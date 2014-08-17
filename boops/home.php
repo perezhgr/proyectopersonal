@@ -8,6 +8,5 @@
 	$model = new Model();
 	$view = new View();
 	$controller = new Controller($model,$view);
-	$view->ImprimirPagina();
-	$controller->BuscarSecciones();
+	$controller->ImprimirPagina();	
 ?>

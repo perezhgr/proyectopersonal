@@ -1,22 +1,19 @@
 <?php
 class Controller
 {
-	private $view;
 	private $model;
+	private $view;
  
-    public function __construct($view,$model) {
+    public function __construct($model,$view) {
         $this->model = $model;
 		$this->view = $view;
     }
 
-	
-		public function BuscarSecciones(){	
+		
+	public function ImprimirPagina(){
 
-			$secciones = $this->model->ObtenerSecciones();
-			
-			if($secciones){
-					$this->view->MostrarSecciones($secciones);
-			}			
-		}
+		$this->view->MostrarSecciones($this->model->ObtenerSecciones());
+	}
+
 }	
 ?>

@@ -9,15 +9,10 @@ class View
 				$this->smarty = New Smarty;
 			}
 
-	  public function ImprimirPagina(){
-
-		$this->smarty->display('home.tpl');
-				
-	  }
-
 	  public function MostrarSecciones($secciones){
 
 	  	$this->smarty->assign("Secciones",$secciones);
+		$this->smarty->display('home.tpl');
 				
 	  }
 }
