@@ -15,7 +15,7 @@ class Model
 	//Obtiene las secciones y trae las categoria relacionadas a cada seccion	
 	public function ObtenerSecciones(){
 		
-		$sql = "SELECT nombre_seccion
+		$sql = "SELECT id_seccion,nombre_seccion
 				FROM seccion ";
 
 		$query = $this->conn->query($sql);

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-17 21:30:17
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-18 15:51:33
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:27000806353f0f9ec82d754-60246368%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1408303815,
+      1 => 1408369891,
       2 => 'file',
     ),
   ),
@@ -65,7 +65,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="inner">
               <h1 class="masthead-brand" >Tupar viajes y turismo</h1>
               <ul class="nav masthead-nav">
-                <li class="active"><a href="#lgdestacados"><i class="fa fa-home fa-2x" ></i></a></li>
                 <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['secciones'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['name'] = 'secciones';
 $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['Secciones']->value) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
@@ -90,8 +89,21 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['index_next'] = 
 $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['iteration'] == 1);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['total']);
 ?>
-                <li><a href="#"><?php echo $_smarty_tpl->tpl_vars['Secciones']->value[$_smarty_tpl->getVariable('smarty')->value['section']['secciones']['index']]['nombre_seccion'];?>
-</a></li>
+                  <?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['Secciones']->value[$_smarty_tpl->getVariable('smarty')->value['section']['secciones']['index']]['id_seccion'];?>
+<?php $_tmp1=ob_get_clean();?><?php if ($_tmp1=='1'){?>
+                    <li class="active">
+                      <a href="<?php echo $_smarty_tpl->tpl_vars['Secciones']->value[$_smarty_tpl->getVariable('smarty')->value['section']['secciones']['index']]['id_seccion'];?>
+">
+                        <i class="fa fa-home fa-2x" ></i>
+                      </a>
+                  <?php }?>
+                    </li>
+                    <li>
+                      <a href="<?php echo $_smarty_tpl->tpl_vars['Secciones']->value[$_smarty_tpl->getVariable('smarty')->value['section']['secciones']['index']]['id_seccion'];?>
+">
+                      <?php echo $_smarty_tpl->tpl_vars['Secciones']->value[$_smarty_tpl->getVariable('smarty')->value['section']['secciones']['index']]['nombre_seccion'];?>
+</a>
+                    </li>
                 <?php endfor; endif; ?>
               </ul>
             </div>

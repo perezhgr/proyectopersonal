@@ -40,9 +40,18 @@
             <div class="inner">
               <h1 class="masthead-brand" >Tupar viajes y turismo</h1>
               <ul class="nav masthead-nav">
-                <li class="active"><a href="#lgdestacados"><i class="fa fa-home fa-2x" ></i></a></li>
                 {section name=secciones loop=$Secciones}
-                <li><a href="#">{$Secciones[secciones]['nombre_seccion']}</a></li>
+                  {if {$Secciones[secciones]['id_seccion']} eq '1'}
+                    <li class="active">
+                      <a href="{$Secciones[secciones]['id_seccion']}">
+                        <i class="fa fa-home fa-2x" ></i>
+                      </a>
+                  {/if}
+                    </li>
+                    <li>
+                      <a href="{$Secciones[secciones]['id_seccion']}">
+                      {$Secciones[secciones]['nombre_seccion']}</a>
+                    </li>
                 {/section}
               </ul>
             </div>
