@@ -44,8 +44,7 @@
                   {if {$Secciones[secciones]['id_seccion']} eq '1'}
                     <li class="active">
                       <a href="{$Secciones[secciones]['id_seccion']}">
-                        <i class="fa fa-home fa-2x" ></i>
-                      </a>
+                        <i class="fa fa-home fa-2x" ></i>                      
                   {/if}
                     </li>
                     <li>

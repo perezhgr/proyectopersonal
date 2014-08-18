@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-18 15:51:33
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-18 15:54:29
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:27000806353f0f9ec82d754-60246368%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1408369891,
+      1 => 1408370067,
       2 => 'file',
     ),
   ),
@@ -94,8 +94,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['secciones']['last']       = 
                     <li class="active">
                       <a href="<?php echo $_smarty_tpl->tpl_vars['Secciones']->value[$_smarty_tpl->getVariable('smarty')->value['section']['secciones']['index']]['id_seccion'];?>
 ">
-                        <i class="fa fa-home fa-2x" ></i>
-                      </a>
+                        <i class="fa fa-home fa-2x" ></i>                      
                   <?php }?>
                     </li>
                     <li>
