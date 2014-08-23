@@ -1,4 +1,5 @@
 <?php  
+		 header('Content-Type: text/html; UTF-8');
 		try{
 
 		$this->conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
