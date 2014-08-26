@@ -12,12 +12,12 @@
                 {foreach from=$Categorias item=categorias}
                   {if {$categorias.id_categoria} eq '1'}
                     <li class="active">
-                    <a href="javascript:GetSubCategoria({$categorias.id_categoria})">
+                    <a href="javascript:GetSubCategoria({$categorias.id_categoria_padre})">
                     <i class="fa fa-home fa-2x" ></i>                      
                   {/if}
                     </li>
                     <li>
-                      <a href="javascript:GetSubCategoria({$categorias.id_categoria});">
+                      <a href="javascript:GetSubCategoria({$categorias.id_categoria_padre});">
                       {$categorias.nombre_categoria}</a>
                     </li>
                 {/foreach}

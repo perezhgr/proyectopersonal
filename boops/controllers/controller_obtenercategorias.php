@@ -10,9 +10,9 @@ class Controller
     }
 
 		
-	public function ObtenerSubcategorias($id_categoria){
+	public function ObtenerSubcategorias($id_categoria_padre){
 
-		$this->view->ImprimirPagina($this->model->ObtenerSubcategoriaById($id_categoria));
+		$this->view->ImprimirPagina($this->model->ObtenerSubcategoriaById($id_categoria_padre));
 	}
 
 //	public function ObtenerConsejos($id_categoria){

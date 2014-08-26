@@ -14,7 +14,7 @@ class Model
 	//Obtiene las categorias
 	public function ObtenerCategorias(){
 		
-		$sql = "SELECT id_categoria,nombre_categoria 
+		$sql = "SELECT * 
 		FROM categoria 
 		WHERE id_categoria=id_categoria_padre";
 

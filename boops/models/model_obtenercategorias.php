@@ -13,12 +13,12 @@ class Model
 	}
 		
 	//Obtiene las secciones y trae las categoria relacionadas a cada seccion	
-	public function ObtenerSubcategoriaById($id_categoria){
+	public function ObtenerSubcategoriaById($id_categoria_padre){
 		
 		$sql = "SELECT  nombre_categoria,descripcion
 				FROM  	categoria 
-				WHERE   (id_categoria_padre = id_categoria_padre) AND 
-				(id_categoria <>id_categoria_padre)";
+				WHERE   (id_categoria_padre = $id_categoria_padre) AND 
+				(id_categoria <>$id_categoria_padre)";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
