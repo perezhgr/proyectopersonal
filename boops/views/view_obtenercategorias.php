@@ -9,11 +9,13 @@ class View
 				$this->smarty = New Smarty;
 			}
 
-	  public function ImprimirPagina($categorias){
-	  	$this->smarty->assign("Categorias",$categorias);
+	  
+	  public function ImprimirPagina($subcategorias){
+	  	$this->smarty->assign("Subcategorias",$subcategorias);
 	  	$this->smarty->display("obtenercategorias.tpl");
-
 	  }
+
+	  
 }
 
 ?>

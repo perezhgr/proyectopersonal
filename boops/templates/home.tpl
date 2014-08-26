@@ -9,16 +9,16 @@
             <div class="inner">
               <h1 class="masthead-brand" >Tupar viajes y turismo</h1>
               <ul class="nav masthead-nav">
-                {foreach from=$Secciones item=secciones}
-                  {if {$secciones.id_seccion} eq '1'}
+                {foreach from=$Categorias item=categorias}
+                  {if {$categorias.id_categoria} eq '1'}
                     <li class="active">
-                    <a href="javascript:GetCategoria({$secciones.id_seccion});">
+                    <a href="javascript:GetSubCategoria({$categorias.id_categoria})">
                     <i class="fa fa-home fa-2x" ></i>                      
                   {/if}
                     </li>
                     <li>
-                      <a href="javascript:GetCategoria({$secciones.id_seccion});">
-                      {$secciones.nombre_seccion}</a>
+                      <a href="javascript:GetSubCategoria({$categorias.id_categoria});">
+                      {$categorias.nombre_categoria}</a>
                     </li>
                 {/foreach}
               </ul>
@@ -58,7 +58,8 @@
 
       </div>
     </div>
-      
+
+    <!--En este div es donde se colococa el contenido que se trae con Ajax!-->
       <div id="contenido" class="container bs-docs-container">
       
       </div>      

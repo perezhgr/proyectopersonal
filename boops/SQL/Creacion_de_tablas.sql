@@ -1,19 +1,83 @@
---Creacion de tabla seccion
-CREATE TABLE seccion (
-id_seccion     INT(10) NOT NULL AUTO_INCREMENT,
-nombre_seccion VARCHAR (50)  NULL,
-descripcion	   VARCHAR (100) NULL,
-CONSTRAINT PK_SECCION PRIMARY KEY (id_seccion)
-)ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;
 
-
---Creacion de tabla categoria
 CREATE TABLE categoria (
-id_categoria     INT(10) NOT NULL AUTO_INCREMENT,
-nombre_categoria VARCHAR (50) NOT NULL,
-descripcion	   	 TEXT (65000) NULL,
-id_seccion   	 INT(10) NOT NULL,
+id_categoria       INT(10) NOT NULL AUTO_INCREMENT,
+nombre_categoria   VARCHAR (50) NULL,
+descripcion	   	   TEXT (65000) NULL,
+id_categoria_padre INT(10) NOT NULL,
+
 CONSTRAINT PK_CATEGORIA PRIMARY KEY (id_categoria),
-CONSTRAINT FK_CATEGORIA_SECCION FOREIGN KEY (id_seccion) REFERENCES seccion (id_seccion) ON DELETE CASCADE
+CONSTRAINT FK_CATEGORIA_PADRE FOREIGN KEY (id_categoria_padre) REFERENCES categoria (id_categoria) ON DELETE CASCADE
 )ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;
 
+
+CREATE TABLE consejo (
+id_consejo     INT(10) NOT NULL AUTO_INCREMENT,
+nombre_consejo VARCHAR (50)  NULL,
+descripcion	   VARCHAR (100) NULL,
+id_categoria   INT(10) NOT NULL ,
+
+CONSTRAINT PK_CONSEJO PRIMARY KEY (id_consejo),
+CONSTRAINT FK_CONSEJO_CATEGORIA FOREIGN KEY (id_categoria) REFERENCES categoria (id_categoria) ON DELETE CASCADE
+)ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;
+
+
+CREATE TABLE lmiel (
+id_lmiel       INT(10) NOT NULL AUTO_INCREMENT,
+nombre_pareja  VARCHAR (50)  NOT NULL,
+fecha	   	   DATE NOT NULL,
+id_categoria   INT(10) NOT NULL ,
+
+CONSTRAINT PK_LMIEL PRIMARY KEY (id_lmiel),
+CONSTRAINT FK_LMIEL_CATEGORIA FOREIGN KEY (id_categoria) REFERENCES categoria (id_categoria) ON DELETE CASCADE
+)ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;
+
+
+
+CREATE TABLE ciudad (
+id_ciudad          INT(10) NOT NULL AUTO_INCREMENT,
+nombre_ciudad 	   VARCHAR (50) NOT NULL,
+duracion		   TEXT (50) NOT NULL,
+precio			   VARCHAR (50) NOT NULL,
+descripcion	       VARCHAR (100) NULL,
+
+CONSTRAINT PK_CIUDAD PRIMARY KEY (id_ciudad)
+)ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;
+
+
+CREATE TABLE imagen (
+  id_imagen   INT(10) NOT NULL AUTO_INCREMENT,
+  path		  VARCHAR(30) NOT NULL,	
+
+CONSTRAINT PK_IMAGEN PRIMARY KEY (id_imagen)
+)ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;
+  
+
+CREATE TABLE administrador(
+id_administrador INT( 11 ) NOT NULL AUTO_INCREMENT ,
+mail VARCHAR( 50 ) NOT NULL ,
+pass VARCHAR( 50 ) NOT NULL ,
+PRIMARY KEY (id_administrador)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8 AUTO_INCREMENT =1;
+
+
+CREATE TABLE categoria_ciudad (
+id_categoria_ciudad	       INT(10) NOT NULL AUTO_INCREMENT,
+id_categoria   			   INT(10) NOT NULL,
+id_ciudad          		   INT(10) NOT NULL,
+
+CONSTRAINT PK_CATEGORIA_CIUDAD PRIMARY KEY (id_categoria_ciudad),
+CONSTRAINT FK_CIUDAD FOREIGN KEY (id_ciudad) REFERENCES ciudad (id_ciudad) ON DELETE CASCADE,
+CONSTRAINT FK_CATEGORIA FOREIGN KEY (id_categoria) REFERENCES categoria (id_categoria) ON DELETE CASCADE
+)ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;
+
+
+
+CREATE TABLE ciudad_imagen (
+id_ciudad_imagen	       INT(10) NOT NULL AUTO_INCREMENT,
+id_ciudad   			   INT(10) NOT NULL,
+id_imagen          		   INT(10) NOT NULL,
+
+CONSTRAINT PK_CIUDAD_IMAGEN PRIMARY KEY (id_ciudad_imagen),
+CONSTRAINT FK_CIUDAD2 FOREIGN KEY (id_ciudad) REFERENCES ciudad (id_ciudad) ON DELETE CASCADE,
+CONSTRAINT FK_IMAGEN FOREIGN KEY (id_imagen) REFERENCES imagen (id_imagen) ON DELETE CASCADE
+)ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;

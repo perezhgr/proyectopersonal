@@ -1,8 +1,7 @@
 <?php  
-		 header('Content-Type: text/html; UTF-8');
 		try{
 
-		$this->conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass);
+		$this->conn = new PDO("mysql:host=$host;dbname=$db",$user,$pass,array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES  \'UTF8\''));		
 		}
 		catch(PDOException $pe)
 		{

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-23 23:48:05
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-26 01:54:28
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:27000806353f0f9ec82d754-60246368%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1408830428,
+      1 => 1409010833,
       2 => 'file',
     ),
   ),
@@ -19,8 +19,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_53f0f9eca02178_79081884',
   'variables' => 
   array (
-    'Secciones' => 0,
-    'secciones' => 0,
+    'Categorias' => 0,
+    'categorias' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -36,23 +36,23 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="inner">
               <h1 class="masthead-brand" >Tupar viajes y turismo</h1>
               <ul class="nav masthead-nav">
-                <?php  $_smarty_tpl->tpl_vars['secciones'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['secciones']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['Secciones']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['secciones']->key => $_smarty_tpl->tpl_vars['secciones']->value){
-$_smarty_tpl->tpl_vars['secciones']->_loop = true;
+                <?php  $_smarty_tpl->tpl_vars['categorias'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['categorias']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['Categorias']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['categorias']->key => $_smarty_tpl->tpl_vars['categorias']->value){
+$_smarty_tpl->tpl_vars['categorias']->_loop = true;
 ?>
-                  <?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['secciones']->value['id_seccion'];?>
+                  <?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['categorias']->value['id_categoria'];?>
 <?php $_tmp1=ob_get_clean();?><?php if ($_tmp1=='1'){?>
                     <li class="active">
-                    <a href="javascript:GetCategoria(<?php echo $_smarty_tpl->tpl_vars['secciones']->value['id_seccion'];?>
-);">
+                    <a href="javascript:GetSubCategoria(<?php echo $_smarty_tpl->tpl_vars['categorias']->value['id_categoria'];?>
+)">
                     <i class="fa fa-home fa-2x" ></i>                      
                   <?php }?>
                     </li>
                     <li>
-                      <a href="javascript:GetCategoria(<?php echo $_smarty_tpl->tpl_vars['secciones']->value['id_seccion'];?>
+                      <a href="javascript:GetSubCategoria(<?php echo $_smarty_tpl->tpl_vars['categorias']->value['id_categoria'];?>
 );">
-                      <?php echo $_smarty_tpl->tpl_vars['secciones']->value['nombre_seccion'];?>
+                      <?php echo $_smarty_tpl->tpl_vars['categorias']->value['nombre_categoria'];?>
 </a>
                     </li>
                 <?php } ?>
@@ -93,7 +93,8 @@ $_smarty_tpl->tpl_vars['secciones']->_loop = true;
 
       </div>
     </div>
-      
+
+    <!--En este div es donde se colococa el contenido que se trae con Ajax!-->
       <div id="contenido" class="container bs-docs-container">
       
       </div>      

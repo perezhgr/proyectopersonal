@@ -11,11 +11,12 @@ class Model
 		include('./conexion.php');
 
 	}		
-	//Obtiene las secciones y trae las categoria relacionadas a cada seccion	
-	public function ObtenerSecciones(){
+	//Obtiene las categorias
+	public function ObtenerCategorias(){
 		
-		$sql = "SELECT id_seccion,nombre_seccion
-				FROM seccion";
+		$sql = "SELECT id_categoria,nombre_categoria 
+		FROM categoria 
+		WHERE id_categoria=id_categoria_padre";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();

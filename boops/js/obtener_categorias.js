@@ -17,10 +17,10 @@ function ObtenerCategorias(seccion){
 //	}
 
 
-function GetCategoria(seccion){
+function GetSubCategoria(categoria){
 	$.ajax({
 		type: "GET",
-		url: "obtenercategorias.php?id_seccion="+seccion,
+		url: "obtenercategorias.php?id_categoria="+categoria,
 		success: function(data)
 			{
 				document.getElementById('contenido').innerHTML=data;

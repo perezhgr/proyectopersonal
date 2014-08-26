@@ -12,14 +12,7 @@ class Controller
 		
 	public function ImprimirPagina(){
 
-		$this->view->MostrarSecciones($this->model->ObtenerSecciones());
-
-		if(isset($_POST['id_seccion'])){
-
-				$categorias = $this->model->GetCategoriaByIdSeccion($_POST['id_seccion']);
-				$this->view->MostrarSecciones($categorias);
-
-			}
+		$this->view->MostrarCategorias($this->model->ObtenerCategorias());
 	}
 
 

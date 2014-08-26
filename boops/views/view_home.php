@@ -9,9 +9,9 @@ class View
 				$this->smarty = New Smarty;
 			}
 
-	  public function MostrarSecciones($secciones){
+	  public function MostrarCategorias($categorias){
 
-	  	$this->smarty->assign("Secciones",$secciones);
+	  	$this->smarty->assign("Categorias",$categorias);
 		$this->smarty->display('home.tpl');
 				
 	  }

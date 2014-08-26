@@ -11,7 +11,7 @@
           </div>  
           <div class="col-md-10">                 
             <h3 >Tupar Viajes y Turismo</h3>
-            <p>Somos una empresa de viajes y turismo, en Tandil, Argentina. Nos apasiona. Somos un equipo de soñadores.Estamos cambiando la manera de viajar a través de la alta calidad y confiabilidad de nuestros servicios.Planifique su viaje.Viajemos juntos.</p>
+            <h4 class="text-center">Somos una empresa de viajes y turismo, en Tandil, Argentina. Nos apasiona. Somos un equipo de soñadores.Estamos cambiando la manera de viajar a través de la alta calidad y confiabilidad de nuestros servicios.Planifique su viaje.Viajemos juntos.</h4>
           </div>
           
         </div><br><br><br><br><br>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-23 22:40:13
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-25 18:15:43
          compiled from "./templates/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:85269557753f24cb55a06c9-05118792%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a4f6f0d327fc7bc3ea86f63906a1bf934ca50c7' => 
     array (
       0 => './templates/footer.tpl',
-      1 => 1408826411,
+      1 => 1408983339,
       2 => 'file',
     ),
   ),
@@ -32,7 +32,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           </div>  
           <div class="col-md-10">                 
             <h3 >Tupar Viajes y Turismo</h3>
-            <p>Somos una empresa de viajes y turismo, en Tandil, Argentina. Nos apasiona. Somos un equipo de soñadores.Estamos cambiando la manera de viajar a través de la alta calidad y confiabilidad de nuestros servicios.Planifique su viaje.Viajemos juntos.</p>
+            <h4 class="text-center">Somos una empresa de viajes y turismo, en Tandil, Argentina. Nos apasiona. Somos un equipo de soñadores.Estamos cambiando la manera de viajar a través de la alta calidad y confiabilidad de nuestros servicios.Planifique su viaje.Viajemos juntos.</h4>
           </div>
           
         </div><br><br><br><br><br>
