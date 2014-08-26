@@ -85,4 +85,66 @@ Autorización de los padres dada ante autoridad judicial, escribano u otra autor
 0 a 14 años de edad: La autorización de los padres', '6');
 
 
-INSERT INTO `tuparvt`.`consejo` (`id_consejo`, `nombre_consejo`, `descripcion`, `id_categoria`) VALUES (NULL, 'Precauciones', 'Ciertos destinos requieren precauciones respecto al consumo de agua potable. Se recomienda beber sólo agua mineral, evitar el consumo de vegetales frescos, frutas con cáscara y hielo. Además, se recomienda usar agua mineral para la higiene bucal.', '6');
+--Inserciones en la tabla imagen
+
+INSERT INTO `imagen` (`path`) VALUES
+('img/amsterdam.png'),
+('img/capetown.png'),
+('img/copenhagen.png'),
+('img/barcelona.png'),
+('img/germany.png '),
+('img/kiev.png'),
+('img/la.png'),
+('img/london.png'),
+('img/nyc.png'),
+('img/paris.png'),
+('img/stockholm.png'),
+('img/sydney.png');
+
+--Inserciones en la tabla ciudad
+
+INSERT INTO `tuparvt`.`ciudad` (`nombre_ciudad`, `duracion`, `precio`, `descripcion`) VALUES 
+('Amsterdam', '3 dias.', '$5000', NULL),
+('Ciudad del Cabo', '5 dias', '$6000', NULL);
+('Copenhague', '4 dias.', '$10000', NULL), 
+('Barcelona', '20 dias', '$15000', NULL),
+('Berlin', '5 dias', '$5000', NULL), 
+('Kiev', '6 dias.', '$4000', NULL), 
+('Los Angeles', '6 dias.', '$5600', NULL),
+('Londres', '4 dias', '$4490', NULL),
+('Nueva York', '6 dias', '$9000', NULL),
+('Paris', '2 dias', '$12000', NULL),
+('Estocolmo', '6 dias.', '$6700', NULL), 
+('Sidney', '10 dias.', '$22000', NULL);
+
+
+--Inserciones en la tabla ciudad imagen
+INSERT INTO `tuparvt`.`ciudad_imagen` (`id_ciudad`, `id_imagen`) VALUES 
+('1', '1'),
+('2', '2'),
+('3', '3'), 
+('4', '4'), 
+('5', '5'), 
+('6', '6'),
+('7', '7'),
+('8', '8'), 
+('9', '9'),
+('10', '10'), 
+('11', '11'),
+('12', '12');
+
+--Inserciones en la tabla categoria ciudad
+
+INSERT INTO `tuparvt`.`categoria_ciudad` (`id_categoria`,`id_ciudad`) VALUES 
+('1', '1'),
+('1', '2'),
+('1', '3'), 
+('1', '4'), 
+('1', '5'), 
+('1', '6'),
+('1', '7'),
+('1', '8'), 
+('1', '9'),
+('1', '10'), 
+('1', '11'),
+('1', '12');

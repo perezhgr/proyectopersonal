@@ -12,7 +12,7 @@ class Controller
 		
 	public function ObtenerSubcategorias($id_categoria_padre){
 
-		$this->view->ImprimirPagina($this->model->ObtenerSubcategoriaById($id_categoria_padre));
+		$this->view->ImprimirPagina($this->model->ObtenerSubcategoriaById($id_categoria_padre),$this->model->ObtenerContenidoById($id_categoria_padre));
 	}
 
 //	public function ObtenerConsejos($id_categoria){

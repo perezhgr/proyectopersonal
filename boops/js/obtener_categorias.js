@@ -11,7 +11,6 @@ function ObtenerCategorias(seccion){
 }
 */
 
-
 //function GetCategoria(pagina) {
 //		$("#contenido").load(pagina);
 //	}
