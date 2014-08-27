@@ -9,10 +9,15 @@ class View
 				$this->smarty = New Smarty;
 			}
 
-	  public function ImprimirPagina($subcategorias,$contenido){
-	  	$this->smarty->assign("Subcategorias",$subcategorias);
-	  	$this->smarty->assign("Contenido",$contenido);
-	  	$this->smarty->display("obtenercategorias.tpl");	  	
+	  public function MostrarLugares($subcategoria,$contenido){
+	  	$this->smarty->assign("Subcategorias",$subcategoria);
+	  	$this->smarty->assign("Contenido",$contenido);	  	
+	  	$this->smarty->display("lugaresdestacados.tpl");
+	  }
+
+	  public function MostrarContacto($contacto){
+	  	$this->smarty->assign("Contacto",$contacto);
+	  	$this->smarty->display("contacto.tpl");	  					
 	  }
 
 	  

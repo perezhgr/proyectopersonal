@@ -9,9 +9,7 @@
 	$view = new View();
 	$controller = new Controller($model,$view);
 
-	if ( isset($_GET['id_categoria_padre']) ) {
-		$controller->ObtenerSubcategorias($_GET['id_categoria_padre']);
-	}
+	$controller->ImprimirPagina();
 
 	//elseif (( isset($_POST['id_categoria']) )) {
 	//	$controller->ObtenerConsejos($_POST['id_categoria']);

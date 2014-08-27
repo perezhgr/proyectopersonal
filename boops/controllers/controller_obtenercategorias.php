@@ -9,11 +9,31 @@ class Controller
 		$this->view = $view;
     }
 
-		
-	public function ObtenerSubcategorias($id_categoria_padre){
+	public function ImprimirPagina(){
 
-		$this->view->ImprimirPagina($this->model->ObtenerSubcategoriaById($id_categoria_padre),$this->model->ObtenerContenidoById($id_categoria_padre));
+		if ( isset($_GET['id_categoria_padre']) ) {
+			if ( $_GET['id_categoria_padre'] == 1 ) {
+
+				$subcategoria=$this->model->ObtenerSubcategoriaById($_GET['id_categoria_padre']);
+				$contenido=$this->model->ObtenerContenidoById($_GET['id_categoria_padre']);
+				$this->view->MostrarLugares($subcategoria,$contenido);
+			}
+			
+			elseif ( $_GET['id_categoria_padre'] == 6 ) {
+
+				$subcategoria=$this->model->ObtenerSubcategoriaById($_GET['id_categoria_padre']);				
+				$this->view->MostrarContacto($subcategoria);
+
+			}
+		
+		}	
+		//$this->view->ImprimirPagina();
+
 	}
+
+
+
+	
 
 //	public function ObtenerConsejos($id_categoria){
 		
