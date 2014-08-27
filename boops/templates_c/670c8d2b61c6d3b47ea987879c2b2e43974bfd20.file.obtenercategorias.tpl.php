@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-26 20:45:46
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-26 20:53:04
          compiled from "./templates/obtenercategorias.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:189960108453f8ef54a4c1c1-15918242%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '670c8d2b61c6d3b47ea987879c2b2e43974bfd20' => 
     array (
       0 => './templates/obtenercategorias.tpl',
-      1 => 1409078741,
+      1 => 1409079176,
       2 => 'file',
     ),
   ),
@@ -59,7 +59,7 @@ $_smarty_tpl->tpl_vars['j']->_loop = true;
               <h3><?php echo $_smarty_tpl->tpl_vars['j']->value['nombre_ciudad'];?>
 </h3>
               <!--<p>Aca va a ir la descripcion</p>-->
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p></br></br></br>
+              <p><a class="btn btn-default" href="#" role="button">Ver detalles&raquo;</a></p></br></br></br>
           </div>
           <?php } ?>                  
 </div>

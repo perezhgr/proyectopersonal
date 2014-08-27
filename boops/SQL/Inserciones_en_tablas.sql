@@ -1,18 +1,18 @@
 --Inserciones en la tabla seccion
-INSERT INTO `tuparvt`.`categoria` (`nombre_seccion`, `descripcion`,) VALUES 
+INSERT INTO `tuparvt`.`categoria` (`nombre_categoria`, `descripcion`,`id_categoria_padre`) VALUES 
 ('', 'Esta es la seccion de lo que seria home','1'),
 ('Empresa','', '2'), 
 ('Paquetes','', '3'), 
 ('Luna de miel','', '4'), 
 ('Consejos', '','5'), 
-('Contactenos','', '6');
-('Lugares destacados', NULL, '1'), 
+('Contactenos','', '6'),
+('Lugares destacados', '', '1'), 
 ('Tupar Viajes y Turismo', 'Tupar Viajes y Turismo, Empresa de Viajes y Turismo, inició sus actividades en 1990. A través de su existencia se ha especializado en Viajes de Placer y de Negocios, y comercializa FunTime, un producto único y novedoso que se ha desarrollado con un creciente suceso. Firenze Viajes está entre las primeras agencias de todo el país en cantidad de pasajeros transportados. Nuestros antecedentes prometen soluciones a la medida del cliente, con el servicio y la calidad que nos caracterizan y respaldan.', '2'),
 ('Elija su destino', '', '3'),
 ('Luna de miel', 'Tu sueño hecho realidad.', '4'), 
-('Consejos a la hora de viajar', '', '5');
+('Consejos a la hora de viajar', '', '5'),
 ('Envienos su consulta','Utilice este formulario para contactar con nuestro equipo. 
-Le enviaremos una respuesta a la brevedad. (max. 24 horas)','6')
+Le enviaremos una respuesta a la brevedad. (max. 24 horas)','6');
 
 --Inserciones en la tabla consejo
 
@@ -87,38 +87,39 @@ Autorización de los padres dada ante autoridad judicial, escribano u otra autor
 
 --Inserciones en la tabla imagen
 
-INSERT INTO `imagen` (`path`) VALUES
-('img/amsterdam.png'),
-('img/capetown.png'),
-('img/copenhagen.png'),
-('img/barcelona.png'),
-('img/germany.png '),
-('img/kiev.png'),
-('img/la.png'),
-('img/london.png'),
-('img/nyc.png'),
-('img/paris.png'),
-('img/stockholm.png'),
-('img/sydney.png');
+INSERT INTO `imagen` (`path`,`id_categoria`,`id_ciudad`) VALUES
+('img/amsterdam.png','1','1'),
+('img/capetown.png','1','2'),
+('img/copenhagen.png','1','3'),
+('img/barcelona.png','1','4'),
+('img/germany.png ','1','5'),
+('img/kiev.png','1','6'),
+('img/la.png','1','7'),
+('img/london.png','1','8'),
+('img/nyc.png','1','9'),
+('img/paris.png','1','10'),
+('img/stockholm.png','1','11'),
+('img/sydney.png','1','12');
 
 --Inserciones en la tabla ciudad
 
-INSERT INTO `tuparvt`.`ciudad` (`nombre_ciudad`, `duracion`, `precio`, `descripcion`) VALUES 
-('Amsterdam', '3 dias.', '$5000', NULL),
-('Ciudad del Cabo', '5 dias', '$6000', NULL);
-('Copenhague', '4 dias.', '$10000', NULL), 
-('Barcelona', '20 dias', '$15000', NULL),
-('Berlin', '5 dias', '$5000', NULL), 
-('Kiev', '6 dias.', '$4000', NULL), 
-('Los Angeles', '6 dias.', '$5600', NULL),
-('Londres', '4 dias', '$4490', NULL),
-('Nueva York', '6 dias', '$9000', NULL),
-('Paris', '2 dias', '$12000', NULL),
-('Estocolmo', '6 dias.', '$6700', NULL), 
-('Sidney', '10 dias.', '$22000', NULL);
+INSERT INTO `tuparvt`.`ciudad` (`nombre_ciudad`, `duracion`, `precio`, `descripcion`,`id_categoria`) VALUES 
+('Amsterdam', '3 dias.', '$5000', '','1'),
+('Ciudad del Cabo', '5 dias', '$6000','','1'),
+('Copenhague', '4 dias.', '$10000', '','1'), 
+('Barcelona', '20 dias', '$15000','','1'),
+('Berlin', '5 dias', '$5000', '','1'), 
+('Kiev', '6 dias.', '$4000','','1'), 
+('Los Angeles', '6 dias.', '$5600','','1'),
+('Londres', '4 dias', '$4490', '','1'),
+('Nueva York', '6 dias', '$9000','','1'),
+('Paris', '2 dias', '$12000','','1'),
+('Estocolmo', '6 dias.', '$6700', '','1'), 
+('Sidney', '10 dias.', '$22000', '','1');
 
 
 --Inserciones en la tabla ciudad imagen
+/*
 INSERT INTO `tuparvt`.`ciudad_imagen` (`id_ciudad`, `id_imagen`) VALUES 
 ('1', '1'),
 ('2', '2'),

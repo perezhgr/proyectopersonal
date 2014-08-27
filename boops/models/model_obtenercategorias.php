@@ -30,10 +30,8 @@ class Model
 		
 		$sql="SELECT c.nombre_ciudad ,c.duracion, c.precio,i.path
 			  FROM   categoria cat
-			  JOIN   categoria_ciudad cd ON (cd.id_categoria = cat.id_categoria)
-			  JOIN   ciudad c ON (c.id_ciudad = cd.id_ciudad)
-			  JOIN   ciudad_imagen ci ON (ci.id_ciudad = c.id_ciudad)
-			  JOIN   imagen i ON (i.id_imagen = ci.id_imagen)
+			  JOIN   ciudad c ON (c.id_categoria = cat.id_categoria)
+			  JOIN   imagen i ON (i.id_ciudad = c.id_ciudad)
 			  WHERE  id_categoria_padre =$id_categoria_padre";
 
 			$query = $this->conn->query($sql);

@@ -18,7 +18,7 @@
               <img class="img-circle" src="{$j.path}" alt="" style="width: 140px; height: 140px;">
               <h3>{$j.nombre_ciudad}</h3>
               <!--<p>Aca va a ir la descripcion</p>-->
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p></br></br></br>
+              <p><a class="btn btn-default" href="#" role="button">Ver detalles&raquo;</a></p></br></br></br>
           </div>
           {/foreach}                  
 </div>
