@@ -9,7 +9,7 @@
    <thead>
       <tr>
          <th></th>
-         <th><p align="center">Nombre</p></th>
+         <th><p align="center">Destino</p></th>
          <th><p align="center">Duracion</p></th>
          <th><p align="center">Precio</p></th>         
       </tr>
@@ -17,9 +17,8 @@
    <tbody>
    {foreach from=$Paquete item=j}
       <tr>
-         <td><a href="ver_detalle.php">
-                <i class="fa fa-search fa-2x"></i>
-             </a>
+         <td><a href="ver_detalle.php"><i class="fa fa-search"></i></a>&nbsp&nbsp
+             <a href="ver_detalle.php"><i class="fa fa-envelope"></i></a>
          </td>         
          <td>{$j.nombre_ciudad}</td>
          <td>{$j.duracion}</td>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-28 19:14:58
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-28 20:51:04
          compiled from "./templates/paquete.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:117755223353ff3b36c05982-43955089%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b83447056fa85474c2038c017ffe20690ac9125d' => 
     array (
       0 => './templates/paquete.tpl',
-      1 => 1409246088,
+      1 => 1409251847,
       2 => 'file',
     ),
   ),
@@ -42,7 +42,7 @@ $_smarty_tpl->tpl_vars['i']->_loop = true;
    <thead>
       <tr>
          <th></th>
-         <th><p align="center">Nombre</p></th>
+         <th><p align="center">Destino</p></th>
          <th><p align="center">Duracion</p></th>
          <th><p align="center">Precio</p></th>         
       </tr>
@@ -54,9 +54,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['j']->key => $_smarty_tpl->tpl_vars['j
 $_smarty_tpl->tpl_vars['j']->_loop = true;
 ?>
       <tr>
-         <td><a href="ver_detalle.php">
-                <i class="fa fa-search fa-2x"></i>
-             </a>
+         <td><a href="ver_detalle.php"><i class="fa fa-search"></i></a>&nbsp&nbsp
+             <a href="ver_detalle.php"><i class="fa fa-envelope"></i></a>
          </td>         
          <td><?php echo $_smarty_tpl->tpl_vars['j']->value['nombre_ciudad'];?>
 </td>
