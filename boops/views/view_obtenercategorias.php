@@ -20,7 +20,16 @@ class View
 	  	$this->smarty->display("contacto.tpl");	  					
 	  }
 
-	  
+	  public function MostrarEmpresa($empresa){
+	  	$this->smarty->assign("Empresa",$empresa);
+	  	$this->smarty->display("empresa.tpl");	  					
+	  }
+
+	  public function MostrarPaquete($subcategoria,$paquete){
+	  	$this->smarty->assign("Subcategoria",$subcategoria);
+	  	$this->smarty->assign("Paquete",$paquete);
+	  	$this->smarty->display("paquete.tpl");	  					
+	  }
 }
 
 ?>

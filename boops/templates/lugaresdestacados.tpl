@@ -22,4 +22,3 @@
           </div>
           {/foreach}                  
 </div>
-

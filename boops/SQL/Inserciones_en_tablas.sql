@@ -115,7 +115,19 @@ INSERT INTO `tuparvt`.`ciudad` (`nombre_ciudad`, `duracion`, `precio`, `descripc
 ('Nueva York', '6 dias', '$9000','','1'),
 ('Paris', '2 dias', '$12000','','1'),
 ('Estocolmo', '6 dias.', '$6700', '','1'), 
-('Sidney', '10 dias.', '$22000', '','1');
+('Sidney', '10 dias.', '$22000', '','1'),
+('Amsterdam', '3 dias.', '$5000', '','3'),
+('Ciudad del Cabo', '5 dias', '$6000','','3'),
+('Copenhague', '4 dias.', '$10000', '','3'), 
+('Barcelona', '20 dias', '$15000','','3'),
+('Berlin', '5 dias', '$5000', '','3'), 
+('Kiev', '6 dias.', '$4000','','3'), 
+('Los Angeles', '6 dias.', '$5600','','3'),
+('Londres', '4 dias', '$4490', '','3'),
+('Nueva York', '6 dias', '$9000','','3'),
+('Paris', '2 dias', '$12000','','3'),
+('Estocolmo', '6 dias.', '$6700', '','3'), 
+('Sidney', '10 dias.', '$22000', '','3');
 
 
 --Inserciones en la tabla ciudad imagen

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-27 17:48:41
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-28 16:42:56
          compiled from "./templates/lugaresdestacados.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:48809443953fdfdd92f4eb3-48080201%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dd97d9d3ddbf019d56b995e8ae58db346587a40b' => 
     array (
       0 => './templates/lugaresdestacados.tpl',
-      1 => 1409154514,
+      1 => 1409234989,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_53fdfdd9364b21_77724953',
   'variables' => 
   array (
     'Subcategorias' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'j' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_53fdfdd9364b21_77724953',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_53fdfdd9364b21_77724953')) {function content_53fdfdd9364b21_77724953($_smarty_tpl) {?><div class="row">
         <div class="col-md-12" role="main">
@@ -63,5 +63,4 @@ $_smarty_tpl->tpl_vars['j']->_loop = true;
           </div>
           <?php } ?>                  
 </div>
-
 <?php }} ?>

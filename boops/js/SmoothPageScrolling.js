@@ -1,4 +1,4 @@
-//Scrolling con efecto
+/*/Scrolling con efecto
 $(document).ready(function(){
   $('a[href*=#]').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
@@ -15,8 +15,9 @@ $(document).ready(function(){
     }
   });
 });
+*/
 
-/*Scrolling comun
+//Scrolling comun
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -30,4 +31,4 @@ $(function() {
       }
     }
   });
-});*/
+});

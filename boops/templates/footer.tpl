@@ -5,7 +5,7 @@
       <div class="container">  
         <div class="row"> 
           <div class="col-md-2">         
-            <img class="img-rectangle" src="img/hugo1.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+            <img class="img-rectangle" src="img/oportunidad-empresario.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
            
             
           </div>  

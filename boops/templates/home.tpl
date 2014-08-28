@@ -28,22 +28,22 @@
           <div class="mastfoot">
           <div class="row">  
           <div class="col-md-12">
-          <form class="navbar-form navbar-right" role="form"><br>
-            <div class="form-group">
-              <input class="input" type="text" placeholder="Email" class="form-control" size="30">
-            </div>
-            <div class="form-group">
-              <input class="input"type="password" placeholder="Contraseña" class="form-control" size="30">
-            </div>
-            <button class="boton" type="submit" class="btn btn-success"><font color="#262626">Iniciar</font></button>
-          </form>
           </div>
           <div class="row">
               <div class="col-md-6 col-md-offset-3">
-               <i class="fa fa-twitter-square fa-3x" ></i>&nbsp&nbsp
-               <i class="fa fa-facebook-square fa-3x"></i>&nbsp&nbsp
-               <i class="fa fa-instagram fa-3x"></i>&nbsp&nbsp
-               <i class="fa fa-youtube-square fa-3x"></i>&nbsp&nbsp
+              <a href="https://www.twitter.com/">
+                  <i class="fa fa-twitter-square fa-3x" ></i>&nbsp&nbsp
+              </a>
+              <a href="https://www.facebook.com/">
+                  <i class="fa fa-facebook-square fa-3x"></i>&nbsp&nbsp
+              </a>
+              <a href="https://www.instagram.com/">
+                  <i class="fa fa-instagram fa-3x"></i>&nbsp&nbsp
+              </a>
+              <a>
+              <a href="https://www.youtube.com/">
+                  <i class="fa fa-youtube-square fa-3x"></i>&nbsp&nbsp
+              </a>
               </div>
             </div>                      
         

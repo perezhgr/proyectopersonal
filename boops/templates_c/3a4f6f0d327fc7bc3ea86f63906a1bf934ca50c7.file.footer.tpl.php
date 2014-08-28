@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-25 18:15:43
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-28 19:47:13
          compiled from "./templates/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:85269557753f24cb55a06c9-05118792%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a4f6f0d327fc7bc3ea86f63906a1bf934ca50c7' => 
     array (
       0 => './templates/footer.tpl',
-      1 => 1408983339,
+      1 => 1409248030,
       2 => 'file',
     ),
   ),
@@ -26,7 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       <div class="container">  
         <div class="row"> 
           <div class="col-md-2">         
-            <img class="img-rectangle" src="img/hugo1.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+            <img class="img-rectangle" src="img/oportunidad-empresario.png" alt="Generic placeholder image" style="width: 140px; height: 140px;">
            
             
           </div>  

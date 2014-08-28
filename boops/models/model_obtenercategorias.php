@@ -35,5 +35,16 @@ class Model
 			$query = $this->conn->query($sql);
 			return $query->fetchAll();	 
 	}
+
+		public function ObtenerCiudadesByCategoria($id_categoria_padre){	
+		
+		$sql="SELECT c.nombre_ciudad ,c.duracion, c.precio
+			  FROM   categoria cat
+			  JOIN   ciudad c ON (c.id_categoria = cat.id_categoria)
+			  WHERE  id_categoria_padre =$id_categoria_padre";
+
+			$query = $this->conn->query($sql);
+			return $query->fetchAll();	 
+	}
 }
 ?>
