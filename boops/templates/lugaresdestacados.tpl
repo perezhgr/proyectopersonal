@@ -22,6 +22,7 @@
                       data-target="#myModal">
                 <i class="fa fa-angle-double-right fa-2x"></i>
               </button></br></br></br>
+              <input class="negro" name="id_ciudad" type="text" value="{$j.id_ciudad}">                                
           </div>
           {/foreach}                  
 </div>
@@ -32,12 +33,12 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-      {foreach from=$Contenido item =j}
+      {foreach from=$Ciudad item =i}
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
-        <h4 class="modal-title negro" id="myModalLabel">{$j.nombre_ciudad}</h4>
+        <h4 class="modal-title negro" id="myModalLabel"></h4>
       </div>
       <div class="modal-body negro">
-        <h5 class="text-left">Duracion: {$j.duracion}</h5>
+        <h5 class="text-left">Duracion: {$i.nombre_ciudad}</h5>
       </div>
       <div class="modal-footer">
       {/foreach}

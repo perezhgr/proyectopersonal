@@ -9,8 +9,12 @@
 	$view = new View();
 	$controller = new Controller($model,$view);
 
+	//$id = $_POST['id'];
+
 	$controller->ImprimirPagina();
 
+	
+	
 	//elseif (( isset($_POST['id_categoria']) )) {
 	//	$controller->ObtenerConsejos($_POST['id_categoria']);
 	//}

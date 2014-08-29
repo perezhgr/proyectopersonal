@@ -38,7 +38,7 @@ class Model
 
 		public function ObtenerCiudadesByCategoria($id_categoria_padre){	
 		
-		$sql="SELECT c.nombre_ciudad ,c.duracion, c.precio
+		$sql="SELECT c.id_ciudad,c.nombre_ciudad ,c.duracion, c.precio
 			  FROM   categoria cat
 			  JOIN   ciudad c ON (c.id_categoria = cat.id_categoria)
 			  WHERE  id_categoria_padre =$id_categoria_padre";
@@ -49,7 +49,7 @@ class Model
 
 	public function ObtenerCiudadById($id_ciudad){	
 		
-		$sql="SELECT c.nombre_ciudad ,c.duracion, c.precio
+		$sql="SELECT id_ciudad,nombre_ciudad ,duracion,precio
 			  FROM   ciudad
 			  WHERE  id_ciudad =$id_ciudad";
 

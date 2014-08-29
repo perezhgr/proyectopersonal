@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-28 22:00:42
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-29 16:52:38
          compiled from "./templates/lugaresdestacados.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:48809443953fdfdd92f4eb3-48080201%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dd97d9d3ddbf019d56b995e8ae58db346587a40b' => 
     array (
       0 => './templates/lugaresdestacados.tpl',
-      1 => 1409256037,
+      1 => 1409323806,
       2 => 'file',
     ),
   ),
@@ -23,6 +23,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'i' => 0,
     'Contenido' => 0,
     'j' => 0,
+    'Ciudad' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -63,6 +64,8 @@ $_smarty_tpl->tpl_vars['j']->_loop = true;
                       data-target="#myModal">
                 <i class="fa fa-angle-double-right fa-2x"></i>
               </button></br></br></br>
+              <input class="negro" name="id_ciudad" type="text" value="<?php echo $_smarty_tpl->tpl_vars['j']->value['id_ciudad'];?>
+">                                
           </div>
           <?php } ?>                  
 </div>
@@ -73,17 +76,16 @@ $_smarty_tpl->tpl_vars['j']->_loop = true;
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-      <?php  $_smarty_tpl->tpl_vars['j'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['j']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['Contenido']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['j']->key => $_smarty_tpl->tpl_vars['j']->value){
-$_smarty_tpl->tpl_vars['j']->_loop = true;
+      <?php  $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['i']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['Ciudad']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['i']->key => $_smarty_tpl->tpl_vars['i']->value){
+$_smarty_tpl->tpl_vars['i']->_loop = true;
 ?>
         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
-        <h4 class="modal-title negro" id="myModalLabel"><?php echo $_smarty_tpl->tpl_vars['j']->value['nombre_ciudad'];?>
-</h4>
+        <h4 class="modal-title negro" id="myModalLabel"></h4>
       </div>
       <div class="modal-body negro">
-        <h5 class="text-left">Duracion: <?php echo $_smarty_tpl->tpl_vars['j']->value['duracion'];?>
+        <h5 class="text-left">Duracion: <?php echo $_smarty_tpl->tpl_vars['i']->value['nombre_ciudad'];?>
 </h5>
       </div>
       <div class="modal-footer">

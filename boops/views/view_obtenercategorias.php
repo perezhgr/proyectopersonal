@@ -9,9 +9,15 @@ class View
 				$this->smarty = New Smarty;
 			}
 
-	  public function MostrarLugares($subcategoria,$contenido){
+	  public function MostrarDetalleCiudad($ciudad){
+	  	$this->smarty->assign("Ciudad",$ciudad);	  	
+	  	
+	  }
+
+	  public function MostrarLugares($subcategoria,$contenido,$ciudad){
 	  	$this->smarty->assign("Subcategorias",$subcategoria);
-	  	$this->smarty->assign("Contenido",$contenido);	  	
+	  	$this->smarty->assign("Contenido",$contenido);
+	  	$this->smarty->assign("Ciudad",$ciudad);
 	  	$this->smarty->display("lugaresdestacados.tpl");
 	  }
 
@@ -30,6 +36,8 @@ class View
 	  	$this->smarty->assign("Paquete",$paquete);
 	  	$this->smarty->display("paquete.tpl");	  					
 	  }
+
+
 }
 
 ?>

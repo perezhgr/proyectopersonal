@@ -11,14 +11,17 @@ class Controller
 
 	public function ImprimirPagina(){
 
-		if ( isset($_GET['id_categoria_padre']) ) {
-			if ( $_GET['id_categoria_padre'] == 1 ) {
-
-				$subcategoria=$this->model->ObtenerSubcategoriaById($_GET['id_categoria_padre']);
-				$contenido=$this->model->ObtenerContenidoById($_GET['id_categoria_padre']);
-				$ciudad=$this->model->ObtenerCiudadById($_POST['id_ciudad']);
-				$this->view->MostrarLugares($subcategoria,$contenido);
+		if ( isset($_GET['id_categoria_padre']) )  {
+			if ( $_GET['id_categoria_padre'] == 1 ) {				
+					if(isset($_POST['id_ciudad'])){
+					
+					$subcategoria=$this->model->ObtenerSubcategoriaById($_GET['id_categoria_padre']);
+					$contenido=$this->model->ObtenerContenidoById($_GET['id_categoria_padre']);
+					$ciudad=$this->model->ObtenerCiudadById($_POST['id_ciudad']);
+					$this->view->MostrarLugares($subcategoria,$contenido,$ciudad);
+		  		}
 			}
+
 
 			elseif ( $_GET['id_categoria_padre'] == 2 ) {
 
@@ -32,6 +35,13 @@ class Controller
 				$paquete=$this->model->ObtenerCiudadesByCategoria($_GET['id_categoria_padre']);
 				$this->view->MostrarPaquete($subcategoria,$paquete);
 			}
+
+			//elseif ( $_GET['id_categoria_padre'] == 4 ) {
+
+			//	$subcategoria=$this->model->ObtenerSubcategoriaById($_GET['id_categoria_padre']);
+			//	$paquete=$this->model->ObtenerCiudadesByCategoria($_GET['id_categoria_padre']);
+			//	$this->view->MostrarPaquete($subcategoria,$paquete);
+			//}
 			
 			elseif ( $_GET['id_categoria_padre'] == 6 ) {
 
@@ -42,6 +52,10 @@ class Controller
 		}	
 		//$this->view->ImprimirPagina();
 	}
+
+//	public function MostrarDetalleCiudad($id_ciudad){
+//		$this->view->MostrarDetalleCiudad();
+//	}
 }
 
 ?>
