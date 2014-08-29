@@ -36,12 +36,13 @@ class Controller
 				$this->view->MostrarPaquete($subcategoria,$paquete);
 			}
 
-			//elseif ( $_GET['id_categoria_padre'] == 4 ) {
+			elseif ( $_GET['id_categoria_padre'] == 4 ) {
 
-			//	$subcategoria=$this->model->ObtenerSubcategoriaById($_GET['id_categoria_padre']);
-			//	$paquete=$this->model->ObtenerCiudadesByCategoria($_GET['id_categoria_padre']);
-			//	$this->view->MostrarPaquete($subcategoria,$paquete);
-			//}
+				$subcategoria=$this->model->ObtenerSubcategoriaById($_GET['id_categoria_padre']);
+				$imagen=$this->model->ObtenerImgsByExperiencia($_GET['id_categoria_padre']);
+				$experiencia=$this->model->ObtenerExperiencias();
+				$this->view->MostrarExperiencia($subcategoria,$imagen,$experiencia);
+			}
 			
 			elseif ( $_GET['id_categoria_padre'] == 6 ) {
 

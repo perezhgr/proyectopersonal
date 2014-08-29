@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-27 17:44:37
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-29 22:48:16
          compiled from "./templates/contacto.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8811913153fdfc048d7ab4-78605702%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6c7bb102d4bad95e5a5dfe049d4ba60ee91b1c57' => 
     array (
       0 => './templates/contacto.tpl',
-      1 => 1409154274,
+      1 => 1409345242,
       2 => 'file',
     ),
   ),
@@ -51,4 +51,10 @@ $_smarty_tpl->tpl_vars['i']->_loop = true;
                   </div>                  
           
           </div>
-        </div><?php }} ?>
+        </div>
+</div>
+
+
+
+
+        <?php }} ?>

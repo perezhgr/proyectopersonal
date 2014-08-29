@@ -56,5 +56,32 @@ class Model
 			$query = $this->conn->query($sql);
 			return $query->fetchAll();	 
 	}
+
+	public function ObtenerExperiencias(){	
+		
+		$sql="SELECT nombre_persona ,condicion, fecha,texto,nombre_ciudad
+			  FROM   experiencia e
+			  JOIN   comentario c ON (c.id_persona = e.id_persona)
+	          JOIN   ciudad ci ON (ci.id_ciudad= e.id_ciudad)
+			  JOIN   categoria cat ON (cat.id_categoria = ci.id_categoria)";
+
+			$query = $this->conn->query($sql);
+			return $query->fetchAll();	 
+	}
+
+	
+	public function ObtenerImgsByExperiencia($id_categoria_padre){	
+		
+		$sql="SELECT i.path,ci.nombre_ciudad
+			  FROM   imagen i
+			  JOIN   ciudad ci ON (ci.id_ciudad= i.id_ciudad)
+			  JOIN   categoria cat ON (cat.id_categoria = ci.id_categoria)
+			  WHERE  cat.id_categoria_padre = $id_categoria_padre";
+
+			$query = $this->conn->query($sql);
+			return $query->fetchAll();	 
+	}	
+
+	
 }
 ?>

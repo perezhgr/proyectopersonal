@@ -37,6 +37,13 @@ class View
 	  	$this->smarty->display("paquete.tpl");	  					
 	  }
 
+	  public function MostrarExperiencia($subcategoria,$imagen,$experiencia){
+	  	$this->smarty->assign("Imagen",$imagen);
+	  	$this->smarty->assign("Subcategoria",$subcategoria);
+	  	$this->smarty->assign("Experiencia",$experiencia);
+	  	$this->smarty->display("experiencia.tpl");	  					
+	  }
+
 
 }
 
