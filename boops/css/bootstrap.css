@@ -6446,3 +6446,9 @@ h1{
 .negro{
   color:black;
 }
+
+.table tbody>tr>th.vert-align
+{
+    vertical-align: middle;
+}
+

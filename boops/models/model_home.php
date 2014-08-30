@@ -2,9 +2,8 @@
 class Model
 {
 	private $conn;
-    
-    	public function __construct(){
 
+	public function __construct(){
 		//Configuración
 		include('./configuracion.php');
 		//Conexión
