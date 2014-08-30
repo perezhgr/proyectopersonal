@@ -15,12 +15,6 @@ class View
 	  	$this->smarty->display("lugaresdestacados.tpl");
 	  }
 
-	  /*public function MostrarModal($detalle){
-	  	$this->smarty->assign("Detalle",$detalle);
-	  	$this->smarty->display("modal.tpl");
-	  }	*/
-
-
 	  public function MostrarContacto($contacto){
 	  	$this->smarty->assign("Contacto",$contacto);
 	  	$this->smarty->display("contacto.tpl");	  					

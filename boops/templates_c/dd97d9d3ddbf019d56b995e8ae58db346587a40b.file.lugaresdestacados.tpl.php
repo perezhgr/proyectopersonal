@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-30 21:58:39
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-30 22:12:27
          compiled from "./templates/lugaresdestacados.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2011454730540221296081e3-03629007%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dd97d9d3ddbf019d56b995e8ae58db346587a40b' => 
     array (
       0 => './templates/lugaresdestacados.tpl',
-      1 => 1409428715,
+      1 => 1409429503,
       2 => 'file',
     ),
   ),
