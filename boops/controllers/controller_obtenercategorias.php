@@ -12,17 +12,16 @@ class Controller
 	public function ImprimirPagina(){
 
 		if ( isset($_GET['id_categoria_padre']) )  {
-			if ( $_GET['id_categoria_padre'] == 1 ) {				
-					if(isset($_POST['id_ciudad'])){
-					
+			if ( $_GET['id_categoria_padre'] == 1 ) {
 					$subcategoria=$this->model->ObtenerSubcategoriaById($_GET['id_categoria_padre']);
 					$contenido=$this->model->ObtenerContenidoById($_GET['id_categoria_padre']);
-					$ciudad=$this->model->ObtenerCiudadById($_POST['id_ciudad']);
-					$this->view->MostrarLugares($subcategoria,$contenido,$ciudad);
+					$this->view->MostrarLugares($subcategoria,$contenido);					
+					//if (isset($_POST['id_ciudad'])){
+					//$detalle=$this->model->ObtenerDetalleCiudadById($_GET['id_ciudad']);
+					//$this->view->MostrarModal($detalle);
+					//}	
 		  		}
-			}
-
-
+			
 			elseif ( $_GET['id_categoria_padre'] == 2 ) {
 
 				$empresa=$this->model->ObtenerSubcategoriaById($_GET['id_categoria_padre']);				

@@ -30,7 +30,6 @@ class Model
 		JOIN   ciudad c ON (c.id_categoria = cat.id_categoria)
 		JOIN   imagen i ON (i.id_ciudad = c.id_ciudad)
 		WHERE  id_categoria_padre =$id_categoria_padre";
-
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();	 
 	}
@@ -41,16 +40,6 @@ class Model
 		FROM   categoria cat
 		JOIN   ciudad c ON (c.id_categoria = cat.id_categoria)
 		WHERE  id_categoria_padre =$id_categoria_padre";
-
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();	 
-	}
-
-	public function ObtenerCiudadById($id_ciudad){	
-		
-		$sql="SELECT id_ciudad,nombre_ciudad ,duracion,precio
-		FROM   ciudad
-		WHERE  id_ciudad =$id_ciudad";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();	 
@@ -80,5 +69,15 @@ class Model
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();	 
 	}	
+
+	/*public function ObtenerDetalleCiudadById($id_ciudad){
+		
+		$sql = "SELECT nombre_ciudad,descripcion,precio,duracion 
+		FROM ciudad 
+		WHERE id_ciudad=$id_ciudad";
+
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}*/
 }
 ?>

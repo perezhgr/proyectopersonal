@@ -9,17 +9,17 @@ class View
 				$this->smarty = New Smarty;
 			}
 
-	  public function MostrarDetalleCiudad($ciudad){
-	  	$this->smarty->assign("Ciudad",$ciudad);	  	
-	  	
-	  }
-
-	  public function MostrarLugares($subcategoria,$contenido,$ciudad){
+	  public function MostrarLugares($subcategoria,$contenido){
 	  	$this->smarty->assign("Subcategorias",$subcategoria);
 	  	$this->smarty->assign("Contenido",$contenido);
-	  	$this->smarty->assign("Ciudad",$ciudad);
 	  	$this->smarty->display("lugaresdestacados.tpl");
 	  }
+
+	  /*public function MostrarModal($detalle){
+	  	$this->smarty->assign("Detalle",$detalle);
+	  	$this->smarty->display("modal.tpl");
+	  }	*/
+
 
 	  public function MostrarContacto($contacto){
 	  	$this->smarty->assign("Contacto",$contacto);
@@ -43,8 +43,6 @@ class View
 	  	$this->smarty->assign("Experiencia",$experiencia);
 	  	$this->smarty->display("experiencia.tpl");	  					
 	  }
-
-
 }
 
 ?>
