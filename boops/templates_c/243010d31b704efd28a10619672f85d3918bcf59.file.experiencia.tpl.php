@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-01 00:56:19
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-01 01:34:14
          compiled from "./templates/experiencia.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:137001018254022192ccbc09-47846342%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '243010d31b704efd28a10619672f85d3918bcf59' => 
     array (
       0 => './templates/experiencia.tpl',
-      1 => 1409525775,
+      1 => 1409528044,
       2 => 'file',
     ),
   ),
@@ -58,7 +58,8 @@ foreach ($_from as $_smarty_tpl->tpl_vars['img']->key => $_smarty_tpl->tpl_vars[
 $_smarty_tpl->tpl_vars['img']->_loop = true;
 ?>
         <div style="height:30%; width:30%; float: left; margin-right: 10px;">
-        <a href="#a"><img alt="320x240" src="<?php echo $_smarty_tpl->tpl_vars['img']->value['path'];?>
+        <a href="#tabla">
+        <img alt="320x240" src="<?php echo $_smarty_tpl->tpl_vars['img']->value['path'];?>
 " class="img-thumbnail" data-toggle="tooltip" data-placement="top" title="<?php echo $_smarty_tpl->tpl_vars['img']->value['nombre_ciudad'];?>
 "/></a>  
         </div>        
@@ -68,7 +69,8 @@ $_smarty_tpl->tpl_vars['img']->_loop = true;
    </div>
   </div>
   <div class="col-md-2">
-    <button type="button" class="btn btn-danger btn-lg btn-block">Comprar</button>
+    <button type="button" class="btn btn-info btn-lg btn-block"><i class="fa fa-shopping-cart fa-2x"></i>
+    </button>
   </div>
 </div></br></br></br></br>
 <!-- Fin de carousel -->
@@ -76,16 +78,19 @@ $_smarty_tpl->tpl_vars['img']->_loop = true;
 <!-- Tabla con los comentarios -->
 <div class="row">
   <div class="col-md-12">
-    <table class="table table-hover ">
+
+    <table class="table table-hover">
       <h4>Comentarios de nuestros viajeros</h4></br>
-      <thead id="a">
+      <thead id="tabla">
         <tr>
          <th></th>
          <th class="text-center"><i class="fa fa-male fa-2x"></i></i></th>
          <th class="text-center"><i class="fa fa-calendar fa-2x"></i></th>
          <th class="text-center"><i class="fa fa-comments fa-2x"></i></th>
          <th class="text-center"><i class="fa fa-eye fa-2x"></i></th>         
-         <th class="text-center"><a href="#lugar"><i class="fa fa-map-marker fa-2x"></i></a></th>         
+         
+         <th data-field="price" data-sortable="true" data-sorter="priceSorter"class="text-center"><i class="fa fa-map-marker fa-2x"></i>
+         </th>         
        </tr>
      </thead>
      <tbody>

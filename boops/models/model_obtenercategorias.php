@@ -65,7 +65,8 @@ class Model
 		JOIN   comentario c ON (c.id_persona = e.id_persona)
 		JOIN   ciudad ci ON (ci.id_ciudad= e.id_ciudad)
 		JOIN   categoria cat ON (cat.id_categoria = ci.id_categoria)
-        WHERE id_categoria_padre =$id_categoria_padre";
+        WHERE id_categoria_padre =$id_categoria_padre
+        ORDER BY nombre_ciudad ASC";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();	 

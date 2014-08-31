@@ -27,7 +27,9 @@
    </div>
   </div>
   <div class="col-md-2">
-  <button type="button" class="btn btn-danger btn-lg btn-block">Comprar</button>
+      <button type="button" class="btn btn-info btn-lg btn-block">
+      <i class="fa fa-shopping-cart fa-2x"></i>
+    </button>
   </div>
 </div></br></br>
 <!-- Fin de carousel -->	

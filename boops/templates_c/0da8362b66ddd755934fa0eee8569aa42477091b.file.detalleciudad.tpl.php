@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-31 22:31:36
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-01 01:43:54
          compiled from "./templates/detalleciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:66690556754036dfe1b3104-82178605%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0da8362b66ddd755934fa0eee8569aa42477091b' => 
     array (
       0 => './templates/detalleciudad.tpl',
-      1 => 1409517088,
+      1 => 1409528476,
       2 => 'file',
     ),
   ),
@@ -65,7 +65,9 @@ $_smarty_tpl->tpl_vars['j']->_loop = true;
    </div>
   </div>
   <div class="col-md-2">
-  <button type="button" class="btn btn-danger btn-lg btn-block">Comprar</button>
+      <button type="button" class="btn btn-info btn-lg btn-block">
+      <i class="fa fa-shopping-cart fa-2x"></i>
+    </button>
   </div>
 </div></br></br>
 <!-- Fin de carousel -->	
