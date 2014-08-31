@@ -64,6 +64,7 @@
     <script src="./js/SmoothPageScrolling.js"></script>
     <script src="./js/jquery.easing.min.js"></script>
     <script src="./js/obtener_categorias.js"></script>    
+    <script src="./js/detalle_ciudad.js"></script>  
     </script>
   </body>
 

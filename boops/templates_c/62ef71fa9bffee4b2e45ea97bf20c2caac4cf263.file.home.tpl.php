@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-30 21:08:20
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-31 19:32:51
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:163504257954022124cf5508-23041620%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1409231985,
+      1 => 1409498224,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_54022124db5c67_77776669',
   'variables' => 
   array (
     'Categorias' => 0,
     'categorias' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_54022124db5c67_77776669',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54022124db5c67_77776669')) {function content_54022124db5c67_77776669($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -46,7 +46,7 @@ $_smarty_tpl->tpl_vars['categorias']->_loop = true;
                     <li class="active">
                     <a href="javascript:GetSubCategoria(<?php echo $_smarty_tpl->tpl_vars['categorias']->value['id_categoria_padre'];?>
 )">
-                    <i class="fa fa-home fa-2x" ></i>                      
+                    <i class="fa fa-home fa-2x" ></i></a>                      
                   <?php }?>
                     </li>
                     <li>
@@ -80,7 +80,9 @@ $_smarty_tpl->tpl_vars['categorias']->_loop = true;
                   <i class="fa fa-youtube-square fa-3x"></i>&nbsp&nbsp
               </a>
               </div>
-            </div>                      
+            </div>       
+            <a class="back-to-top" >
+           <i class="fa fa-arrow-circle-down fa-2x"></i>
         
       </div>
             <div class="inner">
@@ -95,7 +97,9 @@ $_smarty_tpl->tpl_vars['categorias']->_loop = true;
     </div>
 
     <!--En este div es donde se colococa el contenido que se trae con Ajax!-->
+      
       <div id="contenido" class="container bs-docs-container">
+
       
       </div>      
 <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

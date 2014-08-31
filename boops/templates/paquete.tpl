@@ -17,9 +17,11 @@
    <tbody>
    {foreach from=$Paquete item=j}
       <tr>
-         <td><a href="ver_detalle.php"><i class="fa fa-search"></i></a>&nbsp&nbsp
-             <a href="ver_detalle.php"><i class="fa fa-envelope"></i></a>
+         <td><a href="javascript:DetalleCiudad({$j.id_ciudad})">
+                <i class="fa fa-search"></i></a>&nbsp&nbsp
+             <a href=""><i class="fa fa-envelope"></i></a>
          </td>         
+
          <td>{$j.nombre_ciudad}</td>
          <td>{$j.duracion}</td>
          <td>{$j.precio}</td>

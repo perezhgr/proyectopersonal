@@ -13,7 +13,7 @@
                   {if {$categorias.id_categoria} eq '1'}
                     <li class="active">
                     <a href="javascript:GetSubCategoria({$categorias.id_categoria_padre})">
-                    <i class="fa fa-home fa-2x" ></i>                      
+                    <i class="fa fa-home fa-2x" ></i></a>                      
                   {/if}
                     </li>
                     <li>
@@ -45,7 +45,9 @@
                   <i class="fa fa-youtube-square fa-3x"></i>&nbsp&nbsp
               </a>
               </div>
-            </div>                      
+            </div>       
+            <a class="back-to-top" >
+           <i class="fa fa-arrow-circle-down fa-2x"></i>
         
       </div>
             <div class="inner">
@@ -60,7 +62,9 @@
     </div>
 
     <!--En este div es donde se colococa el contenido que se trae con Ajax!-->
+      
       <div id="contenido" class="container bs-docs-container">
+
       
       </div>      
 {include file="footer.tpl"}

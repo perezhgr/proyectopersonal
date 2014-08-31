@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-30 21:08:20
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-31 20:14:48
          compiled from "./templates/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:163818247554022124dc15f9-27758000%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a4f6f0d327fc7bc3ea86f63906a1bf934ca50c7' => 
     array (
       0 => './templates/footer.tpl',
-      1 => 1409249642,
+      1 => 1409508617,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_54022124dc4829_59295033',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54022124dc4829_59295033')) {function content_54022124dc4829_59295033($_smarty_tpl) {?><footer>
   
@@ -85,6 +85,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <script src="./js/SmoothPageScrolling.js"></script>
     <script src="./js/jquery.easing.min.js"></script>
     <script src="./js/obtener_categorias.js"></script>    
+    <script src="./js/detalle_ciudad.js"></script>  
     </script>
   </body>
 

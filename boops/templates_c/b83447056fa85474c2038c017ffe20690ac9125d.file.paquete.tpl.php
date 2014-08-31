@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-30 21:10:04
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-31 20:19:02
          compiled from "./templates/paquete.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9159016025402218ca6a151-35980094%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b83447056fa85474c2038c017ffe20690ac9125d' => 
     array (
       0 => './templates/paquete.tpl',
-      1 => 1409251847,
+      1 => 1409508993,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5402218cad2c89_78033901',
   'variables' => 
   array (
     'Subcategoria' => 0,
@@ -23,8 +25,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'j' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5402218cad2c89_78033901',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5402218cad2c89_78033901')) {function content_5402218cad2c89_78033901($_smarty_tpl) {?><div>
    <?php  $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['i']->_loop = false;
@@ -54,9 +54,12 @@ foreach ($_from as $_smarty_tpl->tpl_vars['j']->key => $_smarty_tpl->tpl_vars['j
 $_smarty_tpl->tpl_vars['j']->_loop = true;
 ?>
       <tr>
-         <td><a href="ver_detalle.php"><i class="fa fa-search"></i></a>&nbsp&nbsp
-             <a href="ver_detalle.php"><i class="fa fa-envelope"></i></a>
+         <td><a href="javascript:DetalleCiudad(<?php echo $_smarty_tpl->tpl_vars['j']->value['id_ciudad'];?>
+)">
+                <i class="fa fa-search"></i></a>&nbsp&nbsp
+             <a href=""><i class="fa fa-envelope"></i></a>
          </td>         
+
          <td><?php echo $_smarty_tpl->tpl_vars['j']->value['nombre_ciudad'];?>
 </td>
          <td><?php echo $_smarty_tpl->tpl_vars['j']->value['duracion'];?>
