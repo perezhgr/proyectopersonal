@@ -34,8 +34,8 @@ class Controller
 			elseif ( $_GET['id_categoria_padre'] == 4 ) {
 
 				$subcategoria=$this->model->ObtenerSubcategoriaById($_GET['id_categoria_padre']);
-				$imagen=$this->model->ObtenerImgsByExperiencia($_GET['id_categoria_padre']);
-				$experiencia=$this->model->ObtenerExperiencias();
+				$imagen=$this->model->ObtenerImgsByCategoria($_GET['id_categoria_padre']);
+				$experiencia=$this->model->ObtenerExperienciasByCiudad($_GET['id_categoria_padre']);
 				$this->view->MostrarExperiencia($subcategoria,$imagen,$experiencia);
 			}
 			

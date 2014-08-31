@@ -23,6 +23,7 @@ class Model
 		return $query->fetchAll();
 	}
 
+	//Obtiene los lugares destacados que pertenecen a la categoria 1.
 	public function ObtenerContenidoById($id_categoria_padre){	
 		
 		$sql="SELECT c.id_ciudad,c.nombre_ciudad ,c.duracion, c.precio,i.path
@@ -43,24 +44,11 @@ class Model
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();	 
-	}
-
-	public function ObtenerExperiencias(){	
-		
-		$sql="SELECT nombre_persona ,condicion, fecha,texto,nombre_ciudad
-		FROM   experiencia e
-		JOIN   comentario c ON (c.id_persona = e.id_persona)
-		JOIN   ciudad ci ON (ci.id_ciudad= e.id_ciudad)
-		JOIN   categoria cat ON (cat.id_categoria = ci.id_categoria)";
-
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();	 
-	}
-
+	}	
 	
-	public function ObtenerImgsByExperiencia($id_categoria_padre){	
+	public function ObtenerImgsByCategoria($id_categoria_padre){	
 		
-		$sql="SELECT i.id_imagen,i.path,ci.nombre_ciudad
+		$sql="SELECT i.id_imagen,i.path,ci.nombre_ciudad,ci.id_ciudad
 		FROM   imagen i
 		JOIN   ciudad ci ON (ci.id_ciudad= i.id_ciudad)
 		JOIN   categoria cat ON (cat.id_categoria = ci.id_categoria)
@@ -68,16 +56,19 @@ class Model
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();	 
-	}	
+	}
 
-	/*public function ObtenerDetalleCiudadById($id_ciudad){
+	public function ObtenerExperienciasByCiudad($id_categoria_padre){	
 		
-		$sql = "SELECT nombre_ciudad,descripcion,precio,duracion 
-		FROM ciudad 
-		WHERE id_ciudad=$id_ciudad";
+		$sql=" SELECT nombre_persona ,condicion, fecha,texto,nombre_ciudad
+		FROM   experiencia e
+		JOIN   comentario c ON (c.id_persona = e.id_persona)
+		JOIN   ciudad ci ON (ci.id_ciudad= e.id_ciudad)
+		JOIN   categoria cat ON (cat.id_categoria = ci.id_categoria)
+        WHERE id_categoria_padre =$id_categoria_padre";
 
 		$query = $this->conn->query($sql);
-		return $query->fetchAll();
-	}*/
+		return $query->fetchAll();	 
+	}
 }
 ?>
