@@ -15,7 +15,7 @@
                       <button class="btn btn-lg btn-primary btn-block" ><i class="fa fa-pencil"></i></button>  
                       <textarea rows="10" type="text" class="form-control" placeholder="Escriba se mensaje" required></textarea><br>
                       <button class="btn btn-lg btn-primary btn-block" type="submit"><i class="fa fa-paper-plane"></i></button>
-                    </form><br><br><br>
+                    </form></br></br></br></br>
                   </div>                  
           
           </div>

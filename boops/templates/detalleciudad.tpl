@@ -48,3 +48,5 @@
 	{/foreach}
 		<!-- Fin Sucategoria -->
 </div>
+
+{include file="incluye.tpl"}

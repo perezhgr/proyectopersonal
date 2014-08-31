@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-31 21:27:46
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-31 21:31:20
          compiled from "./templates/detalleciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:66690556754036dfe1b3104-82178605%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0da8362b66ddd755934fa0eee8569aa42477091b' => 
     array (
       0 => './templates/detalleciudad.tpl',
-      1 => 1409513257,
+      1 => 1409513469,
       2 => 'file',
     ),
   ),
@@ -89,4 +89,6 @@ $_smarty_tpl->tpl_vars['j']->_loop = true;
 	<?php } ?>
 		<!-- Fin Sucategoria -->
 </div>
+
+<?php echo $_smarty_tpl->getSubTemplate ("incluye.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

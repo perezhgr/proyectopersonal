@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-30 21:10:25
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-31 21:57:08
          compiled from "./templates/contacto.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:478116103540221a1ed4727-36698086%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6c7bb102d4bad95e5a5dfe049d4ba60ee91b1c57' => 
     array (
       0 => './templates/contacto.tpl',
-      1 => 1409345242,
+      1 => 1409514888,
       2 => 'file',
     ),
   ),
@@ -15,14 +15,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_540221a201a108_80635272',
   'variables' => 
   array (
     'Contacto' => 0,
     'i' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_540221a201a108_80635272',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_540221a201a108_80635272')) {function content_540221a201a108_80635272($_smarty_tpl) {?><div class="row">
         <div class="col-md-12" role="main">
@@ -47,7 +47,7 @@ $_smarty_tpl->tpl_vars['i']->_loop = true;
                       <button class="btn btn-lg btn-primary btn-block" ><i class="fa fa-pencil"></i></button>  
                       <textarea rows="10" type="text" class="form-control" placeholder="Escriba se mensaje" required></textarea><br>
                       <button class="btn btn-lg btn-primary btn-block" type="submit"><i class="fa fa-paper-plane"></i></button>
-                    </form><br><br><br>
+                    </form></br></br></br></br>
                   </div>                  
           
           </div>

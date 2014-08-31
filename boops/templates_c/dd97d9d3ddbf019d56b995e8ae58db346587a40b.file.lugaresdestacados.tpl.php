@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-31 17:09:21
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-31 21:58:11
          compiled from "./templates/lugaresdestacados.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2011454730540221296081e3-03629007%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dd97d9d3ddbf019d56b995e8ae58db346587a40b' => 
     array (
       0 => './templates/lugaresdestacados.tpl',
-      1 => 1409497421,
+      1 => 1409515085,
       2 => 'file',
     ),
   ),
@@ -64,7 +64,7 @@ $_smarty_tpl->tpl_vars['j']->_loop = true;
       <button type="button" class="btn btn-info" data-toggle="modal" 
       data-target="#myModal">
       <i class="fa fa-angle-double-right fa-2x"></i>
-    </button></br></br></br>                                
+    </button></br></br></br></br>                                
   </div>
 <!-- Fin-->
 
@@ -92,5 +92,6 @@ $_smarty_tpl->tpl_vars['j']->_loop = true;
   </div>
 </div>
 
-</div><?php } ?>
+</div>
+<?php } ?>
 <!-- Fin modal --><?php }} ?>

@@ -24,7 +24,7 @@
       <button type="button" class="btn btn-info" data-toggle="modal" 
       data-target="#myModal">
       <i class="fa fa-angle-double-right fa-2x"></i>
-    </button></br></br></br>                                
+    </button></br></br></br></br>                                
   </div>
 <!-- Fin-->
 
@@ -49,5 +49,6 @@
   </div>
 </div>
 
-</div>{/foreach}
+</div>
+{/foreach}
 <!-- Fin modal -->
