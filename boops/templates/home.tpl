@@ -11,6 +11,7 @@
               <ul class="nav masthead-nav">
                 {foreach from=$Categorias item=categorias}
                   {if {$categorias.id_categoria} eq '1'}
+                    
                     <li class="active">
                     <a href="javascript:GetSubCategoria({$categorias.id_categoria_padre})">
                     <i class="fa fa-home fa-2x" ></i></a>                      
@@ -45,10 +46,10 @@
                   <i class="fa fa-youtube-square fa-3x"></i>&nbsp&nbsp
               </a>
               </div>
-            </div>       
-            <a class="back-to-top" >
-           <i class="fa fa-arrow-circle-down fa-2x"></i>
-        
+            </div></br>
+            <a href="#contenido">
+              <i class="fa fa-chevron-down fa-2x"></i>
+            </a>    
       </div>
             <div class="inner">
               <p>Tupar Viajes y Turismo - <a href="#">Copyright 2014</a>.</p>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-08-31 19:32:51
+<?php /* Smarty version Smarty-3.1.14, created on 2014-08-31 22:13:24
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:163504257954022124cf5508-23041620%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1409498224,
+      1 => 1409516002,
       2 => 'file',
     ),
   ),
@@ -43,6 +43,7 @@ $_smarty_tpl->tpl_vars['categorias']->_loop = true;
 ?>
                   <?php ob_start();?><?php echo $_smarty_tpl->tpl_vars['categorias']->value['id_categoria'];?>
 <?php $_tmp1=ob_get_clean();?><?php if ($_tmp1=='1'){?>
+                    
                     <li class="active">
                     <a href="javascript:GetSubCategoria(<?php echo $_smarty_tpl->tpl_vars['categorias']->value['id_categoria_padre'];?>
 )">
@@ -80,10 +81,10 @@ $_smarty_tpl->tpl_vars['categorias']->_loop = true;
                   <i class="fa fa-youtube-square fa-3x"></i>&nbsp&nbsp
               </a>
               </div>
-            </div>       
-            <a class="back-to-top" >
-           <i class="fa fa-arrow-circle-down fa-2x"></i>
-        
+            </div></br>
+            <a href="#contenido">
+              <i class="fa fa-chevron-down fa-2x"></i>
+            </a>    
       </div>
             <div class="inner">
               <p>Tupar Viajes y Turismo - <a href="#">Copyright 2014</a>.</p>

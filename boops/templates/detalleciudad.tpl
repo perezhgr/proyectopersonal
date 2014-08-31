@@ -12,7 +12,7 @@
 
 <!-- Carousel -->
 <div class="row">
-  <div class="col-md-10 col-md-offset-1">
+  <div class="col-md-10">
    <div id="myCarousel" class="carousel">
     <div class=""carousel-inner>
       <div class="item active">
@@ -23,7 +23,11 @@
         {/foreach}
       </div> 
     </div>    
+
    </div>
+  </div>
+  <div class="col-md-2">
+  <button type="button" class="btn btn-danger btn-lg btn-block">Comprar</button>
   </div>
 </div></br></br>
 <!-- Fin de carousel -->	
