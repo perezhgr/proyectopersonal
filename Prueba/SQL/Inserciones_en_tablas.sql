@@ -59,7 +59,13 @@ INSERT INTO `imagen` (`path`,`cover`,`id_ciudad`,`id_empresa`) VALUES
 ('img/mision.jpg',NULL,NULL,'2'),
 ('img/vision.jpg',NULL,NULL,'3'),
 ('img/empresa.jpg',NULL,NULL,'1'),
-('img/lejos.jpg',NULL,NULL,'4');
+('img/lejos.jpg',NULL,NULL,'4'),
+
+
+('img/sidney.jpg','s',NULL,NULL),
+('img/paris.jpg','s',NULL,NULL),
+('img/vancouver.jpg','s',NULL,NULL);	
+
 
 --Insercion en la tabla admin (sitioweb2014)
 INSERT INTO `tuparvt`.`administrador` (`mail`,`pass`) VALUES 

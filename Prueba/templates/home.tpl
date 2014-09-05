@@ -1,55 +1,4 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
-<head>
-<!-- DEFAULT META TAGS -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Tupar • Viajes y Turismo</title>
-<!-- DEFAULT META TAGS -->
-
-<meta property="og:url" content="http://beerealit.com/"/>
-<meta property="og:site_name" content="BeeReal - UX Design & Software Development">
-<meta property="og:title" content="BeeReal - UX Design & Software Development">
-<meta name="description" content="BeeReal is a technological innovation company which integrates User Experience, Web Development & Digital Marketing. It has a creative team of professionals with different skills, allowing to adapt to each business need and offering high quality services." >
-<meta property="og:description" content="BeeReal is a technological innovation company which integrates User Experience, Web Development & Digital Marketing. It has a creative team of professionals with different skills, allowing to adapt to each business need and offering high quality services." >
-<meta property="og:image" content="http://beerealit.com/files/images/beereal.jpg"/>
-
-<!-- FONTS -->
-<link href='css/api.js' rel='stylesheet' type='text/css' />
-<!-- FONTS -->
-
-<!-- CSS -->
-<link rel='stylesheet' id='default-style-css'  href='css/style.css' type='text/css'
- media='all' />
-<link rel='stylesheet' id='flexslider-style-css'  href='css/flexslider.css' type='text/css' media='all' />
-<link rel='stylesheet' id='easy-opener-style-css'  href='css/easy-opener.css' type='text/css' media='all' />
-<link rel='stylesheet' id='jplayer-style-css'  href='css/jplayer.css' type='text/css' media='all' />
-<link rel='stylesheet' id='isotope-style-css'  href='css/isotope.css' type='text/css' media='all' />
-<link rel="stylesheet" id='rsplugin-style-css' href='css/settings.css' type="text/css" media="all" />
-<link rel="stylesheet" id='fontawesome-style-css' href='css/font-awesome.min.css' type="text/css" media="all" />
-<link rel='stylesheet' id='retina-style-css'  href='css/retina.css' type='text/css' media='all' />
-<link rel='stylesheet' id='mqueries-style-css'  href='css/mqueries.css' type='text/css' media='all' />
-<link rel='stylesheet' id='mqueries-style-css'  href='css/font-awesome1.min.css' type='text/css'/>
-<link rel='stylesheet' id='mqueries-style-css'  href='css/font-awesome1.css' type='text/css'/>
-
-<!--link rel='stylesheet' href='files/css/bookblock.css' type='text/css' media='all' /-->
-<!-- CSS -->
-
-<!-- FAVICON -->
-<link rel="shortcut icon" href="files/uploads/favicon.png"/>
-<!-- FAVICON -->
-
-<!-- JQUERY LIBRARY & MODERNIZR -->
-<script src="js/jquery-1.9.1.min.js"></script>
-<script src='js/modernizr.custom.js'></script>
-<!-- JQUERY LIBRARY & MODERNIZR -->
-
-</head>
-
+{include file="header.tpl"}
 <body>
 
 <!-- PAGELOADER -->
@@ -68,16 +17,12 @@
     <header id="header" class="header-overlay">        
         <div class="header-inner wrapper clearfix">
             <div class="menu clearfix">
+            {foreach from=$Menu item=menu}
             <nav id="main-nav">
                     <ul>
-                    <li class="current-menu-item"><a href="#home" class="scroll-to">Inicio</a></li>
-                    <li><a href="#service" class="scroll-to">Acerca</a></li>
-                    <!--li><a href="#portfolio" class="scroll-to">Portfolio</a></li-->
-                    <li><a href="#team" class="scroll-to">Paquetes</a></li>
-                    <li><a href="#blog" class="scroll-to">Testimonio</a></li>
-                    <li><a href="#contact" class="scroll-to">Contacto</a></li>
-                    </ul>
+                    <li class="current-menu-item"><a href="#{$menu.id_menu}" class="scroll-to">{$menu.nombre_menu}</a></li>
                 </nav>
+            {/foreach}    
             </div>
                     
         </div> <!-- END .header-inner -->
@@ -88,7 +33,7 @@
     <div class="page-body">
     
         <!-- HOME (SLIDER) -->
-        <section id="home" class="no-padding">
+        <section id="1" class="no-padding">
         <div class="section-inner">
 
 
@@ -106,7 +51,7 @@
                 <!-- THE FIRST SLIDE -->
 
                 <li data-transition="fade" data-slotamount="5" data-masterspeed="800">
-
+                
                     <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
 
                     <img src="img/sidney.jpg"   alt="slidebg2"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
@@ -199,7 +144,7 @@
 
                          data-endeasing="easeInOutQuad"
 
-                         style="z-index: 3"><a href="#team" class="sr-button sr-buttonicon small-iconbutton scroll-to" title="Our Team"><i class="fa fa-angle-down"></i></a>
+                         style="z-index: 3"><a href="#3" class="sr-button sr-buttonicon small-iconbutton scroll-to" title="Our Team"><i class="fa fa-angle-down"></i></a>
 
                     </div>
 
@@ -285,7 +230,7 @@
 
                          data-endeasing="easeInOutQuad"
 
-                         style="z-index: 3"><a href="#service" class="sr-button sr-buttonicon small-iconbutton scroll-to" title="Our Services"><i class="fa fa-angle-down"></i></a>
+                         style="z-index: 3"><a href="#2" class="sr-button sr-buttonicon small-iconbutton scroll-to" title="Our Services"><i class="fa fa-angle-down"></i></a>
 
                     </div>
 
@@ -302,7 +247,7 @@
                     <!-- THE MAIN IMAGE IN THE SECOND SLIDE -->
 
                     <img src="img/vancouver.jpg"   alt="slidebg3"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
-
+                
                     <!-- LAYER NR. 2 -->
 
                     <div class="tp-caption srcaption-bigwhite lfl ltr"
@@ -345,7 +290,7 @@
 
                          data-endeasing="easeInOutQuad"
 
-                         style="z-index: 3">Aprenda mas sobre Tupar Viajes y Turismo
+                         style="z-index: 3">Tupar Viajes y Turismo
 
                     </div>
 
@@ -369,7 +314,7 @@
 
                          data-endeasing="easeInOutQuad"
 
-                         style="z-index: 3"><a href="#service" class="sr-button sr-buttonicon small-iconbutton scroll-to" title="Our Services"><i class="fa fa-angle-down"></i></a>
+                         style="z-index: 3"><a href="#2" class="sr-button sr-buttonicon small-iconbutton scroll-to" title="Our Services"><i class="fa fa-angle-down"></i></a>
 
                     </div>
 
@@ -479,7 +424,7 @@
         <!-- HOME (SLIDER) -->
     <div id="sections" class="hidden">
         <!-- SERVICE -->
-        <section id="service">
+        <section id="2">
         <div class="section-inner">
     <div class="wrapper">
 
@@ -488,39 +433,37 @@
             <div class="seperator size-small"><span></span></div>
             <!--h4 class="subtitle">Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et.<br>lobortis aliquam. Aliquam in tortor enim. orci ut et lobortis aliquam.</h4-->
         </div>
-
+        {foreach $Empresa as $empresa name=emp}
+        {if $smarty.foreach.emp.iteration == 1}
         <div class="column-section clearfix">
             <div class="column two-half align-center sr-animation sr-animation-zoomin service" data-delay="100">
-                <img src="img/empresa.jpg" alt="User Experience" />
-                <h3><strong>¿Quienes somos?</strong></h3>
-                <p>
-                    Viajes Falabella inició sus actividades como agencia de viajes en Argentina el año 2001.Es una empresa nacional filial perteneciente al holding Falabella S.A.C.I. e incorporada a la Asociación Internacional de Transporte Aéreo IATA.Nuestra empresa internacionalmente, posee agencias propias en Chile, Perú y Colombia. Cuenta con un departamento de atención a empresas especializado en viajes de negocios. Además, con un área de planificación y organización de viajes de incentivos y congresos, tanto en Argentina como en el extranjero.Viajes Falabella se ha destacado en el mercado por su perfil innovador y su preocupación constante por entregar un servicio de primera clase, que logra equilibrar calidad, precio y formas de pago. Por esta razón, es la agencia de viajes con mayor crecimiento de los últimos años, ocupando un lugar de privilegio entre las principales empresas de la industria.
-                </p></br>
+                <img src="{$empresa.path}" alt="User Experience" />
+                <h3><strong>{$empresa.titulo}</strong></h3>
+                <p>{$empresa.cuerpo}</p></br>
             </div>
+        {else if $smarty.foreach.emp.iteration == 2}
             <div class="column one-half last-col align-center align-center sr-animation sr-animation-zoomin service"  data-delay="250">
-                <img src="img/mision.jpg" alt="User Interface Design" />
-                <h3><strong>Nuestra Misión</strong></h3>
-                <p>
-                    Lograr optimizar los costos de viaje de su empresa ofreciendo el mejor servicio, condiciones y beneficios, los cuales serán traducidos en un ahorro para su empresa. 
-                </p>
+                <img src="{$empresa.path}" alt="User Interface Design" />
+                <h3><strong>{$empresa.titulo}</strong></h3>
+                <p>{$empresa.cuerpo}</p>
             </div>
-
+        {else if $smarty.foreach.emp.iteration == 3}
             <div class="column one-half align-center align-center sr-animation sr-animation-zoomin service"  data-delay="400">
-                <img src="img/vision.jpg" alt="UI Dev" />
-                <h3><strong>Nuestra Visión</strong></h3>
-                <p>
-                   Ser la agencia de viajes más eficiente del mercado del turismo corporativo, satisfaciendo de esta forma las necesidades de nuestros pasajeros de negocio. 
-                </p></br>
+                <img src="{$empresa.path}" alt="UI Dev" />
+                <h3><strong>{$empresa.titulo}</strong></h3>
+                <p>{$empresa.cuerpo}</p></br>
 
             </div>
+        {else}
             <div class="column two-half last-col align-center align-center sr-animation sr-animation-zoomin service" data-delay="550">
-                <img src="img/lejos.jpg" alt="Web Dev" />
-                <h3><strong>Su empresa puede ir muy lejos</strong></h3>
-                <p>
-                    Nuestros vínculos comerciales tanto en Argentina como en el extranjero, permiten ofrecer a su empresa mejores tarifas y condiciones en los principales hoteles nacionales y cadenas internacionales, tarifas preferenciales en líneas aéreas y servicios de traslados.Administraremos y gestionaremos para su empresa acuerdos de descuento con proveedores según sus necesidades.
-                </p>
+                <img src="{$empresa.path}" alt="Web Dev" />
+                <h3><strong>{$empresa.titulo}</strong></h3>
+                <p>{$empresa.cuerpo}</p>
             </div>
         </div>
+        {/if}
+        {/foreach}
+        
     </div> <!-- END .wrapper -->
     <div class="spacer spacer-small"></div>
 
@@ -565,7 +508,7 @@
         <!-- PORTFOLIO -->  
         
         <!-- TEAM -->
-        <section id="team">
+        <section id="3">
         <div class="section-inner">
 <div class="wrapper">
 
@@ -722,7 +665,7 @@
         <!-- TEAM -->       
         
         <!-- BLOG -->
-       <section id="blog">
+       <section id="4">
         <div class="section-inner">
 <div class="wrapper">
 
@@ -878,7 +821,7 @@
         <div class="spacer spacer-big"></div>
 
         <!-- CONTACT -->
-       <section id="contact" class="no-padding">
+       <section id="5" class="no-padding">
                <div class="section-inner">
 
 
@@ -1048,63 +991,4 @@
 </script>       </section>
         <!-- CONTACT -->
         
-        <!-- FOOTER -->  
-        <footer>
-            <div class="footerinner wrapper align-center text-light">
-                <div class="column one-third partners">
-                    <a href="http://www.cepit.org.ar/" target="_blank" class="cepit first">cepit</a>
-                    <a href="http://www.adcv.org.ar/" target="_blank" class="adcv">adcv</a>
-                    <a href="http://www.camaraempresaria.org.ar/" target="_blank" class="cet">cet</a>
-                </div>
-                <div class="column one-third">
-                    <a id="backtotop" href="#" class="sr-button sr-buttonicon small-iconbutton" title="Back to Top"><i class="fa fa-angle-up"></i></a>
-                </div>
-                <div class="column one-third last-col social-share">
-                    <a href="http://twitter.com/beerealit" target="_blank" class="tweet">twitter</a>
-                    <a href="http://facebook.com/beerealit" target="_blank" class="fbk">facebook</a>
-                    <a href="http://www.youtube.com/beerealit" target="_blank" class="ytb">youtube</a>
-                    <a href="https://vimeo.com/user15326840" target="_blank" class="vmo">vimeo</a>
-                </div>
-                <div class="spacer spacer-big"></div>
-                <p class="copyright">&copy; 2014 Copyright • Tupar VyT • Turismo & Viajes</p>
-            </div>
-        </footer>
-        <!-- FOOTER -->         
-     </div>
-    </div> <!-- END .page-body -->
-    <!-- PAGEBODY -->
-    
-</div> <!-- END #page-content -->
-<!-- PAGE CONTENT -->
-
-
-<!-- SCRIPTS -->
-<script type='text/javascript' src='js/retina.js'></script>
-<script type='text/javascript' src='js/jquery.easing.1.3.js'></script>
-<script type='text/javascript' src='js/jquery.easing.compatibility.js'></script>
-<script type='text/javascript' src='js/jquery.visible.min.js'></script>
-<script type='text/javascript' src='js/xone-header.js'></script>
-<script type='text/javascript' src='js/jquery.easy-opener.min.js'></script>
-<script type='text/javascript' src='js/jquery.flexslider.min.js'></script>
-<script type='text/javascript' src='js/jquery.isotope.min.js'></script>
-<script type='text/javascript' src='js/jquery.bgvideo.min.js'></script>
-<script type='text/javascript' src='js/jquery.fitvids.min.js'></script>
-<script type='text/javascript' src='jplayer/jquery.jplayer.min.js'></script>
-<script type="text/javascript" src="js/jquery.themepunch.plugins.min.js"></script>
-<script type="text/javascript" src="js/jquery.themepunch.revolution.min.js"></script>
-<script type='text/javascript' src='js/jquery.parallax.min.js'></script>
-<script type='text/javascript' src='js/jquery.counter.min.js'></script>
-<script type='text/javascript' src='js/jquery.scroll.min.js'></script>
-<script type='text/javascript' src='js/xone-loader.js'></script>
-<script type='text/javascript' src='js/xone-form.js'></script>
-<!--script language="javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script-->
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<!--script type="text/javascript" src="files/js/jquerypp.custom.js"></script-->
-<!--script type="text/javascript" src="files/js/jquery.bookblock.js"></script-->
-<script type='text/javascript' src='js/script.js'></script>
-<script type="text/javascript" src="js/twitterfeed.js"></script>
-
-<!-- SCRIPTS -->
-
-</body>
-</html>
+{include file="footer.tpl"}
