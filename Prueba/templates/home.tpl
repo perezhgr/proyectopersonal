@@ -437,26 +437,26 @@
         {if $smarty.foreach.emp.iteration == 1}
         <div class="column-section clearfix">
             <div class="column two-half align-center sr-animation sr-animation-zoomin service" data-delay="100">
-                <img src="{$empresa.path}" alt="User Experience" />
+                <img src="{$empresa.path}" alt="" />
                 <h3><strong>{$empresa.titulo}</strong></h3>
                 <p>{$empresa.cuerpo}</p></br>
             </div>
         {else if $smarty.foreach.emp.iteration == 2}
             <div class="column one-half last-col align-center align-center sr-animation sr-animation-zoomin service"  data-delay="250">
-                <img src="{$empresa.path}" alt="User Interface Design" />
+                <img src="{$empresa.path}" alt="" />
                 <h3><strong>{$empresa.titulo}</strong></h3>
                 <p>{$empresa.cuerpo}</p>
             </div>
         {else if $smarty.foreach.emp.iteration == 3}
             <div class="column one-half align-center align-center sr-animation sr-animation-zoomin service"  data-delay="400">
-                <img src="{$empresa.path}" alt="UI Dev" />
+                <img src="{$empresa.path}" alt="" />
                 <h3><strong>{$empresa.titulo}</strong></h3>
                 <p>{$empresa.cuerpo}</p></br>
 
             </div>
         {else}
             <div class="column two-half last-col align-center align-center sr-animation sr-animation-zoomin service" data-delay="550">
-                <img src="{$empresa.path}" alt="Web Dev" />
+                <img src="{$empresa.path}" alt="" />
                 <h3><strong>{$empresa.titulo}</strong></h3>
                 <p>{$empresa.cuerpo}</p>
             </div>
@@ -519,143 +519,40 @@
     </div>
 
     <div class="column-section clearfix">
-    <div class="column one-fourth align-center sr-animation sr-animation-frombottom" data-delay="200">
-            <div class="team-pic">
-                <div class="imgoverlay text-light">
-                    <img src="img/amsterdam.jpg" alt="Amsterdam">
-                    <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
-                    <a href="detalle_viaje.html">Ver mas</a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="team-name"><strong>Amsterdam</strong></h4>
-            <h6 class="team-role">Holanda</h6>
-            <div class="seperator size-mini height-small"><span></span></div>
-            <!--p class="team-info">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
-            </p-->
-        </div>
+    {foreach $Ciudades as $ciudades name=c } 
     <div class="column one-fourth align-center sr-animation sr-animation-frombottom" data-delay="400">
             <div class="team-pic">
                 <div class="imgoverlay text-light">
-                    <img src="img/berlin.jpg" alt="Berlin">
+                    <img src="{$ciudades.path}" alt="Berlin">
                     <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
                     <a href="detalle_viaje.html">Ver mas</a>
                     </div>
                     </div>
                 </div>
             </div>
-            <h4 class="team-name"><strong>Berlin</strong></h4>
-            <h6 class="team-role">Alemania</h6>
+            <h4 class="team-name"><strong>{$ciudades.nombre_ciudad}</strong></h4>
+            <h6 class="team-role">{$ciudades.nombre_pais}</h6>
             <div class="seperator size-mini height-small"><span></span></div>
             <!--p class="team-info">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
             </p-->
-        </div>
-    <div class="column one-fourth align-center sr-animation sr-animation-frombottom" data-delay="600">
+        </div>{/foreach}  
+    
+    <!--<div class="column one-fourth align-center last-col sr-animation sr-animation-frombottom" data-delay="800">
             <div class="team-pic">
                 <div class="imgoverlay text-light">
-                    <img src="img/paris1.jpg" alt="UX Paula Dab&oacute;s">
+                    <img src="" alt="">
                     <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
                         <a href="detalle_viaje.html">Ver mas</a>
                     </div>
                     </div>
                 </div>
             </div>
-            <h4 class="team-name"><strong>Paris</strong></h4>
-            <h6 class="team-role">Francia</h6>
+            <h4 class="team-name"><strong></strong></h4>
+            <h6 class="team-role"></h6>
             <div class="seperator size-mini height-small"><span></span></div>
-            <!--p class="team-info">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
-            </p-->
-        </div>
-    <div class="column one-fourth align-center last-col sr-animation sr-animation-frombottom" data-delay="800">
-            <div class="team-pic">
-                <div class="imgoverlay text-light">
-                    <img src="img/cape.jpg" alt="CTO Nicol&aacute;s Tourn&eacute;">
-                    <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
-                        <a href="detalle_viaje.html">Ver mas</a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="team-name"><strong>Ciudad del Cabo</strong></h4>
-            <h6 class="team-role">Sudafrica</h6>
-            <div class="seperator size-mini height-small"><span></span></div>
-            <!--p class="team-info">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
-            </p-->
-        </div>
-    <div class="column one-fourth align-center sr-animation sr-animation-frombottom" data-delay="200">
-            <div class="team-pic">
-                <div class="imgoverlay text-light">
-                    <img src="img/sydney.jpg" alt="Amsterdam">
-                    <div class="overlay"><span class="overlaycolor"></span>
-                    <div class="overlayinfo">
-                    <a href="detalle_viaje.html">Ver mas</a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="team-name"><strong>Sidney</strong></h4>
-            <h6 class="team-role">Australia</h6>
-            <div class="seperator size-mini height-small"><span></span></div>
-            <!--p class="team-info">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
-            </p-->
-        </div>
-    <div class="column one-fourth align-center sr-animation sr-animation-frombottom" data-delay="200">
-            <div class="team-pic">
-                <div class="imgoverlay text-light">
-                    <img src="img/ny.jpg" alt="Amsterdam">
-                    <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
-                    <a href="detalle_viaje.html">Ver mas</a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="team-name"><strong>Nueva York</strong></h4>
-            <h6 class="team-role">EE.UU</h6>
-            <div class="seperator size-mini height-small"><span></span></div>
-            <!--p class="team-info">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
-            </p-->
-        </div>
-    <div class="column one-fourth align-center sr-animation sr-animation-frombottom" data-delay="200">
-            <div class="team-pic">
-                <div class="imgoverlay text-light">
-                    <img src="img/dubai.jpg" alt="Amsterdam">
-                    <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
-                    <a href="detalle_viaje.html">Ver mas</a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="team-name"><strong>Dubai</strong></h4>
-            <h6 class="team-role">Emiratos Arabes Unidos</h6>
-            <div class="seperator size-mini height-small"><span></span></div>
-            <!--p class="team-info">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
-            </p-->
-        </div>
-    <div class="column one-fourth align-center last-col sr-animation sr-animation-frombottom" data-delay="800">
-            <div class="team-pic">
-                <div class="imgoverlay text-light">
-                    <img src="img/london.jpg" alt="">
-                    <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
-                    <a href="detalle_viaje.html">Ver mas</a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="team-name"><strong>Londres</strong></h4>
-            <h6 class="team-role">Reino Unido</h6>
-            <div class="seperator size-mini height-small"><span></span></div>
-            <!--p class="team-info">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
-            </p-->
-        </div>                                     
+    </div-->
+                           
     </div>
 </div> <!-- END .wrapper -->
 

@@ -24,6 +24,10 @@ class View
 		$this->smarty->assign("Empresa",$empresa);				
 	}
 
+	public function MostrarCiudades($ciudades){
+		$this->smarty->assign("Ciudades",$ciudades);				
+	}
+
 	public function ImprimirHome(){
 		$this->smarty->display('home.tpl');
 

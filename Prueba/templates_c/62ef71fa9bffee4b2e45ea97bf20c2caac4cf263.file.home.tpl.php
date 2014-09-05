@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-05 21:40:15
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-05 23:50:46
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9921847175409f7c51398a6-54417005%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1409946011,
+      1 => 1409953844,
       2 => 'file',
     ),
   ),
@@ -23,6 +23,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'menu' => 0,
     'Empresa' => 0,
     'empresa' => 0,
+    'Ciudades' => 0,
+    'ciudades' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -479,7 +481,7 @@ $_smarty_tpl->tpl_vars['empresa']->_loop = true;
         <div class="column-section clearfix">
             <div class="column two-half align-center sr-animation sr-animation-zoomin service" data-delay="100">
                 <img src="<?php echo $_smarty_tpl->tpl_vars['empresa']->value['path'];?>
-" alt="User Experience" />
+" alt="" />
                 <h3><strong><?php echo $_smarty_tpl->tpl_vars['empresa']->value['titulo'];?>
 </strong></h3>
                 <p><?php echo $_smarty_tpl->tpl_vars['empresa']->value['cuerpo'];?>
@@ -488,7 +490,7 @@ $_smarty_tpl->tpl_vars['empresa']->_loop = true;
         <?php }elseif($_smarty_tpl->getVariable('smarty')->value['foreach']['emp']['iteration']==2){?>
             <div class="column one-half last-col align-center align-center sr-animation sr-animation-zoomin service"  data-delay="250">
                 <img src="<?php echo $_smarty_tpl->tpl_vars['empresa']->value['path'];?>
-" alt="User Interface Design" />
+" alt="" />
                 <h3><strong><?php echo $_smarty_tpl->tpl_vars['empresa']->value['titulo'];?>
 </strong></h3>
                 <p><?php echo $_smarty_tpl->tpl_vars['empresa']->value['cuerpo'];?>
@@ -497,7 +499,7 @@ $_smarty_tpl->tpl_vars['empresa']->_loop = true;
         <?php }elseif($_smarty_tpl->getVariable('smarty')->value['foreach']['emp']['iteration']==3){?>
             <div class="column one-half align-center align-center sr-animation sr-animation-zoomin service"  data-delay="400">
                 <img src="<?php echo $_smarty_tpl->tpl_vars['empresa']->value['path'];?>
-" alt="UI Dev" />
+" alt="" />
                 <h3><strong><?php echo $_smarty_tpl->tpl_vars['empresa']->value['titulo'];?>
 </strong></h3>
                 <p><?php echo $_smarty_tpl->tpl_vars['empresa']->value['cuerpo'];?>
@@ -507,7 +509,7 @@ $_smarty_tpl->tpl_vars['empresa']->_loop = true;
         <?php }else{ ?>
             <div class="column two-half last-col align-center align-center sr-animation sr-animation-zoomin service" data-delay="550">
                 <img src="<?php echo $_smarty_tpl->tpl_vars['empresa']->value['path'];?>
-" alt="Web Dev" />
+" alt="" />
                 <h3><strong><?php echo $_smarty_tpl->tpl_vars['empresa']->value['titulo'];?>
 </strong></h3>
                 <p><?php echo $_smarty_tpl->tpl_vars['empresa']->value['cuerpo'];?>
@@ -572,143 +574,47 @@ $_smarty_tpl->tpl_vars['empresa']->_loop = true;
     </div>
 
     <div class="column-section clearfix">
-    <div class="column one-fourth align-center sr-animation sr-animation-frombottom" data-delay="200">
-            <div class="team-pic">
-                <div class="imgoverlay text-light">
-                    <img src="img/amsterdam.jpg" alt="Amsterdam">
-                    <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
-                    <a href="detalle_viaje.html">Ver mas</a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="team-name"><strong>Amsterdam</strong></h4>
-            <h6 class="team-role">Holanda</h6>
-            <div class="seperator size-mini height-small"><span></span></div>
-            <!--p class="team-info">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
-            </p-->
-        </div>
+    <?php  $_smarty_tpl->tpl_vars['ciudades'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ciudades']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['Ciudades']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['ciudades']->key => $_smarty_tpl->tpl_vars['ciudades']->value){
+$_smarty_tpl->tpl_vars['ciudades']->_loop = true;
+?> 
     <div class="column one-fourth align-center sr-animation sr-animation-frombottom" data-delay="400">
             <div class="team-pic">
                 <div class="imgoverlay text-light">
-                    <img src="img/berlin.jpg" alt="Berlin">
+                    <img src="<?php echo $_smarty_tpl->tpl_vars['ciudades']->value['path'];?>
+" alt="Berlin">
                     <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
                     <a href="detalle_viaje.html">Ver mas</a>
                     </div>
                     </div>
                 </div>
             </div>
-            <h4 class="team-name"><strong>Berlin</strong></h4>
-            <h6 class="team-role">Alemania</h6>
+            <h4 class="team-name"><strong><?php echo $_smarty_tpl->tpl_vars['ciudades']->value['nombre_ciudad'];?>
+</strong></h4>
+            <h6 class="team-role"><?php echo $_smarty_tpl->tpl_vars['ciudades']->value['nombre_pais'];?>
+</h6>
             <div class="seperator size-mini height-small"><span></span></div>
             <!--p class="team-info">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
             </p-->
-        </div>
-    <div class="column one-fourth align-center sr-animation sr-animation-frombottom" data-delay="600">
+        </div><?php } ?>  
+    
+    <!--<div class="column one-fourth align-center last-col sr-animation sr-animation-frombottom" data-delay="800">
             <div class="team-pic">
                 <div class="imgoverlay text-light">
-                    <img src="img/paris1.jpg" alt="UX Paula Dab&oacute;s">
+                    <img src="" alt="">
                     <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
                         <a href="detalle_viaje.html">Ver mas</a>
                     </div>
                     </div>
                 </div>
             </div>
-            <h4 class="team-name"><strong>Paris</strong></h4>
-            <h6 class="team-role">Francia</h6>
+            <h4 class="team-name"><strong></strong></h4>
+            <h6 class="team-role"></h6>
             <div class="seperator size-mini height-small"><span></span></div>
-            <!--p class="team-info">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
-            </p-->
-        </div>
-    <div class="column one-fourth align-center last-col sr-animation sr-animation-frombottom" data-delay="800">
-            <div class="team-pic">
-                <div class="imgoverlay text-light">
-                    <img src="img/cape.jpg" alt="CTO Nicol&aacute;s Tourn&eacute;">
-                    <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
-                        <a href="detalle_viaje.html">Ver mas</a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="team-name"><strong>Ciudad del Cabo</strong></h4>
-            <h6 class="team-role">Sudafrica</h6>
-            <div class="seperator size-mini height-small"><span></span></div>
-            <!--p class="team-info">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
-            </p-->
-        </div>
-    <div class="column one-fourth align-center sr-animation sr-animation-frombottom" data-delay="200">
-            <div class="team-pic">
-                <div class="imgoverlay text-light">
-                    <img src="img/sydney.jpg" alt="Amsterdam">
-                    <div class="overlay"><span class="overlaycolor"></span>
-                    <div class="overlayinfo">
-                    <a href="detalle_viaje.html">Ver mas</a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="team-name"><strong>Sidney</strong></h4>
-            <h6 class="team-role">Australia</h6>
-            <div class="seperator size-mini height-small"><span></span></div>
-            <!--p class="team-info">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
-            </p-->
-        </div>
-    <div class="column one-fourth align-center sr-animation sr-animation-frombottom" data-delay="200">
-            <div class="team-pic">
-                <div class="imgoverlay text-light">
-                    <img src="img/ny.jpg" alt="Amsterdam">
-                    <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
-                    <a href="detalle_viaje.html">Ver mas</a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="team-name"><strong>Nueva York</strong></h4>
-            <h6 class="team-role">EE.UU</h6>
-            <div class="seperator size-mini height-small"><span></span></div>
-            <!--p class="team-info">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
-            </p-->
-        </div>
-    <div class="column one-fourth align-center sr-animation sr-animation-frombottom" data-delay="200">
-            <div class="team-pic">
-                <div class="imgoverlay text-light">
-                    <img src="img/dubai.jpg" alt="Amsterdam">
-                    <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
-                    <a href="detalle_viaje.html">Ver mas</a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="team-name"><strong>Dubai</strong></h4>
-            <h6 class="team-role">Emiratos Arabes Unidos</h6>
-            <div class="seperator size-mini height-small"><span></span></div>
-            <!--p class="team-info">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
-            </p-->
-        </div>
-    <div class="column one-fourth align-center last-col sr-animation sr-animation-frombottom" data-delay="800">
-            <div class="team-pic">
-                <div class="imgoverlay text-light">
-                    <img src="img/london.jpg" alt="">
-                    <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
-                    <a href="detalle_viaje.html">Ver mas</a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            <h4 class="team-name"><strong>Londres</strong></h4>
-            <h6 class="team-role">Reino Unido</h6>
-            <div class="seperator size-mini height-small"><span></span></div>
-            <!--p class="team-info">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
-            </p-->
-        </div>                                     
+    </div-->
+                           
     </div>
 </div> <!-- END .wrapper -->
 
