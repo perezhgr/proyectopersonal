@@ -17,7 +17,7 @@ class View
 
 	public function MostrarMenu($menu){
 
-		$this->smarty->assign("Menu",$menu);				
+		$this->smarty->assign("Menu",$menu);			
 	}
 
 	public function MostrarDescripcionEmpresa($empresa){
@@ -26,6 +26,10 @@ class View
 
 	public function MostrarCiudades($ciudades){
 		$this->smarty->assign("Ciudades",$ciudades);				
+	}
+
+	public function MostrarTestimonios($testimonios){
+		$this->smarty->assign("Testimonios",$testimonios);				
 	}
 
 	public function ImprimirHome(){

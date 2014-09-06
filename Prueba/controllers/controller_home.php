@@ -16,6 +16,7 @@ class Controller
 		$this->view->MostrarMenu($this->model->ObtenerMenu());
 		$this->view->MostrarDescripcionEmpresa($this->model->ObtenerDescripcionEmpresa());
 		$this->view->MostrarCiudades($this->model->ObtenerCiudades());
+		$this->view->MostrarTestimonios($this->model->ObtenerTestimonios());	
 
 		$this->view->ImprimirHome();
 	}
