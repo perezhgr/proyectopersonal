@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-06 23:09:18
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-06 23:35:36
          compiled from "./templates/detalle_experiencia.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:473058511540b0fa99f6816-16147112%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c975a9ce1cc8a10d45629ba24e85d05104491571' => 
     array (
       0 => './templates/detalle_experiencia.tpl',
-      1 => 1410037755,
+      1 => 1410039333,
       2 => 'file',
     ),
   ),
@@ -30,7 +30,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_540b0fa9a46d01_20042925')) {function content_540b0fa9a46d01_20042925($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_540b0fa9a46d01_20042925')) {function content_540b0fa9a46d01_20042925($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/opt/lampp/htdocs/Prueba/libs/plugins/modifier.date_format.php';
+?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <body>
 
@@ -130,9 +131,9 @@ $_smarty_tpl->tpl_vars['comentario']->_loop = true;
 ?>
                  <dt class="even">
                  <a ><b><?php echo $_smarty_tpl->tpl_vars['comentario']->value['nombre_persona'];?>
-</b></a>&nbsp
-                    <span><?php echo $_smarty_tpl->tpl_vars['comentario']->value['fecha'];?>
-</span>
+&nbsp•</b></a>&nbsp
+                    <span><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['comentario']->value['fecha'],"%e %B, %Y");?>
+&nbsp•</span>
                     <span>(<?php echo $_smarty_tpl->tpl_vars['comentario']->value['condicion'];?>
 )</span>
                  </dt>

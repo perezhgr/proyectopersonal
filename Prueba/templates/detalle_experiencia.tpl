@@ -76,8 +76,8 @@
                 {/foreach}
                 {foreach from=$Comentario item=comentario}
                  <dt class="even">
-                 <a ><b>{$comentario.nombre_persona}</b></a>&nbsp
-                    <span>{$comentario.fecha}</span>
+                 <a ><b>{$comentario.nombre_persona}&nbsp•</b></a>&nbsp
+                    <span>{$comentario.fecha|date_format:"%e %B, %Y"}&nbsp•</span>
                     <span>({$comentario.condicion})</span>
                  </dt>
                 <p class="text-left"><strong>•&nbsp</strong>{$comentario.texto}</p>
