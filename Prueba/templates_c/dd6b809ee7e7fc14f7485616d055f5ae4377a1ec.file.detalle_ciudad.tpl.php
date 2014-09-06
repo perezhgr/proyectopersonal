@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-06 21:33:22
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-06 21:46:34
          compiled from "./templates/detalle_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2080452488540b06408e9a94-16895380%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dd6b809ee7e7fc14f7485616d055f5ae4377a1ec' => 
     array (
       0 => './templates/detalle_ciudad.tpl',
-      1 => 1410031999,
+      1 => 1410032663,
       2 => 'file',
     ),
   ),
@@ -129,7 +129,6 @@ $_smarty_tpl->tpl_vars['imagen']->_loop = true;
 </div> <!-- END .wrapper -->
 </div> <!-- END .wrapper -->
 </div> <!-- END .section-inner-->       </section>
-        <!-- TEAM -->       
-   
+        <!-- TEAM -->      
 <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 <?php }} ?>

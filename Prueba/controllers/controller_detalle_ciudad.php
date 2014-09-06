@@ -19,7 +19,7 @@ class Controller
 			$this->view->MostrarImagenCiudad($imagen);
 		}
 
-		$this->view->ImprimirHome();
+		$this->view->ImprimirDetalleCiudad();
 	}
 
 

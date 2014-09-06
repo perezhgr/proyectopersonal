@@ -85,6 +85,5 @@
 </div> <!-- END .wrapper -->
 </div> <!-- END .wrapper -->
 </div> <!-- END .section-inner-->       </section>
-        <!-- TEAM -->       
-   
+        <!-- TEAM -->      
 {include file="footer.tpl"}

@@ -580,7 +580,7 @@
                 <div class="imgoverlay text-light">
                     <img src="{$testimonios.path}" alt="Amsterdam">
                     <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
-                    <a href="detalle_experiencia.php">Ver mas</a>
+                    <a href="detalle_experiencia.php?id_ciudad={$testimonios.id_ciudad}">Ver mas</a>
                     </div>
                     </div>
                 </div>
