@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-06 01:39:09
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-06 21:24:00
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9921847175409f7c51398a6-54417005%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1409960340,
+      1 => 1410030290,
       2 => 'file',
     ),
   ),
@@ -587,7 +587,8 @@ $_smarty_tpl->tpl_vars['ciudades']->_loop = true;
                     <img src="<?php echo $_smarty_tpl->tpl_vars['ciudades']->value['path'];?>
 " alt="Berlin">
                     <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
-                    <a href="detalle_viaje.html">Ver mas</a>
+                    <a href="detalle_ciudad.php?id_ciudad=<?php echo $_smarty_tpl->tpl_vars['ciudades']->value['id_ciudad'];?>
+">Ver mas</a>
                     </div>
                     </div>
                 </div>
@@ -649,7 +650,7 @@ $_smarty_tpl->tpl_vars['testimonios']->_loop = true;
                     <img src="<?php echo $_smarty_tpl->tpl_vars['testimonios']->value['path'];?>
 " alt="Amsterdam">
                     <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
-                    <a href="detalle_viaje.html">Ver mas</a>
+                    <a href="detalle_experiencia.php">Ver mas</a>
                     </div>
                     </div>
                 </div>

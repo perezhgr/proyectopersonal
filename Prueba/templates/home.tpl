@@ -525,7 +525,7 @@
                 <div class="imgoverlay text-light">
                     <img src="{$ciudades.path}" alt="Berlin">
                     <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
-                    <a href="detalle_viaje.html">Ver mas</a>
+                    <a href="detalle_ciudad.php?id_ciudad={$ciudades.id_ciudad}">Ver mas</a>
                     </div>
                     </div>
                 </div>
@@ -580,7 +580,7 @@
                 <div class="imgoverlay text-light">
                     <img src="{$testimonios.path}" alt="Amsterdam">
                     <div class="overlay"><span class="overlaycolor"></span><div class="overlayinfo">
-                    <a href="detalle_viaje.html">Ver mas</a>
+                    <a href="detalle_experiencia.php">Ver mas</a>
                     </div>
                     </div>
                 </div>

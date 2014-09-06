@@ -13,9 +13,9 @@ class Model
 
 	public function ObtenerDetalleCiudadById($id_ciudad){	
 		
-		$sql="SELECT nombre_ciudad,duracion,descripcion,precio
-		FROM   ciudad
-		WHERE  id_ciudad=$id_ciudad";
+		$sql="SELECT c.*
+		FROM ciudad c
+		WHERE c.id_ciudad = $id_ciudad";
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();	 
 	}

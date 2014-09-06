@@ -9,9 +9,18 @@ class View
 		$this->smarty = New Smarty;
 	}
 
+
+	public function MostrarDetalleCiudad($ciudad){
+		$this->smarty->assign("Ciudad",$ciudad);			
+	}
+
+
+	public function MostrarImagenCiudad($imagen){
+		$this->smarty->assign("Imagen",$imagen);
+	}
+
 	public function ImprimirHome(){
 		$this->smarty->display('detalle_ciudad.tpl');
-
 	}
 }
 

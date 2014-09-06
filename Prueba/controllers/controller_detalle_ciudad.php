@@ -12,11 +12,12 @@ class Controller
 
 	public function ImprimirPagina(){
 
-		//$this->view->MostrarCover($this->model->ObtenerCover());
-		//$this->view->MostrarMenu($this->model->ObtenerMenu());
-		//$this->view->MostrarDescripcionEmpresa($this->model->ObtenerDescripcionEmpresa());
-		//$this->view->MostrarCiudades($this->model->ObtenerCiudades());
-		//$this->view->MostrarTestimonios($this->model->ObtenerTestimonios());	
+		if(isset($_GET['id_ciudad'])){
+			$ciudad = $this->model->ObtenerDetalleCiudadById($_GET['id_ciudad']);
+			$imagen = $this->model->ObtenerImagenByIdCiudad($_GET['id_ciudad']);
+			$this->view->MostrarDetalleCiudad($ciudad);			
+			$this->view->MostrarImagenCiudad($imagen);
+		}
 
 		$this->view->ImprimirHome();
 	}
