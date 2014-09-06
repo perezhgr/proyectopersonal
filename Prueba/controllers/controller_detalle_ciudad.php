@@ -3,21 +3,24 @@ class Controller
 {
 	private $model;
 	private $view;
- 
-    public function __construct($model,$view) {
-        $this->model = $model;
+
+	public function __construct($model,$view) {
+		$this->model = $model;
 		$this->view = $view;
-    }
+	}
+
 
 	public function ImprimirPagina(){
 
-		if ( isset($_GET['id_ciudad'])) {
-			$ciudad=$this->model->ObtenerDetalleCiudadById($_GET['id_ciudad']);
-			$imagen=$this->model->ObtenerImagenByIdCiudad($_GET['id_ciudad']);			
-			$this->view->MostrarDetalleCiudad($ciudad,$imagen);		  				
-		}	
-		//$this->view->ImprimirPagina();
-	}
-}
+		//$this->view->MostrarCover($this->model->ObtenerCover());
+		//$this->view->MostrarMenu($this->model->ObtenerMenu());
+		//$this->view->MostrarDescripcionEmpresa($this->model->ObtenerDescripcionEmpresa());
+		//$this->view->MostrarCiudades($this->model->ObtenerCiudades());
+		//$this->view->MostrarTestimonios($this->model->ObtenerTestimonios());	
 
+		$this->view->ImprimirHome();
+	}
+
+
+}	
 ?>

@@ -1,0 +1,55 @@
+.top {
+    background-color: #474747;
+}
+.top .navbar-brand {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    
+    background-color: #CCC;
+    color: #474747;
+    text-decoration: none;
+}
+.top .container {
+    padding: 0;
+}
+.banner {
+    background-color: white;
+}
+.banner .container {
+    background-color: white;
+    
+    
+}
+.banner .container p {
+
+    
+}
+.middle {
+    background-color: #CCC;
+}
+.middle .container {
+    background-color: #FFF;
+    min-height: 300px;
+    padding-bottom: 20px;
+}
+.navbar-nav li a {
+    color: #CCC;
+    
+}
+.navbar-nav li a:hover {
+    background-color: #373737;
+}
+.bottom {
+    background-color: #474747;
+}
+.bottom .container {
+    background-color: #373737;
+    
+}
+.bottom .container h3 {
+    color: #999;
+}
+.bottom .container p {
+    color: #666;
+}
