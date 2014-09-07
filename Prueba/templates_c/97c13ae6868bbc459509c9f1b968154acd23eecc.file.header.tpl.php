@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-05 19:49:57
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-07 14:49:08
          compiled from "./templates/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8909636875409f7c54dbd47-18495887%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97c13ae6868bbc459509c9f1b968154acd23eecc' => 
     array (
       0 => './templates/header.tpl',
-      1 => 1409938903,
+      1 => 1410094121,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_5409f7c5554eb9_53173663',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5409f7c5554eb9_53173663')) {function content_5409f7c5554eb9_53173663($_smarty_tpl) {?><!doctype html>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
@@ -56,6 +56,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <link rel='stylesheet' id='mqueries-style-css'  href='css/mqueries.css' type='text/css' media='all' />
 <link rel='stylesheet' id='mqueries-style-css'  href='css/font-awesome1.min.css' type='text/css'/>
 <link rel='stylesheet' id='mqueries-style-css'  href='css/font-awesome1.css' type='text/css'/>
+<link rel='stylesheet'href='css/boton.css' type='text/css'/>
 
 <!--link rel='stylesheet' href='files/css/bookblock.css' type='text/css' media='all' /-->
 <!-- CSS -->
@@ -69,4 +70,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <script src='js/modernizr.custom.js'></script>
 <!-- JQUERY LIBRARY & MODERNIZR -->
 
-</head><?php }} ?>
+</head>
+<?php }} ?>

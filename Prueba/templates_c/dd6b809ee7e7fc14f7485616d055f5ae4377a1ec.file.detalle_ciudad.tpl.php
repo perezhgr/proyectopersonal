@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-06 21:46:34
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-07 15:09:11
          compiled from "./templates/detalle_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2080452488540b06408e9a94-16895380%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dd6b809ee7e7fc14f7485616d055f5ae4377a1ec' => 
     array (
       0 => './templates/detalle_ciudad.tpl',
-      1 => 1410032663,
+      1 => 1410095321,
       2 => 'file',
     ),
   ),
@@ -76,6 +76,8 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
         <h4 class="subtitle"><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
  • <?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_pais'];?>
 </h4>
+        <input type="submit" name="" class="submit" value="Comprar"/><br>
+        <!--<input type="submit" name="" class="submit" value="Ver comentarios"/>-->
     </div>
     <div class="column-section clearfix">
     <?php  $_smarty_tpl->tpl_vars['imagen'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['imagen']->_loop = false;
@@ -120,11 +122,10 @@ $_smarty_tpl->tpl_vars['imagen']->_loop = true;
 </p>
                 <?php echo $_smarty_tpl->getSubTemplate ("incluye.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
-            </div>
-    </div>
-
-    </div>
-    <div class="spacer spacer-big"></div>     
+            </div><br>
+            <div class="spacer spacer-big"></div>     
+        </div>    
+    
 <?php } ?>
 </div> <!-- END .wrapper -->
 </div> <!-- END .wrapper -->

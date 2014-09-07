@@ -41,6 +41,8 @@
         <h2>Detalles del destino</h2>
         <div class="seperator size-small"><span></span></div>
         <h4 class="subtitle">{$ciudad.nombre_ciudad} • {$ciudad.nombre_pais}</h4>
+        <input type="submit" name="" class="submit" value="Comprar"/><br>
+        <!--<input type="submit" name="" class="submit" value="Ver comentarios"/>-->
     </div>
     <div class="column-section clearfix">
     {foreach from=$Imagen item=imagen}
@@ -76,11 +78,10 @@
             	<h4>Descripcion</h4>
             	<p>{$ciudad.descripcion}</p>
                 {include file="incluye.tpl"}
-            </div>
-    </div>
-
-    </div>
-    <div class="spacer spacer-big"></div>     
+            </div><br>
+            <div class="spacer spacer-big"></div>     
+        </div>    
+    
 {/foreach}
 </div> <!-- END .wrapper -->
 </div> <!-- END .wrapper -->

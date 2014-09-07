@@ -13,7 +13,7 @@ class Model
 
 	public function ObtenerCiudadById($id_ciudad){	
 		
-		$sql="SELECT nombre_ciudad,nombre_pais
+		$sql="SELECT id_ciudad,nombre_ciudad,nombre_pais
 		FROM   ciudad 
 		WHERE  id_ciudad =$id_ciudad";
 		$query = $this->conn->query($sql);

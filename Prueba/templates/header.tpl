@@ -35,6 +35,7 @@
 <link rel='stylesheet' id='mqueries-style-css'  href='css/mqueries.css' type='text/css' media='all' />
 <link rel='stylesheet' id='mqueries-style-css'  href='css/font-awesome1.min.css' type='text/css'/>
 <link rel='stylesheet' id='mqueries-style-css'  href='css/font-awesome1.css' type='text/css'/>
+<link rel='stylesheet'href='css/boton.css' type='text/css'/>
 
 <!--link rel='stylesheet' href='files/css/bookblock.css' type='text/css' media='all' /-->
 <!-- CSS -->

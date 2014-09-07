@@ -41,6 +41,8 @@
         <h2>Experiencias de nuestros viajeros</h2>
         <div class="seperator size-small"><span></span></div>
         <h4 class="subtitle">{$ciudad.nombre_ciudad} • {$ciudad.nombre_pais}</h4>
+        <!-- Este boton es una prueba-->
+        <a href="detalle_ciudad.php?id_ciudad={$ciudad.id_ciudad}"><input type="submit" name="" class="submit" value="Comprar"/></a>
     </div>
     {/foreach}
     <div class="column-section clearfix">

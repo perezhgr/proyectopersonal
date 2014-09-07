@@ -692,17 +692,7 @@
                     </div>
 
 
-
-                    <input type="hidden" name="subject" value="Contact from BeeReal site" />
-
-                    <input type="hidden" name="fields" value="name,email,message," />
-
-                    <input type="hidden" name="sendto" value="hi@beerealit.com" />
-
-
-
                 </form>
-
 
 
             </div>

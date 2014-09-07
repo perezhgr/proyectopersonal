@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-06 23:35:36
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-07 15:16:17
          compiled from "./templates/detalle_experiencia.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:473058511540b0fa99f6816-16147112%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c975a9ce1cc8a10d45629ba24e85d05104491571' => 
     array (
       0 => './templates/detalle_experiencia.tpl',
-      1 => 1410039333,
+      1 => 1410095773,
       2 => 'file',
     ),
   ),
@@ -81,6 +81,9 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
         <h4 class="subtitle"><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
  • <?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_pais'];?>
 </h4>
+        <!-- Este boton es una prueba-->
+        <a href="detalle_ciudad.php?id_ciudad=<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
+"><input type="submit" name="" class="submit" value="Comprar"/></a>
     </div>
     <?php } ?>
     <div class="column-section clearfix">

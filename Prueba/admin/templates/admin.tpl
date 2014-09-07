@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Admin Tupar VyT</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.css" media="screen">
-    <link rel="stylesheet" href="css/bootswatch.min.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/font-awesome1.css">
-    <link rel="stylesheet" href="css/font-awesome1.min.css">
-    
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
-      <script src="../bower_components/respond/dest/respond.min.js"></script>
-    <![endif]-->
-
-  </head>
+{include file="header.tpl"}
   <body>
 
     <div class="container">
@@ -38,10 +19,14 @@
           <div class="col-lg-1"></div>
           <div class="col-lg-10">
                   <ul class="nav nav-tabs">
+                    {foreach from=$Countcity item=i}
                     <li class="active"><a href="#home" data-toggle="tab">Ciudades
-                    <span class="badge">33</span></a></li>
+                    <span class="badge">{$i.countcity}</span></a></li>
+                    {/foreach}
+                    {foreach from=$Countcoment item=j}
                     <li><a href="#profile" data-toggle="tab">Testimonios
-                    <span class="badge">65</span></a></li>
+                    <span class="badge">{$j.countcoment}</span></a></li>
+                    {/foreach}
                   </ul>
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="home">
@@ -49,7 +34,8 @@
                         <thead>
                           <tr>
                             <th>#</th>
-                            <th>Nombre</th>
+                            <th>Ciudad</th>
+                            <th>Pais</th>
                             <th>Duracion</th>
                             <th>Precio</th>
                             <th>Descripcion</th>
@@ -57,13 +43,14 @@
                           </tr>
                         </thead>
                         <tbody>
-                          
+                          {foreach from=$Ciudad item=ciudad}
                           <tr class="active danger">
-                            <td>1</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
+                            <td>{$ciudad.id_ciudad}</td>
+                            <td>{$ciudad.nombre_ciudad}</td>
+                            <td>{$ciudad.nombre_pais}</td>
+                            <td>{$ciudad.duracion}</td>
+                            <td>{$ciudad.precio}</td>
+                            <td>{$ciudad.descripcion}</td>
                             <td>
                               <a href="editar_ciudad.html"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
@@ -71,6 +58,7 @@
                               </a>                           
                             </td>
                           </tr>
+                          {/foreach}
                         </tbody>
                         <tfoot>
                             <td>
@@ -85,7 +73,7 @@
                       <table class="table table-striped table-hover ">
                         <thead>
                           <tr>
-                            <th>#</th>
+                            <th>#(Comentario)</th>
                             <th>Persona</th>
                             <th>Condicion</th>
                             <th>Fecha</th>
@@ -95,13 +83,13 @@
                         </thead>
 
                         <tbody>
-                          
+                          {foreach from=$Testimonio item=testimonio}
                           <tr class="active danger">
-                            <td>1</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
-                            <td>Column content</td>
+                            <td>{$testimonio.id_comentario}</td>
+                            <td>{$testimonio.nombre_persona}</td>
+                            <td>{$testimonio.condicion}</td>
+                            <td>{$testimonio.fecha}</td>
+                            <td>{$testimonio.texto}</td>
                             <td>
                               <a href="editar_testimonio.html"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
@@ -109,7 +97,7 @@
                               </a>                           
                             </td>                            
                           </tr>
-                        
+                          {/foreach}
                         </tbody>
                         <tfoot>
                             <td>
@@ -124,12 +112,4 @@
           </div>
           <div class="col-lg-1"></div>
         </div>
-
-      <footer>
-      </footer>
-    </div>
-    <script src="js/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootswatch.js"></script>
-  </body>
-</html>
+{include file="footer.tpl"}        
