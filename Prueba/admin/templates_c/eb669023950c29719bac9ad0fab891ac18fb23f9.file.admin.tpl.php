@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-07 20:20:53
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-07 21:05:38
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1757746597540c9ae3df5640-92654640%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1410114050,
+      1 => 1410116733,
       2 => 'file',
     ),
   ),
@@ -116,7 +116,7 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                         <tfoot>
                             <td>
                             <ul class="nav nav-pills">
-                              <li class="active"><a href="crear_ciudades.html">Crear</span></a></li>
+                              <li class="active"><a href="ABM_ciudad.php">Crear</span></a></li>
                               </ul>
                             </td>
                         </tfoot>

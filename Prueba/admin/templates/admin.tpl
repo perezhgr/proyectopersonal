@@ -63,7 +63,7 @@
                         <tfoot>
                             <td>
                             <ul class="nav nav-pills">
-                              <li class="active"><a href="crear_ciudades.html">Crear</span></a></li>
+                              <li class="active"><a href="ABM_ciudad.php">Crear</span></a></li>
                               </ul>
                             </td>
                         </tfoot>

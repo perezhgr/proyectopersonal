@@ -24,37 +24,37 @@
                   </ul>
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="home">
-                        <form class="form-horizontal">
+                        <form class="form-horizontal" method="POST"> 
                           <fieldset>
                             <legend>Ciudad</legend>
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Ciudad</label>
                               <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputEmail" placeholder="Nombre">
+                                <input type="text" class="form-control" id="inputEmail" placeholder="Nombre" name="ciudad">
                               </div>
                             </div>
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Pais</label>
                               <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputEmail" placeholder="Nombre">
+                                <input type="text" class="form-control" id="inputEmail" placeholder="Nombre" name="pais">
                               </div>
                             </div>
                             <div class="form-group">
                               <label for="inputPassword" class="col-lg-2 control-label">Duracion</label>
                               <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputPassword" placeholder="Duracion">
+                                <input type="text" class="form-control" id="inputPassword" placeholder="Duracion" name="duracion">
                               </div>
                             </div>
                            <div class="form-group">
                               <label for="inputPassword" class="col-lg-2 control-label">Precio</label>
                               <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputPassword" placeholder="Precio">
+                                <input type="text" class="form-control" id="inputPassword" placeholder="Precio" name="precio">
                               </div>
                             </div>
                             <div class="form-group">
                               <label for="inputPassword" class="col-lg-2 control-label">Descripcion</label>
                               <div class="col-lg-10">
-                                <textarea type="text" rows="6" class="form-control" id="texto"  placeholder="Escriba una descripcion"></textarea>
+                                <textarea type="text" rows="6" class="form-control" id="texto"  placeholder="Escriba una descripcion" name="descripcion"></textarea>
                               </div>
                             </div>
                             <div class="form-group">
