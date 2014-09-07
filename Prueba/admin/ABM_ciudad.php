@@ -6,6 +6,14 @@ include './models/model_ABM_ciudad.php';
 $model = new Model();
 $view = new View();
 $controller = new Controller($model,$view);
-$controller->imprimirPagina();
+
+//Uso esta logica para poder imprimir un template u otro.
+
+if(isset($_GET['id_ciudad'])) {
+	$controller->ImprimirPagEditarCiudad();
+}
+else{
+	$controller->ImprimirPagCrearCiudad();
+}		
 
 ?>

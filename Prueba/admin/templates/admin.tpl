@@ -52,7 +52,7 @@
                             <td>{$ciudad.precio}</td>
                             <td>{$ciudad.descripcion}</td>
                             <td>
-                              <a href="editar_ciudad.html"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
+                              <a href="ABM_ciudad.php?id_ciudad={$ciudad.id_ciudad}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
                               <a href="borrar.php"><span class="glyphicon glyphicon-trash"></span>
                               </a>                           

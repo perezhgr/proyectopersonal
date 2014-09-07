@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-07 21:05:38
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-07 22:06:27
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1757746597540c9ae3df5640-92654640%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1410116733,
+      1 => 1410120385,
       2 => 'file',
     ),
   ),
@@ -105,7 +105,8 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                             <td><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['descripcion'];?>
 </td>
                             <td>
-                              <a href="editar_ciudad.html"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
+                              <a href="ABM_ciudad.php?id_ciudad=<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
+"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
                               <a href="borrar.php"><span class="glyphicon glyphicon-trash"></span>
                               </a>                           

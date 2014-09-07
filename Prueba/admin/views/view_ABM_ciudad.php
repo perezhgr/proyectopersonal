@@ -14,6 +14,13 @@ class View
 		$this->smarty->display('crear_ciudad.tpl');
 
 	}
+
+	public function ImprimirPagEditarCiudad($city)
+	{
+		$this->smarty->assign('Ciudad',$city);
+		$this->smarty->display('editar_ciudad.tpl');
+
+	}
 }
 
 ?>
