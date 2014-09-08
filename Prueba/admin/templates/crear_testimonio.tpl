@@ -20,7 +20,7 @@
           <div class="col-lg-10">
                   <ul class="nav nav-tabs">
                     <li class="active"><a href="#home" data-toggle="tab">Testimonios
-                    <span class="badge">65</span></a></li>
+                    </a></li>
                   </ul>
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="home">
@@ -36,12 +36,21 @@
                             <div class="form-group">
                               <label for="select" class="col-lg-2 control-label">Condicion</label>
                               <div class="col-lg-10">
-                                <select class="form-control" id="select" name="condicion">
+                                <select class="form-control" id="select" >
                                   {foreach from=$Condicion item=condicion}  
-                                  <option>{$condicion.condicion}</option>
+                                  <option name="id_condicion"value="{$condicion.id_condicion}">{$condicion.condicion}</option>
                                   {/foreach}
                                 </select>
-
+                              </div>
+                            </div>
+                                                        <div class="form-group">
+                              <label for="select" class="col-lg-2 control-label">Ciudad que deseas comentar</label>
+                              <div class="col-lg-10">
+                                <select class="form-control" id="select" >
+                                  {foreach from=$Ciudad item=ciudad}  
+                                  <option name="id_ciudad"value="{$ciudad.id_ciudad}">{$ciudad.nombre_ciudad}</option>
+                                  {/foreach}
+                                </select>
                               </div>
                             </div>
                            <div class="form-group">

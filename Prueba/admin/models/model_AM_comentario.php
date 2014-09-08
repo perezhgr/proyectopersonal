@@ -12,6 +12,7 @@ class Model
 	}
 	
 
+
 	public function ObtenerCondiciones(){
 		
 		$sql = "SELECT *
@@ -21,9 +22,26 @@ class Model
 		return $query->fetchAll();
 	}
 
+	public function ObtenerCiudades(){
+		
+		$sql = "SELECT *
+		FROM ciudad";
+
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}
+
 	public function InsertaTestimonio($testimonio){
 
-		$sql = "INSERT INTO `ciudad` (`nombre_ciudad`,`nombre_pais`, `duracion`, `precio`,`descripcion`,`testimonio`) 
+		$sql = "INSERT INTO `autosbd`.`auto` (`id_usuario`, `id_marca`, `titulo`, `valor`, `descripcion`, `modelo`, `anio`)  VALUES (:id_usuario,:marca,:titulo,:valor,:descripcion,:modelo,:anio)";
+		$q = $this->conn->prepare($sql);
+		$a=$q->execute(array(':id_usuario'=>$id_usuario, ':marca'=>$auto["marca"], ':titulo'=>$auto["titulo"] ,':valor'=>$auto["valor"] ,':descripcion'=>$auto["descripcion"] ,':modelo'=>$auto["modelo"] ,':anio'=>$auto["anio"] ));
+			
+
+		$id_auto = $this->conn->lastInsertId();		
+
+
+		$sql = "INSERT INTO `experiencia` (`nombre_persona`,`fecha`) 
 		VALUES (:nombre_ciudad,:nombre_pais,:duracion,:precio,:descripcion,:testimonio)";
 
 		$resultado = $this->conn->prepare($sql);

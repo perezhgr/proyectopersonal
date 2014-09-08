@@ -9,6 +9,13 @@ class View
 		$this->smarty = New Smarty;
 	}
 	
+	
+	public function MostrarCiudades($ciudad)
+	{
+		$this->smarty->assign('Ciudad',$ciudad);
+
+	}	
+
 	public function MostrarCondiciones($condicion)
 	{
 		$this->smarty->assign('Condicion',$condicion);

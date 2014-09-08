@@ -12,15 +12,18 @@ class Controller
 	public function ImprimirPagCrearTestimonio(){
 
 		//Trae las condiciones para luego mostrarlas en el HTML
-		$condiciones=$this->model->ObtenerCondiciones();
-		$this->view->MostrarCondiciones($condiciones);
+		$ciudad = $this->model->ObtenerCiudades();
+		$condicion = $this->model->ObtenerCondiciones();
+
+		$this->view->MostrarCiudades($ciudad);
+		$this->view->MostrarCondiciones($condicion);		
 
 		//Crear ciudad		
 		if (isset($_POST['persona'])) {
 
 			$testimonio["persona"] = $_POST["persona"];
 			
-			$testimonio["condicion"] = $_POST["condicion"];
+			$testimonio["id_condicion"] = $_POST["id_condicion"];
 			$testimonio["fecha"] = $_POST["fecha"];
 			$testimonio["comentario"] = $_POST["comentario"];
 
