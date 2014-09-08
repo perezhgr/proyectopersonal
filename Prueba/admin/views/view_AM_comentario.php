@@ -9,18 +9,24 @@ class View
 		$this->smarty = New Smarty;
 	}
 	
-	public function ImprimirPagCrearCiudad()
+	public function MostrarCondiciones($condicion)
 	{
-		$this->smarty->display('crear_ciudad.tpl');
+		$this->smarty->assign('Condicion',$condicion);
+
+	}	
+
+	public function ImprimirPagCrearTestimonio()
+	{
+		$this->smarty->display('crear_testimonio.tpl');
 
 	}
 
-	public function ImprimirPagEditarCiudad($city)
+	/*public function ImprimirPagEditarCiudad($city)
 	{
 		$this->smarty->assign('Ciudad',$city);
 		$this->smarty->display('editar_ciudad.tpl');
 
-	}
+	}*/
 }
 
 ?>

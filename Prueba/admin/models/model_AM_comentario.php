@@ -11,7 +11,17 @@ class Model
 
 	}
 	
-	public function InsertaCiudad($ciudad){
+
+	public function ObtenerCondiciones(){
+		
+		$sql = "SELECT *
+		FROM condicion";
+
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}
+
+	public function InsertaTestimonio($testimonio){
 
 		$sql = "INSERT INTO `ciudad` (`nombre_ciudad`,`nombre_pais`, `duracion`, `precio`,`descripcion`,`testimonio`) 
 		VALUES (:nombre_ciudad,:nombre_pais,:duracion,:precio,:descripcion,:testimonio)";
@@ -26,7 +36,7 @@ class Model
 	}
 
 	
-	public function ObtenerCiudad($id_ciudad){
+	/*public function ObtenerCiudad($id_ciudad){
 		
 		$sql = "SELECT *
 		FROM ciudad
@@ -34,9 +44,9 @@ class Model
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
-	}
+	}*/
 
-	public function ActualizaCiudad($ciudad){
+	/*public function ActualizaCiudad($ciudad){
 		
 		$sql= "UPDATE `ciudad` SET nombre_ciudad = '".$ciudad['ciudad']."' ,
 		nombre_pais = '".$ciudad['pais']."' ,
@@ -46,20 +56,16 @@ class Model
 		WHERE id_ciudad =".$ciudad['id_ciudad'];
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
-	}
+	}*/
 
 
-	public function EliminarCiudad($id_ciudad){
+	/*public function EliminarCiudad($id_ciudad){
 		
 		$sql= "DELETE FROM ciudad
 				WHERE id_ciudad = $id_ciudad";
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
-	}
-
-
-
-
+	}*/
 
 }
 ?>

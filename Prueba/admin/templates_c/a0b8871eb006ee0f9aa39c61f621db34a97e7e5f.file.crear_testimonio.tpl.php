@@ -1,4 +1,31 @@
-{include file="header.tpl"}
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-08 23:50:04
+         compiled from "./templates/crear_testimonio.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:855100354540e22938a3ef7-02914618%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'a0b8871eb006ee0f9aa39c61f621db34a97e7e5f' => 
+    array (
+      0 => './templates/crear_testimonio.tpl',
+      1 => 1410212833,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '855100354540e22938a3ef7-02914618',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_540e2293900157_24763509',
+  'variables' => 
+  array (
+    'Condicion' => 0,
+    'condicion' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_540e2293900157_24763509')) {function content_540e2293900157_24763509($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
   <body>
 
     <div class="container">
@@ -37,9 +64,14 @@
                               <label for="select" class="col-lg-2 control-label">Condicion</label>
                               <div class="col-lg-10">
                                 <select class="form-control" id="select" name="condicion">
-                                  {foreach from=$Condicion item=condicion}  
-                                  <option>{$condicion.condicion}</option>
-                                  {/foreach}
+                                  <?php  $_smarty_tpl->tpl_vars['condicion'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['condicion']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['Condicion']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['condicion']->key => $_smarty_tpl->tpl_vars['condicion']->value){
+$_smarty_tpl->tpl_vars['condicion']->_loop = true;
+?>  
+                                  <option><?php echo $_smarty_tpl->tpl_vars['condicion']->value['condicion'];?>
+</option>
+                                  <?php } ?>
                                 </select>
 
                               </div>
@@ -68,4 +100,6 @@
           </div>
           <div class="col-lg-1"></div>
         </div>
-{include file="footer.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php }} ?>
