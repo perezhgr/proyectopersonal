@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-07 22:06:27
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-08 23:10:38
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1757746597540c9ae3df5640-92654640%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1410120385,
+      1 => 1410210471,
       2 => 'file',
     ),
   ),
@@ -78,7 +78,6 @@ $_smarty_tpl->tpl_vars['j']->_loop = true;
                           <tr>
                             <th>#</th>
                             <th>Ciudad</th>
-                            <th>Pais</th>
                             <th>Duracion</th>
                             <th>Precio</th>
                             <th>Descripcion</th>
@@ -96,8 +95,6 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
 </td>
                             <td><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
 </td>
-                            <td><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_pais'];?>
-</td>
                             <td><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['duracion'];?>
 </td>
                             <td><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['precio'];?>
@@ -105,10 +102,11 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                             <td><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['descripcion'];?>
 </td>
                             <td>
-                              <a href="ABM_ciudad.php?id_ciudad=<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
+                              <a href="AM_ciudad.php?id_ciudad=<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
 "><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
-                              <a href="borrar.php"><span class="glyphicon glyphicon-trash"></span>
+                              <a href="borrar_ciudad.php?id_ciudad=<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
+"><span class="glyphicon glyphicon-trash"></span>
                               </a>                           
                             </td>
                           </tr>
@@ -117,7 +115,7 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                         <tfoot>
                             <td>
                             <ul class="nav nav-pills">
-                              <li class="active"><a href="ABM_ciudad.php">Crear</span></a></li>
+                              <li class="active"><a href="AM_ciudad.php">Crear</span></a></li>
                               </ul>
                             </td>
                         </tfoot>
@@ -127,7 +125,7 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                       <table class="table table-striped table-hover ">
                         <thead>
                           <tr>
-                            <th>#(Comentario)</th>
+                            <th>#</th>
                             <th>Persona</th>
                             <th>Condicion</th>
                             <th>Fecha</th>
@@ -143,7 +141,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['testimonio']->key => $_smarty_tpl->tp
 $_smarty_tpl->tpl_vars['testimonio']->_loop = true;
 ?>
                           <tr class="active danger">
-                            <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['id_comentario'];?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['id_persona'];?>
 </td>
                             <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['nombre_persona'];?>
 </td>
@@ -154,9 +152,11 @@ $_smarty_tpl->tpl_vars['testimonio']->_loop = true;
                             <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['texto'];?>
 </td>
                             <td>
-                              <a href="editar_testimonio.html"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
+                              <a href="AM_comentario.php?id_persona=<?php echo $_smarty_tpl->tpl_vars['testimonio']->value['id_persona'];?>
+"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
-                              <a href="borrar.php"><span class="glyphicon glyphicon-trash"></span>
+                              <a href="borrar_comentario.php?id_persona=<?php echo $_smarty_tpl->tpl_vars['testimonio']->value['id_persona'];?>
+"><span class="glyphicon glyphicon-trash"></span>
                               </a>                           
                             </td>                            
                           </tr>
@@ -165,7 +165,7 @@ $_smarty_tpl->tpl_vars['testimonio']->_loop = true;
                         <tfoot>
                             <td>
                             <ul class="nav nav-pills">
-                              <li class="active"><a href="crear_testimonios.html">Crear</span></a></li>
+                              <li class="active"><a href="AM_comentario.php">Crear</span></a></li>
                               </ul>
                             </td>
                         </tfoot>

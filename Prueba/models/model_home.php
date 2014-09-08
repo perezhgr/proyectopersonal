@@ -48,7 +48,7 @@ class Model
 
 	public function ObtenerCiudades(){
 		
-		$sql = "SELECT c.id_ciudad,nombre_ciudad,nombre_pais,i.path
+		$sql = "SELECT c.id_ciudad,nombre_ciudad,i.path
 		FROM   ciudad c
 		JOIN   imagen i ON (i.id_ciudad = c.id_ciudad)
 		GROUP BY c.id_ciudad ";
@@ -59,7 +59,7 @@ class Model
 
 	public function ObtenerTestimonios(){
 		
-		$sql = "SELECT c.id_ciudad,nombre_ciudad,nombre_pais,i.path
+		$sql = "SELECT c.id_ciudad,nombre_ciudad,i.path
 		FROM   ciudad c
 		JOIN   imagen i ON (i.id_ciudad = c.id_ciudad)
 		WHERE  testimonio IS NOT NULL

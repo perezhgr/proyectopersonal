@@ -1,7 +1,7 @@
 <?php
-include './controllers/controller_ABM_ciudad.php';
-include './views/view_ABM_ciudad.php';
-include './models/model_ABM_ciudad.php';
+include './controllers/controller_AM_ciudad.php';
+include './views/view_AM_ciudad.php';
+include './models/model_AM_ciudad.php';
 
 $model = new Model();
 $view = new View();
@@ -14,6 +14,6 @@ if(isset($_GET['id_ciudad'])) {
 }
 else{
 	$controller->ImprimirPagCrearCiudad();
-}		
+}
 
 ?>

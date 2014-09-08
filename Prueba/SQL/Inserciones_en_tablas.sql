@@ -6,15 +6,26 @@ INSERT INTO `tuparvt`.`menu` (`nombre_menu`) VALUES
 ('Testimonio'),
 ('Contacto');
 
+--Inserciones en la tabla condicion
+
+INSERT INTO `tuparvt`.`condicion` (`condicion`) VALUES 
+('Luna de miel'),
+('Persona viajando sola'),
+('Viaje de negocios'), 
+('Parejas de jovenes'), 
+('Familia con niños pequeños'),
+('Familia con niñños mayores'),
+('Grupo de amigos');
+
 --Inserciones en la tabla ciudad
 
-INSERT INTO `tuparvt`.`ciudad` (`nombre_ciudad`,`nombre_pais`, `duracion`, `precio`, `descripcion`,`testimonio`) VALUES 
-('Amsterdam','Holanda', '3 dias.', '$5000', 'descripcion1','s'),
-('Ciudad del Cabo','Sudafrica','5 dias', '$6000','descripcion2',NULL),
-('Paris','Francia', '4 dias.', '$10000', 'descripcion3',NULL), 
-('Sidney','Australia', '20 dias', '$15000','descripcion4',NULL),
-('Nueva York', 'EE.UU.','14 dias', '$4000','descripcion5','s'), 
-('Berlin','Alemania', '6 dias', '$5000','descripcion6','s');
+INSERT INTO `tuparvt`.`ciudad` (`nombre_ciudad`, `duracion`, `precio`, `descripcion`,`testimonio`) VALUES 
+('Amsterdam', '3 dias.', '$5000', 'descripcion1','s'),
+('Ciudad del Cabo','5 dias', '$6000','descripcion2',NULL),
+('Paris', '4 dias.', '$10000', 'descripcion3',NULL), 
+('Sidney', '20 dias', '$15000','descripcion4',NULL),
+('Nueva York','14 dias', '$4000','descripcion5','s'), 
+('Berlin', '6 dias', '$5000','descripcion6','s');
 ---------------------------------------------------------------
 
 ('Kiev', '6 dias.', '$4000',''), 
@@ -50,7 +61,7 @@ INSERT INTO `tuparvt`.`empresa` (`titulo`,`cuerpo`) VALUES
 
 INSERT INTO `imagen` (`path`,`cover`,`id_ciudad`,`id_empresa`) VALUES
 ('img/amsterdam.jpg',NULL,'1',NULL),
-('img/cape.pg',NULL,'2',NULL),
+('img/cape.jpg',NULL,'2',NULL),
 ('img/paris.jpg',NULL,'3',NULL),
 ('img/berlin.jpg',NULL,'6',NULL),
 ('img/sidney3.jpg',NULL,'4',NULL),
@@ -71,3 +82,6 @@ INSERT INTO `imagen` (`path`,`cover`,`id_ciudad`,`id_empresa`) VALUES
 INSERT INTO `tuparvt`.`administrador` (`mail`,`pass`) VALUES 
 ('perez.hgr@gmail.com','397728967ab813da1a4319e18f71aaf9');
 
+--Insercion en la comentario
+
+INSERT INTO `tuparvt`.`comentario` (`id_comentario`, `texto`, `id_persona`) VALUES (NULL, 'Estuvo genial', '1'), (NULL, 'Muy buen servicio', '2');

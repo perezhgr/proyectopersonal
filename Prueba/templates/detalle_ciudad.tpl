@@ -40,7 +40,7 @@
     <div class="section-title"  id="3">
         <h2>Detalles del destino</h2>
         <div class="seperator size-small"><span></span></div>
-        <h4 class="subtitle">{$ciudad.nombre_ciudad} • {$ciudad.nombre_pais}</h4>
+        <h4 class="subtitle">•&nbsp{$ciudad.nombre_ciudad}</h4>
         <input type="submit" name="" class="submit" value="Comprar"/><br>
         <!--<input type="submit" name="" class="submit" value="Ver comentarios"/>-->
     </div>

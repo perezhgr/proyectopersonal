@@ -531,7 +531,6 @@
                 </div>
             </div>
             <h4 class="team-name"><strong>{$ciudades.nombre_ciudad}</strong></h4>
-            <h6 class="team-role">{$ciudades.nombre_pais}</h6>
             <div class="seperator size-mini height-small"><span></span></div>
             <!--p class="team-info">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.

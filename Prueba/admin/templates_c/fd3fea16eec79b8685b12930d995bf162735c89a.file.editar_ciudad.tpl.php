@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-07 22:43:45
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-08 23:11:16
          compiled from "./templates/editar_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:58858132540cbaca014a39-64387081%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fd3fea16eec79b8685b12930d995bf162735c89a' => 
     array (
       0 => './templates/editar_ciudad.tpl',
-      1 => 1410122323,
+      1 => 1410210390,
       2 => 'file',
     ),
   ),
@@ -68,14 +68,6 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                               </div>
                             </div>
                             <div class="form-group">
-                            <label for="inputEmail" class="col-lg-2 control-label">Pais</label>
-                              <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputEmail" placeholder="Nombre" name="pais"
-                                value="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_pais'];?>
-">
-                              </div>
-                            </div>
-                            <div class="form-group">
                               <label for="inputPassword" class="col-lg-2 control-label">Duracion</label>
                               <div class="col-lg-10">
                                 <input type="text" class="form-control" id="inputPassword" placeholder="Duracion" name="duracion"
@@ -120,7 +112,7 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                            </div>                                               
                             <div class="form-group">
                               <div class="col-lg-10 col-lg-offset-2">
-                                <button type="submit" class="btn btn-primary btn-">Crear</button>
+                                <button type="submit" class="btn btn-primary btn-">Editar</button>
                               </div>
                             </div>
                           </fieldset>

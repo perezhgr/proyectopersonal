@@ -8,7 +8,6 @@ CONSTRAINT PK_MENU PRIMARY KEY (id_menu)
 CREATE TABLE ciudad (
 id_ciudad          INT(10) NOT NULL AUTO_INCREMENT,
 nombre_ciudad 	   VARCHAR (50) NOT NULL,
-nombre_pais 	   VARCHAR (50) NOT NULL,
 duracion		   VARCHAR (20) NOT NULL,
 precio			   VARCHAR (50) NOT NULL,
 descripcion	       TEXT (65000) NOT NULL,
@@ -40,30 +39,35 @@ CONSTRAINT FK_IMAGEN_EMPRESA FOREIGN KEY (id_empresa) REFERENCES empresa (id_emp
 )ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;
 
 
+CREATE TABLE condicion (
+id_condicion        INT(10) NOT NULL AUTO_INCREMENT,
+condicion	   	   	VARCHAR (200) NOT NULL,
+
+CONSTRAINT PK_CONDICION PRIMARY KEY (id_condicion)
+)ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;
+
+
 CREATE TABLE experiencia (
 id_persona     INT(10) NOT NULL AUTO_INCREMENT,
 nombre_persona VARCHAR (50)  NOT NULL,
-condicion	   VARCHAR (50)  NOT NULL,
 fecha	   	   DATE NOT NULL,
+id_condicion   INT(10) NOT NULL ,
 id_ciudad      INT(10) NOT NULL ,
 
 CONSTRAINT PK_EXPERIENCIA PRIMARY KEY (id_persona),
+CONSTRAINT FK_EXP_CONDICION FOREIGN KEY (id_condicion) REFERENCES condicion (id_condicion) ON DELETE CASCADE,
 CONSTRAINT FK_EXP_CIUDAD FOREIGN KEY (id_ciudad) REFERENCES ciudad (id_ciudad) ON DELETE CASCADE
 )ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;
 
 
 CREATE TABLE comentario (
 id_comentario      INT(10) NOT NULL AUTO_INCREMENT,
-texto	   	   	   TEXT (65000) NULL,
+texto	   	   	   TEXT (65000) NOT NULL,
 id_persona 		   INT(10) NOT NULL,
 
 CONSTRAINT PK_COMENTARIO PRIMARY KEY (id_comentario),
 CONSTRAINT FK_COMENTARIO_PERSONA FOREIGN KEY (id_persona) REFERENCES experiencia (id_persona) ON DELETE CASCADE
 )ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;
-
-
-
-
 
 
 CREATE TABLE administrador(

@@ -36,13 +36,6 @@
                               </div>
                             </div>
                             <div class="form-group">
-                            <label for="inputEmail" class="col-lg-2 control-label">Pais</label>
-                              <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputEmail" placeholder="Nombre" name="pais"
-                                value="{$ciudad.nombre_pais}">
-                              </div>
-                            </div>
-                            <div class="form-group">
                               <label for="inputPassword" class="col-lg-2 control-label">Duracion</label>
                               <div class="col-lg-10">
                                 <input type="text" class="form-control" id="inputPassword" placeholder="Duracion" name="duracion"
@@ -83,7 +76,7 @@
                            </div>                                               
                             <div class="form-group">
                               <div class="col-lg-10 col-lg-offset-2">
-                                <button type="submit" class="btn btn-primary btn-">Crear</button>
+                                <button type="submit" class="btn btn-primary btn-">Editar</button>
                               </div>
                             </div>
                           </fieldset>

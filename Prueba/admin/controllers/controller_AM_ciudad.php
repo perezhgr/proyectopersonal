@@ -15,7 +15,6 @@ class Controller
 		if (isset($_POST['ciudad'])) {
 
 			$ciudad["ciudad"] = $_POST["ciudad"];
-			$ciudad["pais"] = $_POST["pais"];
 			$ciudad["duracion"] = $_POST["duracion"];
 			$ciudad["precio"] = $_POST["precio"];
 			$ciudad["descripcion"] = $_POST["descripcion"];
@@ -37,7 +36,6 @@ class Controller
 
 				$ciudad["id_ciudad"] = $_POST["id_ciudad"];
 				$ciudad["ciudad"] = $_POST["ciudad"];
-				$ciudad["pais"] = $_POST["pais"];
 				$ciudad["duracion"] = $_POST["duracion"];
 				$ciudad["precio"] = $_POST["precio"];
 				$ciudad["descripcion"] = $_POST["descripcion"];
@@ -46,6 +44,5 @@ class Controller
 			}			
 		}			
 	}
-
 }
 ?>

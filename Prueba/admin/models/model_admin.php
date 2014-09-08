@@ -14,7 +14,7 @@ class Model
 	//Obtiene todas las ciudaes (para luego mostrarlas en la tabla)
 	public function ObtenerCiudad(){
 		
-		$sql = "SELECT id_ciudad,nombre_ciudad,nombre_pais,duracion,precio,descripcion
+		$sql = "SELECT id_ciudad,nombre_ciudad,duracion,precio,descripcion
 		FROM ciudad";
 
 		$query = $this->conn->query($sql);
@@ -33,9 +33,10 @@ class Model
 
 	public function ObtenerTestimonio(){
 		
-		$sql = "SELECT id_comentario,nombre_persona,condicion,fecha,texto
-		FROM experiencia e
-		JOIN comentario c ON (c.id_persona =e.id_persona)";
+		$sql = "SELECT e.id_persona,nombre_persona,c.condicion,fecha,texto 
+		FROM experiencia e 
+		JOIN comentario com ON (com.id_persona =e.id_persona) 
+		JOIN condicion c ON (c.id_condicion =e.id_condicion)";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();

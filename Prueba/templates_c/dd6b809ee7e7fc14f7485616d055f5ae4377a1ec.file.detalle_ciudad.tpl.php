@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-07 15:09:11
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-08 23:05:23
          compiled from "./templates/detalle_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2080452488540b06408e9a94-16895380%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'dd6b809ee7e7fc14f7485616d055f5ae4377a1ec' => 
     array (
       0 => './templates/detalle_ciudad.tpl',
-      1 => 1410095321,
+      1 => 1410210320,
       2 => 'file',
     ),
   ),
@@ -73,8 +73,7 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
     <div class="section-title"  id="3">
         <h2>Detalles del destino</h2>
         <div class="seperator size-small"><span></span></div>
-        <h4 class="subtitle"><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
- • <?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_pais'];?>
+        <h4 class="subtitle">•&nbsp<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
 </h4>
         <input type="submit" name="" class="submit" value="Comprar"/><br>
         <!--<input type="submit" name="" class="submit" value="Ver comentarios"/>-->

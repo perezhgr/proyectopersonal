@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-07 15:10:55
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-08 23:02:52
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9921847175409f7c51398a6-54417005%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1410094383,
+      1 => 1410210154,
       2 => 'file',
     ),
   ),
@@ -595,8 +595,6 @@ $_smarty_tpl->tpl_vars['ciudades']->_loop = true;
             </div>
             <h4 class="team-name"><strong><?php echo $_smarty_tpl->tpl_vars['ciudades']->value['nombre_ciudad'];?>
 </strong></h4>
-            <h6 class="team-role"><?php echo $_smarty_tpl->tpl_vars['ciudades']->value['nombre_pais'];?>
-</h6>
             <div class="seperator size-mini height-small"><span></span></div>
             <!--p class="team-info">
                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.
@@ -765,17 +763,7 @@ $_smarty_tpl->tpl_vars['testimonios']->_loop = true;
                     </div>
 
 
-
-                    <input type="hidden" name="subject" value="Contact from BeeReal site" />
-
-                    <input type="hidden" name="fields" value="name,email,message," />
-
-                    <input type="hidden" name="sendto" value="hi@beerealit.com" />
-
-
-
                 </form>
-
 
 
             </div>

@@ -35,7 +35,6 @@
                           <tr>
                             <th>#</th>
                             <th>Ciudad</th>
-                            <th>Pais</th>
                             <th>Duracion</th>
                             <th>Precio</th>
                             <th>Descripcion</th>
@@ -47,14 +46,13 @@
                           <tr class="active danger">
                             <td>{$ciudad.id_ciudad}</td>
                             <td>{$ciudad.nombre_ciudad}</td>
-                            <td>{$ciudad.nombre_pais}</td>
                             <td>{$ciudad.duracion}</td>
                             <td>{$ciudad.precio}</td>
                             <td>{$ciudad.descripcion}</td>
                             <td>
-                              <a href="ABM_ciudad.php?id_ciudad={$ciudad.id_ciudad}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
+                              <a href="AM_ciudad.php?id_ciudad={$ciudad.id_ciudad}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
-                              <a href="borrar.php"><span class="glyphicon glyphicon-trash"></span>
+                              <a href="borrar_ciudad.php?id_ciudad={$ciudad.id_ciudad}"><span class="glyphicon glyphicon-trash"></span>
                               </a>                           
                             </td>
                           </tr>
@@ -63,7 +61,7 @@
                         <tfoot>
                             <td>
                             <ul class="nav nav-pills">
-                              <li class="active"><a href="ABM_ciudad.php">Crear</span></a></li>
+                              <li class="active"><a href="AM_ciudad.php">Crear</span></a></li>
                               </ul>
                             </td>
                         </tfoot>
@@ -73,7 +71,7 @@
                       <table class="table table-striped table-hover ">
                         <thead>
                           <tr>
-                            <th>#(Comentario)</th>
+                            <th>#</th>
                             <th>Persona</th>
                             <th>Condicion</th>
                             <th>Fecha</th>
@@ -85,15 +83,15 @@
                         <tbody>
                           {foreach from=$Testimonio item=testimonio}
                           <tr class="active danger">
-                            <td>{$testimonio.id_comentario}</td>
+                            <td>{$testimonio.id_persona}</td>
                             <td>{$testimonio.nombre_persona}</td>
                             <td>{$testimonio.condicion}</td>
                             <td>{$testimonio.fecha}</td>
                             <td>{$testimonio.texto}</td>
                             <td>
-                              <a href="editar_testimonio.html"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
+                              <a href="AM_comentario.php?id_persona={$testimonio.id_persona}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
-                              <a href="borrar.php"><span class="glyphicon glyphicon-trash"></span>
+                              <a href="borrar_comentario.php?id_persona={$testimonio.id_persona}"><span class="glyphicon glyphicon-trash"></span>
                               </a>                           
                             </td>                            
                           </tr>
@@ -102,7 +100,7 @@
                         <tfoot>
                             <td>
                             <ul class="nav nav-pills">
-                              <li class="active"><a href="crear_testimonios.html">Crear</span></a></li>
+                              <li class="active"><a href="AM_comentario.php">Crear</span></a></li>
                               </ul>
                             </td>
                         </tfoot>

@@ -49,6 +49,16 @@ class Model
 	}
 
 
+	public function EliminarCiudad($id_ciudad){
+		
+		$sql= "DELETE FROM ciudad
+				WHERE id_ciudad = $id_ciudad";
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}
+
+
+
 
 
 }
