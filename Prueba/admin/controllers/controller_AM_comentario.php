@@ -21,10 +21,10 @@ class Controller
 		//Crear ciudad		
 		if (isset($_POST['persona'])) {
 
-			$testimonio["persona"] = $_POST["persona"];
-			
-			$testimonio["id_condicion"] = $_POST["id_condicion"];
+			$testimonio["persona"] = $_POST["persona"];			
 			$testimonio["fecha"] = $_POST["fecha"];
+			$testimonio["id_condicion"] = $_POST["id_condicion"];
+			$testimonio["id_ciudad"] = $_POST["id_ciudad"];
 			$testimonio["comentario"] = $_POST["comentario"];
 
 			$this->model->InsertaTestimonio($testimonio);

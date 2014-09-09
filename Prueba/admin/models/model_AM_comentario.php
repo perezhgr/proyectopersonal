@@ -33,24 +33,26 @@ class Model
 
 	public function InsertaTestimonio($testimonio){
 
-		$sql = "INSERT INTO `autosbd`.`auto` (`id_usuario`, `id_marca`, `titulo`, `valor`, `descripcion`, `modelo`, `anio`)  VALUES (:id_usuario,:marca,:titulo,:valor,:descripcion,:modelo,:anio)";
-		$q = $this->conn->prepare($sql);
-		$a=$q->execute(array(':id_usuario'=>$id_usuario, ':marca'=>$auto["marca"], ':titulo'=>$auto["titulo"] ,':valor'=>$auto["valor"] ,':descripcion'=>$auto["descripcion"] ,':modelo'=>$auto["modelo"] ,':anio'=>$auto["anio"] ));
-			
-
-		$id_auto = $this->conn->lastInsertId();		
-
-
-		$sql = "INSERT INTO `experiencia` (`nombre_persona`,`fecha`) 
-		VALUES (:nombre_ciudad,:nombre_pais,:duracion,:precio,:descripcion,:testimonio)";
+		$sql = "INSERT INTO `experiencia` (`nombre_persona`,`fecha`,`id_condicion`,`id_ciudad`) 
+		VALUES (:nombre_persona,:fecha,:id_condicion,:id_ciudad)";
 
 		$resultado = $this->conn->prepare($sql);
-		$resultado->execute(array(':nombre_ciudad'=>$ciudad["ciudad"],':nombre_pais'=>$ciudad["pais"],':duracion'=>$ciudad["duracion"],':precio'=>$ciudad["precio"],':descripcion'=>$ciudad["descripcion"],':testimonio'=>NULL));
+		$resultado->execute(array(':nombre_persona'=>$testimonio["persona"],':fecha'=>$testimonio["fecha"],':id_condicion'=>$testimonio["id_condicion"],':id_ciudad'=>$testimonio["id_ciudad"]));
+		
 		if(!$resultado){
 			die(print($this->conn->errorInfo()[2]));
 		}
 		$resultado=$resultado->fetch(PDO::FETCH_ASSOC);
 		return $resultado;
+
+
+		/*$id_persona = $this->conn->lastInsertId();	
+
+		$sql = "INSERT INTO `comentario` (`texto`,`id_persona`) 
+		VALUES (:texto,:id_persona)";
+		$q = $this->conn->prepare($sql);
+		$a=$q->execute(array(':texto'=>$testimonio["comentario"],':id_persona'=>$id_persona));
+*/
 	}
 
 	

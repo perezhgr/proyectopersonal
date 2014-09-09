@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-09 00:16:06
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-09 01:23:51
          compiled from "./templates/crear_testimonio.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:855100354540e22938a3ef7-02914618%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a0b8871eb006ee0f9aa39c61f621db34a97e7e5f' => 
     array (
       0 => './templates/crear_testimonio.tpl',
-      1 => 1410214559,
+      1 => 1410218575,
       2 => 'file',
     ),
   ),
@@ -65,29 +65,29 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             <div class="form-group">
                               <label for="select" class="col-lg-2 control-label">Condicion</label>
                               <div class="col-lg-10">
-                                <select class="form-control" id="select" >
-                                  <?php  $_smarty_tpl->tpl_vars['condicion'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['condicion']->_loop = false;
+                                <select class="form-control" name="id_condicion" >
+                                <?php  $_smarty_tpl->tpl_vars['condicion'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['condicion']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['Condicion']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['condicion']->key => $_smarty_tpl->tpl_vars['condicion']->value){
 $_smarty_tpl->tpl_vars['condicion']->_loop = true;
-?>  
-                                  <option name="id_condicion"value="<?php echo $_smarty_tpl->tpl_vars['condicion']->value['id_condicion'];?>
+?>    
+                                  <option value="<?php echo $_smarty_tpl->tpl_vars['condicion']->value['id_condicion'];?>
 "><?php echo $_smarty_tpl->tpl_vars['condicion']->value['condicion'];?>
 </option>
                                   <?php } ?>
                                 </select>
                               </div>
                             </div>
-                                                        <div class="form-group">
+                            <div class="form-group">
                               <label for="select" class="col-lg-2 control-label">Ciudad que deseas comentar</label>
                               <div class="col-lg-10">
-                                <select class="form-control" id="select" >
+                                <select class="form-control" id="select" name="id_ciudad" >
                                   <?php  $_smarty_tpl->tpl_vars['ciudad'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ciudad']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['Ciudad']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['ciudad']->key => $_smarty_tpl->tpl_vars['ciudad']->value){
 $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
 ?>  
-                                  <option name="id_ciudad"value="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
+                                  <option value="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
 "><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
 </option>
                                   <?php } ?>
