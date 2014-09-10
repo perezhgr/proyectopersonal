@@ -31,10 +31,11 @@ class Model
 
 	public function ObtenerComentarioByIdCiudad($id_ciudad){	
 		
-		$sql="SELECT e.nombre_persona,e.fecha,e.condicion,c.texto
+		$sql="SELECT e.nombre_persona,e.fecha,c.condicion,com.texto
 		FROM   ciudad ci 
 		JOIN   experiencia e ON (e.id_ciudad =ci.id_ciudad)
-		JOIN   comentario  c ON (c.id_persona = e.id_persona) 
+		JOIN   comentario  com ON (com.id_persona = e.id_persona) 
+        JOIN   condicion   c ON  (c.id_condicion = e.id_condicion)
 		WHERE  ci.id_ciudad =$id_ciudad";
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();	 

@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-07 15:16:17
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-10 19:56:57
          compiled from "./templates/detalle_experiencia.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:473058511540b0fa99f6816-16147112%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:41205115654108260c94b43-12458719%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'c975a9ce1cc8a10d45629ba24e85d05104491571' => 
     array (
       0 => './templates/detalle_experiencia.tpl',
-      1 => 1410095773,
+      1 => 1410368494,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '473058511540b0fa99f6816-16147112',
+  'nocache_hash' => '41205115654108260c94b43-12458719',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_540b0fa9a46d01_20042925',
+  'unifunc' => 'content_54108260e184d8_27953154',
   'variables' => 
   array (
     'Ciudad' => 0,
@@ -30,7 +30,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_540b0fa9a46d01_20042925')) {function content_540b0fa9a46d01_20042925($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/opt/lampp/htdocs/Prueba/libs/plugins/modifier.date_format.php';
+<?php if ($_valid && !is_callable('content_54108260e184d8_27953154')) {function content_54108260e184d8_27953154($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/opt/lampp/htdocs/Prueba/libs/plugins/modifier.date_format.php';
 ?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <body>
@@ -61,7 +61,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <!-- BANNER --> 
     <div class="banner">
         <div class="container">
-        <img src="img/banner5.jpg" alt="">
+        <img src="img/banner/banner5.jpg" alt="">
         </div>
     </div>   
     <!-- BANNER --> 
@@ -78,8 +78,7 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
     <div class="section-title"  id="4">
         <h2>Experiencias de nuestros viajeros</h2>
         <div class="seperator size-small"><span></span></div>
-        <h4 class="subtitle"><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
- • <?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_pais'];?>
+        <h4 class="subtitle">•&nbsp<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
 </h4>
         <!-- Este boton es una prueba-->
         <a href="detalle_ciudad.php?id_ciudad=<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>

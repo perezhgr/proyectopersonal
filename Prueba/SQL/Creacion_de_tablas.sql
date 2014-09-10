@@ -1,3 +1,7 @@
+--Comando para reiniciar el autoincremento de una tabla
+ALTER TABLE menu AUTO_INCREMENT = 1 
+---------------------------------------------------------------------------------
+
 CREATE TABLE menu (
 id_menu            INT(10) NOT NULL AUTO_INCREMENT,
 nombre_menu        VARCHAR (50) NULL,

@@ -54,7 +54,7 @@
                 
                     <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
 
-                    <img src="img/sidney.jpg"   alt="slidebg2"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                    <img src="img/cover/sidney.jpg"   alt="slidebg2"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
 
                     <!-- LAYER NR. 2 -->
 
@@ -160,7 +160,7 @@
 
                     <!-- THE MAIN IMAGE IN THE SECOND SLIDE -->
 
-                    <img src="img/paris.jpg"   alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                    <img src="img/cover/paris.jpg"   alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
 
 
 
@@ -246,7 +246,7 @@
 
                     <!-- THE MAIN IMAGE IN THE SECOND SLIDE -->
 
-                    <img src="img/vancouver.jpg"   alt="slidebg3"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                    <img src="img/cover/vancouver.jpg"   alt="slidebg3"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
                 
                     <!-- LAYER NR. 2 -->
 
@@ -472,7 +472,7 @@
          data-videofile='https://www.youtube.com/embed/hwVGld3XxBg'
          data-videowidth="1280"
          data-videoheight="720"
-         data-videoposter="img/dubai2.jpg"
+         data-videoposter="img/cover/dubai.jpg"
          data-videoparallax="true"
          data-videooverlaycolor="#000000"
          data-videooverlayopacity="0.6">
@@ -585,7 +585,6 @@
                 </div>
             </div>
             <h4 class="team-name"><strong>{$testimonios.nombre_ciudad}</strong></h4>
-            <h6 class="team-role">{$testimonios.nombre_pais}</h6>
             <div class="seperator size-mini height-small"><span></span></div>
         </div>
     {/foreach}

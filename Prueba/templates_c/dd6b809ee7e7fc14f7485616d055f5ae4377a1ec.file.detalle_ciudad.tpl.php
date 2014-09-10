@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-08 23:05:23
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-10 19:37:53
          compiled from "./templates/detalle_ciudad.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2080452488540b06408e9a94-16895380%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:144153659354107fae9c14d8-68406373%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'dd6b809ee7e7fc14f7485616d055f5ae4377a1ec' => 
     array (
       0 => './templates/detalle_ciudad.tpl',
-      1 => 1410210320,
+      1 => 1410368495,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2080452488540b06408e9a94-16895380',
+  'nocache_hash' => '144153659354107fae9c14d8-68406373',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_540b0640f243b2_61425792',
+  'unifunc' => 'content_54107faea46cc4_22010837',
   'variables' => 
   array (
     'Ciudad' => 0,
@@ -26,7 +26,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_540b0640f243b2_61425792')) {function content_540b0640f243b2_61425792($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_54107faea46cc4_22010837')) {function content_54107faea46cc4_22010837($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <body>
 
@@ -56,7 +56,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <!-- BANNER --> 
     <div class="banner">
         <div class="container">
-        <img src="img/banner4.jpg" alt="">
+        <img src="img/banner/banner4.jpg" alt="">
         </div>
     </div>   
     <!-- BANNER --> 

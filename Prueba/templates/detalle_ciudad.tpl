@@ -27,7 +27,7 @@
     <!-- BANNER --> 
     <div class="banner">
         <div class="container">
-        <img src="img/banner4.jpg" alt="">
+        <img src="img/banner/banner4.jpg" alt="">
         </div>
     </div>   
     <!-- BANNER --> 

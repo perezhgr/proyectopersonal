@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-08 23:02:52
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-10 19:20:49
          compiled from "./templates/home.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:9921847175409f7c51398a6-54417005%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:96855525054107f6496dc29-64002091%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1410210154,
+      1 => 1410369647,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '9921847175409f7c51398a6-54417005',
+  'nocache_hash' => '96855525054107f6496dc29-64002091',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5409f7c54a60c4_61491096',
+  'unifunc' => 'content_54107f670f0495_97658969',
   'variables' => 
   array (
     'Menu' => 0,
@@ -30,7 +30,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5409f7c54a60c4_61491096')) {function content_5409f7c54a60c4_61491096($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_54107f670f0495_97658969')) {function content_54107f670f0495_97658969($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
 <body>
 
@@ -93,7 +93,7 @@ $_smarty_tpl->tpl_vars['menu']->_loop = true;
                 
                     <!-- THE MAIN IMAGE IN THE FIRST SLIDE -->
 
-                    <img src="img/sidney.jpg"   alt="slidebg2"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                    <img src="img/cover/sidney.jpg"   alt="slidebg2"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
 
                     <!-- LAYER NR. 2 -->
 
@@ -199,7 +199,7 @@ $_smarty_tpl->tpl_vars['menu']->_loop = true;
 
                     <!-- THE MAIN IMAGE IN THE SECOND SLIDE -->
 
-                    <img src="img/paris.jpg"   alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                    <img src="img/cover/paris.jpg"   alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
 
 
 
@@ -285,7 +285,7 @@ $_smarty_tpl->tpl_vars['menu']->_loop = true;
 
                     <!-- THE MAIN IMAGE IN THE SECOND SLIDE -->
 
-                    <img src="img/vancouver.jpg"   alt="slidebg3"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                    <img src="img/cover/vancouver.jpg"   alt="slidebg3"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
                 
                     <!-- LAYER NR. 2 -->
 
@@ -529,7 +529,7 @@ $_smarty_tpl->tpl_vars['empresa']->_loop = true;
          data-videofile='https://www.youtube.com/embed/hwVGld3XxBg'
          data-videowidth="1280"
          data-videoheight="720"
-         data-videoposter="img/dubai2.jpg"
+         data-videoposter="img/cover/dubai.jpg"
          data-videoparallax="true"
          data-videooverlaycolor="#000000"
          data-videooverlayopacity="0.6">
@@ -656,8 +656,6 @@ $_smarty_tpl->tpl_vars['testimonios']->_loop = true;
             </div>
             <h4 class="team-name"><strong><?php echo $_smarty_tpl->tpl_vars['testimonios']->value['nombre_ciudad'];?>
 </strong></h4>
-            <h6 class="team-role"><?php echo $_smarty_tpl->tpl_vars['testimonios']->value['nombre_pais'];?>
-</h6>
             <div class="seperator size-mini height-small"><span></span></div>
         </div>
     <?php } ?>
