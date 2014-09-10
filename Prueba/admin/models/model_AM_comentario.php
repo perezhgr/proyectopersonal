@@ -9,6 +9,7 @@ class Model
 		//Conexión
 		include('../conexion.php');
 
+	$this->conn->beginTransaction();
 	}
 	
 
@@ -37,23 +38,23 @@ class Model
 		VALUES (:nombre_persona,:fecha,:id_condicion,:id_ciudad)";
 
 		$resultado = $this->conn->prepare($sql);
-		$resultado->execute(array(':nombre_persona'=>$testimonio["persona"],':fecha'=>$testimonio["fecha"],':id_condicion'=>$testimonio["id_condicion"],':id_ciudad'=>$testimonio["id_ciudad"]));
-		
-		if(!$resultado){
-			die(print($this->conn->errorInfo()[2]));
-		}
-		$resultado=$resultado->fetch(PDO::FETCH_ASSOC);
-		return $resultado;
-
-
-		/*$id_persona = $this->conn->lastInsertId();	
+		$resultado->bindValue(':nombre_persona',':fecha',':id_condicion',':id_ciudad', $experiencia, PDO::PARAM_STR); 
+		$resultado->execute();
+		//$resultado->execute(array(':nombre_persona'=>$testimonio["persona"],':fecha'=>$testimonio["fecha"],':id_condicion'=>$testimonio["id_condicion"],':id_ciudad'=>$testimonio["id_ciudad"]));
+		//$resultado=$resultado->fetch(PDO::FETCH_ASSOC);
+		$idPersona = $this->conn->lastInsertId();
+		//$id_persona = $this->conn->lastInsertId();	
 
 		$sql = "INSERT INTO `comentario` (`texto`,`id_persona`) 
 		VALUES (:texto,:id_persona)";
-		$q = $this->conn->prepare($sql);
-		$a=$q->execute(array(':texto'=>$testimonio["comentario"],':id_persona'=>$id_persona));
-*/
-	}
+		$resultado = $this->conn->prepare($sql);
+		$resultado->bindValue(':texto', $comentario, PDO::PARAM_STR); 
+		$resultado->bindValue(':id_persona', $idPersona, PDO::PARAM_INT); 
+		$resultado->execute();
+
+		$this->conn->commit(); 
+
+	}	
 
 	
 	/*public function ObtenerCiudad($id_ciudad){
