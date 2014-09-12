@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Gabriela';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gabriela'), local('Gabriela-Regular'), url(http://fonts.gstatic.com/s/gabriela/v4/fLaucCvjCt_Hmc9smyo_rPesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Radley';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Radley'), url(http://fonts.gstatic.com/s/radley/v9/fE3I-GlsFHTITnHGmv57XA.woff) format('woff');
+}
+@font-face {
+  font-family: 'Trocchi';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Trocchi'), url(http://fonts.gstatic.com/s/trocchi/v4/vnG3tpDGh17z5IKwB3RdMg.woff) format('woff');
+}
