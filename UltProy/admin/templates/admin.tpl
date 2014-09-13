@@ -88,25 +88,18 @@
                         <tbody>
                           {foreach from=$Testimonio item=testimonio}
                           <tr class="active danger">
-                            <td>{$testimonio.id_usuario}</td>
+                            <td>{$testimonio.id_comentario}</td>
                             <td>{$testimonio.nombre}</td>
                             <td>{$testimonio.condicion}</td>
                             <td>{$testimonio.texto}</td>
                             <td>
-                              <a href="AM_comentario.php?id_persona={$testimonio.id_persona}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
-                              </a>
-                              <a href="borrar_comentario.php?id_persona={$testimonio.id_persona}"><span class="glyphicon glyphicon-trash"></span>
+                              <a href="borrar_comentario.php?id_comentario={$testimonio.id_comentario}"><span class="glyphicon glyphicon-trash"></span>
                               </a>                           
                             </td>                            
                           </tr>
                           {/foreach}
                         </tbody>
                         <tfoot>
-                            <td>
-                            <ul class="nav nav-pills">
-                              <li class="active"><a href="AM_comentario.php">Crear</span></a></li>
-                              </ul>
-                            </td>
                         </tfoot>
                       </table> 
                     </div>   
@@ -126,9 +119,9 @@
                             <td>{$condicion.id_condicion}</td>
                             <td>{$condicion.condicion}</td>
                             <td>
-                              <a href="AM_comentario.php?id_persona={$testimonio.id_persona}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
+                              <a href="AM_comentario.php?id_condicion={$condicion.id_condicion}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
-                              <a href="borrar_comentario.php?id_persona={$testimonio.id_persona}"><span class="glyphicon glyphicon-trash"></span>
+                              <a href="borrar_comentario.php?id_condicion={$condicion.id_condicion}"><span class="glyphicon glyphicon-trash"></span>
                               </a>                           
                             </td>                            
                           </tr>
@@ -161,7 +154,7 @@
                             <td>{$usuario.nombre}</td>
                             <td>{$usuario.mail}</td>
                             <td>
-                              <a href="AM_comentario.php?id_usuario={$usuario.id_usuario}"><span class="glyphicon glyphicon-star">&nbsp&nbsp</span>
+                              <a href="editar_usuario.php?id_usuario={$usuario.id_usuario}"><span class="glyphicon glyphicon-star">&nbsp&nbsp</span>
                               </a>
                             </td>                            
                           </tr>
@@ -170,9 +163,8 @@
                         <tfoot>
                         </tfoot>
                       </table> 
-                    </div>  
+                    </div> 
                   </div>
-
           </div>
           
           <div class="col-lg-1"></div>

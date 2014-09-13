@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-13 19:26:45
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-14 00:47:54
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1757746597540c9ae3df5640-92654640%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1410629203,
+      1 => 1410648218,
       2 => 'file',
     ),
   ),
@@ -160,7 +160,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['testimonio']->key => $_smarty_tpl->tp
 $_smarty_tpl->tpl_vars['testimonio']->_loop = true;
 ?>
                           <tr class="active danger">
-                            <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['id_usuario'];?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['id_comentario'];?>
 </td>
                             <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['nombre'];?>
 </td>
@@ -169,10 +169,7 @@ $_smarty_tpl->tpl_vars['testimonio']->_loop = true;
                             <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['texto'];?>
 </td>
                             <td>
-                              <a href="AM_comentario.php?id_persona=<?php echo $_smarty_tpl->tpl_vars['testimonio']->value['id_persona'];?>
-"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
-                              </a>
-                              <a href="borrar_comentario.php?id_persona=<?php echo $_smarty_tpl->tpl_vars['testimonio']->value['id_persona'];?>
+                              <a href="borrar_comentario.php?id_comentario=<?php echo $_smarty_tpl->tpl_vars['testimonio']->value['id_comentario'];?>
 "><span class="glyphicon glyphicon-trash"></span>
                               </a>                           
                             </td>                            
@@ -180,11 +177,6 @@ $_smarty_tpl->tpl_vars['testimonio']->_loop = true;
                           <?php } ?>
                         </tbody>
                         <tfoot>
-                            <td>
-                            <ul class="nav nav-pills">
-                              <li class="active"><a href="AM_comentario.php">Crear</span></a></li>
-                              </ul>
-                            </td>
                         </tfoot>
                       </table> 
                     </div>   
@@ -210,10 +202,10 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
                             <td><?php echo $_smarty_tpl->tpl_vars['condicion']->value['condicion'];?>
 </td>
                             <td>
-                              <a href="AM_comentario.php?id_persona=<?php echo $_smarty_tpl->tpl_vars['testimonio']->value['id_persona'];?>
+                              <a href="AM_comentario.php?id_condicion=<?php echo $_smarty_tpl->tpl_vars['condicion']->value['id_condicion'];?>
 "><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
-                              <a href="borrar_comentario.php?id_persona=<?php echo $_smarty_tpl->tpl_vars['testimonio']->value['id_persona'];?>
+                              <a href="borrar_comentario.php?id_condicion=<?php echo $_smarty_tpl->tpl_vars['condicion']->value['id_condicion'];?>
 "><span class="glyphicon glyphicon-trash"></span>
                               </a>                           
                             </td>                            
@@ -254,7 +246,7 @@ $_smarty_tpl->tpl_vars['usuario']->_loop = true;
                             <td><?php echo $_smarty_tpl->tpl_vars['usuario']->value['mail'];?>
 </td>
                             <td>
-                              <a href="AM_comentario.php?id_usuario=<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
+                              <a href="editar_usuario.php?id_usuario=<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
 "><span class="glyphicon glyphicon-star">&nbsp&nbsp</span>
                               </a>
                             </td>                            
@@ -264,9 +256,8 @@ $_smarty_tpl->tpl_vars['usuario']->_loop = true;
                         <tfoot>
                         </tfoot>
                       </table> 
-                    </div>  
+                    </div> 
                   </div>
-
           </div>
           
           <div class="col-lg-1"></div>

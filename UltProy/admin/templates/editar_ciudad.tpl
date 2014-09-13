@@ -31,10 +31,15 @@
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Ciudad</label>
                               <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputEmail" placeholder="Nombre" name="ciudad" 
-                                value="{$ciudad.nombre_ciudad}">
+                                {foreach from=$Nombreciudad item=nombreciudad}
+                                <select class="form-control" name="ciudad" >
+                                  <option value="">{$nombreciudad.nombre_ciudad}</option>
+                                  {/foreach} 
+                                </select>
+                                 
                               </div>
                             </div>
+
                             <div class="form-group">
                               <label for="inputPassword" class="col-lg-2 control-label">Duracion</label>
                               <div class="col-lg-10">
@@ -50,30 +55,13 @@
                               </div>
                             </div>
                             <div class="form-group">
-                              <label for="inputPassword" class="col-lg-2 control-label">Descripcion</label>
-                              <div class="col-lg-10">
-                                <textarea type="text" rows="6" class="form-control" id="texto"  placeholder="Escriba una descripcion" name="descripcion" >{$ciudad.descripcion}</textarea>
-                              </div>
-                            <div class="form-group">
-                            <label for="inputEmail" class="col-lg-2 control-label">Ciudad</label>
+                            <label for="inputEmail" class="col-lg-2 control-label"></label>
                               <div class="col-lg-10">
                                 <input type="hidden" class="form-control" id="inputEmail" placeholder="Nombre" name="id_ciudad" 
                                 value="{$ciudad.id_ciudad}">
                               </div>
                             </div>
-                            </div>
-                            <div class="form-group">
-                             <label for="inputPassword" class="col-lg-2 control-label"></label>
-                             <input type="file" class="filestyle">
-                           </div>
-                            <div class="form-group">
-                             <label for="inputPassword" class="col-lg-2 control-label"></label>
-                             <input type="file" class="filestyle">
-                           </div>
-                            <div class="form-group">
-                             <label for="inputPassword" class="col-lg-2 control-label"></label>
-                             <input type="file" class="filestyle">
-                           </div>                                               
+                            </div>                                         
                             <div class="form-group">
                               <div class="col-lg-10 col-lg-offset-2">
                                 <button type="submit" class="btn btn-primary btn-">Editar</button>

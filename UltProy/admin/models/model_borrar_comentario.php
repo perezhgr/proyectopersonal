@@ -11,10 +11,10 @@ class Model
 
 	}
 
-	public function EliminarCiudad($id_ciudad){
+	public function EliminarComentario($id_comentario){
 		
-		$sql= "DELETE FROM ciudad
-				WHERE id_ciudad = $id_ciudad";
+		$sql= "DELETE FROM comentario
+				WHERE id_comentario = $id_comentario";				
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
 	}

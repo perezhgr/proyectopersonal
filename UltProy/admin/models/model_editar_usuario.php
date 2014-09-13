@@ -10,13 +10,13 @@ class Model
 		include('../conexion.php');
 
 	}
-
-	public function EliminarCiudad($id_ciudad){
+	
+	public function EditarUsuario($usuario){
 		
-		$sql= "DELETE FROM ciudad
-				WHERE id_ciudad = $id_ciudad";
+		$sql= "UPDATE usuario SET `es_admin` = '1'
+		 WHERE id_usuario = $usuario";
 		$query = $this->conn->query($sql);
-		return $query->fetchAll();
+		return $query->fetchAll();		
 	}
 }
 ?>

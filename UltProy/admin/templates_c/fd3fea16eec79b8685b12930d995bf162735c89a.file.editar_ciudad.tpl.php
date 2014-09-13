@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-08 23:11:16
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-13 22:31:15
          compiled from "./templates/editar_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:58858132540cbaca014a39-64387081%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fd3fea16eec79b8685b12930d995bf162735c89a' => 
     array (
       0 => './templates/editar_ciudad.tpl',
-      1 => 1410210390,
+      1 => 1410640272,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'Ciudad' => 0,
+    'Nombreciudad' => 0,
+    'nombreciudad' => 0,
     'ciudad' => 0,
   ),
   'has_nocache_code' => false,
@@ -62,11 +64,20 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Ciudad</label>
                               <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputEmail" placeholder="Nombre" name="ciudad" 
-                                value="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
-">
+                                <?php  $_smarty_tpl->tpl_vars['nombreciudad'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['nombreciudad']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['Nombreciudad']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['nombreciudad']->key => $_smarty_tpl->tpl_vars['nombreciudad']->value){
+$_smarty_tpl->tpl_vars['nombreciudad']->_loop = true;
+?>
+                                <select class="form-control" name="ciudad" >
+                                  <option value=""><?php echo $_smarty_tpl->tpl_vars['nombreciudad']->value['nombre_ciudad'];?>
+</option>
+                                  <?php } ?> 
+                                </select>
+                                 
                               </div>
                             </div>
+
                             <div class="form-group">
                               <label for="inputPassword" class="col-lg-2 control-label">Duracion</label>
                               <div class="col-lg-10">
@@ -84,32 +95,14 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                               </div>
                             </div>
                             <div class="form-group">
-                              <label for="inputPassword" class="col-lg-2 control-label">Descripcion</label>
-                              <div class="col-lg-10">
-                                <textarea type="text" rows="6" class="form-control" id="texto"  placeholder="Escriba una descripcion" name="descripcion" ><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['descripcion'];?>
-</textarea>
-                              </div>
-                            <div class="form-group">
-                            <label for="inputEmail" class="col-lg-2 control-label">Ciudad</label>
+                            <label for="inputEmail" class="col-lg-2 control-label"></label>
                               <div class="col-lg-10">
                                 <input type="hidden" class="form-control" id="inputEmail" placeholder="Nombre" name="id_ciudad" 
                                 value="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
 ">
                               </div>
                             </div>
-                            </div>
-                            <div class="form-group">
-                             <label for="inputPassword" class="col-lg-2 control-label"></label>
-                             <input type="file" class="filestyle">
-                           </div>
-                            <div class="form-group">
-                             <label for="inputPassword" class="col-lg-2 control-label"></label>
-                             <input type="file" class="filestyle">
-                           </div>
-                            <div class="form-group">
-                             <label for="inputPassword" class="col-lg-2 control-label"></label>
-                             <input type="file" class="filestyle">
-                           </div>                                               
+                            </div>                                         
                             <div class="form-group">
                               <div class="col-lg-10 col-lg-offset-2">
                                 <button type="submit" class="btn btn-primary btn-">Editar</button>

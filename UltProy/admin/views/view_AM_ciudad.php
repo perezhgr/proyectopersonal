@@ -15,6 +15,11 @@ class View
 
 	}
 
+	public function MostrarNombresCiudades($nombre){
+	$this->smarty->assign('Nombreciudad',$nombre);
+	}
+
+
 	public function ImprimirPagEditarCiudad($city)
 	{
 		$this->smarty->assign('Ciudad',$city);

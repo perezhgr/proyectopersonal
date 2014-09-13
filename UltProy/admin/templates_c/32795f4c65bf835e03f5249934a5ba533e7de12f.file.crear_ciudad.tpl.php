@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-08 23:08:26
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-13 20:29:10
          compiled from "./templates/crear_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1253137523540cad01627627-01460166%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '32795f4c65bf835e03f5249934a5ba533e7de12f' => 
     array (
       0 => './templates/crear_ciudad.tpl',
-      1 => 1410210503,
+      1 => 1410632917,
       2 => 'file',
     ),
   ),
@@ -65,12 +65,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                               <label for="inputPassword" class="col-lg-2 control-label">Precio</label>
                               <div class="col-lg-10">
                                 <input type="text" class="form-control" id="inputPassword" placeholder="Precio" name="precio">
-                              </div>
-                            </div>
-                            <div class="form-group">
-                              <label for="inputPassword" class="col-lg-2 control-label">Descripcion</label>
-                              <div class="col-lg-10">
-                                <textarea type="text" rows="6" class="form-control" id="texto"  placeholder="Escriba una descripcion" name="descripcion"></textarea>
                               </div>
                             </div>
                             <div class="form-group">

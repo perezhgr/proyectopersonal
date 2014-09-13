@@ -46,12 +46,6 @@
                               </div>
                             </div>
                             <div class="form-group">
-                              <label for="inputPassword" class="col-lg-2 control-label">Descripcion</label>
-                              <div class="col-lg-10">
-                                <textarea type="text" rows="6" class="form-control" id="texto"  placeholder="Escriba una descripcion" name="descripcion"></textarea>
-                              </div>
-                            </div>
-                            <div class="form-group">
                              <label for="inputPassword" class="col-lg-2 control-label"></label>
                              <input type="file" class="filestyle">
                            </div>

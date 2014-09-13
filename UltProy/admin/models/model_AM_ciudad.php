@@ -13,11 +13,11 @@ class Model
 	
 	public function InsertaCiudad($ciudad){
 
-		$sql = "INSERT INTO `ciudad` (`nombre_ciudad`,`duracion`, `precio`,`descripcion`,`testimonio`) 
-		VALUES (:nombre_ciudad,:duracion,:precio,:descripcion,:testimonio)";
+		$sql = "INSERT INTO `ciudad` (`nombre_ciudad`,`duracion`, `precio`) 
+		VALUES (:nombre_ciudad,:duracion,:precio)";
 
 		$resultado = $this->conn->prepare($sql);
-		$resultado->execute(array(':nombre_ciudad'=>$ciudad["ciudad"],':duracion'=>$ciudad["duracion"],':precio'=>$ciudad["precio"],':descripcion'=>$ciudad["descripcion"],':testimonio'=>NULL));
+		$resultado->execute(array(':nombre_ciudad'=>$ciudad["ciudad"],':duracion'=>$ciudad["duracion"],':precio'=>$ciudad["precio"]));
 		if(!$resultado){
 			die(print($this->conn->errorInfo()[2]));
 		}
@@ -26,11 +26,20 @@ class Model
 	}
 
 	
-	public function ObtenerCiudad($id_ciudad){
+	public function ObtenerCiudadById($id_ciudad){
 		
-		$sql = "SELECT *
+		$sql = "SELECT id_ciudad,duracion,precio
 		FROM ciudad
 		WHERE id_ciudad=$id_ciudad";
+
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}
+
+	public function ObtenerNombreCiudad(){
+		
+		$sql = "SELECT nombre_ciudad
+		FROM ciudad";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
@@ -41,7 +50,6 @@ class Model
 		$sql= "UPDATE `ciudad` SET nombre_ciudad = '".$ciudad['ciudad']."' ,
 		duracion = '".$ciudad['duracion']."' ,
 		precio = '".$ciudad['precio']."' ,
-		descripcion = '".$ciudad['descripcion']."' 
 		WHERE id_ciudad =".$ciudad['id_ciudad'];
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
@@ -55,10 +63,6 @@ class Model
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
 	}
-
-
-
-
 
 }
 ?>

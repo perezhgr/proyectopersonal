@@ -17,20 +17,22 @@ class Controller
 			$ciudad["ciudad"] = $_POST["ciudad"];
 			$ciudad["duracion"] = $_POST["duracion"];
 			$ciudad["precio"] = $_POST["precio"];
-			$ciudad["descripcion"] = $_POST["descripcion"];
-
 			$this->model->InsertaCiudad($ciudad);
 
 		}
 		$this->view->ImprimirPagCrearCiudad();
 	}
 
+	public function ObtenerNombreCiudad(){
+		$nombre=$this->model->ObtenerNombreCiudad();
+		$this->view->MostrarNombresCiudades($nombre);
+	}	
 	public function ImprimirPagEditarCiudad(){
 
 		if(isset($_GET['id_ciudad'])) {
 
-			$city = $this->model->ObtenerCiudad($_GET['id_ciudad']);
-			$this->view->ImprimirPagEditarCiudad($city);
+		$city=$this->model->ObtenerCiudadById($_GET['id_ciudad']);
+		$this->view->ImprimirPagEditarCiudad($city);
 
 			if (isset($_POST['id_ciudad'])) {
 
@@ -38,8 +40,6 @@ class Controller
 				$ciudad["ciudad"] = $_POST["ciudad"];
 				$ciudad["duracion"] = $_POST["duracion"];
 				$ciudad["precio"] = $_POST["precio"];
-				$ciudad["descripcion"] = $_POST["descripcion"];
-
 				$this->model->ActualizaCiudad($ciudad);
 			}			
 		}			
