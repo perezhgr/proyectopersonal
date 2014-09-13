@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-08 23:33:46
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-13 19:26:45
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1757746597540c9ae3df5640-92654640%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1410212022,
+      1 => 1410629203,
       2 => 'file',
     ),
   ),
@@ -22,11 +22,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'Countcity' => 0,
     'i' => 0,
     'Countcoment' => 0,
-    'j' => 0,
+    'Countcondicion' => 0,
+    'Countuser' => 0,
     'Ciudad' => 0,
     'ciudad' => 0,
     'Testimonio' => 0,
     'testimonio' => 0,
+    'Condicion' => 0,
+    'condicion' => 0,
+    'Usuario' => 0,
+    'usuario' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -57,22 +62,40 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 foreach ($_from as $_smarty_tpl->tpl_vars['i']->key => $_smarty_tpl->tpl_vars['i']->value){
 $_smarty_tpl->tpl_vars['i']->_loop = true;
 ?>
-                    <li class="active"><a href="#home" data-toggle="tab">Ciudades
+                    <li class="active"><a href="#ciudad" data-toggle="tab">Ciudades
                     <span class="badge"><?php echo $_smarty_tpl->tpl_vars['i']->value['countcity'];?>
 </span></a></li>
                     <?php } ?>
-                    <?php  $_smarty_tpl->tpl_vars['j'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['j']->_loop = false;
+                    <?php  $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['i']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['Countcoment']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['j']->key => $_smarty_tpl->tpl_vars['j']->value){
-$_smarty_tpl->tpl_vars['j']->_loop = true;
+foreach ($_from as $_smarty_tpl->tpl_vars['i']->key => $_smarty_tpl->tpl_vars['i']->value){
+$_smarty_tpl->tpl_vars['i']->_loop = true;
 ?>
-                    <li><a href="#profile" data-toggle="tab">Testimonios
-                    <span class="badge"><?php echo $_smarty_tpl->tpl_vars['j']->value['countcoment'];?>
+                    <li><a href="#comentario" data-toggle="tab">Testimonios
+                    <span class="badge"><?php echo $_smarty_tpl->tpl_vars['i']->value['countcoment'];?>
+</span></a></li>
+                    <?php } ?>
+                    <?php  $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['i']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['Countcondicion']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['i']->key => $_smarty_tpl->tpl_vars['i']->value){
+$_smarty_tpl->tpl_vars['i']->_loop = true;
+?>                    
+                    <li><a href="#condicion" data-toggle="tab">Condicion del turista
+                    <span class="badge"><?php echo $_smarty_tpl->tpl_vars['i']->value['countcondicion'];?>
+</span></a></li>
+                    <?php } ?>
+                    <?php  $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['i']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['Countuser']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['i']->key => $_smarty_tpl->tpl_vars['i']->value){
+$_smarty_tpl->tpl_vars['i']->_loop = true;
+?>                    
+                    <li><a href="#usuario" data-toggle="tab">Usuarios
+                    <span class="badge"><?php echo $_smarty_tpl->tpl_vars['i']->value['countuser'];?>
 </span></a></li>
                     <?php } ?>
                   </ul>
                   <div id="myTabContent" class="tab-content">
-                    <div class="tab-pane fade active in" id="home">
+                    <div class="tab-pane fade active in" id="ciudad">
                       <table class="table table-striped table-hover ">
                         <thead>
                           <tr>
@@ -80,7 +103,6 @@ $_smarty_tpl->tpl_vars['j']->_loop = true;
                             <th>Ciudad</th>
                             <th>Duracion</th>
                             <th>Precio</th>
-                            <th>Descripcion</th>
                             <th>Accion</th>
                           </tr>
                         </thead>
@@ -98,8 +120,6 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                             <td><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['duracion'];?>
 </td>
                             <td><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['precio'];?>
-</td>
-                            <td><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['descripcion'];?>
 </td>
                             <td>
                               <a href="AM_ciudad.php?id_ciudad=<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
@@ -121,14 +141,13 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                         </tfoot>
                       </table> 
                     </div>
-                    <div class="tab-pane fade" id="profile">
+                    <div class="tab-pane fade" id="comentario">
                       <table class="table table-striped table-hover ">
                         <thead>
                           <tr>
                             <th>#</th>
                             <th>Persona</th>
                             <th>Condicion</th>
-                            <th>Fecha</th>
                             <th>Texto</th>
                             <th>Accion</th>
                           </tr>
@@ -141,13 +160,11 @@ foreach ($_from as $_smarty_tpl->tpl_vars['testimonio']->key => $_smarty_tpl->tp
 $_smarty_tpl->tpl_vars['testimonio']->_loop = true;
 ?>
                           <tr class="active danger">
-                            <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['id_persona'];?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['id_usuario'];?>
 </td>
-                            <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['nombre_persona'];?>
+                            <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['nombre'];?>
 </td>
                             <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['condicion'];?>
-</td>
-                            <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['fecha'];?>
 </td>
                             <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['texto'];?>
 </td>
@@ -171,8 +188,87 @@ $_smarty_tpl->tpl_vars['testimonio']->_loop = true;
                         </tfoot>
                       </table> 
                     </div>   
+                    <div class="tab-pane fade" id="condicion">
+                      <table class="table table-striped table-hover ">
+                        <thead>
+                          <tr>
+                            <th>#</th>                            
+                            <th>Condicion</th>
+                            <th>Accion</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <?php  $_smarty_tpl->tpl_vars['condicion'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['condicion']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['Condicion']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['condicion']->key => $_smarty_tpl->tpl_vars['condicion']->value){
+$_smarty_tpl->tpl_vars['condicion']->_loop = true;
+?>
+                          <tr class="active danger">
+                            <td><?php echo $_smarty_tpl->tpl_vars['condicion']->value['id_condicion'];?>
+</td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['condicion']->value['condicion'];?>
+</td>
+                            <td>
+                              <a href="AM_comentario.php?id_persona=<?php echo $_smarty_tpl->tpl_vars['testimonio']->value['id_persona'];?>
+"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
+                              </a>
+                              <a href="borrar_comentario.php?id_persona=<?php echo $_smarty_tpl->tpl_vars['testimonio']->value['id_persona'];?>
+"><span class="glyphicon glyphicon-trash"></span>
+                              </a>                           
+                            </td>                            
+                          </tr>
+                          <?php } ?>
+                        </tbody>
+                        <tfoot>
+                            <td>
+                            <ul class="nav nav-pills">
+                              <li class="active"><a href="AM_comentario.php">Crear</span></a></li>
+                              </ul>
+                            </td>
+                        </tfoot>
+                      </table> 
+                    </div>
+                    <div class="tab-pane fade" id="usuario">
+                      <table class="table table-striped table-hover ">
+                        <thead>
+                          <tr>
+                            <th>#</th>                            
+                            <th>Nombre</th>
+                            <th>E-mail</th>
+                            <th>Accion</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <?php  $_smarty_tpl->tpl_vars['usuario'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['usuario']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['Usuario']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['usuario']->key => $_smarty_tpl->tpl_vars['usuario']->value){
+$_smarty_tpl->tpl_vars['usuario']->_loop = true;
+?>
+                          <tr class="active danger">
+                            <td><?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
+</td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['usuario']->value['nombre'];?>
+</td>
+                            <td><?php echo $_smarty_tpl->tpl_vars['usuario']->value['mail'];?>
+</td>
+                            <td>
+                              <a href="AM_comentario.php?id_usuario=<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
+"><span class="glyphicon glyphicon-star">&nbsp&nbsp</span>
+                              </a>
+                            </td>                            
+                          </tr>
+                          <?php } ?>
+                        </tbody>
+                        <tfoot>
+                        </tfoot>
+                      </table> 
+                    </div>  
                   </div>
+
           </div>
+          
           <div class="col-lg-1"></div>
         </div>
 <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>

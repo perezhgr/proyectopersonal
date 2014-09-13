@@ -34,6 +34,7 @@ CREATE TABLE imagen (
 
 CREATE TABLE usuario(
 	id_usuario INT( 11 ) NOT NULL AUTO_INCREMENT ,
+	nombre VARCHAR( 50 ) NOT NULL ,
 	mail VARCHAR( 50 ) NOT NULL ,
 	pass VARCHAR( 50 ) NOT NULL ,
 	es_admin  TINYINT(1) NULL,

@@ -22,6 +22,20 @@ class View
 		$this->smarty->assign("Countcoment",$countcoment);		
 
 	}
+
+	public function MostrarCondicion($condicion,$countcondicion)
+	{
+		$this->smarty->assign("Condicion",$condicion);
+		$this->smarty->assign("Countcondicion",$countcondicion);		
+
+	}
+
+	public function MostrarUsuario($usuario,$countuser)
+	{
+		$this->smarty->assign("Usuario",$usuario);
+		$this->smarty->assign("Countuser",$countuser);		
+
+	}	
 	
 	public function ImprimirPaginaAdmin()
 	{
