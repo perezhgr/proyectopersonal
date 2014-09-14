@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-14 00:47:54
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-14 16:54:13
          compiled from "./templates/admin.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1757746597540c9ae3df5640-92654640%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1340954347541591112ed7c1-77948224%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1410648218,
+      1 => 1410706449,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1757746597540c9ae3df5640-92654640',
+  'nocache_hash' => '1340954347541591112ed7c1-77948224',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_540c9ae404c896_83020031',
+  'unifunc' => 'content_5415911143e749_75288648',
   'variables' => 
   array (
     'Countcity' => 0,
@@ -35,7 +35,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_540c9ae404c896_83020031')) {function content_540c9ae404c896_83020031($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_5415911143e749_75288648')) {function content_5415911143e749_75288648($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
   <body>
 
@@ -202,10 +202,9 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
                             <td><?php echo $_smarty_tpl->tpl_vars['condicion']->value['condicion'];?>
 </td>
                             <td>
-                              <a href="AM_comentario.php?id_condicion=<?php echo $_smarty_tpl->tpl_vars['condicion']->value['id_condicion'];?>
-"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
+                              <a href=""><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
-                              <a href="borrar_comentario.php?id_condicion=<?php echo $_smarty_tpl->tpl_vars['condicion']->value['id_condicion'];?>
+                              <a href="borrar_condicion.php?id_condicion=<?php echo $_smarty_tpl->tpl_vars['condicion']->value['id_condicion'];?>
 "><span class="glyphicon glyphicon-trash"></span>
                               </a>                           
                             </td>                            
@@ -215,7 +214,7 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
                         <tfoot>
                             <td>
                             <ul class="nav nav-pills">
-                              <li class="active"><a href="AM_comentario.php">Crear</span></a></li>
+                              <li class="active"><a href="AM_condicion.php">Crear</span></a></li>
                               </ul>
                             </td>
                         </tfoot>

@@ -25,18 +25,16 @@
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="home">
                         <form class="form-horizontal" method="POST"> 
-                          {foreach from=$Ciudad item=ciudad}
+                          
                           <fieldset>
                             <legend>Ciudad</legend>
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Ciudad</label>
                               <div class="col-lg-10">
-                                {foreach from=$Nombreciudad item=nombreciudad}
-                                <select class="form-control" name="ciudad" >
-                                  <option value="">{$nombreciudad.nombre_ciudad}</option>
-                                  {/foreach} 
-                                </select>
-                                 
+
+                              {html_options name=ciudades options=$Ciudades}
+                              <select name="ciudades" class="form-group">
+                              </select>
                               </div>
                             </div>
 
@@ -44,21 +42,21 @@
                               <label for="inputPassword" class="col-lg-2 control-label">Duracion</label>
                               <div class="col-lg-10">
                                 <input type="text" class="form-control" id="inputPassword" placeholder="Duracion" name="duracion"
-                                value="{$ciudad.duracion}">
+                                value="">
                               </div>
                             </div>
                            <div class="form-group">
                               <label for="inputPassword" class="col-lg-2 control-label">Precio</label>
                               <div class="col-lg-10">
                                 <input type="text" class="form-control" id="inputPassword" placeholder="Precio" name="precio"
-                                value="{$ciudad.precio}">
+                                value="">
                               </div>
                             </div>
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label"></label>
                               <div class="col-lg-10">
-                                <input type="hidden" class="form-control" id="inputEmail" placeholder="Nombre" name="id_ciudad" 
-                                value="{$ciudad.id_ciudad}">
+                                <input type="hidden" class="form-control" id="inputEmail" placeholder="Nombre" name="" 
+                                value="">
                               </div>
                             </div>
                             </div>                                         
@@ -68,7 +66,7 @@
                               </div>
                             </div>
                           </fieldset>
-                          {/foreach}
+                          
                         </form>                        
                     </div>
                   </div>

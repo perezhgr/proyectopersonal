@@ -119,9 +119,9 @@
                             <td>{$condicion.id_condicion}</td>
                             <td>{$condicion.condicion}</td>
                             <td>
-                              <a href="AM_comentario.php?id_condicion={$condicion.id_condicion}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
+                              <a href=""><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
-                              <a href="borrar_comentario.php?id_condicion={$condicion.id_condicion}"><span class="glyphicon glyphicon-trash"></span>
+                              <a href="borrar_condicion.php?id_condicion={$condicion.id_condicion}"><span class="glyphicon glyphicon-trash"></span>
                               </a>                           
                             </td>                            
                           </tr>
@@ -130,7 +130,7 @@
                         <tfoot>
                             <td>
                             <ul class="nav nav-pills">
-                              <li class="active"><a href="AM_comentario.php">Crear</span></a></li>
+                              <li class="active"><a href="AM_condicion.php">Crear</span></a></li>
                               </ul>
                             </td>
                         </tfoot>

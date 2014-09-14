@@ -1,4 +1,26 @@
-{include file="header.tpl"}
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-14 16:49:42
+         compiled from "./templates/crear_condicion.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:36013785415a47a071f70-60876046%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '5a563fad399da08d1898576cb3a7d7bfe1577d83' => 
+    array (
+      0 => './templates/crear_condicion.tpl',
+      1 => 1410706157,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '36013785415a47a071f70-60876046',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5415a47a0e41a9_65946822',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5415a47a0e41a9_65946822')) {function content_5415a47a0e41a9_65946822($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
   <body>
 
     <div class="container">
@@ -45,4 +67,6 @@
           </div>
           <div class="col-lg-1"></div>
         </div>
-{include file="footer.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
+<?php }} ?>

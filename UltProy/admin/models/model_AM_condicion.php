@@ -8,51 +8,19 @@ class Model
 		include('../configuracion.php');
 		//Conexión
 		include('../conexion.php');
-
-	$this->conn->beginTransaction();
 	}
 	
+	public function InsertaCondicion($condicion){
 
-
-	public function ObtenerCondiciones(){
-		
-		$sql = "SELECT *
-		FROM condicion";
-
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();
-	}
-
-	public function ObtenerCiudades(){
-		
-		$sql = "SELECT *
-		FROM ciudad";
-
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();
-	}
-
-	public function InsertaTestimonio($testimonio){
-
-		$sql = "INSERT INTO `experiencia` (`nombre_persona`,`fecha`,`id_condicion`,`id_ciudad`) 
-		VALUES (:nombre_persona,:fecha,:id_condicion,:id_ciudad)";
+		$sql = "INSERT INTO `condicion` (`condicion`) 
+		VALUES (:condicion)";
 
 		$resultado = $this->conn->prepare($sql);
-		$resultado->bindValue(':nombre_persona',':fecha',':id_condicion',':id_ciudad', $experiencia, PDO::PARAM_STR); 
-		$resultado->execute();
-		//$resultado->execute(array(':nombre_persona'=>$testimonio["persona"],':fecha'=>$testimonio["fecha"],':id_condicion'=>$testimonio["id_condicion"],':id_ciudad'=>$testimonio["id_ciudad"]));
-		//$resultado=$resultado->fetch(PDO::FETCH_ASSOC);
-		$idPersona = $this->conn->lastInsertId();
-		//$id_persona = $this->conn->lastInsertId();	
-
-		$sql = "INSERT INTO `comentario` (`texto`,`id_persona`) 
-		VALUES (:texto,:id_persona)";
-		$resultado = $this->conn->prepare($sql);
-		$resultado->bindValue(':texto', $comentario, PDO::PARAM_STR); 
-		$resultado->bindValue(':id_persona', $idPersona, PDO::PARAM_INT); 
-		$resultado->execute();
-
-		$this->conn->commit(); 
+		$resultado->execute(array(':condicion'=>$condicion["condicion"]));
+		if(!$resultado){
+			die(print($this->conn->errorInfo()[2]));
+		}
+		$resultado=$resultado->fetch(PDO::FETCH_ASSOC);
 
 	}	
 

@@ -8,23 +8,17 @@ class View
 	{
 		$this->smarty = New Smarty;
 	}
-	
-	
-	public function MostrarCiudades($ciudad)
-	{
-		$this->smarty->assign('Ciudad',$ciudad);
 
-	}	
-
-	public function MostrarCondiciones($condicion)
+	
+	/*public function MostrarCondiciones($condicion)
 	{
 		$this->smarty->assign('Condicion',$condicion);
 
-	}	
+	}*/	
 
-	public function ImprimirPagCrearTestimonio()
+	public function ImprimirPagCrearCondicion()
 	{
-		$this->smarty->display('crear_testimonio.tpl');
+		$this->smarty->display('crear_condicion.tpl');
 
 	}
 

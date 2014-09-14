@@ -1,7 +1,7 @@
 <?php
-include './controllers/controller_AM_comentario.php';
-include './views/view_AM_comentario.php';
-include './models/model_AM_comentario.php';
+include './controllers/controller_AM_condicion.php';
+include './views/view_AM_condicion.php';
+include './models/model_AM_condicion.php';
 
 $model = new Model();
 $view = new View();
@@ -13,7 +13,7 @@ $controller = new Controller($model,$view);
 //	$controller->ImprimirPagEditarComentario();
 //}
 //else{
-	$controller->ImprimirPagCrearTestimonio();
+	$controller->ImprimirPagCrearCondicion();
 //}
 
 ?>

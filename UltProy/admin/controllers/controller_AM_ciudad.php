@@ -23,16 +23,14 @@ class Controller
 		$this->view->ImprimirPagCrearCiudad();
 	}
 
-	public function ObtenerNombreCiudad(){
-		$nombre=$this->model->ObtenerNombreCiudad();
-		$this->view->MostrarNombresCiudades($nombre);
-	}	
+	
 	public function ImprimirPagEditarCiudad(){
 
 		if(isset($_GET['id_ciudad'])) {
 
-		$city=$this->model->ObtenerCiudadById($_GET['id_ciudad']);
-		$this->view->ImprimirPagEditarCiudad($city);
+		$ciudades = $this->model->ObtenerAllCiudades();
+		//$city=$this->model->ObtenerCiudadById($_GET['id_ciudad']);
+		$this->view->ImprimirPagEditarCiudad($ciudades/*,$city*/);
 
 			if (isset($_POST['id_ciudad'])) {
 

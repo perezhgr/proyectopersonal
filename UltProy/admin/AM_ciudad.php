@@ -11,7 +11,6 @@ $controller = new Controller($model,$view);
 
 if(isset($_GET['id_ciudad'])) {
 	$controller->ImprimirPagEditarCiudad();
-	$controller->ObtenerNombreCiudad();
 }
 else{
 	$controller->ImprimirPagCrearCiudad();
