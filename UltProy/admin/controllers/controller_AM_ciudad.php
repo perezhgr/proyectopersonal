@@ -11,12 +11,15 @@ class Controller
 	
 	public function ImprimirPagCrearCiudad(){
 
-		//Crear ciudad		
+		//Crear ciudad con 3 imagenes		
 		if (isset($_POST['ciudad'])) {
 
 			$ciudad["ciudad"] = $_POST["ciudad"];
 			$ciudad["duracion"] = $_POST["duracion"];
 			$ciudad["precio"] = $_POST["precio"];
+			$ciudad["imagen0"] = $_FILES["imagen0"];
+        	$ciudad["imagen1"] = $_FILES["imagen1"];
+        	$ciudad["imagen2"] = $_FILES["imagen2"];
 			$this->model->InsertaCiudad($ciudad);
 
 		}

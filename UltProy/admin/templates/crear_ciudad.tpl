@@ -24,7 +24,7 @@
                   </ul>
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="home">
-                        <form class="form-horizontal" method="POST"> 
+                        <form class="form-horizontal" method="POST" ENCTYPE="multipart/form-data"> 
                           <fieldset>
                             <legend>Ciudad</legend>
                             <div class="form-group">
@@ -46,16 +46,16 @@
                               </div>
                             </div>
                             <div class="form-group">
-                             <label for="inputPassword" class="col-lg-2 control-label"></label>
-                             <input type="file" class="filestyle">
+                             <label for="inputPassword" class="col-lg-2 control-label">Agregar Imagen 1</label>
+                             <input type="file" class="filestyle" name="imagen0">
                            </div>
                             <div class="form-group">
-                             <label for="inputPassword" class="col-lg-2 control-label"></label>
-                             <input type="file" class="filestyle">
+                             <label for="inputPassword" class="col-lg-2 control-label">Agregar Imagen 2</label>
+                             <input type="file" class="filestyle" name="imagen1">
                            </div>
                             <div class="form-group">
-                             <label for="inputPassword" class="col-lg-2 control-label"></label>
-                             <input type="file" class="filestyle">
+                             <label for="inputPassword" class="col-lg-2 control-label">Agregar Imagen 3</label>
+                             <input type="file" class="filestyle" name="imagen2">
                            </div>                                               
                             <div class="form-group">
                               <div class="col-lg-10 col-lg-offset-2">

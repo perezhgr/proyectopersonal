@@ -11,6 +11,8 @@ class Model
 
 	}
 	
+//Empieza las funciones que crean una ciudad y 3 imagenes.
+
 	public function InsertaCiudad($ciudad){
 
 		$sql = "INSERT INTO `ciudad` (`nombre_ciudad`,`duracion`, `precio`) 
@@ -18,22 +20,64 @@ class Model
 
 		$resultado = $this->conn->prepare($sql);
 		$resultado->execute(array(':nombre_ciudad'=>$ciudad["ciudad"],':duracion'=>$ciudad["duracion"],':precio'=>$ciudad["precio"]));
-		if(!$resultado){
+		
+		$id_ciudad= $this->conn->lastInsertId();		
+
+		for ($i=0; $i<3 ; $i++) { 
+			$this->insertarImagen($ciudad["imagen".$i],$id_ciudad);
+		}
+
+		if (!$resultado)
+		{
 			die(print($this->conn->errorInfo()[2]));
 		}
-		$resultado=$resultado->fetch(PDO::FETCH_ASSOC);
-		return $resultado;
+		return $resultado->fetchAll(PDO::FETCH_ASSOC);
 	}
 
-	
-	public function ObtenerAllCiudades(){
-		
-		$sql = "SELECT nombre_ciudad
-		FROM ciudad";
 
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();
-	}
+
+	public function insertarImagen($imagen,$id_ciudad)
+	{
+		$allowed =  array('gif','png' ,'jpg','jpeg');
+		if(!$imagen['error'])
+		{
+			$filename = $imagen['name'];
+			$ext = pathinfo($filename, PATHINFO_EXTENSION);
+			if(in_array($ext,$allowed) ) {
+					$new_file_name = uniqid(); //Generar un uniq id para la foto.
+					$path = 'img/'.$new_file_name.'.'.$ext;
+					move_uploaded_file($imagen['tmp_name'],$path );
+					//echo 'Congratulations!  Your image was uploaded.';
+
+					$sql = "INSERT INTO imagen (`path`,`id_ciudad`)  VALUES (:path,:id_ciudad)";
+
+					$q = $this->conn->prepare($sql);
+					$arreglo = array(':path'=>$path,':id_ciudad'=>$id_ciudad);
+					$a=$q->execute($arreglo);					
+				}
+				else
+				{
+					echo 'Error: Invalid Extension';
+				}
+			}
+			else
+			{
+				echo 'Error: Fatal Error';
+			}		
+		}
+
+
+
+//Empieza el editado de una ciudad		
+
+		public function ObtenerAllCiudades(){
+
+			$sql = "SELECT nombre_ciudad
+			FROM ciudad";
+
+			$query = $this->conn->query($sql);
+			return $query->fetchAll();
+		}
 
 	/*public function ObtenerCiudadById($id_ciudad){
 		
@@ -55,15 +99,5 @@ class Model
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
 	}
-
-
-	public function EliminarCiudad($id_ciudad){
-		
-		$sql= "DELETE FROM ciudad
-		WHERE id_ciudad = $id_ciudad";
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();
-	}
-
 }
 ?>
