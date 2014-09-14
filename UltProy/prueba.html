@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link href='css/font-awesome.css' rel='stylesheet' type='text/css'>
   <link href='css/font-awesome.min.css' rel='stylesheet' type='text/css'>
-
+  <link rel="stylesheet" href="css/estilo.css">
 
 
   <title>Tupar VyT</title>
@@ -228,106 +228,12 @@
           <div class="item col-xs-6 col-sm-4">
             <div class="photo"><img src="img/ny.jpg" width="300" height="186"></div>
             <div class="info">
-              <div class="name">Nueva York</div>
-
-            </div>
-            <div class="panel-group" id="accordion">
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                      Detalles del Paquete
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseOne" class="panel-collapse collapse in">
-                  <div class="panel-body">
-                    Precio: $4400<br>
-                    Duracion: 3 dias<br>
-                    Descripcion:Desripcion<br><br>          
-                    <button type="submit" class="btn btn-primary ">Comprar</button>
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                      Galeria
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseTwo" class="panel-collapse collapse">
-                  <div class="panel-body">
-                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                      <!-- Indicators -->
-                      <ol class="carousel-indicators">
-                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                      </ol>
-
-                      <!-- Wrapper for slides -->
-                      <div class="carousel-inner">
-                        <div class="item active">
-                          <img src="img/ny.jpg" alt="...">
-                          <div class="carousel-caption">
-                            ...
-                          </div>
-                        </div>
-                        <div class="item">
-                          <img src="img/ny2.jpg" alt="...">
-                          <div class="carousel-caption">
-                            ...
-                          </div>
-                        </div>
-                        <div class="item">
-                          <img src="img/ny3.jpg" alt="...">
-                          <div class="carousel-caption">
-                            ...
-                          </div>
-                        </div>
-                        ...
-                      </div>
-
-                      <!-- Controls -->
-                      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                      </a>
-                      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="panel panel-default">
-                <div class="panel-heading">
-                  <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                      Comentarios
-                    </a>
-                  </h4>
-                </div>
-                <div id="collapseThree" class="panel-collapse collapse">
-                  <div class="panel-body">
-                  <strong>Hugo (Soltero),21 de agosto 2014</strong><br><br>
-                    El lugar es genial<hr>
-                    Maria 14 de septiembre 2013<br>
-                    El lugar es genial<hr>
-                    Hugo 21 de agosto 2014<br>
-                    El lugar es genial<hr>
-                    Hugo 21 de agosto 2014<br>
-                    El lugar es genial<hr>
-                    Hugo 21 de agosto 2014<br>
-                    El lugar es genial<hr>
-
-                  </div>
-                </div>
+              <div class="name">Nueva York<br><br>
+              <a class="btn btn-primary btn-lg" href="#modal">Ver detalle</a>
               </div>
             </div>
-
-          </div>
+            </div>
+            
 
           <div class=" item col-xs-6 col-sm-4">
             <div class="photo"><img src="img/amsterdam.jpg" width="300" height="186"></div>
@@ -404,6 +310,98 @@
 
     </div>
   </div>
+
+
+
+
+
+
+<!-- Modal -->
+
+  <div id="modal">
+    <div class="modal-content">
+      <div class="header">
+        <h3>Amsterdam</h3>
+      </div>
+      <div class="copy">
+        <div class="row">
+          <div class="col-sm-4">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <img src="img/amsterdam2.jpg" alt="...">
+                    <div class="carousel-caption">
+                      ...
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="img/amsterdam3.jpg" alt="...">
+                    <div class="carousel-caption">
+                      ...
+                    </div>
+                  </div>
+                      <div class="item">
+                    <img src="img/amsterdam.jpg" alt="...">
+                    <div class="carousel-caption">
+                      ...
+                    </div>
+                  </div>
+                  ...
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+              </div>
+          </div>
+          <div class="col-sm- text-center">
+          <p>Lugar:Amsterdam</p><br>
+          <p>Precio:$5000</p><br>
+          <p>Duracion:3 dias</p><br>
+          </div>
+
+
+
+        </div><hr><hr>
+        <div class="row">
+          <div class="col-sm-12">
+          <a href=""><p class="text-center">Ver comentarios</p></a>
+          
+          <address>
+            <strong>Comentarios(12):</strong><br>
+            <div class="jumbotron"><strong><u>Hugo (Soltero) dijo:</u></strong><br>
+            • EL lugar estuvo increible !</div>
+            <div class="jumbotron"><strong><u>Maria (Luna de miel) dijo:</u></strong><br>
+            • EL lugar estuvo increible !</div>                     
+            <div class="jumbotron"><strong>Maria (Luna de miel) dijo:</strong><br>
+            • EL lugar estuvo increible !</div>
+            <strong>Maria (Luna de miel) dijo:</strong><br>
+            • EL lugar estuvo increible !<hr>
+          </address>
+
+          </div>
+        </div>
+      </div>
+      <div class="cf footer">
+        <a href="javascript: window.history.go(-1)">Cerrar</a>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </div>
+
+<!-- Modal -->
   <!--/.container-->
 </section>
 <section class="content-23 v-center custom-bg pastries-section" id="h1-pastries">
@@ -450,27 +448,6 @@
         <p>El acceso y uso de este sitio web se rige por los términos y condiciones descritos a continuación, así como por la legislación que se aplique en la República Argentina. En consecuencia, todas las visitas y todos los contratos y transacciones que se realicen en este sitio, como asimismo sus efectos jurídicos, quedarán regidos por estas reglas y sometidas a esa legislación, y no podrán variar sino en virtud de una nueva protocolización de nuevos términos y condiciones, que regirán a partir de la fecha en que aparezcan en esta misma página.
           Los términos y condiciones contenidos en este instrumento se aplicarán y se entenderán formar parte de todos los actos y contratos que se ejecuten o celebren mediante los sistemas de oferta y comercialización comprendidos en este sitio web entre los usuarios y Viajes Falabella S.A.</p>
         </div>
-        <!-- Button trigger modal -->
-<a data-toggle="modal" href="#myModal" class="btn btn-primary">Launch modal</a>
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        Prueba
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
       </div>
 
     </div>
@@ -522,8 +499,6 @@
     </div>
 
   </section>
-
-
   <footer class="footer-5">
     <div class="container">
       <a class="brand" href="#">

@@ -5089,10 +5089,11 @@ button.close {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1050;
+  z-index: none;
   -webkit-overflow-scrolling: touch;
   outline: 0;
 }
+
 .modal.fade .modal-dialog {
   -webkit-transform: translate(0, -25%);
   -ms-transform: translate(0, -25%);
@@ -5129,7 +5130,7 @@ button.close {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1040;
+  z-index:1050;
   background-color: #000000;
 }
 .modal-backdrop.fade {
@@ -5778,3 +5779,8 @@ button.close {
     display: none !important;
   }
 }
+
+
+
+
+
