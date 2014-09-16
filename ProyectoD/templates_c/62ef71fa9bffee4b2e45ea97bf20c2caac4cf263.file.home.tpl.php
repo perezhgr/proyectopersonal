@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-16 15:26:50
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-16 16:24:13
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2714599155416d238a9e215-72868841%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1410874006,
+      1 => 1410877451,
       2 => 'file',
     ),
   ),
@@ -29,7 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_5416d238b3be11_62975523')) {function content_5416d238b3be11_62975523($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
     <body>
-      <div class="site-wrapper">
+      <div id="top" class="site-wrapper">
 
         <div class="site-wrapper-inner ">
 
@@ -48,11 +48,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
             <div class="inner cover ">
               <h1 class="cover-heading ">Tupar VyT</h1>
-              <p class="lead">Tu sueño haecho realidad</p>
+              <p class="lead">Tu sueño hecho realidad</p>
               <p class="lead">
                 <a class="btn btn-primary btn-lg"  data-toggle="modal2" data-target="
-                .bs-example-modal-lg" role="button">Inicia sesion&raquo;</a>
-                <a class="btn btn-success btn-lg"  data-toggle="modal3" data-target=".bs-example-modal-lg" role="button">Registrate&raquo;</a>
+                .bs-example-modal-md" role="button">Inicia sesion&nbsp&raquo;</a>
+                <a class="btn btn-success btn-md"  data-toggle="modal3" data-target=".bs-example-modal-lg" role="button">Registrate&nbsp&raquo;</a>
               </p>
 
             </div>
@@ -63,7 +63,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <a href="https://twitter.com"><i class="fa fa-twitter fa-2x"></i></a>
               &nbsp&nbsp
               <a href="https://youtube.com"><i class="fa fa-youtube-square fa-2x"></i></a>&nbsp&nbsp
-              <a href="https://instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
+              <a href="https://instagram.com"><i class="fa fa-instagram fa-2x"></i></a><br><br>
+
+              <a href="#empresa" class="sr-button sr-buttonicon small-iconbutton" title="Back to Top">
+              <i class="fa fa-angle-double-down fa-3x"></i></a>
               </p>
             </div>
           </div>
@@ -82,6 +85,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['empresa']->key => $_smarty_tpl->tpl_v
 $_smarty_tpl->tpl_vars['empresa']->_loop = true;
 ?>
           <div class="col-lg-6">
+          <img class="img-circle" src="img/lejos.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
             <h3><?php echo $_smarty_tpl->tpl_vars['empresa']->value['titulo'];?>
 </h3><br>
             <p class="text-justify"><?php echo $_smarty_tpl->tpl_vars['empresa']->value['cuerpo'];?>
@@ -119,7 +123,7 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
        <div class="row">
        <h2 id="contacto">Envienos su consulta</h2><br><br>
         <div class="col-lg-8">
-        <h4>Estaríamos encantados de proporcionarle con más información , sólo tiene que llamar , correo electrónico o visítenos</h4><br><br>
+        <h4 class="text-center">Estaríamos encantados de proporcionarle con más información ,<br> sólo tiene que llamar , correo electrónico o visítenos</h4><br><br>
         <form class="form-horizontal" ACTION="" METHOD="POST">        
             <fieldset>
               <div class="form-group">
@@ -144,22 +148,23 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
             </div>
           </fieldset>
         </form>
-        </div><br><br><br><br><br>
+        </div><br>
         <div class="row">
 
           <div class="col-lg-4">
 
-            <p class="text-justify">Bee In Touch<br><br>
+            <h4 class="text-justify">Tupar VyT</h4><br>
 
-            To find out more about what we can do for you, request some more examples of our work, or arrange a meeting, please don't hesitate to get in touch.<br><br>
-            Oficina Tupar VyT<br><br>
+            <p class="text-justify">Oficina Tupar VyT<br><br>
 
-            25 de mayo 268<br>
-            Tandil 7000<br>
-            Argentina<br><br><br>
 
-            +54 249 422 0494<br>
-            tuparvyt@gmail.com<br></p>
+            <i class="fa fa-road fa-2x"></i>&nbsp&nbsp25 de mayo 268<br><br>
+            <i class="fa fa-building fa-2x"></i>&nbsp&nbspTandil 7000<br><br>
+            <i class="fa fa-map-marker fa-2x"></i>&nbsp&nbsp&nbsp&nbspArgentina<br><br>
+            <i class="fa fa-phone fa-2x"></i>&nbsp&nbsp+54 249 422 0494<br><br>
+            <i class="fa fa-envelope fa-2x"></i>&nbsp&nbsptuparvyt@gmail.com<br><br>
+            <i class="fa fa-desktop fa-2x"></i>&nbsp&nbspwww.tuparvyt.com</p>
+
           </div>
         </div>
       </div>    

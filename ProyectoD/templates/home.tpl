@@ -1,6 +1,6 @@
 {include file="header.tpl"}
     <body>
-      <div class="site-wrapper">
+      <div id="top" class="site-wrapper">
 
         <div class="site-wrapper-inner ">
 
@@ -19,11 +19,11 @@
 
             <div class="inner cover ">
               <h1 class="cover-heading ">Tupar VyT</h1>
-              <p class="lead">Tu sueño haecho realidad</p>
+              <p class="lead">Tu sueño hecho realidad</p>
               <p class="lead">
                 <a class="btn btn-primary btn-lg"  data-toggle="modal2" data-target="
-                .bs-example-modal-lg" role="button">Inicia sesion&raquo;</a>
-                <a class="btn btn-success btn-lg"  data-toggle="modal3" data-target=".bs-example-modal-lg" role="button">Registrate&raquo;</a>
+                .bs-example-modal-md" role="button">Inicia sesion&nbsp&raquo;</a>
+                <a class="btn btn-success btn-md"  data-toggle="modal3" data-target=".bs-example-modal-lg" role="button">Registrate&nbsp&raquo;</a>
               </p>
 
             </div>
@@ -34,7 +34,10 @@
               <a href="https://twitter.com"><i class="fa fa-twitter fa-2x"></i></a>
               &nbsp&nbsp
               <a href="https://youtube.com"><i class="fa fa-youtube-square fa-2x"></i></a>&nbsp&nbsp
-              <a href="https://instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
+              <a href="https://instagram.com"><i class="fa fa-instagram fa-2x"></i></a><br><br>
+
+              <a href="#empresa" class="sr-button sr-buttonicon small-iconbutton" title="Back to Top">
+              <i class="fa fa-angle-double-down fa-3x"></i></a>
               </p>
             </div>
           </div>
@@ -49,6 +52,7 @@
           <h2 id="empresa">Nuestro servicio</h2><br><br>
           {foreach from=$Empresa item=empresa}
           <div class="col-lg-6">
+          <img class="img-circle" src="img/lejos.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
             <h3>{$empresa.titulo}</h3><br>
             <p class="text-justify">{$empresa.cuerpo}</p>
           </div>
@@ -76,7 +80,7 @@
        <div class="row">
        <h2 id="contacto">Envienos su consulta</h2><br><br>
         <div class="col-lg-8">
-        <h4>Estaríamos encantados de proporcionarle con más información , sólo tiene que llamar , correo electrónico o visítenos</h4><br><br>
+        <h4 class="text-center">Estaríamos encantados de proporcionarle con más información ,<br> sólo tiene que llamar , correo electrónico o visítenos</h4><br><br>
         <form class="form-horizontal" ACTION="" METHOD="POST">        
             <fieldset>
               <div class="form-group">
@@ -101,22 +105,23 @@
             </div>
           </fieldset>
         </form>
-        </div><br><br><br><br><br>
+        </div><br>
         <div class="row">
 
           <div class="col-lg-4">
 
-            <p class="text-justify">Bee In Touch<br><br>
+            <h4 class="text-justify">Tupar VyT</h4><br>
 
-            To find out more about what we can do for you, request some more examples of our work, or arrange a meeting, please don't hesitate to get in touch.<br><br>
-            Oficina Tupar VyT<br><br>
+            <p class="text-justify">Oficina Tupar VyT<br><br>
 
-            25 de mayo 268<br>
-            Tandil 7000<br>
-            Argentina<br><br><br>
 
-            +54 249 422 0494<br>
-            tuparvyt@gmail.com<br></p>
+            <i class="fa fa-road fa-2x"></i>&nbsp&nbsp25 de mayo 268<br><br>
+            <i class="fa fa-building fa-2x"></i>&nbsp&nbspTandil 7000<br><br>
+            <i class="fa fa-map-marker fa-2x"></i>&nbsp&nbsp&nbsp&nbspArgentina<br><br>
+            <i class="fa fa-phone fa-2x"></i>&nbsp&nbsp+54 249 422 0494<br><br>
+            <i class="fa fa-envelope fa-2x"></i>&nbsp&nbsptuparvyt@gmail.com<br><br>
+            <i class="fa fa-desktop fa-2x"></i>&nbsp&nbspwww.tuparvyt.com</p>
+
           </div>
         </div>
       </div>    
