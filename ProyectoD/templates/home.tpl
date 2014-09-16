@@ -21,9 +21,9 @@
               <h1 class="cover-heading ">Tupar VyT</h1>
               <p class="lead">Tu sueño hecho realidad</p>
               <p class="lead">
-                <a class="btn btn-primary btn-lg"  data-toggle="modal2" data-target="
-                .bs-example-modal-md" role="button">Inicia sesion&nbsp&raquo;</a>
-                <a class="btn btn-success btn-md"  data-toggle="modal3" data-target=".bs-example-modal-lg" role="button">Registrate&nbsp&raquo;</a>
+                <a class="btn btn-primary btn-lg"  data-toggle="tooltip" data-placement="left" title="Inicia sesion" data-toggle="modal2" data-target="
+                .bs-example-modal-md" role="button"><i class="fa fa-user fa-2x"></i>&nbsp;</a>
+                <a class="btn btn-success btn-md" data-toggle="tooltip" data-placement="left" title="Registrate" data-toggle="modal3" data-target=".bs-example-modal-lg" role="button"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</a>
               </p>
 
             </div>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-16 16:24:13
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-16 16:46:58
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2714599155416d238a9e215-72868841%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1410877451,
+      1 => 1410878816,
       2 => 'file',
     ),
   ),
@@ -50,9 +50,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <h1 class="cover-heading ">Tupar VyT</h1>
               <p class="lead">Tu sueño hecho realidad</p>
               <p class="lead">
-                <a class="btn btn-primary btn-lg"  data-toggle="modal2" data-target="
-                .bs-example-modal-md" role="button">Inicia sesion&nbsp&raquo;</a>
-                <a class="btn btn-success btn-md"  data-toggle="modal3" data-target=".bs-example-modal-lg" role="button">Registrate&nbsp&raquo;</a>
+                <a class="btn btn-primary btn-lg"  data-toggle="tooltip" data-placement="left" title="Inicia sesion" data-toggle="modal2" data-target="
+                .bs-example-modal-md" role="button"><i class="fa fa-user fa-2x"></i>&nbsp;</a>
+                <a class="btn btn-success btn-md" data-toggle="tooltip" data-placement="left" title="Registrate" data-toggle="modal3" data-target=".bs-example-modal-lg" role="button"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</a>
               </p>
 
             </div>
