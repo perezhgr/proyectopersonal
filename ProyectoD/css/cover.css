@@ -28,11 +28,15 @@ html,
 body {
   height: 100%;
   background-color: #333;
+  
 }
 body {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  position: relative;
+  min-height: 350px;
+  background: url("../img/cover.jpg") no-repeat scroll 0px 100% / cover transparent;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -139,7 +143,7 @@ body {
     top: 0;
   }
   .mastfoot {
-    position: fixed;
+    position: absolute;
     bottom: 0;
   }
   /* Start the vertical centering */
@@ -161,3 +165,4 @@ body {
     width: 700px;
   }
 }
+

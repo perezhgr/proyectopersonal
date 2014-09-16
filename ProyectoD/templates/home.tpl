@@ -1,14 +1,13 @@
 {include file="header.tpl"}
     <body>
-
       <div class="site-wrapper">
 
-        <div class="site-wrapper-inner">
+        <div class="site-wrapper-inner ">
 
-          <div class="cover-container">
+          <div class="cover-container ">
 
-            <div class="masthead clearfix">
-              <div class="inner">
+            <div class=" masthead clearfix ">
+              <div class="inner ">
                 <h3 class="masthead-brand"></h3>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="#empresa">Acerca</a></li>
@@ -18,15 +17,27 @@
               </div>
             </div>
 
-            <div class="inner cover">
-              <h1 class="cover-heading">Tupar VyT</h1>
+            <div class="inner cover ">
+              <h1 class="cover-heading ">Tupar VyT</h1>
               <p class="lead">Tu sueño haecho realidad</p>
               <p class="lead">
                 <a class="btn btn-primary btn-lg"  data-toggle="modal2" data-target="
                 .bs-example-modal-lg" role="button">Inicia sesion&raquo;</a>
                 <a class="btn btn-success btn-lg"  data-toggle="modal3" data-target=".bs-example-modal-lg" role="button">Registrate&raquo;</a>
               </p>
+
             </div>
+            <div class="mastfoot">
+            <div class="inner">
+              <p><a href="http://fb.com"><i class="fa fa-facebook fa-2x"></i></a>
+              &nbsp&nbsp
+              <a href="https://twitter.com"><i class="fa fa-twitter fa-2x"></i></a>
+              &nbsp&nbsp
+              <a href="https://youtube.com"><i class="fa fa-youtube-square fa-2x"></i></a>&nbsp&nbsp
+              <a href="https://instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
+              </p>
+            </div>
+          </div>
           </div>
 
         </div>
@@ -55,7 +66,6 @@
            <p>
             <h3>{$ciudad.nombre_ciudad}</h3>
             <a class="btn btn-primary "  data-toggle="modal" data-target=".bs-example-modal-lg" role="button" href="javascript:getDetalleCiudad({$ciudad.id_ciudad})">Ver mas &raquo;</a>
-            <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
           </p>
          </div>
          {/foreach}
@@ -67,18 +77,13 @@
        <h2 id="contacto">Envienos su consulta</h2><br><br>
         <div class="col-lg-8">
         <h4>Estaríamos encantados de proporcionarle con más información , sólo tiene que llamar , correo electrónico o visítenos</h4><br><br>
-        <form class="form-horizontal" method="POST">
+        <form class="form-horizontal" ACTION="" METHOD="POST">        
             <fieldset>
               <div class="form-group">
-                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                <label for="inputPassword" class="col-lg-2 control-label"
+                name="asunto">Asunto</label>
                 <div class="col-lg-8">
-                  <input type="text" class="form-control" id="inputEmail" placeholder="Email" name="mail" >
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="inputPassword" class="col-lg-2 control-label">Asunto</label>
-                <div class="col-lg-8">
-                  <input type="password" class="form-control" id="inputPassword" placeholder="Asunto" name="pass">
+                  <input type="text" class="form-control" id="inputPassword" placeholder="Asunto" name="asunto">
                 </div>
               </div>
               <div class="form-group">
@@ -88,8 +93,10 @@
               </div>
             </div>
             <div class="form-group">
-              <div class="col-lg-5">
-                <button type="submit" class="btn btn-primary ">Enviar</button>
+              <div class="col-lg-2"></div>
+              <div class="col-lg-8">
+              <button type="submit" class="btn btn-primary btn-md btn-block"><i class="fa fa-paper-plane fa-1x"></i></button>
+                
               </div>
             </div>
           </fieldset>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-15 21:43:51
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-16 14:58:12
          compiled from "./templates/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17022055575416d238b45113-68992283%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97c13ae6868bbc459509c9f1b968154acd23eecc' => 
     array (
       0 => './templates/header.tpl',
-      1 => 1410809830,
+      1 => 1410872260,
       2 => 'file',
     ),
   ),
@@ -36,7 +36,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <!-- Custom styles for this template -->
   <link href="css/cover.css" rel="stylesheet">
   <link href="css/carousel.css" rel="stylesheet">
-  
+  <link href="css/carousel.css" rel="stylesheet">
+  <link href="css/font-awesome.css" rel="stylesheet">  
 
   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
   <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
