@@ -21,12 +21,83 @@
               <h1 class="cover-heading ">Tupar VyT</h1>
               <p class="lead">Tu sueño hecho realidad</p>
               <p class="lead">
-                <a class="btn btn-primary btn-lg"  data-toggle="tooltip" data-placement="left" title="Inicia sesion" data-toggle="modal2" data-target="
-                .bs-example-modal-md" role="button"><i class="fa fa-user fa-2x"></i>&nbsp;</a>
-                <a class="btn btn-success btn-md" data-toggle="tooltip" data-placement="left" title="Registrate" data-toggle="modal3" data-target=".bs-example-modal-lg" role="button"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</a>
+                <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-user fa-1x"></i>&nbsp;</a>
               </p>
+              <!-- FORM PARA LOGIN -->
+              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Inicia sesion</h4>
+                    </div>
+                    <div class="modal-body">
 
+                      <form class="form-horizontal" ACTION="" METHOD="POST">        
+                        <fieldset>
+
+                          <div class="form-group">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-6">
+                              <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-6">
+                              <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass">
+                            </div>
+                          </div>
+
+                          <div class="form-group">
+                            <div class="col-lg-3"></div>
+                            <div class="col-lg-2">
+                            <button type="submit" data-toggle="tooltip" data-placement="left" title="Iniciar sesion" class="btn btn-primary btn-md btn-block"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
+
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <!-- FIN FORM PARA LOGIN -->
+
+          <!--FORM PARA REGISTRARSE -->
+          <form class="form-horizontal" ACTION="" METHOD="POST">        
+            <fieldset>
+              <div class="form-group">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                  <input type="text" class="form-control" id="inputPassword" placeholder="Nombre" name="nombre">
+                </div>
+              </div>
+              <div class="form-group">
+              <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                  <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail">
+                </div>
+              </div>
+              <div class="form-group">
+              <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass">
+                </div>
+              </div>
+
+            <div class="form-group">
+              <div class="col-lg-4"></div>
+              <div class="col-lg-2">
+              <button type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="btn btn-success btn-md btn-block"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
+                
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        <!--FIN FORM PARA REGISTRARSE -->
+
             <div class="mastfoot">
             <div class="inner">
               <p><a href="http://fb.com"><i class="fa fa-facebook fa-2x"></i></a>
