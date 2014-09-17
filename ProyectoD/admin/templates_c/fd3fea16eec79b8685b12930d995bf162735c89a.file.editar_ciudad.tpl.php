@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-14 16:02:57
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-17 14:39:02
          compiled from "./templates/editar_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:38070822354158fd4c7fd06-98594908%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fd3fea16eec79b8685b12930d995bf162735c89a' => 
     array (
       0 => './templates/editar_ciudad.tpl',
-      1 => 1410703330,
+      1 => 1410957524,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'Ciudades' => 0,
+    'ciudad' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_54158fd4ce8b66_49363841')) {function content_54158fd4ce8b66_49363841($_smarty_tpl) {?><?php if (!is_callable('smarty_function_html_options')) include '/opt/lampp/htdocs/UltProy/libs/plugins/function.html_options.php';
-?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_54158fd4ce8b66_49363841')) {function content_54158fd4ce8b66_49363841($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
   <body>
 
@@ -57,35 +57,41 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                             <legend>Ciudad</legend>
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Ciudad</label>
-                              <div class="col-lg-10">
-
-                              <?php echo smarty_function_html_options(array('name'=>'ciudades','options'=>$_smarty_tpl->tpl_vars['Ciudades']->value),$_smarty_tpl);?>
-
-                              <select name="ciudades" class="form-group">
-                              </select>
-                              </div>
+                            <div class="col-lg-10">
+                                 <?php  $_smarty_tpl->tpl_vars['ciudad'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ciudad']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['Ciudades']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['ciudad']->key => $_smarty_tpl->tpl_vars['ciudad']->value){
+$_smarty_tpl->tpl_vars['ciudad']->_loop = true;
+?>
+                                 <input type="text" class="form-control" id="inputPassword" placeholder="" name="ciudad" value="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
+">
                             </div>
-
+                            </div>
                             <div class="form-group">
                               <label for="inputPassword" class="col-lg-2 control-label">Duracion</label>
                               <div class="col-lg-10">
                                 <input type="text" class="form-control" id="inputPassword" placeholder="Duracion" name="duracion"
-                                value="">
+                                value="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['duracion'];?>
+">
                               </div>
                             </div>
                            <div class="form-group">
                               <label for="inputPassword" class="col-lg-2 control-label">Precio</label>
                               <div class="col-lg-10">
                                 <input type="text" class="form-control" id="inputPassword" placeholder="Precio" name="precio"
-                                value="">
+                                value="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['precio'];?>
+">
                               </div>
+
                             </div>
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label"></label>
                               <div class="col-lg-10">
-                                <input type="hidden" class="form-control" id="inputEmail" placeholder="Nombre" name="" 
-                                value="">
+                                <input type="hidden" class="form-control" id="inputEmail" placeholder="Nombre" name="id_ciudad" 
+                                value="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
+">
                               </div>
+                              <?php } ?>
                             </div>
                             </div>                                         
                             <div class="form-group">

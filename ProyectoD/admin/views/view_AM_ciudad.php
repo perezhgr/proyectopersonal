@@ -15,10 +15,9 @@ class View
 
 	}
 
-	public function ImprimirPagEditarCiudad($ciudades)
+	public function ImprimirPagEditarCiudad($ciudad)
 	{
-		$this->smarty->assign('Ciudades',$ciudades);
-		//$this->smarty->assign('id_ciudad',$city);
+		$this->smarty->assign('Ciudades',$ciudad);
 		$this->smarty->display('editar_ciudad.tpl');
 
 	}

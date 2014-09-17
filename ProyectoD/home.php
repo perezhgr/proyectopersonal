@@ -7,5 +7,6 @@ $model = new Model();
 $view = new View();
 $controller = new Controller($model,$view);
 $controller->ImprimirPagina();	
-//$controller->enviarMail();	
+//$controller->enviarMail();
+
 ?>

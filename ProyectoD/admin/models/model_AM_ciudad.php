@@ -45,7 +45,7 @@ class Model
 			$ext = pathinfo($filename, PATHINFO_EXTENSION);
 			if(in_array($ext,$allowed) ) {
 					$new_file_name = uniqid(); //Generar un uniq id para la foto.
-					$path = 'img/'.$new_file_name.'.'.$ext;
+					$path = '../img/'.$new_file_name.'.'.$ext;
 					move_uploaded_file($imagen['tmp_name'],$path );
 					//echo 'Congratulations!  Your image was uploaded.';
 
@@ -64,40 +64,33 @@ class Model
 			{
 				echo 'Error: Fatal Error';
 			}		
-		}
+	}
 
 
+		public function ObtenerCiudadById($id_ciudad){
 
-//Empieza el editado de una ciudad		
-
-		public function ObtenerAllCiudades(){
-
-			$sql = "SELECT nombre_ciudad
-			FROM ciudad";
+			$sql = "SELECT *
+			FROM ciudad
+			WHERE id_ciudad=$id_ciudad";
 
 			$query = $this->conn->query($sql);
 			return $query->fetchAll();
 		}
 
-	/*public function ObtenerCiudadById($id_ciudad){
-		
-		$sql = "SELECT id_ciudad
-		FROM ciudad
-		WHERE id_ciudad=$id_ciudad";
+		public function ActualizaCiudad($ciudad){
 
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();
-	}*/
+			$sql= "UPDATE `ciudad` SET nombre_ciudad = '".$ciudad['ciudad']."' ,
+			duracion = '".$ciudad['duracion']."' ,
+			precio = '".$ciudad['precio']."' ,
+			WHERE id_ciudad =".$ciudad['id_ciudad'];
 
+			$q = $this->conn->prepare($sql);
+         	$q->execute(array(':nombre_ciudad'=>$ciudad["ciudad"] ,':duracion'=>$ciudad["duracion"] ,':precio'=>$ciudad["precio"]));
+			
+			$a=$q->fetch(PDO::FETCH_ASSOC);
+			return $q;
 
-	public function ActualizaCiudad($ciudad){
-		
-		$sql= "UPDATE `ciudad` SET nombre_ciudad = '".$ciudad['ciudad']."' ,
-		duracion = '".$ciudad['duracion']."' ,
-		precio = '".$ciudad['precio']."' ,
-		WHERE id_ciudad =".$ciudad['id_ciudad'];
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();
-	}
+			
+		}
 }
 ?>

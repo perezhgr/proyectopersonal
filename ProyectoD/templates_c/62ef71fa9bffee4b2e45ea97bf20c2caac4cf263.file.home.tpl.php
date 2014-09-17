@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-16 16:46:58
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-17 01:07:02
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2714599155416d238a9e215-72868841%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1410878816,
+      1 => 1410908819,
       2 => 'file',
     ),
   ),
@@ -81,16 +81,30 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <h2 id="empresa">Nuestro servicio</h2><br><br>
           <?php  $_smarty_tpl->tpl_vars['empresa'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['empresa']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['Empresa']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['emp']['iteration']=0;
 foreach ($_from as $_smarty_tpl->tpl_vars['empresa']->key => $_smarty_tpl->tpl_vars['empresa']->value){
 $_smarty_tpl->tpl_vars['empresa']->_loop = true;
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['emp']['iteration']++;
 ?>
+          <?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['emp']['iteration']!==4){?>
           <div class="col-lg-6">
-          <img class="img-circle" src="img/lejos.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <img class="img-circle" src="<?php echo $_smarty_tpl->tpl_vars['empresa']->value['path'];?>
+" alt="Generic placeholder image" style="width: 140px; height: 140px;">
             <h3><?php echo $_smarty_tpl->tpl_vars['empresa']->value['titulo'];?>
 </h3><br>
             <p class="text-justify"><?php echo $_smarty_tpl->tpl_vars['empresa']->value['cuerpo'];?>
 </p>
           </div>
+          <?php }else{ ?>
+          <div class="col-lg-12">
+          <img class="img-circle" src="<?php echo $_smarty_tpl->tpl_vars['empresa']->value['path'];?>
+" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+            <h3><?php echo $_smarty_tpl->tpl_vars['empresa']->value['titulo'];?>
+</h3><br>
+            <p class="text-justify"><?php echo $_smarty_tpl->tpl_vars['empresa']->value['cuerpo'];?>
+</p>
+          </div>
+          <?php }?>
           <?php } ?>
         </div><br><br><br><br><br><br><br><br>
 

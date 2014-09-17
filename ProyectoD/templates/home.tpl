@@ -50,12 +50,20 @@
       <div class="container marketing">
         <div class="row">
           <h2 id="empresa">Nuestro servicio</h2><br><br>
-          {foreach from=$Empresa item=empresa}
+          {foreach $Empresa as $empresa name=emp}
+          {if $smarty.foreach.emp.iteration !== 4}
           <div class="col-lg-6">
-          <img class="img-circle" src="img/lejos.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <img class="img-circle" src="{$empresa.path}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
             <h3>{$empresa.titulo}</h3><br>
             <p class="text-justify">{$empresa.cuerpo}</p>
           </div>
+          {else}
+          <div class="col-lg-12">
+          <img class="img-circle" src="{$empresa.path}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+            <h3>{$empresa.titulo}</h3><br>
+            <p class="text-justify">{$empresa.cuerpo}</p>
+          </div>
+          {/if}
           {/foreach}
         </div><br><br><br><br><br><br><br><br>
 

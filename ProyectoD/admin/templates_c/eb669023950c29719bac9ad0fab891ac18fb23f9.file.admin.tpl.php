@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-14 20:55:29
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-17 15:34:47
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1340954347541591112ed7c1-77948224%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1410720925,
+      1 => 1410960843,
       2 => 'file',
     ),
   ),
@@ -202,7 +202,8 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
                             <td><?php echo $_smarty_tpl->tpl_vars['condicion']->value['condicion'];?>
 </td>
                             <td>
-                              <a href=""><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
+                              <a href="AM_condicion.php?id_condicion=<?php echo $_smarty_tpl->tpl_vars['condicion']->value['id_condicion'];?>
+"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
                               <a href="borrar_condicion.php?id_condicion=<?php echo $_smarty_tpl->tpl_vars['condicion']->value['id_condicion'];?>
 "><span class="glyphicon glyphicon-trash"></span>
@@ -248,6 +249,9 @@ $_smarty_tpl->tpl_vars['usuario']->_loop = true;
                               <a href="editar_usuario.php?id_usuario=<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
 "><span class="glyphicon glyphicon-star">&nbsp&nbsp</span>
                               </a>
+                            <a href="borrar_usuario.php?id_usuario=<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
+"><span class="glyphicon glyphicon-trash"></span>
+                              </a>  
                             </td>                            
                           </tr>
                           <?php } ?>

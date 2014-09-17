@@ -11,8 +11,9 @@ class Controller
 
 
 	public function ImprimirPagina(){
+		$empresa=$this->model->ObtenerDescripcionEmpresa();
 
-		$this->view->MostrarDescripcionEmpresa($this->model->ObtenerDescripcionEmpresa());
+		$this->view->MostrarDescripcionEmpresa($empresa);
 		$this->view->MostrarCiudades($this->model->ObtenerCiudades());
 		$this->view->ImprimirHome();
 	}

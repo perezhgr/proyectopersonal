@@ -30,34 +30,33 @@
                             <legend>Ciudad</legend>
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Ciudad</label>
-                              <div class="col-lg-10">
-
-                              {html_options name=ciudades options=$Ciudades}
-                              <select name="ciudades" class="form-group">
-                              </select>
-                              </div>
+                            <div class="col-lg-10">
+                                 {foreach from=$Ciudades item=ciudad}
+                                 <input type="text" class="form-control" id="inputPassword" placeholder="" name="ciudad" value="{$ciudad.nombre_ciudad}">
                             </div>
-
+                            </div>
                             <div class="form-group">
                               <label for="inputPassword" class="col-lg-2 control-label">Duracion</label>
                               <div class="col-lg-10">
                                 <input type="text" class="form-control" id="inputPassword" placeholder="Duracion" name="duracion"
-                                value="">
+                                value="{$ciudad.duracion}">
                               </div>
                             </div>
                            <div class="form-group">
                               <label for="inputPassword" class="col-lg-2 control-label">Precio</label>
                               <div class="col-lg-10">
                                 <input type="text" class="form-control" id="inputPassword" placeholder="Precio" name="precio"
-                                value="">
+                                value="{$ciudad.precio}">
                               </div>
+
                             </div>
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label"></label>
                               <div class="col-lg-10">
-                                <input type="hidden" class="form-control" id="inputEmail" placeholder="Nombre" name="" 
-                                value="">
+                                <input type="hidden" class="form-control" id="inputEmail" placeholder="Nombre" name="id_ciudad" 
+                                value="{$ciudad.id_ciudad}">
                               </div>
+                              {/foreach}
                             </div>
                             </div>                                         
                             <div class="form-group">

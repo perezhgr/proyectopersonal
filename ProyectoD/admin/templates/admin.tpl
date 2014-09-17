@@ -119,7 +119,7 @@
                             <td>{$condicion.id_condicion}</td>
                             <td>{$condicion.condicion}</td>
                             <td>
-                              <a href=""><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
+                              <a href="AM_condicion.php?id_condicion={$condicion.id_condicion}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
                               <a href="borrar_condicion.php?id_condicion={$condicion.id_condicion}"><span class="glyphicon glyphicon-trash"></span>
                               </a>                           
@@ -156,6 +156,8 @@
                             <td>
                               <a href="editar_usuario.php?id_usuario={$usuario.id_usuario}"><span class="glyphicon glyphicon-star">&nbsp&nbsp</span>
                               </a>
+                            <a href="borrar_usuario.php?id_usuario={$usuario.id_usuario}"><span class="glyphicon glyphicon-trash"></span>
+                              </a>  
                             </td>                            
                           </tr>
                           {/foreach}
