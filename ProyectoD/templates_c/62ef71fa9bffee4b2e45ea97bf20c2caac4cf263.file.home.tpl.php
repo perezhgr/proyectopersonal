@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-17 16:30:48
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-17 16:52:29
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2714599155416d238a9e215-72868841%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1410964244,
+      1 => 1410965547,
       2 => 'file',
     ),
   ),
@@ -47,8 +47,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             </div>
 
             <div class="inner cover ">
-              <h1 class="cover-heading ">Tupar VyT</h1>
-              <p class="lead">Tu sueño hecho realidad</p>
+              <h1 class="cover-heading w">Tupar Viajes y Turismo</h1>
+              <p class="lead s">Tu sueño hecho realidad...</p>
               <p class="lead">
                 <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-user fa-1x"></i>&nbsp;</a>
               </p>
@@ -118,13 +118,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
             <div class="form-group">
               <div class="col-lg-4"></div>
-              <div class="col-lg-2">
-              <button type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="btn btn-success btn-md btn-block"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
+              <div class="col-lg-1">
+              <button type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="btn btn-success btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
                 
               </div>
             </div>
           </fieldset>
-        </form>
+        </form><br><br>
         <!--FIN FORM PARA REGISTRARSE -->
 
             <div class="mastfoot">

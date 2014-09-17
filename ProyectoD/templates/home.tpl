@@ -18,8 +18,8 @@
             </div>
 
             <div class="inner cover ">
-              <h1 class="cover-heading ">Tupar VyT</h1>
-              <p class="lead">Tu sueño hecho realidad</p>
+              <h1 class="cover-heading w">Tupar Viajes y Turismo</h1>
+              <p class="lead s">Tu sueño hecho realidad...</p>
               <p class="lead">
                 <a class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-user fa-1x"></i>&nbsp;</a>
               </p>
@@ -89,13 +89,13 @@
 
             <div class="form-group">
               <div class="col-lg-4"></div>
-              <div class="col-lg-2">
-              <button type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="btn btn-success btn-md btn-block"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
+              <div class="col-lg-1">
+              <button type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="btn btn-success btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
                 
               </div>
             </div>
           </fieldset>
-        </form>
+        </form><br><br>
         <!--FIN FORM PARA REGISTRARSE -->
 
             <div class="mastfoot">

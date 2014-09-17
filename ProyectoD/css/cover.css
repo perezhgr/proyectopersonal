@@ -166,3 +166,19 @@ body {
   }
 }
 
+@font-face{
+
+    font-family: "tupar";/* Nombre que le doy a la fuente */
+    src:url("../fonts/fonts/AlexBrush-Regular.ttf") format("truetype");
+    
+}
+
+.w{
+    font-family: "tupar";
+    font-size: 50px;
+}
+.s{
+   font-family: "tupar";
+    font-size: 40px;
+}
+
