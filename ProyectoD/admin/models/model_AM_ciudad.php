@@ -64,7 +64,8 @@ class Model
 			{
 				echo 'Error: Fatal Error';
 			}		
-	}
+		}
+
 
 
 		public function ObtenerCiudadById($id_ciudad){
@@ -77,20 +78,15 @@ class Model
 			return $query->fetchAll();
 		}
 
+
 		public function ActualizaCiudad($ciudad){
 
 			$sql= "UPDATE `ciudad` SET nombre_ciudad = '".$ciudad['ciudad']."' ,
 			duracion = '".$ciudad['duracion']."' ,
-			precio = '".$ciudad['precio']."' ,
+			precio = '".$ciudad['precio']."' 
 			WHERE id_ciudad =".$ciudad['id_ciudad'];
-
-			$q = $this->conn->prepare($sql);
-         	$q->execute(array(':nombre_ciudad'=>$ciudad["ciudad"] ,':duracion'=>$ciudad["duracion"] ,':precio'=>$ciudad["precio"]));
-			
-			$a=$q->fetch(PDO::FETCH_ASSOC);
-			return $q;
-
-			
+			$query = $this->conn->query($sql);
+			return $query->fetchAll();	
 		}
-}
-?>
+	}
+	?>

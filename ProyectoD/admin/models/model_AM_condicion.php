@@ -35,26 +35,12 @@ class Model
 		return $query->fetchAll();
 	}
 
-	/*public function ActualizaCiudad($ciudad){
+	public function ActualizaCondicion($condicion){
 		
-		$sql= "UPDATE `ciudad` SET nombre_ciudad = '".$ciudad['ciudad']."' ,
-		nombre_pais = '".$ciudad['pais']."' ,
-		duracion = '".$ciudad['duracion']."' ,
-		precio = '".$ciudad['precio']."' ,
-		descripcion = '".$ciudad['descripcion']."' 
-		WHERE id_ciudad =".$ciudad['id_ciudad'];
+		$sql= "UPDATE `condicion` SET condicion = '".$condicion['condicion']."' 
+		WHERE id_condicion =".$condicion['id_condicion'];
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
-	}*/
-
-
-	/*public function EliminarCiudad($id_ciudad){
-		
-		$sql= "DELETE FROM ciudad
-				WHERE id_ciudad = $id_ciudad";
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();
-	}*/
-
+	}
 }
 ?>

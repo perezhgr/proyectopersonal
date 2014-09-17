@@ -9,7 +9,7 @@ $controller = new Controller($model,$view);
 
 //Uso esta logica para poder imprimir un template u otro.
 
-if(isset($_GET['id_ciudad'])) {
+if(isset($_GET['id_condicion'])) {
 	$controller->ImprimirPagEditarCondicion();
 }
 else{
