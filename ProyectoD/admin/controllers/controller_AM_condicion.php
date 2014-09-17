@@ -21,25 +21,20 @@ class Controller
 		$this->view->ImprimirPagCrearCondicion();
 	}
 
-/*	public function ImprimirPagEditarComentario(){
+	public function ImprimirPagEditarCondicion(){
 
-		if(isset($_GET['id_comentario'])) {
+		if(isset($_GET['id_condicion'])) {
 
-			$city = $this->model->Obtenercomentario($_GET['id_comentario']);
-			$this->view->ImprimirPagEditarCiudad($city);
+			$condicion = $this->model->ObtenerCondicionById($_GET['id_condicion']);
+			$this->view->ImprimirPagEditarCondicion($condicion);
 
-			if (isset($_POST['id_ciudad'])) {
+			if (isset($_POST['id_condicion'])) {
 
-				$ciudad["id_ciudad"] = $_POST["id_ciudad"];
-				$ciudad["ciudad"] = $_POST["ciudad"];
-				$ciudad["pais"] = $_POST["pais"];
-				$ciudad["duracion"] = $_POST["duracion"];
-				$ciudad["precio"] = $_POST["precio"];
-				$ciudad["descripcion"] = $_POST["descripcion"];
-
-				$this->model->ActualizaCiudad($ciudad);
+				$condicion["id_condicion"] = $_POST["id_condicion"];
+				$condicion["condicion"] = $_POST["condicion"];
+				$this->model->ActualizaCondicion($condicion);
 			}			
 		}			
-	}*/
+	}
 }
 ?>

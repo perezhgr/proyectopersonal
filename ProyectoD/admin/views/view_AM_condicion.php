@@ -9,12 +9,6 @@ class View
 		$this->smarty = New Smarty;
 	}
 
-	
-	/*public function MostrarCondiciones($condicion)
-	{
-		$this->smarty->assign('Condicion',$condicion);
-
-	}*/	
 
 	public function ImprimirPagCrearCondicion()
 	{
@@ -22,12 +16,13 @@ class View
 
 	}
 
-	/*public function ImprimirPagEditarCiudad($city)
-	{
-		$this->smarty->assign('Ciudad',$city);
-		$this->smarty->display('editar_ciudad.tpl');
 
-	}*/
+	public function ImprimirPagEditarCondicion($condicion)
+	{
+		$this->smarty->assign('Condicion',$condicion);
+		$this->smarty->display('editar_condicion.tpl');
+
+	}
 }
 
 ?>

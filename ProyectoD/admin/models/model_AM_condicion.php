@@ -25,15 +25,15 @@ class Model
 	}	
 
 	
-	/*public function ObtenerCiudad($id_ciudad){
+	public function ObtenerCondicionById($id_condicion){
 		
 		$sql = "SELECT *
-		FROM ciudad
-		WHERE id_ciudad=$id_ciudad";
+		FROM condicion
+		WHERE id_condicion=$id_condicion";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
-	}*/
+	}
 
 	/*public function ActualizaCiudad($ciudad){
 		

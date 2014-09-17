@@ -25,15 +25,14 @@
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="home">
                         <form class="form-horizontal" method="POST"> 
-                          {foreach from=$Ciudad item=ciudad}
+                          {foreach from=$Condicion item=condicion}
                           <fieldset>
-                            <legend>Ciudad</legend>
+                            <legend>Condicion</legend>
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Ciudad</label>
                               <div class="col-lg-10">
-                                {foreach from=$Nombreciudad item=nombreciudad}
-                                <select class="form-control" name="ciudad" >
-                                  <option value="">{$nombreciudad.nombre_ciudad}</option>
+                                <select class="form-control" name="condicion" >
+                                  <option value="">{$condicion.condicion}</option>
                                   {/foreach} 
                                 </select>
                                  
@@ -68,7 +67,6 @@
                               </div>
                             </div>
                           </fieldset>
-                          {/foreach}
                         </form>                        
                     </div>
                   </div>
