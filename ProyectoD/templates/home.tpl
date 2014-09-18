@@ -39,13 +39,13 @@
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail">
+                              <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail"required>
                             </div>
                           </div>
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
-                              <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass">
+                              <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass"required>
                             </div>
                           </div>
 
@@ -71,19 +71,19 @@
               <div class="form-group">
                 <div class="col-lg-4"></div>
                 <div class="col-lg-4">
-                  <input type="text" class="form-control" id="inputPassword" placeholder="Nombre" name="nombre">
+                  <input type="text" class="form-control" id="inputPassword" placeholder="Nombre" name="nombre" required>
                 </div>
               </div>
               <div class="form-group">
               <div class="col-lg-4"></div>
                 <div class="col-lg-4">
-                  <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail">
+                  <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail" required>
                 </div>
               </div>
               <div class="form-group">
               <div class="col-lg-4"></div>
                 <div class="col-lg-4">
-                  <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass">
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass" required>
                 </div>
               </div>
 
