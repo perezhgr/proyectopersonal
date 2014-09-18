@@ -2,7 +2,7 @@
       <div class="footerinner wrapper align-center text-light">
         <div class="column one-third">
           <a href="#top" class="sr-button sr-buttonicon small-iconbutton" title="Back to Top">
-            <i class="fa fa-angle-double-up fa-3x"></i>
+            <i class="zoom fa fa-angle-double-up fa-3x"></i>
 
             <div class="spacer spacer-big"></div>
             <p class="copyright">© 2014 Todos los derechos reservados • Tupar VyT • Viajes &amp; Turismo</p>
