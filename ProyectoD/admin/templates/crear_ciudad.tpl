@@ -46,8 +46,8 @@
                     </div>
                   </div>
                   <div class="form-group">
-                   <label for="inputPassword" class="col-lg-2 control-label"></label>
-                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="btn btn-default btn-file">
+                   <label for="inputPassword" class="col-lg-2 control-label">Eliga imagenes</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                   <span class="btn btn-default btn-file">
                     <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen0">
                   </span>&nbsp;&nbsp;&nbsp;
                   <span class="btn btn-default btn-file">
