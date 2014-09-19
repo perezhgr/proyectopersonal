@@ -11,6 +11,32 @@ class Model
 
 	}		
 
+	public function GrabarUsuario($usuario){
+		
+		$sql = "INSERT INTO `usuario` (`nombre`,`mail`,`pass`,`es_admin`) 
+		VALUES (:nombre,:mail,:pass,:es_admin)";
+
+		$resultado = $this->conn->prepare($sql);
+		$resultado->execute(array(':nombre'=>$usuario["nombre"],':mail'=>$usuario["mail"],':pass'=>$usuario["pass"],':es_admin'=>NULL));
+
+		if (!$resultado)
+		{
+			die(print($this->conn->errorInfo()[2]));
+		}
+		return $resultado->fetchAll(PDO::FETCH_ASSOC);
+	}
+
+	public function BuscarUsuario($usuario){
+		
+		$sql = "SELECT mail,pass
+		FROM   usuario 
+		WHERE  pass=".$usuario['pass'];
+
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}
+
+
 	public function ObtenerDescripcionEmpresa(){
 		
 		$sql = "SELECT *

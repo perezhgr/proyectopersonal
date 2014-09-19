@@ -39,13 +39,13 @@
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail"required>
+                              <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="correo"required>
                             </div>
                           </div>
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
-                              <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass"required>
+                              <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password"required>
                             </div>
                           </div>
 

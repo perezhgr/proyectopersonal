@@ -11,13 +11,25 @@ class Controller
 
 
 	public function ImprimirPagina(){
-		$empresa=$this->model->ObtenerDescripcionEmpresa();
+		
+		if(isset($_POST['nombre'])){
+			$usuario['nombre'] = $_POST['nombre'] ;
+			$usuario['mail'] = $_POST['mail'] ;
+			$usuario['pass'] = md5($_POST['pass']);
+			$this->model->GrabarUsuario($usuario);
+		}
+		elseif (isset($_POST['correo'])) {
+			$usuario['mail'] = $_POST['correo'];
+			$usuario['pass'] = md5($_POST['password']);
+			$this->model->BuscarUsuario($usuario);
+		}
 
+		$empresa=$this->model->ObtenerDescripcionEmpresa();
 		$this->view->MostrarDescripcionEmpresa($empresa);
 		$this->view->MostrarCiudades($this->model->ObtenerCiudades());
 		$this->view->ImprimirHome();
-	}
-
+	}	
+}
 
 	/*public function enviarMail(){
 
@@ -41,8 +53,8 @@ class Controller
 			echo 'success';
 		else
 			echo 'error';
-	}*/
+		}*/
 
 
-}	
-?>
+		
+	?>
