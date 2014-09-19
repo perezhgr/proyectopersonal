@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-19 00:22:44
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-19 14:40:01
          compiled from "./templates/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:40343516854158fd4d28833-84251937%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a4f6f0d327fc7bc3ea86f63906a1bf934ca50c7' => 
     array (
       0 => './templates/footer.tpl',
-      1 => 1411078957,
+      1 => 1411130397,
       2 => 'file',
     ),
   ),
@@ -28,8 +28,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/bootswatch.js"></script>	
 	<script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
-	<script type="text/javascript" src="js/jquery.js"> </script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
 	
+	  <script>
+        $('#confirm-delete').on('show.bs.modal', function(e) {
+            $(this).find('.danger').attr('href', $(e.relatedTarget).data('href'));
+            
+            $('.debug-url').html('Delete URL: <strong>' + $(this).find('.danger').attr('href') + '</strong>');
+        })
+    </script>
 </body>
 </html>
 <?php }} ?>

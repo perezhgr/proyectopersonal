@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-17 15:34:47
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-19 14:55:57
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1340954347541591112ed7c1-77948224%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1410960843,
+      1 => 1411131351,
       2 => 'file',
     ),
   ),
@@ -125,9 +125,8 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                               <a href="AM_ciudad.php?id_ciudad=<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
 "><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
-                              <a href="borrar_ciudad.php?id_ciudad=<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
-"><span class="glyphicon glyphicon-trash"></span>
-                              </a>                           
+                               <a data-href="" data-toggle="modal" data-target="#confirm-delete" href="#"><span class="glyphicon glyphicon-trash"></span></a><br> 
+                                                     
                             </td>
                           </tr>
                           <?php } ?>
@@ -139,7 +138,32 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                               </ul>
                             </td>
                         </tfoot>
-                      </table> 
+                      </table>
+                      <!--INICIO MODAL CERRAR--> 
+                      <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                              <h4 class="modal-title" id="myModalLabel">Confirmacion de eliminacion</h4>
+                            </div>
+
+                            <div class="modal-body">
+                              <p>Vas a borrar una ciudad ; este procedimiento es irreversible.</p>
+                              <p>¿Quieres continuar?</p>
+                              <p class="debug-url"></p>
+                            </div>
+
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                              <a href="borrar_ciudad.php?id_ciudad=<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
+" class="btn btn-danger danger">Borrar</a>
+                            </div>
+                          </div>
+                        </div>
+                      <!--FIN MODAL CERRAR--> 
+                      </div>
                     </div>
                     <div class="tab-pane fade" id="comentario">
                       <table class="table table-striped table-hover ">
