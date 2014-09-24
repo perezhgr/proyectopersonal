@@ -1,4 +1,5 @@
                   <!-- CAROUSEL-->
+                  {foreach from=$Ciudad item=ciudad}
                   <div class="row">
                     {foreach $Imagen as $imagen name=img}
                     <div class="col-lg-1"></div>
@@ -15,23 +16,23 @@
                         {if $smarty.foreach.img.iteration == 1}
                         <div class="carousel-inner">
                           <div class="item active">
-                            <img src="{$imagen.path}" alt="..." class="img-responsive img-thumbnail" width="300px" height="300px">
+                            <img src="{$imagen.path}" alt="" class="img-responsive img-thumbnail" width="300px" height="300px">
                             <div class="carousel-caption">
-                              <h3>Berlin</h3>
+                              <h3>{$ciudad.nombre_ciudad}</h3>
                             </div>
                           </div>
                           {elseif $smarty.foreach.img.iteration == 2}
                           <div class="item">
-                            <img src="{$imagen.path}" alt="..." class="img-responsive img-thumbnail" width="300px" height="300px">
+                            <img src="{$imagen.path}" alt="" class="img-responsive img-thumbnail" width="300px" height="300px">
                             <div class="carousel-caption">
-                              <h3>Berlin</h3>
+                              <h3>{$ciudad.nombre_ciudad}</h3>
                             </div>
                           </div>
                           {else}
                           <div class="item">
-                            <img src="{$imagen.path}" alt="..."class="img-responsive img-thumbnail" width="300px" height="300px">
+                            <img src="{$imagen.path}" alt=""class="img-responsive img-thumbnail" width="300px" height="300px">
                             <div class="carousel-caption">
-                              <h3>Berlin</h3>
+                              <h3>{$ciudad.nombre_ciudad}</h3>
                             </div>
                           </div>
                         </div>
@@ -51,7 +52,7 @@
                   <!-- FIN CAROUSEL-->
 
                   <!-- DATOS CIUDAD-->
-                  {foreach from=$Ciudad item=ciudad}      
+                        
                   <div class="row">                                    
                     <div class="col-lg-4  text-center">                      
                       <h3>Lugar<h3><h4>{$ciudad.nombre_ciudad}</h4>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-24 20:40:25
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-24 23:47:44
          compiled from "./templates/modal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:185600833554220ee6b8dab1-54559864%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9afbabd2d7104bba99deb709b2f3809e75b1e519' => 
     array (
       0 => './templates/modal.tpl',
-      1 => 1411584022,
+      1 => 1411595257,
       2 => 'file',
     ),
   ),
@@ -19,9 +19,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_54220ee6c30b03_31248837',
   'variables' => 
   array (
+    'Ciudad' => 0,
     'Imagen' => 0,
     'imagen' => 0,
-    'Ciudad' => 0,
     'ciudad' => 0,
     'Comentario' => 0,
     'comentario' => 0,
@@ -29,6 +29,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54220ee6c30b03_31248837')) {function content_54220ee6c30b03_31248837($_smarty_tpl) {?>                  <!-- CAROUSEL-->
+                  <?php  $_smarty_tpl->tpl_vars['ciudad'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ciudad']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['Ciudad']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['ciudad']->key => $_smarty_tpl->tpl_vars['ciudad']->value){
+$_smarty_tpl->tpl_vars['ciudad']->_loop = true;
+?>
                   <div class="row">
                     <?php  $_smarty_tpl->tpl_vars['imagen'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['imagen']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['Imagen']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -52,25 +57,28 @@ $_smarty_tpl->tpl_vars['imagen']->_loop = true;
                         <div class="carousel-inner">
                           <div class="item active">
                             <img src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['path'];?>
-" alt="..." class="img-responsive img-thumbnail" width="300px" height="300px">
+" alt="" class="img-responsive img-thumbnail" width="300px" height="300px">
                             <div class="carousel-caption">
-                              <h3>Berlin</h3>
+                              <h3><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
+</h3>
                             </div>
                           </div>
                           <?php }elseif($_smarty_tpl->getVariable('smarty')->value['foreach']['img']['iteration']==2){?>
                           <div class="item">
                             <img src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['path'];?>
-" alt="..." class="img-responsive img-thumbnail" width="300px" height="300px">
+" alt="" class="img-responsive img-thumbnail" width="300px" height="300px">
                             <div class="carousel-caption">
-                              <h3>Berlin</h3>
+                              <h3><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
+</h3>
                             </div>
                           </div>
                           <?php }else{ ?>
                           <div class="item">
                             <img src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value['path'];?>
-" alt="..."class="img-responsive img-thumbnail" width="300px" height="300px">
+" alt=""class="img-responsive img-thumbnail" width="300px" height="300px">
                             <div class="carousel-caption">
-                              <h3>Berlin</h3>
+                              <h3><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
+</h3>
                             </div>
                           </div>
                         </div>
@@ -90,11 +98,7 @@ $_smarty_tpl->tpl_vars['imagen']->_loop = true;
                   <!-- FIN CAROUSEL-->
 
                   <!-- DATOS CIUDAD-->
-                  <?php  $_smarty_tpl->tpl_vars['ciudad'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ciudad']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['Ciudad']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['ciudad']->key => $_smarty_tpl->tpl_vars['ciudad']->value){
-$_smarty_tpl->tpl_vars['ciudad']->_loop = true;
-?>      
+                        
                   <div class="row">                                    
                     <div class="col-lg-4  text-center">                      
                       <h3>Lugar<h3><h4><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>

@@ -15,7 +15,6 @@
   <!-- Custom styles for this template -->
   <link href="css/cover.css" rel="stylesheet">
   <link href="css/carousel.css" rel="stylesheet">
-  <link href="css/carousel.css" rel="stylesheet">
   <link href="css/font-awesome.css" rel="stylesheet">  
 
   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->

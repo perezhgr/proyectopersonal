@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-24 19:36:16
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 00:52:28
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11170143915419df466eb559-80047184%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1411569712,
+      1 => 1411599006,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_5419df46881c82_06520704',
   'variables' => 
   array (
-    'Usuario' => 0,
     'Empresa' => 0,
     'empresa' => 0,
     'Ciudades' => 0,
@@ -43,10 +42,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   <li class="active"><a href="#empresa">Acerca</a></li>
                   <li><a href="#paquetes">Paquetes</a></li>
                   <li><a href="#contacto">Contacto</a></li>
-                  <?php if (isset($_smarty_tpl->tpl_vars['Usuario']->value)){?>
-                  <li><a href=""></a><?php echo $_smarty_tpl->tpl_vars['Usuario']->value['user']['nombre'];?>
-</li>
-                  <?php }?>
+                  
+                  <li><a href=""></a></li>
                   <li><p class="lead">
                     <a class="zoom btn btn-primary btn-md" data-toggle="modal" data-target="#myModal"><i class="fa fa-user fa-1x"></i>&nbsp;</a>
                     </p>
@@ -68,10 +65,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                       <h4 class="modal-title" id="myModalLabel">Inicia sesion</h4>
                     </div>
                     <div class="modal-body">
-
                       <form class="form-horizontal" ACTION="" METHOD="POST">        
                         <fieldset>
-
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">

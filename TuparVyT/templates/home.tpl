@@ -13,9 +13,8 @@
                   <li class="active"><a href="#empresa">Acerca</a></li>
                   <li><a href="#paquetes">Paquetes</a></li>
                   <li><a href="#contacto">Contacto</a></li>
-                  {if isset($Usuario)}
-                  <li><a href=""></a>{$Usuario.user.nombre}</li>
-                  {/if}
+                  
+                  <li><a href=""></a></li>
                   <li><p class="lead">
                     <a class="zoom btn btn-primary btn-md" data-toggle="modal" data-target="#myModal"><i class="fa fa-user fa-1x"></i>&nbsp;</a>
                     </p>
@@ -37,10 +36,8 @@
                       <h4 class="modal-title" id="myModalLabel">Inicia sesion</h4>
                     </div>
                     <div class="modal-body">
-
                       <form class="form-horizontal" ACTION="" METHOD="POST">        
                         <fieldset>
-
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">

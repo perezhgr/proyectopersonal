@@ -12,11 +12,13 @@ class Controller
 
 	public function ImprimirComentario(){
 
+		$this->view->MostrarCondicionesDeViaje($this->model->ObtenerCondiciones());
 		if (isset($_GET['id_ciudad'])) {
 
 			$this->view->MostrarComentario($this->model->ObtenerComentarioByIdCiudad($_GET['id_ciudad']));
 		    $this->view->ImprimirComentario();
 		}
+
 	}
 }	
 ?>

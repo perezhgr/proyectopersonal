@@ -13,12 +13,21 @@ class Model
 
 	public function ObtenerComentarioByIdCiudad($id_ciudad){
 		
-		$sql = "SELECT u.nombre,c.texto,co.condicion 
+		$sql = "SELECT u.nombre,c.texto,c.id_ciudad,co.condicion 
 		FROM   comentario c
 		JOIN   ciudad ci ON (ci.id_ciudad = c.id_ciudad)
 		JOIN   usuario u ON (u.id_usuario = c.id_usuario)
 		JOIN   condicion co ON (co.id_condicion = c.id_condicion)
 		WHERE  c.id_ciudad= $id_ciudad";
+
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}
+
+	public function ObtenerCondiciones(){
+		
+		$sql = "SELECT *
+		FROM condicion";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
