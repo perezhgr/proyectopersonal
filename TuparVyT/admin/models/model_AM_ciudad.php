@@ -45,8 +45,8 @@ class Model
 			$ext = pathinfo($filename, PATHINFO_EXTENSION);
 			if(in_array($ext,$allowed) ) {
 					$new_file_name = uniqid(); //Generar un uniq id para la foto.
-					$path = '../img/'.$new_file_name.'.'.$ext;
-					move_uploaded_file($imagen['tmp_name'],$path );
+					$path = 'img/'.$new_file_name.'.'.$ext;
+					move_uploaded_file($imagen['tmp_name'],"../".$path );
 					//echo 'Congratulations!  Your image was uploaded.';
 
 					$sql = "INSERT INTO imagen (`path`,`id_ciudad`)  VALUES (:path,:id_ciudad)";

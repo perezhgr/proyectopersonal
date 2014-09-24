@@ -13,6 +13,10 @@ class View
 		$this->smarty->assign("Empresa",$empresa);				
 	}
 
+	public function MostrarUsuario($usuario){
+		$this->smarty->assign("Usuario",$usuario);				
+	}
+
 	public function MostrarCiudades($ciudades){
 		$this->smarty->assign("Ciudades",$ciudades);				
 	}

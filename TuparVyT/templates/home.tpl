@@ -13,6 +13,13 @@
                   <li class="active"><a href="#empresa">Acerca</a></li>
                   <li><a href="#paquetes">Paquetes</a></li>
                   <li><a href="#contacto">Contacto</a></li>
+                  {if isset($Usuario)}
+                  <li><a href=""></a>{$Usuario.user.nombre}</li>
+                  {/if}
+                  <li><p class="lead">
+                    <a class="zoom btn btn-primary btn-md" data-toggle="modal" data-target="#myModal"><i class="fa fa-user fa-1x"></i>&nbsp;</a>
+                    </p>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -20,9 +27,7 @@
             <div class="inner cover ">
               <h1 class="cover-heading w ">Tupar Viajes y Turismo</h1>
               <p class="lead s zoom">Tu sueño hecho realidad...</p>
-              <p class="lead">
-                <a class="zoom btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-user fa-1x"></i>&nbsp;</a>
-              </p>
+
               <!-- FORM PARA LOGIN -->
               <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -62,33 +67,34 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div><br>
             <!-- FIN FORM PARA LOGIN -->
 
           <!--FORM PARA REGISTRARSE -->
           <form class="form-horizontal" ACTION="" METHOD="POST">        
             <fieldset>
               <div class="form-group">
-                <div class="col-lg-4"></div>
-                <div class="col-lg-4">
+                <div class="col-lg-7"></div>
+                <div class="col-lg-5">
+                <label>Registrate y comenta nuestros destinos.</label>
                   <input type="text" class="form-control" id="inputPassword" placeholder="Nombre" name="nombre" required>
                 </div>
               </div>
               <div class="form-group">
-              <div class="col-lg-4"></div>
-                <div class="col-lg-4">
+              <div class="col-lg-7"></div>
+                <div class="col-lg-5">
                   <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail" required>
                 </div>
               </div>
               <div class="form-group">
-              <div class="col-lg-4"></div>
-                <div class="col-lg-4">
+              <div class="col-lg-7"></div>
+                <div class="col-lg-5">
                   <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass" required>
                 </div>
               </div>
 
             <div class="form-group">
-              <div class="col-lg-4"></div>
+              <div class="col-lg-7"></div>
               <div class="col-lg-1">
               <button type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-success btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
                 
@@ -96,7 +102,6 @@
             </div>
           </fieldset>
         </form><br><br>
-        <!--FIN FORM PARA REGISTRARSE -->
 
             <div class="mastfoot">
             <div class="inner">
@@ -138,21 +143,41 @@
           {/foreach}
         </div><br><br><br><br><br><br><br><br>
 
+
+        <!-- Modal con Ajax-->
+        <div class="modal fade" id="myModal75" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Detalle del paquete turistico</h4>
+              </div>
+              <div class="modal-body">
+                <div id="contenidomodal"></div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fin Modal con Ajax-->
+
         <!-- Three columns of text below the carousel -->
         <div class="row ">
-            <h2 id="paquetes">Paquetes</h2><br><br>
-            {foreach from=$Ciudades item=ciudad}
+          <h2 id="paquetes">Paquetes</h2><br><br>
+          {foreach from=$Ciudades item=ciudad}
           <div class="col-lg-4 col-sm-6 col-xs-12 ">
             <a href="">
-             <img src="{$ciudad.path}" class="img-rounded img-responsive zoom"  data-toggle="tooltip" data-placement="left" title="{$ciudad.nombre_ciudad}">
+            <img src="{$ciudad.path}" class="img-rounded img-responsive zoom"  data-toggle="tooltip" data-placement="left" title="{$ciudad.nombre_ciudad}">
            </a>
-           <p>
-            <h3>{$ciudad.nombre_ciudad}</h3>
-            <a class="btn btn-primary "  data-toggle="modal" data-target=".bs-example-modal-lg" role="button" href="javascript:getDetalleCiudad({$ciudad.id_ciudad})">Ver mas &raquo;</a>
-          </p>
-         </div>
-         {/foreach}
-         <!-- /.col-lg-4 -->
+           <h3>{$ciudad.nombre_ciudad}</h3>
+           <button class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal75"  onClick="getDetalleCiudad({$ciudad.id_ciudad})">
+            Ver mas &raquo;
+          </button>
+        </div>
+        {/foreach}
+        <!-- /.col-lg-4 -->
        </div><br><br><br><br><br><br><br><br><!-- /.row -->
 
        <div class="row">

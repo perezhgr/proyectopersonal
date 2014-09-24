@@ -6220,3 +6220,7 @@ button.close {
     -ms-transform : scale(1.1); /* IE9 */
     opacity: 1;
   }
+
+  .k{
+    font-color:black; 
+  }
