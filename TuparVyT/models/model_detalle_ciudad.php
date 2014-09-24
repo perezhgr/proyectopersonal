@@ -23,8 +23,8 @@ class Model
 		//die();
 	}
 
-	/*
-	public function ObtenerCiudades(){
+	
+	public function ObtenerImgByIdCiudad($id_ciudad){
 		
 		$sql = "SELECT c.id_ciudad,nombre_ciudad,i.path
 		FROM   ciudad c
@@ -33,6 +33,16 @@ class Model
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
-	}*/
+	}
+
+	public function ObtenerCountComentByIdCiudad($id_ciudad){
+		
+		$sql = "SELECT COUNT(id_comentario) as comentarios
+		FROM   comentario 
+		WHERE  id_ciudad =$id_ciudad";
+
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}
 }
 ?>

@@ -13,6 +13,14 @@ class View
 		$this->smarty->assign("Ciudad",$ciudad);				
 	}
 
+	public function MostrarImgCiudad($imagen){
+		$this->smarty->assign("Imagen",$imagen);				
+	}
+
+	public function MostrarContadorComentario($comentario){
+		$this->smarty->assign("Comentario",$comentario);				
+	}
+
 	public function ImprimirModal(){
 		$this->smarty->display('modal.tpl');
 
