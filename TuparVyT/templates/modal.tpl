@@ -84,8 +84,9 @@
                       {/foreach}
                       <div class="row">
                       <div class="col-lg-1"></div>
-                        <div class="col-lg-11">
+                        <div class="col-lg-10">
                           <div id="comentario"></div>
                         </div>
+                        <div class="col-lg-1"></div>
                       </div>
                       <!-- FIN COMENTARIOS-->                  

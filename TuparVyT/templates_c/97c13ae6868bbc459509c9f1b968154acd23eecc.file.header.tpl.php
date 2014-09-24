@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-17 21:21:42
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-24 20:39:25
          compiled from "./templates/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11674108085419df468875e4-84245449%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97c13ae6868bbc459509c9f1b968154acd23eecc' => 
     array (
       0 => './templates/header.tpl',
-      1 => 1410872260,
+      1 => 1411583917,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_5419df468c47e4_90359947',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5419df468c47e4_90359947')) {function content_5419df468c47e4_90359947($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
@@ -28,7 +28,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Tupar VyT</title>
+  <title>Tupar • VyT</title>
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.css" rel="stylesheet">
