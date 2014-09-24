@@ -145,15 +145,15 @@
 
 
         <!-- Modal con Ajax-->
-        <div class="modal fade" id="myModal75" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content ">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Detalle del paquete turistico</h4>
+                <h3 class="modal-title" id="myModalLabel">Detalles del paquete turistico</h3>
               </div>
               <div class="modal-body">
-                <div id="contenidomodal"></div>
+               <div id="contenidomodal"></div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
@@ -172,9 +172,8 @@
             <img src="{$ciudad.path}" class="img-rounded img-responsive zoom"  data-toggle="tooltip" data-placement="left" title="{$ciudad.nombre_ciudad}">
            </a>
            <h3>{$ciudad.nombre_ciudad}</h3>
-           <button class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal75"  onClick="getDetalleCiudad({$ciudad.id_ciudad})">
-            Ver mas &raquo;
-          </button>
+
+        <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" onClick="getDetalleCiudad({$ciudad.id_ciudad})">Ver mas &raquo;</button>
         </div>
         {/foreach}
         <!-- /.col-lg-4 -->

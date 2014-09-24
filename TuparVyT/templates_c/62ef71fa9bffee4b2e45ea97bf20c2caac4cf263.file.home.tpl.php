@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-24 14:35:07
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-24 16:01:36
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11170143915419df466eb559-80047184%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1411562101,
+      1 => 1411567294,
       2 => 'file',
     ),
   ),
@@ -188,15 +188,15 @@ $_smarty_tpl->tpl_vars['empresa']->_loop = true;
 
 
         <!-- Modal con Ajax-->
-        <div class="modal fade" id="myModal75" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
+        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content ">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="myModalLabel">Detalle del paquete turistico</h4>
+                <h3 class="modal-title" id="myModalLabel">Detalles del paquete turistico</h3>
               </div>
               <div class="modal-body">
-                <div id="contenidomodal"></div>
+               <div id="contenidomodal"></div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
@@ -222,10 +222,9 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
            </a>
            <h3><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
 </h3>
-           <button class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal75"  onClick="getDetalleCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
-)">
-            Ver mas &raquo;
-          </button>
+
+        <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" onClick="getDetalleCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
+)">Ver mas &raquo;</button>
         </div>
         <?php } ?>
         <!-- /.col-lg-4 -->
