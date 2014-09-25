@@ -11,28 +11,41 @@ class Controller
 	
 	public function ImprimirPagCrearCiudad(){
 
+		session_start();
+
+		if (isset($_SESSION['mail'])){
+
 		//Crear ciudad con 3 imagenes		
-		if (isset($_POST['ciudad'])) {
+			if (isset($_POST['ciudad'])) {
 
-			$ciudad["ciudad"] = $_POST["ciudad"];
-			$ciudad["duracion"] = $_POST["duracion"];
-			$ciudad["precio"] = $_POST["precio"];
-			$ciudad["imagen0"] = $_FILES["imagen0"];
-        	$ciudad["imagen1"] = $_FILES["imagen1"];
-        	$ciudad["imagen2"] = $_FILES["imagen2"];
-			$this->model->InsertaCiudad($ciudad);
+				$ciudad["ciudad"] = $_POST["ciudad"];
+				$ciudad["duracion"] = $_POST["duracion"];
+				$ciudad["precio"] = $_POST["precio"];
+				$ciudad["imagen0"] = $_FILES["imagen0"];
+				$ciudad["imagen1"] = $_FILES["imagen1"];
+				$ciudad["imagen2"] = $_FILES["imagen2"];
+				$this->model->InsertaCiudad($ciudad);
 
+			}
+			$this->view->ImprimirPagCrearCiudad();
 		}
-		$this->view->ImprimirPagCrearCiudad();
+		else
+		{
+			header('Location: login.php');
+		}
 	}
 
-	
+
 	public function ImprimirPagEditarCiudad(){
 
-		if(isset($_GET['id_ciudad'])) {
-		$ciudad=$this->model->ObtenerCiudadById($_GET['id_ciudad']);
-		$this->view->ImprimirPagEditarCiudad($ciudad);
-		}
+		session_start();
+
+		if (isset($_SESSION['mail'])){	
+
+			if(isset($_GET['id_ciudad'])) {
+				$ciudad=$this->model->ObtenerCiudadById($_GET['id_ciudad']);
+				$this->view->ImprimirPagEditarCiudad($ciudad);
+			}
 
 			if (isset($_POST['id_ciudad'])) {				
 				$ciudad["id_ciudad"] = $_POST["id_ciudad"];
@@ -41,7 +54,12 @@ class Controller
 				$ciudad["precio"] = $_POST["precio"];				
 				$this->model->ActualizaCiudad($ciudad);
 			}
-					
+
+		}
+		else
+		{
+			header('Location: login.php');
+		}
 	}
 }
 ?>

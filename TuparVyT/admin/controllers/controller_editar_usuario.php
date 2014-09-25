@@ -11,10 +11,17 @@ class Controller
 	
 	public function EditarUsuario(){
 
-		if (isset($_GET['id_usuario'])) {
+		session_start();
+		if(isset($_SESSION["mail"])){
+			if (isset($_GET['id_usuario'])) {
 
-			$this->model->EditarUsuario($_GET['id_usuario']);
-			$this->view->MostrarAlerta();
+				$this->model->EditarUsuario($_GET['id_usuario']);
+				$this->view->MostrarAlerta();
+			}
+		}
+		else
+		{
+			header('Location: login.php');
 		}
 	}
 }

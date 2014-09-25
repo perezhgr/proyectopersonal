@@ -10,13 +10,19 @@ class Controller
 	}
 	
 	public function EliminarCiudad(){
-			
-		if(isset($_GET['id_ciudad'])) {
-		$this->model->EliminarCiudad($_GET['id_ciudad']);
-		$this->view->resultado();
+		session_start();
+		if(isset($_SESSION["mail"]))
+		{
+			if(isset($_GET['id_ciudad'])) {
+				$this->model->EliminarCiudad($_GET['id_ciudad']);
+				$this->view->resultado();
+			}
 		}
-	}			
-
+		else
+		{
+			header('Location: login.php');
+		}			
+	}
 }
 ?>
 

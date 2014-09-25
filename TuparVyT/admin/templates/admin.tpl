@@ -24,9 +24,9 @@
           {/if}
           </div>
           <div class="col-lg-1">
-                        <button id="logout" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="Salir">
-            <span class="glyphicon glyphicon-log-out">&nbsp&nbsp</span>
-          </button>
+          <button id="logout" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
+              <span class="glyphicon glyphicon-log-out">&nbsp&nbsp</span>
+            </button>
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 21:49:27
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 21:58:42
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1340954347541591112ed7c1-77948224%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1411674557,
+      1 => 1411675119,
       2 => 'file',
     ),
   ),
@@ -64,9 +64,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <?php }?>
           </div>
           <div class="col-lg-1">
-                        <button id="logout" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="Salir">
-            <span class="glyphicon glyphicon-log-out">&nbsp&nbsp</span>
-          </button>
+          <button id="logout" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
+              <span class="glyphicon glyphicon-log-out">&nbsp&nbsp</span>
+            </button>
           </div>
         </div>
 

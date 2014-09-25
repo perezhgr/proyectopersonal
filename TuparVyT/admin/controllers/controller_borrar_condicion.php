@@ -10,13 +10,20 @@ class Controller
 	}
 	
 	public function EliminarCondicion(){
-			
-		if(isset($_GET['id_condicion'])) {
-		$this->model->EliminarCondicion($_GET['id_condicion']);
-		$this->view->resultado();
-		}
-	}			
 
+		session_start();
+		if(isset($_SESSION["mail"]))
+		{		
+			if(isset($_GET['id_condicion'])) {
+				$this->model->EliminarCondicion($_GET['id_condicion']);
+				$this->view->resultado();
+			}
+		}			
+		else
+		{
+			header('Location: login.php');
+		}
+	}	
 }
 ?>
 

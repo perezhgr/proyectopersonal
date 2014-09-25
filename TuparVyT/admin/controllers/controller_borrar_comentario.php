@@ -10,13 +10,20 @@ class Controller
 	}
 	
 	public function EliminarComentario(){
-			
-		if(isset($_GET['id_comentario'])) {
-		$this->model->EliminarComentario($_GET['id_comentario']);
-		$this->view->resultado();
+		
+		session_start();
+		if(isset($_SESSION["mail"]))
+		{	
+			if(isset($_GET['id_comentario'])) {
+				$this->model->EliminarComentario($_GET['id_comentario']);
+				$this->view->resultado();
+			}
 		}
-	}			
-
+		else
+		{
+			header('Location: login.php');
+		}			
+	}
 }
 ?>
 
