@@ -1,4 +1,5 @@
 <?php
+include '../reporte_errores.php';
 include './controllers/controller_AM_condicion.php';
 include './views/view_AM_condicion.php';
 include './models/model_AM_condicion.php';

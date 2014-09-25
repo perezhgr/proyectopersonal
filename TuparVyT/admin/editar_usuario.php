@@ -1,4 +1,5 @@
 <?php
+include '../reporte_errores.php';
 include './controllers/controller_editar_usuario.php';
 include './views/view_editar_usuario.php';
 include './models/model_editar_usuario.php';

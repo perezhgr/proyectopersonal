@@ -1,4 +1,5 @@
 <?php
+include '../reporte_errores.php';
 include './controllers/controller_AM_ciudad.php';
 include './views/view_AM_ciudad.php';
 include './models/model_AM_ciudad.php';
