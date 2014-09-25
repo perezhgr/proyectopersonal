@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 01:12:20
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 16:05:28
          compiled from "./templates/comentario.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:935602893542308c61e4914-32350852%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97c8bc7d70edfb520fa336f38cd61fe19ba5a240' => 
     array (
       0 => './templates/comentario.tpl',
-      1 => 1411600195,
+      1 => 1411653923,
       2 => 'file',
     ),
   ),
@@ -38,9 +38,11 @@ $_smarty_tpl->tpl_vars['comentario']->_loop = true;
 )</strong> dijo:<br>
                       •&nbsp;<em><?php echo $_smarty_tpl->tpl_vars['comentario']->value['texto'];?>
 </em>
-                    </div><br>                    
+                    </div><br>
+                    <?php } ?>
                   </address>
 
+                  <!-- COMENTARIO
                   <form class="form-horizontal" ACTION="" METHOD="POST">        
                     <div class="jumbotron">
                     <h4>Deja tu comentario</h4><br>
@@ -82,7 +84,7 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
                           <button type="submit" class="btn btn-success btn-md">Publicar</button>                            
                         </div>
                       </div>
-                    <?php } ?>
+                    
                     </div>
-                  </form>
+                  </form>!-->
 <?php }} ?>

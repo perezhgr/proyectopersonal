@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-19 14:55:57
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 19:50:47
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1340954347541591112ed7c1-77948224%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1411131351,
+      1 => 1411667443,
       2 => 'file',
     ),
   ),
@@ -252,6 +252,7 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
                             <th>#</th>                            
                             <th>Nombre</th>
                             <th>E-mail</th>
+                            <th class="text-center">¿Tiene previlegios de administrador?</th>
                             <th>Accion</th>
                           </tr>
                         </thead>
@@ -268,15 +269,23 @@ $_smarty_tpl->tpl_vars['usuario']->_loop = true;
                             <td><?php echo $_smarty_tpl->tpl_vars['usuario']->value['nombre'];?>
 </td>
                             <td><?php echo $_smarty_tpl->tpl_vars['usuario']->value['mail'];?>
-</td>
+</td>                           
                             <td>
-                              <a href="editar_usuario.php?id_usuario=<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
-"><span class="glyphicon glyphicon-star">&nbsp&nbsp</span>
-                              </a>
+                            <?php if ($_smarty_tpl->tpl_vars['usuario']->value['es_admin']==1){?>
+                              <p class="text-center"><a href="editar_usuario.php?id_usuario=<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
+"><span class=" glyphicon glyphicon-ok"></span>
+                              </a></p>
+                            <?php }else{ ?>  
+                            <p class="text-center"><a href="editar_usuario.php?id_usuario=<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
+"><span class="glyphicon glyphicon-remove"></span>
+                            </a></p>
+                            <?php }?>
+                            </td>  
+                            <td>
                             <a href="borrar_usuario.php?id_usuario=<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
-"><span class="glyphicon glyphicon-trash"></span>
-                              </a>  
-                            </td>                            
+"><span class=" text-center glyphicon glyphicon-trash"></span>
+                            </a>
+                            </td> 
                           </tr>
                           <?php } ?>
                         </tbody>

@@ -24,13 +24,13 @@ class Model
 		return $query->fetchAll();
 	}
 
-	public function ObtenerCondiciones(){
+	/*public function ObtenerCondiciones(){
 		
 		$sql = "SELECT *
 		FROM condicion";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
-	}
+	}*/
 }
 ?>

@@ -73,9 +73,8 @@ class Model
 
 	public function ObtenerUsuario(){
 		
-		$sql = "SELECT id_usuario,nombre,mail
-		FROM usuario
-		WHERE es_admin IS NULL";
+		$sql = "SELECT *
+		FROM usuario";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
@@ -84,8 +83,7 @@ class Model
 	public function CountUsuario(){
 		
 		$sql = "SELECT COUNT(id_usuario) AS countuser
-		FROM usuario
-		WHERE es_admin 	IS NULL";
+		FROM usuario";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();

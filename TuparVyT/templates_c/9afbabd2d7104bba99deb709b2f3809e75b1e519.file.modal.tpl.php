@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 15:08:57
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 19:44:37
          compiled from "./templates/modal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:185600833554220ee6b8dab1-54559864%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9afbabd2d7104bba99deb709b2f3809e75b1e519' => 
     array (
       0 => './templates/modal.tpl',
-      1 => 1411650192,
+      1 => 1411667073,
       2 => 'file',
     ),
   ),
@@ -112,12 +112,20 @@ $_smarty_tpl->tpl_vars['imagen']->_loop = true;
 foreach ($_from as $_smarty_tpl->tpl_vars['comentario']->key => $_smarty_tpl->tpl_vars['comentario']->value){
 $_smarty_tpl->tpl_vars['comentario']->_loop = true;
 ?>
+                              <?php if ($_smarty_tpl->tpl_vars['comentario']->value['comentarios']==0){?>
+                              <small><em>* Esta ciudad no tiene comentarios.<br>
+                              * Si desea dejar su comentario debera registrarse primero.</em>
+                              </small>
+                              <?php }else{ ?>  
                               <button type="button" class="btn btn-primary" onClick="getComentarioCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
 )">
                                 <span class="badge pull-right"><?php echo $_smarty_tpl->tpl_vars['comentario']->value['comentarios'];?>
 </span>
-                                Ver Comentarios&nbsp;
-                              </button>
+                                <i class="fa fa-comments fa-2x"></i>&nbsp;
+                              </button><br>
+                              <small><em>
+                              * Si desea dejar su comentario debera registrarse primero.</em></small>
+                              <?php }?>
                               <?php } ?>
                             </li><br><br>
                           </ul>

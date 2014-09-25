@@ -3,9 +3,11 @@
                     {foreach from=$Comentario item=comentario}
                     <div class="jumbotron text-left"><strong>{$comentario.nombre} ({$comentario.condicion})</strong> dijo:<br>
                       •&nbsp;<em>{$comentario.texto}</em>
-                    </div><br>                    
+                    </div><br>
+                    {/foreach}
                   </address>
 
+                  <!-- COMENTARIO
                   <form class="form-horizontal" ACTION="" METHOD="POST">        
                     <div class="jumbotron">
                     <h4>Deja tu comentario</h4><br>
@@ -40,6 +42,6 @@
                           <button type="submit" class="btn btn-success btn-md">Publicar</button>                            
                         </div>
                       </div>
-                    {/foreach}
+                    
                     </div>
-                  </form>
+                  </form>!-->

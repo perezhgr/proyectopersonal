@@ -167,6 +167,7 @@
                             <th>#</th>                            
                             <th>Nombre</th>
                             <th>E-mail</th>
+                            <th class="text-center">¿Tiene previlegios de administrador?</th>
                             <th>Accion</th>
                           </tr>
                         </thead>
@@ -176,13 +177,20 @@
                           <tr class="active danger">
                             <td>{$usuario.id_usuario}</td>
                             <td>{$usuario.nombre}</td>
-                            <td>{$usuario.mail}</td>
+                            <td>{$usuario.mail}</td>                           
                             <td>
-                              <a href="editar_usuario.php?id_usuario={$usuario.id_usuario}"><span class="glyphicon glyphicon-star">&nbsp&nbsp</span>
-                              </a>
-                            <a href="borrar_usuario.php?id_usuario={$usuario.id_usuario}"><span class="glyphicon glyphicon-trash"></span>
-                              </a>  
-                            </td>                            
+                            {if $usuario.es_admin ==1}
+                              <p class="text-center"><a href="editar_usuario.php?id_usuario={$usuario.id_usuario}"><span class=" glyphicon glyphicon-ok"></span>
+                              </a></p>
+                            {else}  
+                            <p class="text-center"><a href="editar_usuario.php?id_usuario={$usuario.id_usuario}"><span class="glyphicon glyphicon-remove"></span>
+                            </a></p>
+                            {/if}
+                            </td>  
+                            <td>
+                            <a href="borrar_usuario.php?id_usuario={$usuario.id_usuario}"><span class=" text-center glyphicon glyphicon-trash"></span>
+                            </a>
+                            </td> 
                           </tr>
                           {/foreach}
                         </tbody>
