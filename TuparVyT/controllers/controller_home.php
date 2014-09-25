@@ -10,13 +10,13 @@
 		}
 
 
-		public function ImprimirPagina(){
+		public function ImprimirHome(){
 			
 			//if(array_key_exists('nombre',$_POST)){
-			session_start();
-			if(isset($_SESSION["mail"])){
-				$this->view->imprimirPagina($_SESSION["mail"]);
-			}	
+			//session_start();
+			//if(isset($_SESSION["mail"])){
+				//$this->view->ImprimirHome();
+			//}	
 			if(isset($_POST['nombre'])){
 				$usuario['nombre'] = $_POST['nombre'] ;
 				$usuario['mail'] = $_POST['mail'] ;

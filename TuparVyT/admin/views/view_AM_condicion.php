@@ -17,7 +17,6 @@ class View
 
 	}
 
-
 	public function ImprimirPagEditarCondicion($condicion,$mail)
 	{
 		$this->smarty->assign('Mail',$mail);
