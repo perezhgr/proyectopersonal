@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-17 00:17:49
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 21:12:16
          compiled from "./templates/login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11828171985418b70db6e2f5-07612028%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f5f63cf8bf5077cbe9e40e023158dd20352e878a' => 
     array (
       0 => './templates/login.tpl',
-      1 => 1410524443,
+      1 => 1411672299,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_5418b70dbeaac2_81161231',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5418b70dbeaac2_81161231')) {function content_5418b70dbeaac2_81161231($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -42,7 +42,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <div class="col-lg-3"></div>
           <div class="col-lg-6">
             <div class="well bs-component">
-              <form class="form-horizontal" method="POST">
+              <form  id="formlogin" class="form-horizontal" method="POST">
                 <fieldset>
                   <legend>Por favor, inicie sesion</legend>
                   <div class="form-group">
@@ -59,7 +59,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   </div>
                   <div class="form-group">
                     <div class="col-lg-3 col-lg-offset-9">
-                      <button type="submit" class="btn btn-primary btn-lg">Iniciar</button>
+                      <button id="signin" type="submit" class="btn btn-primary btn-lg">Iniciar</button>
                     </div>
                   </div>
                 </fieldset>

@@ -20,7 +20,7 @@
         <div class="col-lg-3"></div>
           <div class="col-lg-6">
             <div class="well bs-component">
-              <form class="form-horizontal" method="POST">
+              <form  id="formlogin" class="form-horizontal" method="POST">
                 <fieldset>
                   <legend>Por favor, inicie sesion</legend>
                   <div class="form-group">
@@ -37,7 +37,7 @@
                   </div>
                   <div class="form-group">
                     <div class="col-lg-3 col-lg-offset-9">
-                      <button type="submit" class="btn btn-primary btn-lg">Iniciar</button>
+                      <button id="signin" type="submit" class="btn btn-primary btn-lg">Iniciar</button>
                     </div>
                   </div>
                 </fieldset>

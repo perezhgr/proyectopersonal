@@ -10,35 +10,45 @@ class Controller
 	}
 	
 	public function imprimirPagina(){
-		$this->view->imprimirPagina();
+		{
+			session_start();
+			if(!isset($_SESSION["mail"]))
+			{
+				$this->view->imprimirPagina();
+			}
+			else
+			{
+				header('Location: admin.php');
+			}
+		}
 
 	}
-	public function LoginAdmin($formulario){
-
-				$error = $this->verificarFormulario($formulario);
-				if(!$error)
-				{
-					$user = $this->model->GetUsuario($formulario["mail"]);
-
-					if(empty($user))
-					{
-						$this->view->MensajeError("Error: Usuario Inexistente");
-					} 	
-					else if($user["pass"] != md5($formulario["pass"]))
-					{
-						$this->view->MensajeError("Error: Password Inválida");
-					}
-					else
-					{
-
-						$_SESSION["mail"]=$formulario["mail"];
-						echo "admin.php";
-					}
-				}
-				else
-				{
-					$this->view->MensajeError($error);
-				}	
+	public function loginUsuario($formulario)
+	{
+		$error = $this->verificarFormulario($formulario);
+		if(!$error)
+		{
+			$user = $this->model->GetUsuario($formulario["mail"]);
+			
+			if(empty($user))
+			{
+				$this->view->MensajeError("Error: Usuario Inexistente");
+			} 	
+			if($user[0]["pass"] != md5($formulario["pass"]))
+			{
+				$this->view->MensajeError("Error: Password Inválida");
+			}
+			
+			session_start();
+			$_SESSION["mail"]=$formulario["mail"];
+			echo "login.php";
+			
+		}
+		else
+		{
+			$this->view->MensajeError($error);
+		}
+		
 	}
 
 	private function verificarFormulario($formulario)

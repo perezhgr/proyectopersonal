@@ -7,18 +7,14 @@ $model = new Model();
 $view = new View();
 $controller = new Controller($model,$view);
 
-session_start();
-if (isset ($_POST["mail"])) 
+if(isset($_POST["mail"]))
 {
-	$formulario=$_POST["mail"];
-	$formulario=$_POST["pass"];
-	$controller->LoginAdmin($formulario);
-
+    $formulario["mail"] = $_POST["mail"];
+	$formulario["pass"] = $_POST["pass"];
+	$controller->loginUsuario($formulario);
 }
 else
-{ 
-
+{
 	$controller->imprimirPagina();
-
 }
 ?>

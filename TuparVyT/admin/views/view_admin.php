@@ -37,8 +37,9 @@ class View
 
 	}	
 	
-	public function ImprimirPaginaAdmin()
-	{
+	public function ImprimirPaginaAdmin($mail)
+	{	
+		$this->smarty->assign("Mail",$mail);
 		$this->smarty->display('admin.tpl');
 
 	}

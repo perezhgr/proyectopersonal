@@ -13,10 +13,9 @@ class Model
 	//Obtiene el usuario del administrador
 	public function GetUsuario($mail){
 		
-		$sql = "SELECT mail,pass 
-		FROM administrador
-		WHERE mail=$mail";
-
+		$sql = "SELECT *
+		FROM usuario
+		WHERE mail='$mail'";
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
 	}
