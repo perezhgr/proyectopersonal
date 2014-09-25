@@ -6225,3 +6225,12 @@ button.close {
   .k{
     font-color:black; 
   }
+
+.bx{
+  border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 7px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-color: white;
+    
+}

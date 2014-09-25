@@ -68,37 +68,30 @@
             <!-- FIN FORM PARA LOGIN -->
 
           <!--FORM PARA REGISTRARSE -->
-          <form class="form-horizontal" ACTION="" METHOD="POST">        
-            <fieldset>
+          <div class="row">
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4 bx zoom">
+          <form  class="form-horizontal" ACTION="" METHOD="POST">        
+            <fieldset >
               <div class="form-group">
-                <div class="col-lg-7"></div>
-                <div class="col-lg-5">
                 <label>Registrate y comenta nuestros destinos.</label>
                   <input type="text" class="form-control" id="inputPassword" placeholder="Nombre" name="nombre" required>
-                </div>
               </div>
               <div class="form-group">
-              <div class="col-lg-7"></div>
-                <div class="col-lg-5">
                   <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail" required>
-                </div>
               </div>
               <div class="form-group">
-              <div class="col-lg-7"></div>
-                <div class="col-lg-5">
                   <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass" required>
-                </div>
               </div>
-
-            <div class="form-group">
-              <div class="col-lg-7"></div>
-              <div class="col-lg-1">
+            <div class="form-group">            
+            <div class="col-lg-1">
               <button type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-success btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
-                
-              </div>
+            </div>
             </div>
           </fieldset>
-        </form><br><br>
+        </form>
+        </div><br><br>
+        </div>
 
             <div class="mastfoot">
             <div class="inner">

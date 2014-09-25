@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 00:52:28
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 14:15:21
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11170143915419df466eb559-80047184%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1411599006,
+      1 => 1411647319,
       2 => 'file',
     ),
   ),
@@ -97,37 +97,30 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <!-- FIN FORM PARA LOGIN -->
 
           <!--FORM PARA REGISTRARSE -->
-          <form class="form-horizontal" ACTION="" METHOD="POST">        
-            <fieldset>
+          <div class="row">
+          <div class="col-lg-4"></div>
+          <div class="col-lg-4 bx zoom">
+          <form  class="form-horizontal" ACTION="" METHOD="POST">        
+            <fieldset >
               <div class="form-group">
-                <div class="col-lg-7"></div>
-                <div class="col-lg-5">
                 <label>Registrate y comenta nuestros destinos.</label>
                   <input type="text" class="form-control" id="inputPassword" placeholder="Nombre" name="nombre" required>
-                </div>
               </div>
               <div class="form-group">
-              <div class="col-lg-7"></div>
-                <div class="col-lg-5">
                   <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail" required>
-                </div>
               </div>
               <div class="form-group">
-              <div class="col-lg-7"></div>
-                <div class="col-lg-5">
                   <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass" required>
-                </div>
               </div>
-
-            <div class="form-group">
-              <div class="col-lg-7"></div>
-              <div class="col-lg-1">
+            <div class="form-group">            
+            <div class="col-lg-1">
               <button type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-success btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
-                
-              </div>
+            </div>
             </div>
           </fieldset>
-        </form><br><br>
+        </form>
+        </div><br><br>
+        </div>
 
             <div class="mastfoot">
             <div class="inner">
