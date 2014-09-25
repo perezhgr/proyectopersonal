@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-17 20:38:51
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-26 01:12:43
          compiled from "./templates/editar_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:38070822354158fd4c7fd06-98594908%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fd3fea16eec79b8685b12930d995bf162735c89a' => 
     array (
       0 => './templates/editar_ciudad.tpl',
-      1 => 1410979100,
+      1 => 1411686749,
       2 => 'file',
     ),
   ),
@@ -19,6 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_54158fd4ce8b66_49363841',
   'variables' => 
   array (
+    'Mail' => 0,
     'Ciudades' => 0,
     'ciudad' => 0,
   ),
@@ -42,6 +43,23 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
       <!-- Forms
       ================================================== -->
+
+      <div class="row">
+          <div class="col-lg-9">
+          </div>
+          <div class="col-lg-2">                        
+           <?php if (isset($_smarty_tpl->tpl_vars['Mail']->value)){?>
+           <h4><strong>Conectado como:</strong><p class="text-success"><?php echo $_smarty_tpl->tpl_vars['Mail']->value;?>
+</p></h4>           
+          <?php }?>
+          </div>
+          <div class="col-lg-1">
+          <button id="logout" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
+              <span class="glyphicon glyphicon-log-out">&nbsp&nbsp</span>
+            </button>
+          </div>
+        </div>  
+        
         <div class="row">
           <div class="col-lg-1"></div>
           <div class="col-lg-10">

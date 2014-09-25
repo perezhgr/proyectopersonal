@@ -27,7 +27,7 @@ class Controller
 				$this->model->InsertaCiudad($ciudad);
 
 			}
-			$this->view->ImprimirPagCrearCiudad();
+			$this->view->ImprimirPagCrearCiudad($_SESSION["mail"]);
 		}
 		else
 		{
@@ -44,7 +44,7 @@ class Controller
 
 			if(isset($_GET['id_ciudad'])) {
 				$ciudad=$this->model->ObtenerCiudadById($_GET['id_ciudad']);
-				$this->view->ImprimirPagEditarCiudad($ciudad);
+				$this->view->ImprimirPagEditarCiudad($ciudad,$_SESSION["mail"]);
 			}
 
 			if (isset($_POST['id_ciudad'])) {				

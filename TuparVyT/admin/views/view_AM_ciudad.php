@@ -9,14 +9,16 @@ class View
 		$this->smarty = New Smarty;
 	}
 	
-	public function ImprimirPagCrearCiudad()
+	public function ImprimirPagCrearCiudad($mail)
 	{
+		$this->smarty->assign('Mail',$mail);
 		$this->smarty->display('crear_ciudad.tpl');
 
 	}
 
-	public function ImprimirPagEditarCiudad($ciudad)
+	public function ImprimirPagEditarCiudad($ciudad,$mail)
 	{
+		$this->smarty->assign('Mail',$mail);
 		$this->smarty->assign('Ciudades',$ciudad);
 		$this->smarty->display('editar_ciudad.tpl');
 

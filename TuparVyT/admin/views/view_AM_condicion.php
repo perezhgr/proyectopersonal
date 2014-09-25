@@ -10,15 +10,17 @@ class View
 	}
 
 
-	public function ImprimirPagCrearCondicion()
+	public function ImprimirPagCrearCondicion($mail)
 	{
+		$this->smarty->assign('Mail',$mail);
 		$this->smarty->display('crear_condicion.tpl');
 
 	}
 
 
-	public function ImprimirPagEditarCondicion($condicion)
+	public function ImprimirPagEditarCondicion($condicion,$mail)
 	{
+		$this->smarty->assign('Mail',$mail);
 		$this->smarty->assign('Condicion',$condicion);
 		$this->smarty->display('editar_condicion.tpl');
 

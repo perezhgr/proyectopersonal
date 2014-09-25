@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-14 16:49:42
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-26 01:10:29
          compiled from "./templates/crear_condicion.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:36013785415a47a071f70-60876046%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5a563fad399da08d1898576cb3a7d7bfe1577d83' => 
     array (
       0 => './templates/crear_condicion.tpl',
-      1 => 1410706157,
+      1 => 1411686619,
       2 => 'file',
     ),
   ),
@@ -17,6 +17,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_5415a47a0e41a9_65946822',
+  'variables' => 
+  array (
+    'Mail' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5415a47a0e41a9_65946822')) {function content_5415a47a0e41a9_65946822($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
@@ -37,6 +41,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
       <!-- Forms
       ================================================== -->
+        <div class="row">
+          <div class="col-lg-9">
+          </div>
+          <div class="col-lg-2">                        
+           <?php if (isset($_smarty_tpl->tpl_vars['Mail']->value)){?>
+           <h4><strong>Conectado como:</strong><p class="text-success"><?php echo $_smarty_tpl->tpl_vars['Mail']->value;?>
+</p></h4>           
+          <?php }?>
+          </div>
+          <div class="col-lg-1">
+          <button id="logout" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
+              <span class="glyphicon glyphicon-log-out">&nbsp&nbsp</span>
+            </button>
+          </div>
+        </div>   
+
         <div class="row">
           <div class="col-lg-1"></div>
           <div class="col-lg-10">

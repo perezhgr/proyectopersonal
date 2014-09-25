@@ -15,6 +15,22 @@
 
       <!-- Forms
       ================================================== -->
+
+      <div class="row">
+          <div class="col-lg-9">
+          </div>
+          <div class="col-lg-2">                        
+           {if isset($Mail)}
+           <h4><strong>Conectado como:</strong><p class="text-success">{$Mail}</p></h4>           
+          {/if}
+          </div>
+          <div class="col-lg-1">
+          <button id="logout" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
+              <span class="glyphicon glyphicon-log-out">&nbsp&nbsp</span>
+            </button>
+          </div>
+        </div>  
+        
         <div class="row">
           <div class="col-lg-1"></div>
           <div class="col-lg-10">

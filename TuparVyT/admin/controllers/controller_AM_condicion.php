@@ -21,7 +21,8 @@ class Controller
 				$this->model->InsertaCondicion($condicion);
 
 			}
-			$this->view->ImprimirPagCrearCondicion();
+			$this->view->ImprimirPagCrearCondicion($_SESSION['mail']);
+
 		}
 		else
 		{
@@ -37,7 +38,7 @@ class Controller
 			if(isset($_GET['id_condicion'])) {
 
 				$condicion = $this->model->ObtenerCondicionById($_GET['id_condicion']);
-				$this->view->ImprimirPagEditarCondicion($condicion);
+				$this->view->ImprimirPagEditarCondicion($condicion,$_SESSION['mail']);
 
 				if (isset($_POST['id_condicion'])) {
 
