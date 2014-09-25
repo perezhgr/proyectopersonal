@@ -1,5 +1,5 @@
 <?php
-class Controller
+class ControllerBorrarUsuario
 {
 	private $view;
 	private $model;

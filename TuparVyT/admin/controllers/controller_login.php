@@ -1,5 +1,5 @@
 <?php
-class Controller
+class ControllerLogin
 {
 	private $view;
 	private $model;

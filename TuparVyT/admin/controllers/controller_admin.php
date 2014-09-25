@@ -1,5 +1,5 @@
 <?php
-class Controller
+class ControllerAdmin
 {
 	private $view;
 	private $model;

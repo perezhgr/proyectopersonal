@@ -3,9 +3,9 @@ include './controllers/controller_borrar_ciudad.php';
 include './views/view_borrar_ciudad.php';
 include './models/model_borrar_ciudad.php';
 
-$model = new Model();
-$view = new View();
-$controller = new Controller($model,$view);
+$model = new ModelBorrarCiudad();
+$view = new ViewBorrarCiudad();
+$controller = new ControllerBorrarCiudad($model,$view);
 
 $controller->EliminarCiudad();
 ?>

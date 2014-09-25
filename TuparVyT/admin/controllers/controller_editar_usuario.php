@@ -1,5 +1,5 @@
 <?php
-class Controller
+class ControllerEditarUsuario
 {
 	private $view;
 	private $model;

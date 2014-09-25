@@ -1,5 +1,5 @@
 <?php
-class Controller
+class ControllerBorrarCiudad
 {
 	private $view;
 	private $model;

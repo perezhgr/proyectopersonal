@@ -1,5 +1,5 @@
 <?php
-class Controller
+class ControllerComentarioCiudad
 {
 	private $model;
 	private $view;

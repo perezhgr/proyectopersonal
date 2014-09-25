@@ -1,6 +1,6 @@
 <?php
 require('./libs/Smarty.class.php');
-class View
+class ViewDetalleCiudad
 {
 	public $smarty;   
 

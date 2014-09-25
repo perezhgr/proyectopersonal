@@ -1,5 +1,5 @@
 <?php
-class Controller
+class ControllerBorrarCondicion
 {
 	private $view;
 	private $model;

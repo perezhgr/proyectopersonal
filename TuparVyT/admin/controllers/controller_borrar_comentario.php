@@ -1,5 +1,5 @@
 <?php
-class Controller
+class ControllerBorrarComentario
 {
 	private $view;
 	private $model;
