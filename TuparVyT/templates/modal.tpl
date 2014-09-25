@@ -1,7 +1,7 @@
                   <!-- CAROUSEL-->
                   {foreach from=$Ciudad item=ciudad}
                   <div class="row">
-                    {foreach $Imagen as $imagen name=img}
+                    
                     <div class="col-lg-1"></div>
                     <div class="col-lg-10">
                       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -13,30 +13,20 @@
                         </ol>
 
                         <!-- Wrapper for slides -->
-                        {if $smarty.foreach.img.iteration == 1}
+                        
                         <div class="carousel-inner">
-                          <div class="item active">
+                        {foreach $Imagen as $imagen name=img}
+                        
+                          <div class="item {if $smarty.foreach.img.iteration == 1} active{/if}">
+
                             <img src="{$imagen.path}" alt="" class="img-responsive img-thumbnail" width="300px" height="300px">
                             <div class="carousel-caption">
                               <h3>{$ciudad.nombre_ciudad}</h3>
                             </div>
-                          </div>
-                          {elseif $smarty.foreach.img.iteration == 2}
-                          <div class="item">
-                            <img src="{$imagen.path}" alt="" class="img-responsive img-thumbnail" width="300px" height="300px">
-                            <div class="carousel-caption">
-                              <h3>{$ciudad.nombre_ciudad}</h3>
-                            </div>
-                          </div>
-                          {else}
-                          <div class="item">
-                            <img src="{$imagen.path}" alt=""class="img-responsive img-thumbnail" width="300px" height="300px">
-                            <div class="carousel-caption">
-                              <h3>{$ciudad.nombre_ciudad}</h3>
-                            </div>
-                          </div>
+                          </div>                          
+                          {/foreach}   
                         </div>
-                        {/if}
+                        
 
                         <!-- Controls -->
                         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -47,7 +37,7 @@
                         </a>
                       </div>
                     </div>
-                    {/foreach}                    
+                                     
                   </div>
                   <!-- FIN CAROUSEL-->
 

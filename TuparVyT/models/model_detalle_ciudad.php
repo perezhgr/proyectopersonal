@@ -29,7 +29,7 @@ class Model
 		$sql = "SELECT c.id_ciudad,nombre_ciudad,i.path
 		FROM   ciudad c
 		JOIN   imagen i ON (i.id_ciudad = c.id_ciudad)
-		GROUP BY c.id_ciudad ";
+		WHERE  c.id_ciudad =$id_ciudad ";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
