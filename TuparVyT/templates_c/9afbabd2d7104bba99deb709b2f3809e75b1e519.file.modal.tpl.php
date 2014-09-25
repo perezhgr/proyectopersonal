@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 02:06:54
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 15:08:57
          compiled from "./templates/modal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:185600833554220ee6b8dab1-54559864%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9afbabd2d7104bba99deb709b2f3809e75b1e519' => 
     array (
       0 => './templates/modal.tpl',
-      1 => 1411603602,
+      1 => 1411650192,
       2 => 'file',
     ),
   ),
@@ -131,5 +131,15 @@ $_smarty_tpl->tpl_vars['comentario']->_loop = true;
                         </div>
                         <div class="col-lg-1"></div>
                       </div>
-                      <!-- FIN COMENTARIOS-->                  
-<?php }} ?>
+                      <!-- FIN COMENTARIOS-->
+
+                      <!-- CAROUSEL CICLICO-->                                    
+                      <script type="text/javascript">
+                        $('.carousel').carousel({
+                          interval: 2800
+                        })
+                        $('.carousel').carousel({
+                          pause: "hover"
+                        })
+                      </script>
+                      <!-- FIN CAROUSEL CICLICO-->                                    <?php }} ?>

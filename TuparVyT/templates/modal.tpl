@@ -80,4 +80,15 @@
                         </div>
                         <div class="col-lg-1"></div>
                       </div>
-                      <!-- FIN COMENTARIOS-->                  
+                      <!-- FIN COMENTARIOS-->
+
+                      <!-- CAROUSEL CICLICO-->                                    
+                      <script type="text/javascript">
+                        $('.carousel').carousel({
+                          interval: 2800
+                        })
+                        $('.carousel').carousel({
+                          pause: "hover"
+                        })
+                      </script>
+                      <!-- FIN CAROUSEL CICLICO-->                                    

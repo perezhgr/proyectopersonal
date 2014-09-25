@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 14:15:21
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 15:07:30
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11170143915419df466eb559-80047184%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1411647319,
+      1 => 1411650445,
       2 => 'file',
     ),
   ),
@@ -44,8 +44,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   <li><a href="#contacto">Contacto</a></li>
                   
                   <li><a href=""></a></li>
-                  <li><p class="lead">
+                  <li><p class="lead" data-toggle="tooltip" data-placement="left" title="Iniciar sesion">
                     <a class="zoom btn btn-primary btn-md" data-toggle="modal" data-target="#myModal"><i class="fa fa-user fa-1x"></i>&nbsp;</a>
+                  </p>
+                  </li>
+                  <li><p class="lead">
+                    <a class="zoom btn btn-danger btn-md" data-toggle="tooltip" data-placement="left" title="Salir"><i class="fa fa-sign-out fa-1x"></i>&nbsp;</a>
                     </p>
                   </li>
                 </ul>
@@ -103,14 +107,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <form  class="form-horizontal" ACTION="" METHOD="POST">        
             <fieldset >
               <div class="form-group">
+              <div class="col-lg-12">
                 <label>Registrate y comenta nuestros destinos.</label>
                   <input type="text" class="form-control" id="inputPassword" placeholder="Nombre" name="nombre" required>
               </div>
-              <div class="form-group">
-                  <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail" required>
               </div>
               <div class="form-group">
+              <div class="col-lg-12">
+                  <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail" required>
+              </div>
+              </div>
+              <div class="form-group">
+              <div class="col-lg-12">
                   <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass" required>
+              </div>
               </div>
             <div class="form-group">            
             <div class="col-lg-1">
@@ -203,11 +213,9 @@ foreach ($_from as $_smarty_tpl->tpl_vars['ciudad']->key => $_smarty_tpl->tpl_va
 $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
 ?>
           <div class="col-lg-4 col-sm-6 col-xs-12 ">
-            <a href="">
             <img src="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['path'];?>
 " class="img-rounded img-responsive zoom"  data-toggle="tooltip" data-placement="left" title="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
 ">
-           </a>
            <h3><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
 </h3>
 

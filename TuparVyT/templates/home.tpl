@@ -15,8 +15,12 @@
                   <li><a href="#contacto">Contacto</a></li>
                   
                   <li><a href=""></a></li>
-                  <li><p class="lead">
+                  <li><p class="lead" data-toggle="tooltip" data-placement="left" title="Iniciar sesion">
                     <a class="zoom btn btn-primary btn-md" data-toggle="modal" data-target="#myModal"><i class="fa fa-user fa-1x"></i>&nbsp;</a>
+                  </p>
+                  </li>
+                  <li><p class="lead">
+                    <a class="zoom btn btn-danger btn-md" data-toggle="tooltip" data-placement="left" title="Salir"><i class="fa fa-sign-out fa-1x"></i>&nbsp;</a>
                     </p>
                   </li>
                 </ul>
@@ -74,14 +78,20 @@
           <form  class="form-horizontal" ACTION="" METHOD="POST">        
             <fieldset >
               <div class="form-group">
+              <div class="col-lg-12">
                 <label>Registrate y comenta nuestros destinos.</label>
                   <input type="text" class="form-control" id="inputPassword" placeholder="Nombre" name="nombre" required>
               </div>
-              <div class="form-group">
-                  <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail" required>
               </div>
               <div class="form-group">
+              <div class="col-lg-12">
+                  <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail" required>
+              </div>
+              </div>
+              <div class="form-group">
+              <div class="col-lg-12">
                   <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass" required>
+              </div>
               </div>
             <div class="form-group">            
             <div class="col-lg-1">
@@ -158,9 +168,7 @@
           <h2 id="paquetes">Paquetes</h2><br><br>
           {foreach from=$Ciudades item=ciudad}
           <div class="col-lg-4 col-sm-6 col-xs-12 ">
-            <a href="">
             <img src="{$ciudad.path}" class="img-rounded img-responsive zoom"  data-toggle="tooltip" data-placement="left" title="{$ciudad.nombre_ciudad}">
-           </a>
            <h3>{$ciudad.nombre_ciudad}</h3>
 
         <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" onClick="getDetalleCiudad({$ciudad.id_ciudad})">Ver mas &raquo;</button>
