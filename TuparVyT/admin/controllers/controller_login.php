@@ -60,11 +60,13 @@ class ControllerLogin
 	}
 
 	private function verificaremail($email){ 
-		if (!ereg("^([a-zA-Z0-9._]+)@([a-zA-Z0-9.-]+).([a-zA-Z]{2,4})$",$email)){ 
-			return false; 
-		} else { 
-			return true; 
-		} 
+
+		if(!preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i", $email)) {
+ 			return false;
+		}
+		else{
+			return true;
+		}
 	}	
 }
 ?>

@@ -1,4 +1,5 @@
 <?php
+//phpinfo();
 include 'reporte_errores.php';
 include './controllers/controller_home.php';
 include './views/view_home.php';
