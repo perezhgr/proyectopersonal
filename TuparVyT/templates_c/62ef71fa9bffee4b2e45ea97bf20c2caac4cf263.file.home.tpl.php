@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 15:07:30
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-26 02:07:11
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11170143915419df466eb559-80047184%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1411650445,
+      1 => 1411690028,
       2 => 'file',
     ),
   ),
@@ -197,7 +197,7 @@ $_smarty_tpl->tpl_vars['empresa']->_loop = true;
                <div id="contenidomodal"></div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
               </div>
             </div>
           </div>
