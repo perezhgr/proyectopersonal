@@ -10,19 +10,23 @@
               <div class="inner ">
                 <h3 class="masthead-brand"></h3>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="#empresa">Acerca</a></li>
+                  <li class="active"><a href="#top">Home</a></li>
+                  <li><a href="#empresa">Acerca</a></li>
                   <li><a href="#paquetes">Paquetes</a></li>
                   <li><a href="#contacto">Contacto</a></li>
-                  
                   <li><a href=""></a></li>
                   <li><p class="lead" data-toggle="tooltip" data-placement="left" title="Iniciar sesion">
                     <a class="zoom btn btn-primary btn-md" data-toggle="modal" data-target="#myModal"><i class="fa fa-user fa-1x"></i>&nbsp;</a>
                   </p>
                   </li>
-                  <li><p class="lead">
-                    <a class="zoom btn btn-danger btn-md" data-toggle="tooltip" data-placement="left" title="Salir"><i class="fa fa-sign-out fa-1x"></i>&nbsp;</a>
-                    </p>
-                  </li>
+                  {if isset($Mail)}
+                  <h4><strong>Conectado como:</strong><p class="text-success">{$Mail}</p></h4> 
+                           
+                  <button id="logout" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
+              <span class="glyphicon glyphicon-log-out">&nbsp&nbsp</span>
+            </button>
+                  {/if}
+
                 </ul>
               </div>
             </div>
@@ -40,25 +44,25 @@
                       <h4 class="modal-title" id="myModalLabel">Inicia sesion</h4>
                     </div>
                     <div class="modal-body">
-                      <form class="form-horizontal" ACTION="" METHOD="POST">        
+                      <form id="formlog" class="form-horizontal" method="POST">        
                         <fieldset>
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="correo"required>
+                              <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail">
                             </div>
                           </div>
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
-                              <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password"required>
+                              <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass">
                             </div>
                           </div>
 
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-2">
-                            <button type="submit" data-toggle="tooltip" data-placement="left" title="Iniciar sesion" class="btn btn-primary btn-md btn-block"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
+                            <button  type="submit" data-toggle="tooltip" data-placement="left" title="Iniciar sesion" class="btn btn-primary btn-md btn-block"><i id="signin"class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
 
                             </div>
                           </div>

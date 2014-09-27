@@ -23,6 +23,7 @@ class ControllerLogin
 		}
 
 	}
+	
 	public function loginUsuario($formulario)
 	{
 		$error = $this->verificarFormulario($formulario);

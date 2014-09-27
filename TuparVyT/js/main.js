@@ -1,10 +1,9 @@
-
 $("#signin").click(function() {
 
 	$.ajax({
 	  type: "POST",
-	  url: "login.php",
-	  data:$("#formlogin").serialize(),
+	  url: "home.php",
+	  data:$("#formlog").serialize(),
 	  success: function(data)
 			   {
 				   if(data.indexOf("Error")== -1)

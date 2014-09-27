@@ -13,18 +13,29 @@ class ViewHome
 		$this->smarty->assign("Empresa",$empresa);				
 	}
 
-	public function MostrarUsuario($usuario){
-		$this->smarty->assign("Usuario",$usuario);				
+	public function MostrarUsuario(){
+		$this->smarty->assign();				
 	}
 
 	public function MostrarCiudades($ciudades){
 		$this->smarty->assign("Ciudades",$ciudades);				
 	}
 
-	public function ImprimirHome(){
+
+	public function ImprimirHome1(){
 		$this->smarty->display('home.tpl');
 
 	}
+	public function ImprimirHome($mail){
+		$this->smarty->assign("Mail",$mail);				
+		$this->smarty->display('home.tpl');
+
+	}
+
+	public function MensajeError($error){
+		echo $error;
+	}
+
 }
 
 ?>

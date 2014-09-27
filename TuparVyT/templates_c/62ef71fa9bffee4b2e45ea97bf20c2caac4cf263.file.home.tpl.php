@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-26 02:07:11
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-27 19:17:51
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11170143915419df466eb559-80047184%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1411690028,
+      1 => 1411838265,
       2 => 'file',
     ),
   ),
@@ -19,6 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_5419df46881c82_06520704',
   'variables' => 
   array (
+    'Mail' => 0,
     'Empresa' => 0,
     'empresa' => 0,
     'Ciudades' => 0,
@@ -39,19 +40,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <div class="inner ">
                 <h3 class="masthead-brand"></h3>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="#empresa">Acerca</a></li>
+                  <li class="active"><a href="#top">Home</a></li>
+                  <li><a href="#empresa">Acerca</a></li>
                   <li><a href="#paquetes">Paquetes</a></li>
                   <li><a href="#contacto">Contacto</a></li>
-                  
                   <li><a href=""></a></li>
                   <li><p class="lead" data-toggle="tooltip" data-placement="left" title="Iniciar sesion">
                     <a class="zoom btn btn-primary btn-md" data-toggle="modal" data-target="#myModal"><i class="fa fa-user fa-1x"></i>&nbsp;</a>
                   </p>
                   </li>
-                  <li><p class="lead">
-                    <a class="zoom btn btn-danger btn-md" data-toggle="tooltip" data-placement="left" title="Salir"><i class="fa fa-sign-out fa-1x"></i>&nbsp;</a>
-                    </p>
-                  </li>
+                  <?php if (isset($_smarty_tpl->tpl_vars['Mail']->value)){?>
+                  <h4><strong>Conectado como:</strong><p class="text-success"><?php echo $_smarty_tpl->tpl_vars['Mail']->value;?>
+</p></h4> 
+                           
+                  <button id="logout" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
+              <span class="glyphicon glyphicon-log-out">&nbsp&nbsp</span>
+            </button>
+                  <?php }?>
+
                 </ul>
               </div>
             </div>
@@ -69,25 +75,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                       <h4 class="modal-title" id="myModalLabel">Inicia sesion</h4>
                     </div>
                     <div class="modal-body">
-                      <form class="form-horizontal" ACTION="" METHOD="POST">        
+                      <form id="formlog" class="form-horizontal" method="POST">        
                         <fieldset>
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="correo"required>
+                              <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail">
                             </div>
                           </div>
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
-                              <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password"required>
+                              <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass">
                             </div>
                           </div>
 
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-2">
-                            <button type="submit" data-toggle="tooltip" data-placement="left" title="Iniciar sesion" class="btn btn-primary btn-md btn-block"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
+                            <button  type="submit" data-toggle="tooltip" data-placement="left" title="Iniciar sesion" class="btn btn-primary btn-md btn-block"><i id="signin"class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
 
                             </div>
                           </div>

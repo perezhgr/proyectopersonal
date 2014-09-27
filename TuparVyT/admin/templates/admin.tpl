@@ -52,7 +52,7 @@
                     <span class="badge">{$i.countuser}</span></a></li>
                     {/foreach}
                   </ul>
-                  <div id="myTabContent" class="tab-content">
+                  <div id="myTabContent" class=" tab-content">
                     <div class="tab-pane fade active in" id="ciudad">
                       <table class="table table-striped table-hover ">
                         <thead>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 14:55:40
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-27 15:05:12
          compiled from "./templates/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11790283235419df468c7e02-31547617%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a4f6f0d327fc7bc3ea86f63906a1bf934ca50c7' => 
     array (
       0 => './templates/footer.tpl',
-      1 => 1411649680,
+      1 => 1411823109,
       2 => 'file',
     ),
   ),
@@ -34,13 +34,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/docs.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
-    <script src="js/SmoothPageScrolling.js"></script>
-    <script src="js/detalle_ciudad.js"></script>
-    <script src="js/comentario_ciudad.js"></script>
+    <script type="text/javascript" src="js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="js/SmoothPageScrolling.js"></script>
+    <script type="text/javascript" src="js/detalle_ciudad.js"></script>
+    <script type="text/javascript" src="js/comentario_ciudad.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/logout.js"></script>
+    
   </body>
   </html><?php }} ?>
