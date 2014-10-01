@@ -1,4 +1,5 @@
      <footer>
+
       <div class="footerinner wrapper align-center text-light">
         <div class="column one-third">
           <a href="#top" class="sr-button sr-buttonicon small-iconbutton" title="Back to Top">
@@ -12,7 +13,6 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/docs.min.js"></script>
@@ -26,7 +26,8 @@
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
-    <script type="text/javascript" src="js/logout.js"></script>
+    <!-- 
+    <script type="text/javascript" src="js/logout.js"></script>-->
     
   </body>
   </html>

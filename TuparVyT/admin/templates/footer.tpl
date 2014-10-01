@@ -11,13 +11,7 @@
 	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/logout.js"></script>
-	
-	  <script>
-        $('#confirm-delete').on('show.bs.modal', function(e) {
-            $(this).find('.danger').attr('href', $(e.relatedTarget).data('href'));
-            
-            $('.debug-url').html('Delete URL: <strong>' + $(this).find('.danger').attr('href') + '</strong>');
-        })
-    </script>
+	<script type="text/javascript" src="js/borrar_ciudad.js"></script>
+
 </body>
 </html>

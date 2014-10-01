@@ -6,10 +6,10 @@
 
           <div class="cover-container ">
 
-            <div class=" masthead clearfix ">
+            <div class="masthead clearfix ">
               <div class="inner ">
                 <h3 class="masthead-brand"></h3>
-                <ul class="nav masthead-nav">
+                <ul class=" nav masthead-nav">
                   <li class="active"><a href="#top">Home</a></li>
                   <li><a href="#empresa">Acerca</a></li>
                   <li><a href="#paquetes">Paquetes</a></li>
@@ -114,7 +114,7 @@
               <a href="https://twitter.com"><i class=" zoom fa fa-twitter fa-2x"></i></a>
               &nbsp&nbsp
               <a href="https://youtube.com"><i class=" zoom fa fa-youtube-square fa-2x"></i></a>&nbsp&nbsp
-              <a href="https://instagram.com"><i class="zoom fa fa-instagram fa-2x"></i></a><br><br>
+              <a href="https://instagram.com"><i class="zoom fa fa-instagram fa-2x"></i></a><br>
 
               <a href="#empresa" class="sr-button sr-buttonicon small-iconbutton" title="Back to Top">
               <i class=" zoom fa fa-angle-double-down fa-3x"></i></a>
@@ -185,7 +185,7 @@
        <h2 id="contacto">Envienos su consulta</h2><br><br>
         <div class="col-lg-8">
         <h4 class="text-center">Estaríamos encantados de proporcionarle con más información ,<br> sólo tiene que llamar , correo electrónico o visítenos</h4><br><br>
-        <form class="form-horizontal" ACTION="" METHOD="POST">        
+        <form class="zoom form-horizontal" ACTION="" METHOD="POST">        
             <fieldset>
               <div class="form-group">
                 <label for="inputPassword" class="col-lg-2 control-label"

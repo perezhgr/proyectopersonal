@@ -9,10 +9,20 @@ class ViewBorrarCiudad
 		$this->smarty = New Smarty;
 	}
 	
-	public function resultado()
-	{
-		echo "borrado";
+	public function MostrarCountCiudadesActualizadas($count)
+	{		
+		$this->smarty->assign('Countcity',$count);	
+		$this->smarty->display('count.tpl');
+	}
+	
+	public function MostrarCiudadesActualizadas($ciudad)
+	{		
+		$this->smarty->assign('Ciudad',$ciudad);
+	}
 
+	public function MostrarPanelActualizado()
+	{		
+		$this->smarty->display('panel_ciudad.tpl');
 	}
 }
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-27 18:31:28
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-01 16:01:46
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1340954347541591112ed7c1-77948224%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1411835185,
+      1 => 1412172101,
       2 => 'file',
     ),
   ),
@@ -81,9 +81,10 @@ foreach ($_from as $_smarty_tpl->tpl_vars['i']->key => $_smarty_tpl->tpl_vars['i
 $_smarty_tpl->tpl_vars['i']->_loop = true;
 ?>
                     <li class="active"><a href="#ciudad" data-toggle="tab">Ciudades
-                    <span class="badge"><?php echo $_smarty_tpl->tpl_vars['i']->value['countcity'];?>
-</span></a></li>
+                    <span class="badge"><div id="count"><?php echo $_smarty_tpl->tpl_vars['i']->value['countcity'];?>
+</div></span></a></li>
                     <?php } ?>
+                    
                     <?php  $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['i']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['Countcoment']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['i']->key => $_smarty_tpl->tpl_vars['i']->value){
@@ -112,7 +113,7 @@ $_smarty_tpl->tpl_vars['i']->_loop = true;
 </span></a></li>
                     <?php } ?>
                   </ul>
-                  <div id="myTabContent" class=" tab-content">
+                  <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="ciudad">
                       <table class="table table-striped table-hover ">
                         <thead>
@@ -124,7 +125,7 @@ $_smarty_tpl->tpl_vars['i']->_loop = true;
                             <th>Accion</th>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="TabCiudad">
                           <?php  $_smarty_tpl->tpl_vars['ciudad'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ciudad']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['Ciudad']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['ciudad']->key => $_smarty_tpl->tpl_vars['ciudad']->value){
@@ -143,21 +144,10 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                               <a href="AM_ciudad.php?id_ciudad=<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
 "><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
-                               <a data-href="" data-toggle="modal" data-target="#confirm-delete" href="#"><span class="glyphicon glyphicon-trash"></span></a><br> 
-                                                     
+                               <a data-href="" data-toggle="modal" data-target="#confirm-delete" href="#"><span class="glyphicon glyphicon-trash"></span></a><br>
                             </td>
                           </tr>
-                          <?php } ?>
-                        </tbody>
-                        <tfoot>
-                            <td>
-                            <ul class="nav nav-pills">
-                              <li class="active"><a href="AM_ciudad.php">Crear</span></a></li>
-                              </ul>
-                            </td>
-                        </tfoot>
-                      </table>
-                      <!--INICIO MODAL CERRAR--> 
+                          <!--INICIO MODAL CERRAR--> 
                       <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
@@ -175,13 +165,24 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
 
                             <div class="modal-footer">
                               <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                              <a href="borrar_ciudad.php?id_ciudad=<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
-" class="btn btn-danger danger">Borrar</a>
+                              <button onClick="BorrarCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
+)" class="btn btn-danger danger">Borrar</button>
                             </div>
                           </div>
                         </div>
-                      <!--FIN MODAL CERRAR--> 
                       </div>
+                      <!--FIN MODAL CERRAR-->  
+                                             
+                          <?php } ?>
+                        </tbody>
+                        <tfoot>
+                            <td>
+                            <ul class="nav nav-pills">
+                              <li class="active"><a href="AM_ciudad.php">Crear</span></a></li>
+                              </ul>
+                            </td>
+                        </tfoot>
+                      </table> 
                     </div>
                     <div class="tab-pane fade" id="comentario">
                       <table class="table table-striped table-hover ">
@@ -216,6 +217,7 @@ $_smarty_tpl->tpl_vars['testimonio']->_loop = true;
                               </a>                           
                             </td>                            
                           </tr>
+                          
                           <?php } ?>
                         </tbody>
                         <tfoot>

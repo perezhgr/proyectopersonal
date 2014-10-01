@@ -1,6 +1,6 @@
 <?php
-phpinfo();
-if(mail('perez.hgr@gmail.com','Comprobación SMTP Server','Me copia'));
-	echo "success";
 
+phpinfo();
+if(mail('mbrada@rec.unicen.edu.ar','Comprobación SMTP Server','Me copia'));
+	echo "success";
 ?>

@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-27 19:17:51
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-01 14:54:19
          compiled from "./templates/home.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11170143915419df466eb559-80047184%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:936389164542b0a0e965c58-34212797%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1411838265,
+      1 => 1412166513,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '11170143915419df466eb559-80047184',
+  'nocache_hash' => '936389164542b0a0e965c58-34212797',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5419df46881c82_06520704',
+  'unifunc' => 'content_542b0a0ea9d2e1_27618312',
   'variables' => 
   array (
     'Mail' => 0,
@@ -27,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5419df46881c82_06520704')) {function content_5419df46881c82_06520704($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_542b0a0ea9d2e1_27618312')) {function content_542b0a0ea9d2e1_27618312($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
     <body>
       <div id="top" class="site-wrapper">
@@ -36,10 +36,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
           <div class="cover-container ">
 
-            <div class=" masthead clearfix ">
+            <div class="masthead clearfix ">
               <div class="inner ">
                 <h3 class="masthead-brand"></h3>
-                <ul class="nav masthead-nav">
+                <ul class=" nav masthead-nav">
                   <li class="active"><a href="#top">Home</a></li>
                   <li><a href="#empresa">Acerca</a></li>
                   <li><a href="#paquetes">Paquetes</a></li>
@@ -145,7 +145,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <a href="https://twitter.com"><i class=" zoom fa fa-twitter fa-2x"></i></a>
               &nbsp&nbsp
               <a href="https://youtube.com"><i class=" zoom fa fa-youtube-square fa-2x"></i></a>&nbsp&nbsp
-              <a href="https://instagram.com"><i class="zoom fa fa-instagram fa-2x"></i></a><br><br>
+              <a href="https://instagram.com"><i class="zoom fa fa-instagram fa-2x"></i></a><br>
 
               <a href="#empresa" class="sr-button sr-buttonicon small-iconbutton" title="Back to Top">
               <i class=" zoom fa fa-angle-double-down fa-3x"></i></a>
@@ -236,7 +236,7 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
        <h2 id="contacto">Envienos su consulta</h2><br><br>
         <div class="col-lg-8">
         <h4 class="text-center">Estaríamos encantados de proporcionarle con más información ,<br> sólo tiene que llamar , correo electrónico o visítenos</h4><br><br>
-        <form class="form-horizontal" ACTION="" METHOD="POST">        
+        <form class="zoom form-horizontal" ACTION="" METHOD="POST">        
             <fieldset>
               <div class="form-group">
                 <label for="inputPassword" class="col-lg-2 control-label"

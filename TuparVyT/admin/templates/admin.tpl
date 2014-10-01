@@ -37,8 +37,9 @@
                   <ul class="nav nav-tabs">
                     {foreach from=$Countcity item=i}
                     <li class="active"><a href="#ciudad" data-toggle="tab">Ciudades
-                    <span class="badge">{$i.countcity}</span></a></li>
+                    <span class="badge"><div id="count">{$i.countcity}</div></span></a></li>
                     {/foreach}
+                    
                     {foreach from=$Countcoment item=i}
                     <li><a href="#comentario" data-toggle="tab">Testimonios
                     <span class="badge">{$i.countcoment}</span></a></li>
@@ -52,7 +53,7 @@
                     <span class="badge">{$i.countuser}</span></a></li>
                     {/foreach}
                   </ul>
-                  <div id="myTabContent" class=" tab-content">
+                  <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="ciudad">
                       <table class="table table-striped table-hover ">
                         <thead>
@@ -64,7 +65,7 @@
                             <th>Accion</th>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="TabCiudad">
                           {foreach from=$Ciudad item=ciudad}
                           <tr class="active danger">
                             <td>{$ciudad.id_ciudad}</td>
@@ -74,21 +75,10 @@
                             <td>
                               <a href="AM_ciudad.php?id_ciudad={$ciudad.id_ciudad}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
-                               <a data-href="" data-toggle="modal" data-target="#confirm-delete" href="#"><span class="glyphicon glyphicon-trash"></span></a><br> 
-                                                     
+                               <a data-href="" data-toggle="modal" data-target="#confirm-delete" href="#"><span class="glyphicon glyphicon-trash"></span></a><br>
                             </td>
                           </tr>
-                          {/foreach}
-                        </tbody>
-                        <tfoot>
-                            <td>
-                            <ul class="nav nav-pills">
-                              <li class="active"><a href="AM_ciudad.php">Crear</span></a></li>
-                              </ul>
-                            </td>
-                        </tfoot>
-                      </table>
-                      <!--INICIO MODAL CERRAR--> 
+                          <!--INICIO MODAL CERRAR--> 
                       <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                           <div class="modal-content">
@@ -106,12 +96,23 @@
 
                             <div class="modal-footer">
                               <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                              <a href="borrar_ciudad.php?id_ciudad={$ciudad.id_ciudad}" class="btn btn-danger danger">Borrar</a>
+                              <button onClick="BorrarCiudad({$ciudad.id_ciudad})" class="btn btn-danger danger">Borrar</button>                             
                             </div>
                           </div>
                         </div>
-                      <!--FIN MODAL CERRAR--> 
                       </div>
+                      <!--FIN MODAL CERRAR-->  
+                                             
+                          {/foreach}
+                        </tbody>
+                        <tfoot>
+                            <td>
+                            <ul class="nav nav-pills">
+                              <li class="active"><a href="AM_ciudad.php">Crear</span></a></li>
+                              </ul>
+                            </td>
+                        </tfoot>
+                      </table> 
                     </div>
                     <div class="tab-pane fade" id="comentario">
                       <table class="table table-striped table-hover ">
@@ -137,6 +138,7 @@
                               </a>                           
                             </td>                            
                           </tr>
+                          
                           {/foreach}
                         </tbody>
                         <tfoot>
