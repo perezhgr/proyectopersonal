@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-01 16:01:46
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-01 21:28:08
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1340954347541591112ed7c1-77948224%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1412172101,
+      1 => 1412191683,
       2 => 'file',
     ),
   ),
@@ -74,6 +74,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <div class="col-lg-1">          
           </div>
           <div class="col-lg-10">
+                <div  id="alerta" role="alert">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <div id="mensaje"></div>
+                </div>
+
                   <ul class="nav nav-tabs">
                     <?php  $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['i']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['Countcity']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -166,7 +171,8 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                             <div class="modal-footer">
                               <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
                               <button onClick="BorrarCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
-)" class="btn btn-danger danger">Borrar</button>
+);ActualizarContadorCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
+);" class="btn btn-danger danger">Borrar</button>
                             </div>
                           </div>
                         </div>

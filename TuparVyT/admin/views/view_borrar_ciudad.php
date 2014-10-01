@@ -9,12 +9,6 @@ class ViewBorrarCiudad
 		$this->smarty = New Smarty;
 	}
 	
-	public function MostrarCountCiudadesActualizadas($count)
-	{		
-		$this->smarty->assign('Countcity',$count);	
-		$this->smarty->display('count.tpl');
-	}
-	
 	public function MostrarCiudadesActualizadas($ciudad)
 	{		
 		$this->smarty->assign('Ciudad',$ciudad);

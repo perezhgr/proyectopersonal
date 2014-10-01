@@ -34,6 +34,11 @@
           <div class="col-lg-1">          
           </div>
           <div class="col-lg-10">
+                <div  id="alerta" role="alert">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <div id="mensaje"></div>
+                </div>
+
                   <ul class="nav nav-tabs">
                     {foreach from=$Countcity item=i}
                     <li class="active"><a href="#ciudad" data-toggle="tab">Ciudades
@@ -96,7 +101,7 @@
 
                             <div class="modal-footer">
                               <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                              <button onClick="BorrarCiudad({$ciudad.id_ciudad})" class="btn btn-danger danger">Borrar</button>                             
+                              <button onClick="BorrarCiudad({$ciudad.id_ciudad});ActualizarContadorCiudad({$ciudad.id_ciudad});" class="btn btn-danger danger">Borrar</button>
                             </div>
                           </div>
                         </div>

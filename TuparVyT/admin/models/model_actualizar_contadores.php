@@ -1,5 +1,5 @@
 <?php
-class ModelBorrarCiudad
+class ModelActualizarContadores
 {
 	private $conn;
 
@@ -11,18 +11,11 @@ class ModelBorrarCiudad
 
 	}
 
-	public function EliminarCiudad($id_ciudad){
+	public function CountCiudad(){
 		
-		$sql= "DELETE FROM ciudad
-		WHERE id_ciudad = $id_ciudad";
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();
-	}
-
-	public function GetCiudades(){
-		
-		$sql= "SELECT *
+		$sql = "SELECT COUNT(id_ciudad) AS countcity
 		FROM ciudad";
+
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
 	}

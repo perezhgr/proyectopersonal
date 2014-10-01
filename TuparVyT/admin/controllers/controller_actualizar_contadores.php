@@ -1,5 +1,5 @@
 <?php
-class ControllerBorrarCiudad
+class ControllerActualizarContadores
 {
 	private $view;
 	private $model;
@@ -9,14 +9,12 @@ class ControllerBorrarCiudad
 		$this->view = $view;
 	}
 	
-	public function EliminarCiudad(){
+	public function ActualizarContadores(){
 		session_start();
 		if(isset($_SESSION["mail"]))
 		{
 			if(isset($_GET['id_ciudad'])) {
-				$this->model->EliminarCiudad($_GET['id_ciudad']);
-				$this->view->MostrarCiudadesActualizadas($this->model->GetCiudades());
-				$this->view->MostrarPanelActualizado();
+				$this->view->MostrarCountCiudadesActualizadas($this->model->CountCiudad());
 			}
 		}
 		else

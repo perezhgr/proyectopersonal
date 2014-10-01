@@ -1,3 +1,3 @@
                     {foreach from=$Countcity item=i}
-                    <p>{$i.countcity}</p>
+                    {$i.countcity}
                     {/foreach}
