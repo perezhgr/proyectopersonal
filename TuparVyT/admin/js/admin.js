@@ -165,3 +165,19 @@ function BorrarUsuario(usuario){
 			
 		}});
 }
+
+/*----Editar un usuario (Promover) ----*/
+function PromoverUsuario(usuario){
+	$.ajax({
+		type: "GET",
+		url: "editar_usuario.php?id_usuario="+usuario,
+		success: function(data)
+		{	
+			$('#TabUsuario').html(data);
+			$.ambiance({message: "El usuario tiene permisos de administrador !",
+				title: "Hecho!",
+				timeout: 2,
+				type: "error"});
+			
+		}});
+}

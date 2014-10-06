@@ -9,11 +9,14 @@ class ViewEditarUsuario
 		$this->smarty = New Smarty;
 	}
 	
-	public function MostrarAlerta()
-	{
-		echo "usuario editado existosamente";
-		//$this->smarty->display('alerta.tpl');			
-
+	public function MostrarUsuariosActualizados($usuario)
+	{		
+		$this->smarty->assign('Usuario',$usuario);
+		
+	}
+	public function MostrarPanelActualizado()
+	{		
+		$this->smarty->display('panel_usuario.tpl');
 	}
 }
 
