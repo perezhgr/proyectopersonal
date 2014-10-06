@@ -84,34 +84,6 @@ function BorrarComentario(comentario){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*----Borrar una condicion----*/
 function BorrarCondicion(condicion){
 	$.ajax({

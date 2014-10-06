@@ -18,5 +18,14 @@ class ModelBorrarCondicion
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
 	}
+
+		public function ObtenerCondicion(){
+		
+		$sql = "SELECT *
+		FROM condicion";
+
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}
 }
 ?>
