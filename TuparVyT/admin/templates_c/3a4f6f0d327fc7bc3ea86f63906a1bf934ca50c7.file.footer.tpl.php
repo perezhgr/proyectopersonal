@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-01 14:36:39
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-05 23:22:37
          compiled from "./templates/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:40343516854158fd4d28833-84251937%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a4f6f0d327fc7bc3ea86f63906a1bf934ca50c7' => 
     array (
       0 => './templates/footer.tpl',
-      1 => 1412166575,
+      1 => 1412544071,
       2 => 'file',
     ),
   ),
@@ -32,8 +32,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/logout.js"></script>
-	<script type="text/javascript" src="js/borrar_ciudad.js"></script>
-
+	<script type="text/javascript" src="js/inserciones.js"></script>
+	<script type="text/javascript" src="js/jquery.ambiance.js"></script>
 </body>
 </html>
 <?php }} ?>

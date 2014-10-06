@@ -176,6 +176,12 @@
            <h3>{$ciudad.nombre_ciudad}</h3>
 
         <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" onClick="getDetalleCiudad({$ciudad.id_ciudad})">Ver mas &raquo;</button>
+        <div >
+        <script>
+        setTimeout(function() {
+            $('#cargando').html("<i class="fa fa-cog fa-spin fa-5x"></i>");     
+        }, 5000);</script>
+        </div>
         </div>
         {/foreach}
         <!-- /.col-lg-4 -->

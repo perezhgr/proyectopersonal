@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-26 01:10:29
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-05 23:35:59
          compiled from "./templates/crear_condicion.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:36013785415a47a071f70-60876046%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5a563fad399da08d1898576cb3a7d7bfe1577d83' => 
     array (
       0 => './templates/crear_condicion.tpl',
-      1 => 1411686619,
+      1 => 1412544957,
       2 => 'file',
     ),
   ),
@@ -65,19 +65,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     </a></li>
                   </ul>
                   <div id="myTabContent" class="tab-content">
-                    <div class="tab-pane fade active in" id="home">
-                        <form class="form-horizontal" method="POST">
+
+                     <div class="tab-pane fade active in" id="home">
+                        <form  id="formcondicion" class="form-horizontal" method="post" action="">
                           <fieldset>
                             <legend>Condicion del turista</legend>
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Condicion</label>
                               <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputEmail" placeholder="Condicion para categorizar a un turista" name="condicion">
+                                <input type="text" class="form-control" id="inputEmail" placeholder="Condicion para categorizar a un turista" name="condicion" required>
                               </div>
                             </div>
                             <div class="form-group">
                               <div class="col-lg-10 col-lg-offset-2">
-                                <button type="submit" class="btn btn-primary btn-">Crear</button>
+                                <input type="submit" class="btn btn-primary" value="Crear">
                               </div>
                             </div>
                           </fieldset>

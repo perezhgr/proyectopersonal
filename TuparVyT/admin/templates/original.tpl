@@ -34,8 +34,9 @@
           <div class="col-lg-1">          
           </div>
           <div class="col-lg-10">
-                <div  id="alerta">
-                <div id="mensaje"></div>              
+                <div  id="alerta" role="alert">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <div id="mensaje"></div>
                 </div>
 
                   <ul class="nav nav-tabs">
@@ -81,7 +82,32 @@
                               </a>
                                <a data-href="" data-toggle="modal" data-target="#delete" href="#"><span class="glyphicon glyphicon-trash"></span></a><br>
                             </td>
-                          </tr>                                             
+                          </tr>
+                          <!--INICIO MODAL CERRAR--> 
+                      <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                              <h4 class="modal-title" id="myModalLabel">Confirmacion de eliminacion</h4>
+                            </div>
+
+                            <div class="modal-body">
+                              <p>Vas a borrar una ciudad ; este procedimiento es irreversible.</p>
+                              <p>¿Quieres continuar?</p>
+                              <p class="debug-url"></p>
+                            </div>
+
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                              <button onClick="BorrarCiudad({$ciudad.id_ciudad});ActualizarContadorCiudad({$ciudad.id_ciudad});" class="btn btn-danger danger">Borrar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--FIN MODAL CERRAR-->  
+                                             
                           {/foreach}
                         </tbody>
                         <tfoot>
@@ -196,26 +222,6 @@
                       </table> 
                     </div> 
                   </div>
-                  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                    Launch demo modal
-                  </button>
-                  <!--INICIO MODAL CERRAR--> 
-                  <div class="modal fade" id="modal_emergente">
-                    <div class="modal-dialog">
-                      <div class="modal-content" id="modal_body">
-                        <div class="modal-header">
-                        <h4 class="modal-title">Eliminar Ciudad</h4>
-
-                        </div>
-                          <div class="modal-footer">
-                            <div class="form-group">
-                              <button type="button" id="boton_borrarep" class="btn btn-danger col-lg-3 pull-left"><span class="glyphicon glyphicon-trash"></span></button>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-                  </div>    
-                      <!--FIN MODAL CERRAR-->  
           </div>
           
           <div class="col-lg-1"></div>

@@ -11,10 +11,7 @@ class ControllerDetalleCiudad
 
 
 	public function ImprimirModal(){
-		//echo "<h1>HOLA MUNDO - CIUDAD</h1>";
-
-		
-		//if(array_key_exists('id_ciudad',$_GET)){
+	
 		if (isset($_GET['id_ciudad'])) {
 
 			$this->view->MostrarDetalleCiudad($this->model->ObtenerDetalleCiudad($_GET['id_ciudad']));

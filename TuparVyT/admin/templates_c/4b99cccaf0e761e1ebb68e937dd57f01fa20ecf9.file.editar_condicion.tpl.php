@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-26 01:14:28
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-06 02:11:37
          compiled from "./templates/editar_condicion.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9778900955419d8a33d7454-13844061%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4b99cccaf0e761e1ebb68e937dd57f01fa20ecf9' => 
     array (
       0 => './templates/editar_condicion.tpl',
-      1 => 1411686819,
+      1 => 1412554291,
       2 => 'file',
     ),
   ),
@@ -69,7 +69,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   </ul>
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="home">
-                        <form class="form-horizontal" method="POST"> 
+                        <form class="form-horizontal" method="POST" > 
                           <?php  $_smarty_tpl->tpl_vars['condicion'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['condicion']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['Condicion']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['condicion']->key => $_smarty_tpl->tpl_vars['condicion']->value){
@@ -88,8 +88,8 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
                             </div>
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label"></label>
-                              <div class="col-lg-10">
-                                <input type="hidden" class="form-control" id="inputEmail" placeholder="Nombre" name="id_condicion" 
+                                <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputEmail" placeholder="Nombre" name="id_condicion" 
                                 value="<?php echo $_smarty_tpl->tpl_vars['condicion']->value['id_condicion'];?>
 ">
                               </div>
@@ -97,7 +97,8 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
                             </div>                                         
                             <div class="form-group">
                               <div class="col-lg-10 col-lg-offset-2">
-                                <button type="submit" class="btn btn-primary btn-">Editar</button>
+                                <button type="button" onClick="EditarCondicion(<?php echo $_smarty_tpl->tpl_vars['condicion']->value['id_condicion'];?>
+)"class="btn btn-primary btn-">Editar</button>
                               </div>
                             </div>
                           </fieldset>

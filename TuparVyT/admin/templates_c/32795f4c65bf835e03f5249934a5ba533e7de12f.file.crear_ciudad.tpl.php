@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-26 01:05:11
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-06 00:06:19
          compiled from "./templates/crear_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1519808595415a3c3a66d22-29589237%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '32795f4c65bf835e03f5249934a5ba533e7de12f' => 
     array (
       0 => './templates/crear_ciudad.tpl',
-      1 => 1411686274,
+      1 => 1412546764,
       2 => 'file',
     ),
   ),
@@ -66,7 +66,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           </ul>
           <div id="myTabContent" class="tab-content">
             <div class="tab-pane fade active in" id="home">
-              <form class="form-horizontal" method="POST" ENCTYPE="multipart/form-data"> 
+              <form  class="form-horizontal" method="POST" ENCTYPE="multipart/form-data"> 
                 <fieldset>
                   <legend>Ciudad</legend>
                   <div class="form-group">

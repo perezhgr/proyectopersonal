@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-26 01:12:43
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-06 02:05:15
          compiled from "./templates/editar_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:38070822354158fd4c7fd06-98594908%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fd3fea16eec79b8685b12930d995bf162735c89a' => 
     array (
       0 => './templates/editar_ciudad.tpl',
-      1 => 1411686749,
+      1 => 1412549536,
       2 => 'file',
     ),
   ),
@@ -69,7 +69,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   </ul>
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="home">
-                        <form class="form-horizontal" method="POST"> 
+                        <form id="formeditarciudad"class="form-horizontal" method="POST"> 
                           
                           <fieldset>
                             <legend>Ciudad</legend>
@@ -81,7 +81,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 foreach ($_from as $_smarty_tpl->tpl_vars['ciudad']->key => $_smarty_tpl->tpl_vars['ciudad']->value){
 $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
 ?>
-                                 <input type="text" class="form-control" id="inputPassword" placeholder="" name="ciudad" value="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
+                                 <input type="text" class="form-control" id="inputPassword" placeholder="Ciudad" name="ciudad" value="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
 ">
                             </div>
                             </div>

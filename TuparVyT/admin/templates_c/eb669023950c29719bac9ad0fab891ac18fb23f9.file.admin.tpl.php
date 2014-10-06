@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-01 21:28:08
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-05 21:15:41
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1340954347541591112ed7c1-77948224%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1412191683,
+      1 => 1412536357,
       2 => 'file',
     ),
   ),
@@ -74,9 +74,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <div class="col-lg-1">          
           </div>
           <div class="col-lg-10">
-                <div  id="alerta" role="alert">
-                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <div id="mensaje"></div>
+                <div  id="alerta">
+                <div id="mensaje"></div>              
                 </div>
 
                   <ul class="nav nav-tabs">
@@ -149,36 +148,9 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                               <a href="AM_ciudad.php?id_ciudad=<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
 "><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
-                               <a data-href="" data-toggle="modal" data-target="#confirm-delete" href="#"><span class="glyphicon glyphicon-trash"></span></a><br>
+                               <a data-href="" data-toggle="modal" data-target="#delete" href="#"><span class="glyphicon glyphicon-trash"></span></a><br>
                             </td>
-                          </tr>
-                          <!--INICIO MODAL CERRAR--> 
-                      <div class="modal fade" id="confirm-delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-
-                            <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                              <h4 class="modal-title" id="myModalLabel">Confirmacion de eliminacion</h4>
-                            </div>
-
-                            <div class="modal-body">
-                              <p>Vas a borrar una ciudad ; este procedimiento es irreversible.</p>
-                              <p>¿Quieres continuar?</p>
-                              <p class="debug-url"></p>
-                            </div>
-
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                              <button onClick="BorrarCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
-);ActualizarContadorCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
-);" class="btn btn-danger danger">Borrar</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--FIN MODAL CERRAR-->  
-                                             
+                          </tr>                                             
                           <?php } ?>
                         </tbody>
                         <tfoot>
@@ -320,6 +292,26 @@ $_smarty_tpl->tpl_vars['usuario']->_loop = true;
                       </table> 
                     </div> 
                   </div>
+                  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                    Launch demo modal
+                  </button>
+                  <!--INICIO MODAL CERRAR--> 
+                  <div class="modal fade" id="modal_emergente">
+                    <div class="modal-dialog">
+                      <div class="modal-content" id="modal_body">
+                        <div class="modal-header">
+                        <h4 class="modal-title">Eliminar Ciudad</h4>
+
+                        </div>
+                          <div class="modal-footer">
+                            <div class="form-group">
+                              <button type="button" id="boton_borrarep" class="btn btn-danger col-lg-3 pull-left"><span class="glyphicon glyphicon-trash"></span></button>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>    
+                      <!--FIN MODAL CERRAR-->  
           </div>
           
           <div class="col-lg-1"></div>

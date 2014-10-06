@@ -39,7 +39,7 @@
           </ul>
           <div id="myTabContent" class="tab-content">
             <div class="tab-pane fade active in" id="home">
-              <form class="form-horizontal" method="POST" ENCTYPE="multipart/form-data"> 
+              <form  class="form-horizontal" method="POST" ENCTYPE="multipart/form-data"> 
                 <fieldset>
                   <legend>Ciudad</legend>
                   <div class="form-group">
