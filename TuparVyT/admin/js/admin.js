@@ -1,3 +1,19 @@
+/*----Borrar una ciudad----*/
+function BorrarCiudad(ciudad){
+	$.ajax({
+		type: "GET",
+		url: "borrar_ciudad.php?id_ciudad="+ciudad,
+		success: function(data)
+		{	
+			$('#TabCiudad').html(data);
+			$.ambiance({message: "La ciudad se ha borrado exitosamente!",
+				title: "Hecho!",
+				timeout: 1,
+				type: "success"});
+			
+		}});
+}
+
 /*----Crear una ciudad----*/
 //No anda la insercion de imagenes.
 $("#formciudad").submit(function() 
@@ -49,6 +65,71 @@ $("#formeditarciudad").submit(function()
 });
 */
 
+
+/*----Borrar un comentario (testimonio)----*/
+function BorrarComentario(comentario){
+	$.ajax({
+		type: "GET",
+		url: "borrar_comentario.php?id_comentario="+comentario,
+		success: function(data)
+		{	
+			$('#TabComentario').html(data);
+			$.ambiance({message: "El comentario se ha borrado exitosamente!",
+				title: "Hecho!",
+				timeout: 1,
+				type: "success"});
+			
+		}});
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----Borrar una condicion----*/
+function BorrarCondicion(condicion){
+	$.ajax({
+		type: "GET",
+		url: "borrar_condicion.php?id_condicion="+condicion,
+		success: function(data)
+		{	
+			$('#TabCondicion').html(data);
+			$.ambiance({message: "La condicion se ha borrado exitosamente!",
+				title: "Hecho!",
+				timeout: 1,
+				type: "success"});
+			
+		}});
+}
+
+
+
 /*----Crear una condicion----*/
 $("#formcondicion").submit(function() 
 {
@@ -96,25 +177,3 @@ $("#formeditarcondicion").submit('click',function EditarCondicion(condicion)
 });
 */
 
-
-$("#formeditarcondicion").submit(function a() 
-{
-	$.ajax({
-		type: "POST",
-		url: "AM_condicion.php",
-		data:$("#formeditarcondicion").serialize(), 
-		//data 
-		//serialize().Encode a set of form elements as a string for submission.
-		success: function(data)
-		{
-			$.ambiance({message: "La condicion se ha insertado exitosamente!",
-				title: "Hecho!",
-				timeout: 2,
-				type: "success"});
-			//$(":text").val('');			
-			
-		}
-
-	});
-	return false;
-});

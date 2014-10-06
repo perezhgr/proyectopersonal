@@ -8,7 +8,7 @@
                       <a href="AM_ciudad.php?id_ciudad={$ciudad.id_ciudad}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                       </a>
 
-                      <a style="cursor:pointer">
+                      <a data-toggle="tooltip" data-placement="top" title="Para eliminar una ciudad haga click en el icono" style="cursor:pointer">
                         <span  onclick="BorrarCiudad({$ciudad.id_ciudad});"
                                class=" glyphicon glyphicon-trash ">
                         </span>

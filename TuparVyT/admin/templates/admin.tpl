@@ -41,7 +41,7 @@
                     <li><a href="#condicion" data-toggle="tab">Condicion del turista</a></li>
                     <li><a href="#usuario" data-toggle="tab">Usuarios</a></li>
                   </ul>
-                  <div id="myTabContent" class="tab-content">
+                  <div class="tab-content">
                     <div class="tab-pane fade active in" id="ciudad">
                       <table class="table table-striped table-hover ">
                         <thead>
@@ -61,10 +61,10 @@
                             <td>{$ciudad.duracion}</td>
                             <td>{$ciudad.precio}</td>
                             <td>
-                              <a href="AM_ciudad.php?id_ciudad={$ciudad.id_ciudad}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
-                              </a>
-                              <a style="cursor:pointer">
-                                  <span onclick="BorrarCiudad({$ciudad.id_ciudad});"class="glyphicon glyphicon-trash ">
+                              <a data-toggle="tooltip" data-placement="top" title="Edite una ciudad haciendo click aqui"  href="AM_ciudad.php?id_ciudad={$ciudad.id_ciudad}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
+                              </a> 
+                              <a data-toggle="tooltip" data-placement="top" title="Elimine una ciudad haciendo click aqui" style="cursor:pointer">
+                                  <span onclick="BorrarCiudad({$ciudad.id_ciudad});" class="glyphicon glyphicon-trash ">
                                   </span>
                               </a><br>
                               </td>
@@ -74,14 +74,14 @@
                         <tfoot>
                             <td>
                             <ul class="nav nav-pills">
-                              <li class="active"><a href="AM_ciudad.php">Crear</span></a></li>
+                              <li class="active"><a data-toggle="tooltip" data-placement="top" title="Cree una nueva ciudad" href="AM_ciudad.php">Crear</span></a></li>
                               </ul>
                             </td>
                         </tfoot>
                       </table> 
                     </div>
-                    <div class="tab-pane fade" id="comentario">
-                      <table class="table table-striped table-hover ">
+                    <div class="tab-pane fade"  id="comentario">
+                      <table class="table table-striped table-hover">
                         <thead>
                           <tr>
                             <th>#</th>
@@ -92,7 +92,7 @@
                           </tr>
                         </thead>
 
-                        <tbody>
+                        <tbody id="TabComentario">
                           {foreach from=$Testimonio item=testimonio}
                           <tr class="active danger">
                             <td>{$testimonio.id_comentario}</td>
@@ -100,11 +100,10 @@
                             <td>{$testimonio.condicion}</td>
                             <td>{$testimonio.texto}</td>
                             <td>
-                              <a href="borrar_comentario.php?id_comentario={$testimonio.id_comentario}"><span class="glyphicon glyphicon-trash"></span>
+                              <a  data-toggle="tooltip" data-placement="top" title="Elimine un comentario haciendo click aqui" style="cursor:pointer"><span  onclick="BorrarComentario({$testimonio.id_comentario});" class="glyphicon glyphicon-trash"></span>
                               </a>                           
                             </td>                            
-                          </tr>
-                          
+                          </tr>                          
                           {/foreach}
                         </tbody>
                         <tfoot>
@@ -121,7 +120,7 @@
                           </tr>
                         </thead>
 
-                        <tbody>
+                        <tbody id="TabCondicion">
                           {foreach from=$Condicion item=condicion}
                           <tr class="active danger">
                             <td>{$condicion.id_condicion}</td>
@@ -129,7 +128,7 @@
                             <td>
                               <a href="AM_condicion.php?id_condicion={$condicion.id_condicion}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
-                              <a href="borrar_condicion.php?id_condicion={$condicion.id_condicion}"><span class="glyphicon glyphicon-trash"></span>
+                              <a data-toggle="tooltip" data-placement="top" title="Elimine una condicion haciendo click aqui" style="cursor:pointer"><span onclick="BorrarCondicion({$condicion.id_condicion});" class="glyphicon glyphicon-trash"></span>
                               </a>                           
                             </td>                            
                           </tr>

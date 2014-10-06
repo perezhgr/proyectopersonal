@@ -18,5 +18,16 @@ class ModelBorrarComentario
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
 	}
+
+	public function GetComentarios(){
+		
+		$sql= "SELECT com.id_comentario,u.nombre,c.condicion,texto
+		FROM usuario u
+		JOIN comentario com ON (com.id_usuario =u.id_usuario) 
+		JOIN condicion c ON (c.id_condicion =com.id_condicion)";
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}
 }
+
 ?>

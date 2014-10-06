@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-06 20:43:58
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-06 21:45:17
          compiled from "./templates/panel_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:736118182542bf573e8aa00-83581060%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'abba31158c3fc565841c8db249ac76119e662c9a' => 
     array (
       0 => './templates/panel_ciudad.tpl',
-      1 => 1412620985,
+      1 => 1412624025,
       2 => 'file',
     ),
   ),
@@ -43,7 +43,7 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
 "><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                       </a>
 
-                      <a style="cursor:pointer">
+                      <a data-toggle="tooltip" data-placement="top" title="Para eliminar una ciudad haga click en el icono" style="cursor:pointer">
                         <span  onclick="BorrarCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
 );"
                                class=" glyphicon glyphicon-trash ">
