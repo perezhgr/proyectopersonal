@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-06 22:17:15
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-06 22:58:25
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1340954347541591112ed7c1-77948224%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1412626593,
+      1 => 1412629074,
       2 => 'file',
     ),
   ),
@@ -217,7 +217,7 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
                           </tr>
                         </thead>
 
-                        <tbody>
+                        <tbody id="TabUsuario">
                           <?php  $_smarty_tpl->tpl_vars['usuario'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['usuario']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['Usuario']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['usuario']->key => $_smarty_tpl->tpl_vars['usuario']->value){
@@ -236,14 +236,14 @@ $_smarty_tpl->tpl_vars['usuario']->_loop = true;
 "><span class=" glyphicon glyphicon-ok"></span>
                               </a></p>
                             <?php }else{ ?>  
-                            <p class="text-center"><a href="editar_usuario.php?id_usuario=<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
+                            <p class="text-center"><a data-toggle="tooltip" data-placement="top" title="Cambie los previlegios de un usuario haciendo click aqui" style="cursor:pointer" href="editar_usuario.php?id_usuario=<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
 "><span class="glyphicon glyphicon-remove"></span>
                             </a></p>
                             <?php }?>
                             </td>  
                             <td>
-                            <a href="borrar_usuario.php?id_usuario=<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
-"><span class=" text-center glyphicon glyphicon-trash"></span>
+                            <a data-toggle="tooltip" data-placement="top" title="Elimine un usuario haciendo click aqui" style="cursor:pointer"><span onclick="BorrarUsuario(<?php echo $_smarty_tpl->tpl_vars['usuario']->value['id_usuario'];?>
+);" class="glyphicon glyphicon-trash"></span>
                             </a>
                             </td> 
                           </tr>

@@ -149,3 +149,19 @@ $("#formeditarcondicion").submit('click',function EditarCondicion(condicion)
 });
 */
 
+
+/*----Borrar un usuario ----*/
+function BorrarUsuario(usuario){
+	$.ajax({
+		type: "GET",
+		url: "borrar_usuario.php?id_usuario="+usuario,
+		success: function(data)
+		{	
+			$('#TabUsuario').html(data);
+			$.ambiance({message: "El usuario se ha borrado exitosamente!",
+				title: "Hecho!",
+				timeout: 1,
+				type: "success"});
+			
+		}});
+}
