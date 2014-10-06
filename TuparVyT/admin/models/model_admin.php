@@ -17,15 +17,6 @@ class ModelAdmin
 		$sql = "SELECT id_ciudad,nombre_ciudad,duracion,precio
 		FROM ciudad";
 
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();
-	}
-	
-	//Obtiene cantidad de ciudades
-	public function CountCiudad(){
-		
-		$sql = "SELECT COUNT(id_ciudad) AS countcity
-		FROM ciudad";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
@@ -42,16 +33,6 @@ class ModelAdmin
 		return $query->fetchAll();
 	}
 
-	//Obtiene cantidad de comentarios
-	public function CountComentario(){
-		
-		$sql = "SELECT COUNT(id_comentario) AS countcoment
-		FROM comentario";
-
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();
-	}
-
 
 	public function ObtenerCondicion(){
 		
@@ -62,15 +43,6 @@ class ModelAdmin
 		return $query->fetchAll();
 	}
 
-	public function CountCondicion(){
-		
-		$sql = "SELECT COUNT(id_condicion) AS countcondicion
-		FROM condicion";
-
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();
-	}	
-
 	public function ObtenerUsuario(){
 		
 		$sql = "SELECT *
@@ -79,16 +51,6 @@ class ModelAdmin
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
 	}
-
-	public function CountUsuario(){
-		
-		$sql = "SELECT COUNT(id_usuario) AS countuser
-		FROM usuario";
-
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();
-	}
-
 	
 }
 ?>

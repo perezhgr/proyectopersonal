@@ -12,7 +12,7 @@ class ViewActualizarContadores
 	public function MostrarCountCiudadesActualizadas($count)
 	{		
 		$this->smarty->assign('Countcity',$count);
-		$this->smarty->display('count.tpl');		
+		$this->smarty->display('contador.tpl');		
 	}
 }
 

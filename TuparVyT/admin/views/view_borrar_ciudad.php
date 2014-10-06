@@ -12,8 +12,8 @@ class ViewBorrarCiudad
 	public function MostrarCiudadesActualizadas($ciudad)
 	{		
 		$this->smarty->assign('Ciudad',$ciudad);
+		
 	}
-
 	public function MostrarPanelActualizado()
 	{		
 		$this->smarty->display('panel_ciudad.tpl');

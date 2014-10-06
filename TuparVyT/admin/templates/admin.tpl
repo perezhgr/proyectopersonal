@@ -34,28 +34,12 @@
           <div class="col-lg-1">          
           </div>
           <div class="col-lg-10">
-                <div  id="alerta">
-                <div id="mensaje"></div>              
-                </div>
-
                   <ul class="nav nav-tabs">
-                    {foreach from=$Countcity item=i}
-                    <li class="active"><a href="#ciudad" data-toggle="tab">Ciudades
-                    <span class="badge"><div id="count">{$i.countcity}</div></span></a></li>
-                    {/foreach}
-                    
-                    {foreach from=$Countcoment item=i}
-                    <li><a href="#comentario" data-toggle="tab">Testimonios
-                    <span class="badge">{$i.countcoment}</span></a></li>
-                    {/foreach}
-                    {foreach from=$Countcondicion item=i}                    
-                    <li><a href="#condicion" data-toggle="tab">Condicion del turista
-                    <span class="badge">{$i.countcondicion}</span></a></li>
-                    {/foreach}
-                    {foreach from=$Countuser item=i}                    
-                    <li><a href="#usuario" data-toggle="tab">Usuarios
-                    <span class="badge">{$i.countuser}</span></a></li>
-                    {/foreach}
+                    <li class="active"><a href="#ciudad" data-toggle="tab">Ciudades</a>
+                    </li>
+                    <li><a href="#comentario" data-toggle="tab">Testimonios</a></li>
+                    <li><a href="#condicion" data-toggle="tab">Condicion del turista</a></li>
+                    <li><a href="#usuario" data-toggle="tab">Usuarios</a></li>
                   </ul>
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="ciudad">
@@ -80,17 +64,10 @@
                               <a href="AM_ciudad.php?id_ciudad={$ciudad.id_ciudad}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
                               <a style="cursor:pointer">
-                                  <span onclick="BorrarCiudad({$ciudad.id_ciudad})"class="glyphicon glyphicon-trash ">
+                                  <span onclick="BorrarCiudad({$ciudad.id_ciudad});"class="glyphicon glyphicon-trash ">
                                   </span>
                               </a><br>
-                                  <a id="pop" 
-        href="#" 
-        class="btn btn-lg btn-danger" 
-        data-toggle="popover" 
-        data-content="And here's some amazing content. It's very engaging. right?"
-    >Hover to toggle popover</a>
-
-                            </td>
+                              </td>
                           </tr>                                             
                           {/foreach}
                         </tbody>

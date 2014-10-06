@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-06 16:51:13
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-06 16:53:07
          compiled from "./templates/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:40343516854158fd4d28833-84251937%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a4f6f0d327fc7bc3ea86f63906a1bf934ca50c7' => 
     array (
       0 => './templates/footer.tpl',
-      1 => 1412607068,
+      1 => 1412607175,
       2 => 'file',
     ),
   ),
@@ -34,13 +34,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<script type="text/javascript" src="js/logout.js"></script>
 	<script type="text/javascript" src="js/inserciones.js"></script>
 	<script type="text/javascript" src="js/jquery.ambiance.js"></script>
-	<script type="text/javascript" src="js/original.js"></script>
-	<script>
-	$('[data-toggle="popover"]').popover({
-    trigger: 'hover',
-        'placement': 'top'
-});</script>
-	
+	<script type="text/javascript" src="js/original.js"></script>	
 </body>
 </html>
 <?php }} ?>

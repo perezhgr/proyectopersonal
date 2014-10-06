@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-06 16:43:16
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-06 20:43:58
          compiled from "./templates/panel_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:736118182542bf573e8aa00-83581060%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'abba31158c3fc565841c8db249ac76119e662c9a' => 
     array (
       0 => './templates/panel_ciudad.tpl',
-      1 => 1412606533,
+      1 => 1412620985,
       2 => 'file',
     ),
   ),
@@ -24,7 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_542bf573eee422_52575388')) {function content_542bf573eee422_52575388($_smarty_tpl) {?>                  <?php  $_smarty_tpl->tpl_vars['ciudad'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ciudad']->_loop = false;
+<?php if ($_valid && !is_callable('content_542bf573eee422_52575388')) {function content_542bf573eee422_52575388($_smarty_tpl) {?>                <?php  $_smarty_tpl->tpl_vars['ciudad'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ciudad']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['Ciudad']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['ciudad']->key => $_smarty_tpl->tpl_vars['ciudad']->value){
 $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
@@ -45,10 +45,10 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
 
                       <a style="cursor:pointer">
                         <span  onclick="BorrarCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
-)"
+);"
                                class=" glyphicon glyphicon-trash ">
                         </span>
                       </a><br>
                     </td>
-                  </tr>                                              
+                  </tr>
                   <?php } ?><?php }} ?>

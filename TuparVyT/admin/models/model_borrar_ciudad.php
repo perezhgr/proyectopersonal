@@ -19,6 +19,7 @@ class ModelBorrarCiudad
 		return $query->fetchAll();
 	}
 
+
 	public function GetCiudades(){
 		
 		$sql= "SELECT *

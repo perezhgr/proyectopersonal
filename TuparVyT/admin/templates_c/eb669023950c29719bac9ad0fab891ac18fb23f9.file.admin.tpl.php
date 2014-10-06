@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-06 16:51:13
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-06 20:43:38
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1340954347541591112ed7c1-77948224%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1412607017,
+      1 => 1412620998,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'Mail' => 0,
-    'Countcity' => 0,
-    'i' => 0,
-    'Countcoment' => 0,
-    'Countcondicion' => 0,
-    'Countuser' => 0,
     'Ciudad' => 0,
     'ciudad' => 0,
     'Testimonio' => 0,
@@ -74,48 +69,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <div class="col-lg-1">          
           </div>
           <div class="col-lg-10">
-                <div  id="alerta">
-                <div id="mensaje"></div>              
-                </div>
-
                   <ul class="nav nav-tabs">
-                    <?php  $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['i']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['Countcity']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['i']->key => $_smarty_tpl->tpl_vars['i']->value){
-$_smarty_tpl->tpl_vars['i']->_loop = true;
-?>
-                    <li class="active"><a href="#ciudad" data-toggle="tab">Ciudades
-                    <span class="badge"><div id="count"><?php echo $_smarty_tpl->tpl_vars['i']->value['countcity'];?>
-</div></span></a></li>
-                    <?php } ?>
-                    
-                    <?php  $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['i']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['Countcoment']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['i']->key => $_smarty_tpl->tpl_vars['i']->value){
-$_smarty_tpl->tpl_vars['i']->_loop = true;
-?>
-                    <li><a href="#comentario" data-toggle="tab">Testimonios
-                    <span class="badge"><?php echo $_smarty_tpl->tpl_vars['i']->value['countcoment'];?>
-</span></a></li>
-                    <?php } ?>
-                    <?php  $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['i']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['Countcondicion']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['i']->key => $_smarty_tpl->tpl_vars['i']->value){
-$_smarty_tpl->tpl_vars['i']->_loop = true;
-?>                    
-                    <li><a href="#condicion" data-toggle="tab">Condicion del turista
-                    <span class="badge"><?php echo $_smarty_tpl->tpl_vars['i']->value['countcondicion'];?>
-</span></a></li>
-                    <?php } ?>
-                    <?php  $_smarty_tpl->tpl_vars['i'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['i']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['Countuser']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['i']->key => $_smarty_tpl->tpl_vars['i']->value){
-$_smarty_tpl->tpl_vars['i']->_loop = true;
-?>                    
-                    <li><a href="#usuario" data-toggle="tab">Usuarios
-                    <span class="badge"><?php echo $_smarty_tpl->tpl_vars['i']->value['countuser'];?>
-</span></a></li>
-                    <?php } ?>
+                    <li class="active"><a href="#ciudad" data-toggle="tab">Ciudades</a>
+                    </li>
+                    <li><a href="#comentario" data-toggle="tab">Testimonios</a></li>
+                    <li><a href="#condicion" data-toggle="tab">Condicion del turista</a></li>
+                    <li><a href="#usuario" data-toggle="tab">Usuarios</a></li>
                   </ul>
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="ciudad">
@@ -150,17 +109,10 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                               </a>
                               <a style="cursor:pointer">
                                   <span onclick="BorrarCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
-)"class="glyphicon glyphicon-trash ">
+);"class="glyphicon glyphicon-trash ">
                                   </span>
                               </a><br>
-                                  <a id="pop" 
-        href="#" 
-        class="btn btn-lg btn-danger" 
-        data-toggle="popover" 
-        data-content="And here's some amazing content. It's very engaging. right?"
-    >Hover to toggle popover</a>
-
-                            </td>
+                              </td>
                           </tr>                                             
                           <?php } ?>
                         </tbody>

@@ -9,32 +9,24 @@ class ViewAdmin
 		$this->smarty = New Smarty;
 	}
 
-	public function MostrarCiudad($ciudad,$countcity)
+	public function MostrarCiudad($ciudad)
 	{
 		$this->smarty->assign("Ciudad",$ciudad);	
-		$this->smarty->assign("Countcity",$countcity);			
-
 	}
 
-	public function MostrarTestimonio($testimonio,$countcoment)
+	public function MostrarTestimonio($testimonio)
 	{
 		$this->smarty->assign("Testimonio",$testimonio);
-		$this->smarty->assign("Countcoment",$countcoment);		
-
 	}
 
-	public function MostrarCondicion($condicion,$countcondicion)
+	public function MostrarCondicion($condicion)
 	{
 		$this->smarty->assign("Condicion",$condicion);
-		$this->smarty->assign("Countcondicion",$countcondicion);		
-
 	}
 
-	public function MostrarUsuario($usuario,$countuser)
+	public function MostrarUsuario($usuario)
 	{
 		$this->smarty->assign("Usuario",$usuario);
-		$this->smarty->assign("Countuser",$countuser);		
-
 	}	
 	
 	public function ImprimirPaginaAdmin($mail)
