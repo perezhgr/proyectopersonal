@@ -79,7 +79,17 @@
                             <td>
                               <a href="AM_ciudad.php?id_ciudad={$ciudad.id_ciudad}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                               </a>
-                               <a data-href="" data-toggle="modal" data-target="#delete" href="#"><span class="glyphicon glyphicon-trash"></span></a><br>
+                              <a style="cursor:pointer">
+                                  <span onclick="BorrarCiudad({$ciudad.id_ciudad})"class="glyphicon glyphicon-trash ">
+                                  </span>
+                              </a><br>
+                                  <a id="pop" 
+        href="#" 
+        class="btn btn-lg btn-danger" 
+        data-toggle="popover" 
+        data-content="And here's some amazing content. It's very engaging. right?"
+    >Hover to toggle popover</a>
+
                             </td>
                           </tr>                                             
                           {/foreach}
@@ -196,28 +206,7 @@
                       </table> 
                     </div> 
                   </div>
-                  <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                    Launch demo modal
-                  </button>
-                  <!--INICIO MODAL CERRAR--> 
-                  <div class="modal fade" id="modal_emergente">
-                    <div class="modal-dialog">
-                      <div class="modal-content" id="modal_body">
-                        <div class="modal-header">
-                        <h4 class="modal-title">Eliminar Ciudad</h4>
-
-                        </div>
-                          <div class="modal-footer">
-                            <div class="form-group">
-                              <button type="button" id="boton_borrarep" class="btn btn-danger col-lg-3 pull-left"><span class="glyphicon glyphicon-trash"></span></button>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-                  </div>    
-                      <!--FIN MODAL CERRAR-->  
           </div>
-          
-          <div class="col-lg-1"></div>
+        <div class="col-lg-1"></div>
         </div>
 {include file="footer.tpl"}        

@@ -7,7 +7,18 @@
                     <td>
                       <a href="AM_ciudad.php?id_ciudad={$ciudad.id_ciudad}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                       </a>
-                      <a data-href="" data-toggle="modal" data-target="#confirm-delete" href="#"><span class="glyphicon glyphicon-trash"></span></a><br>
+
+                      <a style="cursor:pointer">
+                        <span  onclick="BorrarCiudad({$ciudad.id_ciudad})"
+                               class=" glyphicon glyphicon-trash ">
+                        </span>
+                      </a><br>
+                          <a id="pop" 
+        href="#" 
+        class="btn btn-lg btn-danger" 
+        data-toggle="popover" 
+        data-content="And here's some amazing content. It's very engaging. right?"
+    >Hover to toggle popover</a>
                     </td>
                   </tr>                                              
                   {/foreach}

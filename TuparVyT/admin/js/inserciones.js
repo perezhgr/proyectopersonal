@@ -1,4 +1,5 @@
-/*----Crear una ciudad----
+/*----Crear una ciudad----*/
+//No anda la insercion de imagenes.
 $("#formciudad").submit(function() 
 {
 	$.ajax({
@@ -21,7 +22,7 @@ $("#formciudad").submit(function()
 	return false;
 });
 
-*/
+
 
 /*----Editar una ciudad----
 
@@ -95,16 +96,25 @@ $("#formeditarcondicion").submit('click',function EditarCondicion(condicion)
 });
 */
 
-function EditarCondicion(condicion){
+
+$("#formeditarcondicion").submit(function a() 
+{
 	$.ajax({
 		type: "POST",
-		url: "AM_condicion.php?id_condicion="+condicion,
+		url: "AM_condicion.php",
+		data:$("#formeditarcondicion").serialize(), 
+		//data 
+		//serialize().Encode a set of form elements as a string for submission.
 		success: function(data)
-		{		
-			$.ambiance({message: "La condicion se ha editado exitosamente!",
+		{
+			$.ambiance({message: "La condicion se ha insertado exitosamente!",
 				title: "Hecho!",
 				timeout: 2,
 				type: "success"});
-		}});
+			//$(":text").val('');			
+			
+		}
 
-}
+	});
+	return false;
+});

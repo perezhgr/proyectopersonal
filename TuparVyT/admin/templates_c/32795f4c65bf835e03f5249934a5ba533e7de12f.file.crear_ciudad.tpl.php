@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-06 00:06:19
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-06 15:53:50
          compiled from "./templates/crear_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1519808595415a3c3a66d22-29589237%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '32795f4c65bf835e03f5249934a5ba533e7de12f' => 
     array (
       0 => './templates/crear_ciudad.tpl',
-      1 => 1412546764,
+      1 => 1412603626,
       2 => 'file',
     ),
   ),
@@ -66,42 +66,43 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           </ul>
           <div id="myTabContent" class="tab-content">
             <div class="tab-pane fade active in" id="home">
-              <form  class="form-horizontal" method="POST" ENCTYPE="multipart/form-data"> 
+              <form  id="formciudad" class="form-horizontal" method="POST" enctype="multipart/form-data" > 
+
                 <fieldset>
                   <legend>Ciudad</legend>
                   <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Ciudad</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputEmail" placeholder="Nombre" name="ciudad">
+                      <input type="text" class="form-control" id="inputEmail" placeholder="Nombre" name="ciudad" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Duracion</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputPassword" placeholder="Duracion" name="duracion">
+                      <input type="text" class="form-control" id="inputPassword" placeholder="Duracion" name="duracion" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Precio</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputPassword" placeholder="Precio" name="precio">
+                      <input type="text" class="form-control" id="inputPassword" placeholder="Precio" name="precio" required>
                     </div>
                   </div>
                   <div class="form-group">
                    <label for="inputPassword" class="col-lg-2 control-label">Eliga imagenes</label>&nbsp;&nbsp;&nbsp;&nbsp;
                    <span class="btn btn-default btn-file">
-                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen0">
+                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen0"  multiple="" directory="">
                   </span>&nbsp;&nbsp;&nbsp;
                   <span class="btn btn-default btn-file">
-                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen1">
+                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen1" multiple="" directory="">
                   </span>&nbsp;&nbsp;&nbsp;
                   <span class="btn btn-default btn-file">
-                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen2">
+                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen2" multiple="" directory="">
                   </span>
                 </div><br>
                 <div class="form-group">
                   <div class="col-lg-10 col-lg-offset-2">
-                    <button type="submit" class="btn btn-primary btn-">Crear</button>
+                    <input type="submit" class="btn btn-primary" value="Crear">
                   </div>
                 </div>
               </fieldset>
