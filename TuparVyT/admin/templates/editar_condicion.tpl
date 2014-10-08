@@ -41,7 +41,7 @@
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="home">
                         {foreach from=$Condicion item=condicion}
-                        <form id="formeditarcondicion" class="form-horizontal" method ="POST" onsubmit="a();" enctype="multipart/form-data" > 
+                        <form id="formeditarcondicion" class="form-horizontal" method ="POST" enctype="multipart/form-data" > 
                           
                           <fieldset>
                             <legend>Condicion</legend>
@@ -56,14 +56,14 @@
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label"></label>
                                 <div class="col-lg-10">
-                                <input type="text" class="form-control" placeholder="Nombre" name="id_condicion" 
+                                <input type="hidden" class="form-control" placeholder="Nombre" name="id_condicion" 
                                 value="{$condicion.id_condicion}">
                               </div>
                             </div>
                             </div>                                         
                             <div class="form-group">
                               <div class="col-lg-10 col-lg-offset-2">
-                                <input type="submit" value="Editar"/>
+                                <button type="submit" class="btn btn-primary btn-">Editar</button>
                               </div>
                             </div>
                           </fieldset>

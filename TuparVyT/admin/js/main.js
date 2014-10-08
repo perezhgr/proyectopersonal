@@ -13,9 +13,9 @@ $("#signin").click(function() {
 			}
 			else
 			{
-				$.ambiance({message: "Verfique que su mail y contraseña sean correctos!",
+				$.ambiance({message: "Verfique que su mail y contraseña sean correctos!. Asegurese de que usted tiene permisos de administrador.",
 					title: "Error !",
-					timeout: 2,
+					timeout: 4,
 					type: "error"});
 			}
 		}

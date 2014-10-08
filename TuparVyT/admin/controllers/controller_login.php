@@ -49,7 +49,7 @@ class ControllerLogin
 			
 			session_start();
 			$_SESSION["mail"]=$formulario["mail"];
-			echo "login.php";
+			//echo "login.php";
 			
 		}
 		

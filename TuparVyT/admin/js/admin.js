@@ -1,3 +1,4 @@
+/*----Borrar una ciudad----*/
 function BorrarCiudad(ciudad){
 	$.ajax({
 		type: "GET",
@@ -13,34 +14,46 @@ function BorrarCiudad(ciudad){
 		}});
 }
 
+/*----Crear una ciudad----*/
+
+$( '#formciudad' )
+  .submit( function( e ) {
+    $.ajax( {
+      url: "AM_ciudad.php",
+      type: 'POST',
+      data: new FormData( this ),
+      processData: false,
+      contentType: false
+      
+    } );
+    $(":text").val('');
+    $.ambiance({message: "La ciudad se ha creado exitosamente !",
+				title: "Hecho!",
+				timeout: 2,
+				type: "success"});						
+    e.preventDefault();
+  } );
 
 
 
-
-/*----Editar una ciudad----
+/*----Editar una ciudad----*/
 
 $("#formeditarciudad").submit(function() 
 {
 	$.ajax({
 		type: "POST",
-		url: "AM_ciudad.php?id_ciudad="+3,
 		data:$("#formeditarciudad").serialize(), 
-		//data 
-		//serialize().Encode a set of form elements as a string for submission.
 		success: function(data)
 		{
 			$.ambiance({message: "La ciudad se ha editado exitosamente!",
 				title: "Hecho!",
 				timeout: 2,
-				type: "success"});
-			$(":text").val('');			
-			
+				type: "success"});	
 		}
 
 	});
 	return false;
 });
-*/
 
 
 /*----Borrar un comentario (testimonio)----*/
@@ -102,29 +115,24 @@ $("#formcondicion").submit(function()
 	return false;
 });
 
-/*----Editar una condicion----
-$("#formeditarcondicion").submit('click',function EditarCondicion(condicion) 
+/*----Editar una condicion----*/
+$("#formeditarcondicion").submit(function() 
 {
 	$.ajax({
-		type: "GET",
-		url: "AM_condicion.php?id_condicion="+condicion,
+		type: "POST",
 		data:$("#formeditarcondicion").serialize(), 
-		//data 
-		//serialize().Encode a set of form elements as a string for submission.
 		success: function(data)
 		{
 			$.ambiance({message: "La condicion se ha editado exitosamente!",
 				title: "Hecho!",
 				timeout: 2,
-				type: "success"});
-			//$(":text").val('');			
-			
+				type: "success"});	
 		}
 
 	});
 	return false;
 });
-*/
+
 
 
 /*----Borrar un usuario ----*/

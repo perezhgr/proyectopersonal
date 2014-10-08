@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-06 02:05:15
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-08 16:16:28
          compiled from "./templates/editar_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:38070822354158fd4c7fd06-98594908%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fd3fea16eec79b8685b12930d995bf162735c89a' => 
     array (
       0 => './templates/editar_ciudad.tpl',
-      1 => 1412549536,
+      1 => 1412777280,
       2 => 'file',
     ),
   ),
@@ -69,7 +69,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   </ul>
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="home">
-                        <form id="formeditarciudad"class="form-horizontal" method="POST"> 
+                        <form id="formeditarciudad" class="form-horizontal" method="POST"> 
                           
                           <fieldset>
                             <legend>Ciudad</legend>
@@ -105,7 +105,7 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label"></label>
                               <div class="col-lg-10">
-                                <input type="hidden" class="form-control" id="inputEmail" placeholder="Nombre" name="id_ciudad" 
+                                <input type="hidden" class="form-control" placeholder="Nombre" name="id_ciudad" 
                                 value="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
 ">
                               </div>

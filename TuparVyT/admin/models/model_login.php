@@ -15,7 +15,7 @@ class ModelLogin
 		
 		$sql = "SELECT *
 		FROM usuario
-		WHERE mail='$mail'";
+		WHERE mail='$mail' AND es_admin IS NOT NULL";
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
 	}

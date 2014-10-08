@@ -40,7 +40,7 @@
                   </ul>
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="home">
-                        <form id="formeditarciudad"class="form-horizontal" method="POST"> 
+                        <form id="formeditarciudad" class="form-horizontal" method="POST"> 
                           
                           <fieldset>
                             <legend>Ciudad</legend>
@@ -69,7 +69,7 @@
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label"></label>
                               <div class="col-lg-10">
-                                <input type="hidden" class="form-control" id="inputEmail" placeholder="Nombre" name="id_ciudad" 
+                                <input type="hidden" class="form-control" placeholder="Nombre" name="id_ciudad" 
                                 value="{$ciudad.id_ciudad}">
                               </div>
                               {/foreach}
