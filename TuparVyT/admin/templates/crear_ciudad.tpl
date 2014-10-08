@@ -46,19 +46,19 @@
                   <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Ciudad</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputEmail" placeholder="Nombre" name="ciudad" required>
+                      <input id="1" type="text" class="form-control" placeholder="Nombre" name="ciudad" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Duracion</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputPassword" placeholder="Duracion" name="duracion" required>
+                      <input id="2" type="text" class="form-control"  placeholder="Duracion" name="duracion" required>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Precio</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputPassword" placeholder="Precio" name="precio" required>
+                      <input id="3" stype="text" class="form-control"  placeholder="Precio" name="precio" required>
                     </div>
                   </div>
                   <div class="form-group">

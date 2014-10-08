@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-02 18:04:43
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-07 15:34:52
          compiled from "./templates/modal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1443305185542b0a1a112ec0-45545667%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9afbabd2d7104bba99deb709b2f3809e75b1e519' => 
     array (
       0 => './templates/modal.tpl',
-      1 => 1412265841,
+      1 => 1412688875,
       2 => 'file',
     ),
   ),
@@ -41,9 +41,15 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
-                          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <?php  $_smarty_tpl->tpl_vars['imagen'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['imagen']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['Imagen']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['img']['iteration']=0;
+foreach ($_from as $_smarty_tpl->tpl_vars['imagen']->key => $_smarty_tpl->tpl_vars['imagen']->value){
+$_smarty_tpl->tpl_vars['imagen']->_loop = true;
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['img']['iteration']++;
+?>
+                          <li data-target="#carousel-example-generic" data-slide-to="0" class="<?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['img']['iteration']==1){?>active<?php }?>"></li>
+                          <?php } ?>   
                         </ol>
 
                         <!-- Wrapper for slides -->

@@ -1,4 +1,3 @@
-/*----Borrar una ciudad----*/
 function BorrarCiudad(ciudad){
 	$.ajax({
 		type: "GET",
@@ -6,37 +5,15 @@ function BorrarCiudad(ciudad){
 		success: function(data)
 		{	
 			$('#TabCiudad').html(data);
-			$.ambiance({message: "La ciudad se ha borrado exitosamente!",
+			$.ambiance({message: "La ciudad se ha eliminado exitosamente !",
 				title: "Hecho!",
-				timeout: 1,
+				timeout: 2,
 				type: "success"});
 			
 		}});
 }
 
-/*----Crear una ciudad----*/
-//No anda la insercion de imagenes.
-$("#formciudad").submit(function() 
-{
-	$.ajax({
-		type: "POST",
-		url: "AM_ciudad.php",
-		data:$("#formciudad").serialize(), 
-		//data 
-		//serialize().Encode a set of form elements as a string for submission.
-		success: function(data)
-		{
-			$.ambiance({message: "La ciudad se ha insertado exitosamente!",
-				title: "Hecho!",
-				timeout: 1,
-				type: "success"});
-			$(":text").val('');			
-			
-		}
 
-	});
-	return false;
-});
 
 
 
@@ -74,9 +51,9 @@ function BorrarComentario(comentario){
 		success: function(data)
 		{	
 			$('#TabComentario').html(data);
-			$.ambiance({message: "El comentario se ha borrado exitosamente!",
+			$.ambiance({message: "El comentario se ha eliminado exitosamente !",
 				title: "Hecho!",
-				timeout: 1,
+				timeout: 2,
 				type: "success"});
 			
 		}});
@@ -92,9 +69,9 @@ function BorrarCondicion(condicion){
 		success: function(data)
 		{	
 			$('#TabCondicion').html(data);
-			$.ambiance({message: "La condicion se ha borrado exitosamente!",
+			$.ambiance({message: "La condicion se ha eliminado exitosamente !",
 				title: "Hecho!",
-				timeout: 1,
+				timeout: 2,
 				type: "success"});
 			
 		}});
@@ -113,7 +90,7 @@ $("#formcondicion").submit(function()
 		//serialize().Encode a set of form elements as a string for submission.
 		success: function(data)
 		{
-			$.ambiance({message: "La condicion se ha insertado exitosamente!",
+			$.ambiance({message: "La condicion se ha creado exitosamente !",
 				title: "Hecho!",
 				timeout: 2,
 				type: "success"});
@@ -158,9 +135,9 @@ function BorrarUsuario(usuario){
 		success: function(data)
 		{	
 			$('#TabUsuario').html(data);
-			$.ambiance({message: "El usuario se ha borrado exitosamente!",
+			$.ambiance({message: "El usuario se ha eliminado exitosamente !",
 				title: "Hecho!",
-				timeout: 1,
+				timeout: 2,
 				type: "success"});
 			
 		}});
@@ -176,7 +153,7 @@ function PromoverUsuario(usuario){
 			$('#TabUsuario').html(data);
 			$.ambiance({message: "El usuario tiene permisos de administrador !",
 				title: "Hecho!",
-				timeout: 2,
+				timeout: 3,
 				type: "error"});
 			
 		}});

@@ -27,8 +27,15 @@ class ControllerLogin
 	public function loginUsuario($formulario)
 	{
 		$error = $this->verificarFormulario($formulario);
-		if(!$error)
+		if($error)
 		{
+
+			$this->view->MensajeError($error);
+			
+		}
+		else
+		{
+
 			$user = $this->model->GetUsuario($formulario["mail"]);
 			
 			if(empty($user))
@@ -44,10 +51,6 @@ class ControllerLogin
 			$_SESSION["mail"]=$formulario["mail"];
 			echo "login.php";
 			
-		}
-		else
-		{
-			$this->view->MensajeError($error);
 		}
 		
 	}

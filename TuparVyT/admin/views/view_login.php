@@ -16,7 +16,7 @@ class ViewLogin
 	}
 
 	public function MensajeError($error){
-		echo $error;
+		print_r($error);
 	}
 
 }

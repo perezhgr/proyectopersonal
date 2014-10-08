@@ -1,5 +1,5 @@
 {include file="header.tpl"}
-  <body>
+  <body >
 
     <div class="container">
 
