@@ -24,13 +24,13 @@ class ControllerLogin
 
 
 		if (empty($user)){
-			$this->view->MensajeError("Error: Usuario inexistente.");			
+			$this->view->MensajeErrorUsuario("Error: Usuario inexistente.");			
 		}
 		elseif (empty($esadmi)) {
-			$this->view->MensajeError("Error : Usuario sin permisos de administrador.");
+			$this->view->MensajeErrorAdmin("Error : Usuario sin permisos de administrador.");
 		}
 		elseif (empty($pass)) {
-			$this->view->MensajeError("Error : Password Invalida.");
+			$this->view->MensajeErrorPass("Error : Password Invalida.");
 		}
 		else{
 			$_SESSION["mail"]=$formulario["mail"];

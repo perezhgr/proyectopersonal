@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-09 21:48:47
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-09 22:33:21
          compiled from "./templates/login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11828171985418b70db6e2f5-07612028%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f5f63cf8bf5077cbe9e40e023158dd20352e878a' => 
     array (
       0 => './templates/login.tpl',
-      1 => 1412884107,
+      1 => 1412886795,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_5418b70dbeaac2_81161231',
   'variables' => 
   array (
-    'Error' => 0,
+    'ErrorUsuario' => 0,
+    'ErrorAdmin' => 0,
+    'ErrorPass' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -52,13 +54,34 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="email" placeholder="yyy@zzz.com" name="mail" >
+                      <input type="text" class="form-control" id="email" placeholder="yyy@zzz.com" name="mail" ><br>
+                      <?php if (isset($_smarty_tpl->tpl_vars['ErrorUsuario']->value)){?>
+                        <strong class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorUsuario']->value;?>
+</strong>
+                      <?php }else{ ?>
+                        <strong  style="display:none" class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorUsuario']->value;?>
+</strong>
+                      <?php }?>
+                      <?php if (isset($_smarty_tpl->tpl_vars['ErrorAdmin']->value)){?>
+                        <strong class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorAdmin']->value;?>
+</strong>
+                      <?php }else{ ?>
+                        <strong  style="display:none" class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorAdmin']->value;?>
+</strong>
+                      <?php }?>
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Password</label>
                     <div class="col-lg-10">
-                      <input type="password" class="form-control" id="pass" placeholder="Password" name="pass" >
+                      <input type="password" class="form-control" id="pass" placeholder="Password" name="pass" ><br>
+                      <?php if (isset($_smarty_tpl->tpl_vars['ErrorPass']->value)){?>
+                        <strong class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorPass']->value;?>
+</strong>
+                      <?php }else{ ?>
+                        <strong  style="display:none" class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorPass']->value;?>
+</strong>
+                      <?php }?>
                     </div>
                   </div>
                   <div class="form-group">
@@ -66,8 +89,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                       <button id="signin" type="submit" class="btn btn-primary btn-lg">Iniciar</button>
                     </div>
                   </div>
-                   <strong class="error"><?php echo $_smarty_tpl->tpl_vars['Error']->value;?>
-</strong>
                 </fieldset>
               </form>
             </div>
