@@ -15,9 +15,27 @@ class ModelLogin
 		
 		$sql = "SELECT *
 		FROM usuario
+		WHERE mail='$mail'";
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}
+
+public function GetEsAdmin($mail){
+		
+		$sql = "SELECT *
+		FROM usuario
 		WHERE mail='$mail' AND es_admin IS NOT NULL";
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
 	}
+
+	public function GetPass($pass){
+		
+		$sql = "SELECT *
+		FROM usuario
+		WHERE pass='$pass'";
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}	
 }
 ?>

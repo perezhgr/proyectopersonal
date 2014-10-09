@@ -11,7 +11,7 @@ $controller = new ControllerLogin($model,$view);
 if(isset($_POST["mail"]))
 {
     $formulario["mail"] = $_POST["mail"];
-	$formulario["pass"] = $_POST["pass"];
+	$formulario["pass"] = md5($_POST["pass"]);
 	$controller->loginUsuario($formulario);
 }
 else

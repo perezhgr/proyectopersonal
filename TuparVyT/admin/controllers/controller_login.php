@@ -1,4 +1,5 @@
 <?php
+session_start();
 class ControllerLogin
 {
 	private $view;
@@ -8,69 +9,29 @@ class ControllerLogin
 		$this->model = $model;
 		$this->view = $view;
 	}
-	
-	public function imprimirPagina(){
-		{
-			session_start();
-			if(!isset($_SESSION["mail"]))
-			{
-				$this->view->imprimirPagina();
-			}
-			else
-			{
-				header('Location: admin.php');
-			}
+
+	public function loginUsuario($formulario){
+		$user=$this->model->GetUsuario($formulario['mail']);
+		$esadmi=$this->model->GetEsAdmin($formulario['mail']);
+		$pass=$this->model->GetPass($formulario['pass']);
+
+		if (empty($user)){
+			$this->view->MensajeError("Error:Usuario inexistente");			
 		}
-
-	}
-	
-	public function loginUsuario($formulario)
-	{
-		$error = $this->verificarFormulario($formulario);
-		if($error)
-		{
-
-			$this->view->MensajeError($error);
-			
+		elseif (empty($esadmi)) {
+			$this->view->MensajeError("Error: Usuario sin permisos de administrador");
 		}
-		else
-		{
-
-			$user = $this->model->GetUsuario($formulario["mail"]);
-			
-			if(empty($user))
-			{
-				$this->view->MensajeError("Error: Usuario Inexistente");
-			} 	
-			if($user[0]["pass"] != md5($formulario["pass"]))
-			{
-				$this->view->MensajeError("Error: Password Inválida");
-			}
-			
-			session_start();
-			$_SESSION["mail"]=$formulario["mail"];
-			//echo "login.php";
-			
-		}
-		
-	}
-
-	private function verificarFormulario($formulario)
-	{
-		if(!$this->verificaremail($formulario["mail"]))
-			return "Error: Email Inválido";
-		if(strlen($formulario["pass"])==0)
-			return "Error: La password es vacía";
-	}
-
-	private function verificaremail($email){ 
-
-		if(!preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i", $email)) {
- 			return false;
+		elseif (empty($pass)) {
+			$this->view->MensajeError("Error: Password Inválida");
 		}
 		else{
-			return true;
-		}
-	}	
+			$_SESSION["mail"]=$formulario["mail"];
+			header('Location: admin.php');
+		}		
+	}
+
+	public function imprimirPagina(){
+		$this->view->imprimirPagina();
+	}
 }
 ?>

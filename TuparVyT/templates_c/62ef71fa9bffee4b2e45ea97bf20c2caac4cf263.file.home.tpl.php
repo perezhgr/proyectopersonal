@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-02 17:26:51
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-09 16:20:31
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:936389164542b0a0e965c58-34212797%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1412263264,
+      1 => 1412864428,
       2 => 'file',
     ),
   ),
@@ -227,12 +227,6 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
 
         <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" onClick="getDetalleCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
 )">Ver mas &raquo;</button>
-        <div >
-        <script>
-        setTimeout(function() {
-            $('#cargando').html("<i class="fa fa-cog fa-spin fa-5x"></i>");     
-        }, 5000);</script>
-        </div>
         </div>
         <?php } ?>
         <!-- /.col-lg-4 -->
@@ -266,6 +260,7 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
             </div>
           </fieldset>
         </form>
+        
         </div><br>
         <div class="row">
 

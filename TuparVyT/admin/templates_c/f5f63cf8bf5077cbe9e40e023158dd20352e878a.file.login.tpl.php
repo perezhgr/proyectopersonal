@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-08 15:11:42
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-09 19:24:43
          compiled from "./templates/login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11828171985418b70db6e2f5-07612028%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f5f63cf8bf5077cbe9e40e023158dd20352e878a' => 
     array (
       0 => './templates/login.tpl',
-      1 => 1412773895,
+      1 => 1412875431,
       2 => 'file',
     ),
   ),
@@ -48,13 +48,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="inputEmail" placeholder="yyy@zzz.com" name="mail" >
+                      <input type="text" class="form-control" id="email" placeholder="yyy@zzz.com" name="mail" >
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Password</label>
                     <div class="col-lg-10">
-                      <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass">
+                      <input type="password" class="form-control" id="pass" placeholder="Password" name="pass" >
                     </div>
                   </div>
                   <div class="form-group">

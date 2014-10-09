@@ -24,13 +24,43 @@ class ModelComentarioCiudad
 		return $query->fetchAll();
 	}
 
-	/*public function ObtenerCondiciones(){
+	public function ObtenerCondicion(){
 		
 		$sql = "SELECT *
 		FROM condicion";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
-	}*/
+	}
+
+
+	public function ObtenerIdCiudad($id_ciudad){
+		
+		$sql = "SELECT id_ciudad		
+		FROM ciudad
+		WHERE id_ciudad = $id_ciudad";
+
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}
+
+	public function InsertaComentario($comentario){
+
+		$sql = "INSERT INTO `tuparvt`.`comentario` (`texto`,`id_usuario`, `id_ciudad`, `id_condicion`) 
+		VALUES (:texto,:id_usuario,:id_ciudad,id_condicion)";
+
+		$resultado = $this->conn->prepare($sql);
+		$resultado->execute(array(':texto'=>$comentario["texto"],':id_usuario'=>$comentario["id_usuario"],':id_ciudad'=>$comentario["id_ciudad"],':id_condicion'=>$comentario["id_condicion"]));
+
+		if (!$resultado)
+		{
+			die(print($this->conn->errorInfo()[2]));
+		}
+		return $resultado->fetchAll(PDO::FETCH_ASSOC);
+
+	}
+
+
+
 }
 ?>
