@@ -16,7 +16,8 @@ class ViewLogin
 	}
 
 	public function MensajeError($error){
-		print_r($error);
+		
+		$this->smarty->assign('Error',$error);
 	}
 
 }

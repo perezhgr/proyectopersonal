@@ -6313,3 +6313,6 @@ input:required {
   outline: none;
 }
 
+.error{
+  color: red;
+}

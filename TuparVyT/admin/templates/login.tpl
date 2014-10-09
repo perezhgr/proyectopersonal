@@ -40,6 +40,12 @@
                       <button id="signin" type="submit" class="btn btn-primary btn-lg">Iniciar</button>
                     </div>
                   </div>
+                  {if !isset($Error)}
+                  <strong class="error"></strong>
+                  {else}
+                  <strong class="error">{$Error}</strong>
+                  {/if}
+
                 </fieldset>
               </form>
             </div>
