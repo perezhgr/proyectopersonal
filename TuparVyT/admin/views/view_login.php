@@ -16,10 +16,11 @@ class ViewLogin
 	}
 
 	public function MensajeError($error){
-		
-		$this->smarty->assign('Error',$error);
-	}
 
+		if ($error){
+		$this->smarty->assign('Error',$error);
+		}		
+	}
 }
 
 ?>

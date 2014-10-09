@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-09 21:37:30
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-09 21:48:47
          compiled from "./templates/login.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:11828171985418b70db6e2f5-07612028%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f5f63cf8bf5077cbe9e40e023158dd20352e878a' => 
     array (
       0 => './templates/login.tpl',
-      1 => 1412883446,
+      1 => 1412884107,
       2 => 'file',
     ),
   ),
@@ -66,13 +66,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                       <button id="signin" type="submit" class="btn btn-primary btn-lg">Iniciar</button>
                     </div>
                   </div>
-                  <?php if (!isset($_smarty_tpl->tpl_vars['Error']->value)){?>
-                  <strong class="error"></strong>
-                  <?php }else{ ?>
-                  <strong class="error"><?php echo $_smarty_tpl->tpl_vars['Error']->value;?>
+                   <strong class="error"><?php echo $_smarty_tpl->tpl_vars['Error']->value;?>
 </strong>
-                  <?php }?>
-
                 </fieldset>
               </form>
             </div>
