@@ -13,20 +13,24 @@
                   <li class="active"><a href="#top">Home</a></li>
                   <li ><a href="#empresa">Acerca</a></li>
                   <li><a href="#paquetes">Paquetes</a></li>
-                  <li><a href="#contacto">Contacto</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                  <li><a href="#contacto">Contacto</a></li>
+                  
                   <li><a href=""></a></li>
                   <li><p class="lead">
                     <a class="zoom btn btn-default btn-sm" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
                   </p>
                   </li>
-                  {if isset($Mail)}
-                  <h4><strong>Conectado como:</strong><p class="text-success">{$Mail}</p></h4> 
-                           
-                  <button id="logout" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
-              <span class="glyphicon glyphicon-log-out">&nbsp&nbsp</span>
-            </button>
+                  {if isset($Mail)} 
+                  <li><p class="lead">
+                    <a class="btn btn-primary btn-sm">
+                      <strong>{$Mail}</strong>
+                    </a>&nbsp
+                    <button id="logout" class=" zoom btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
+                      <i class="fa fa-power-off"></i>
+                    </button>
+                  </p>
+                  </li>
                   {/if}
-
                 </ul>
               </div>
             </div>

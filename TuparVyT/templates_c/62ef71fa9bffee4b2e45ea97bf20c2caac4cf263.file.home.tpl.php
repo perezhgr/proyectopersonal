@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-11 22:40:51
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-11 23:09:30
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:936389164542b0a0e965c58-34212797%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1413060033,
+      1 => 1413061766,
       2 => 'file',
     ),
   ),
@@ -45,21 +45,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   <li class="active"><a href="#top">Home</a></li>
                   <li ><a href="#empresa">Acerca</a></li>
                   <li><a href="#paquetes">Paquetes</a></li>
-                  <li><a href="#contacto">Contacto</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                  <li><a href="#contacto">Contacto</a></li>
+                  
                   <li><a href=""></a></li>
                   <li><p class="lead">
                     <a class="zoom btn btn-default btn-sm" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
                   </p>
                   </li>
-                  <?php if (isset($_smarty_tpl->tpl_vars['Mail']->value)){?>
-                  <h4><strong>Conectado como:</strong><p class="text-success"><?php echo $_smarty_tpl->tpl_vars['Mail']->value;?>
-</p></h4> 
-                           
-                  <button id="logout" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
-              <span class="glyphicon glyphicon-log-out">&nbsp&nbsp</span>
-            </button>
+                  <?php if (isset($_smarty_tpl->tpl_vars['Mail']->value)){?> 
+                  <li><p class="lead">
+                    <a class="btn btn-primary btn-sm">
+                      <strong><?php echo $_smarty_tpl->tpl_vars['Mail']->value;?>
+</strong>
+                    </a>&nbsp
+                    <button id="logout" class=" zoom btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
+                      <i class="fa fa-power-off"></i>
+                    </button>
+                  </p>
+                  </li>
                   <?php }?>
-
                 </ul>
               </div>
             </div>

@@ -26,8 +26,12 @@ class ViewHome
 		$this->smarty->assign('ErrorPass',$errorpass);
 	}
 
-	public function ImprimirHome(/*$mail*/){
-		//$this->smarty->assign("Mail",$mail);				
+	public function ImprimirUsuarioLogueado($mail){
+		$this->smarty->assign("Mail",$mail);			
+
+	}
+
+	public function ImprimirHome(){
 		$this->smarty->display('home.tpl');
 
 	}

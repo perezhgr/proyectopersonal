@@ -38,7 +38,8 @@
 				}
 				else{
 					$_SESSION["mail"]=$formulario["mail"];
-					header('Location: home.php');
+					$this->view->ImprimirUsuarioLogueado($_SESSION["mail"]);
+					//header('Location: home.php');
 				}		
 			}
 
