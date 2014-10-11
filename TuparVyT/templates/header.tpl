@@ -9,15 +9,13 @@
 
   <title>Tupar • VyT</title>
 
-  <!-- Bootstrap core CSS -->
+  <!-- Bootstrap core CSS -->  
   <link href="css/bootstrap.css" rel="stylesheet">
-
   <!-- Custom styles for this template -->
   <link href="css/cover.css" rel="stylesheet">
   <link href="css/carousel.css" rel="stylesheet">
   <link href="css/font-awesome.css" rel="stylesheet">  
-
-  
+  <link href="css/jquery.ambiance.css" rel="stylesheet">       
   
   
 

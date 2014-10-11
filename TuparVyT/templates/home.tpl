@@ -99,7 +99,7 @@
               </div>
             <div class="form-group">            
             <div class="col-lg-1">
-              <button type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-default btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
+              <button  id="registrarse" type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-default btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
             </div><br><br><br>
               <small>¿Ya tienes una cuenta? 
               </small>

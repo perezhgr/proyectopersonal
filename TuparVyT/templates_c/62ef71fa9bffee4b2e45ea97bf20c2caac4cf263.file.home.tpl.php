@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-11 20:07:24
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-11 21:12:34
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:936389164542b0a0e965c58-34212797%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1413050839,
+      1 => 1413054751,
       2 => 'file',
     ),
   ),
@@ -130,7 +130,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               </div>
             <div class="form-group">            
             <div class="col-lg-1">
-              <button type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-default btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
+              <button  id="registrarse" type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-default btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
             </div><br><br><br>
               <small>¿Ya tienes una cuenta? 
               </small>
