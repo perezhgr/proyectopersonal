@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-08 02:29:26
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-11 20:53:15
          compiled from "./templates/crear_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1519808595415a3c3a66d22-29589237%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '32795f4c65bf835e03f5249934a5ba533e7de12f' => 
     array (
       0 => './templates/crear_ciudad.tpl',
-      1 => 1412728153,
+      1 => 1413053580,
       2 => 'file',
     ),
   ),
@@ -91,13 +91,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   <div class="form-group">
                    <label for="inputPassword" class="col-lg-2 control-label">Eliga imagenes</label>&nbsp;&nbsp;&nbsp;&nbsp;
                    <span class="btn btn-default btn-file">
-                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen0"  multiple="" directory="">
+                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen0">
                   </span>&nbsp;&nbsp;&nbsp;
                   <span class="btn btn-default btn-file">
-                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen1" multiple="" directory="">
+                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen1">
                   </span>&nbsp;&nbsp;&nbsp;
                   <span class="btn btn-default btn-file">
-                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen2" multiple="" directory="">
+                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen2">
                   </span>
                 </div><br>
                 <div class="form-group">

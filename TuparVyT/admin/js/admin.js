@@ -1,8 +1,7 @@
-
 /*----Borrar una ciudad----*/
 function BorrarCiudad(ciudad){
-	var x;
-    if (confirm("Esta seguro que desea borrar la ciudad ?") == true) {
+//	var x;
+//    if (confirm("Esta seguro que desea borrar la ciudad ?") == true) {
    
 	$.ajax({
 		type: "GET",
@@ -16,28 +15,27 @@ function BorrarCiudad(ciudad){
 				type: "success"});
 			
 		}});
-	}
 }
 
 /*----Crear una ciudad----*/
 
-$('#formciudad').submit( function() {
+$('#formciudad').submit( function(e) {
     $.ajax( {
       url: "AM_ciudad.php",
-      type: 'POST',
+      type: "POST",
       data: new FormData( this ),
       processData: false,
       contentType: false
-      
+            
     } );
     $(":text").val('');
     $.ambiance({message: "La ciudad se ha creado exitosamente !",
 				title: "Hecho!",
 				timeout: 2,
 				type: "success"});						
-    e.preventDefault();
+   
+   e.preventDefault(); 
   } );
-
 
 
 /*----Editar una ciudad----*/

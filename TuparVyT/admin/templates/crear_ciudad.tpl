@@ -64,13 +64,13 @@
                   <div class="form-group">
                    <label for="inputPassword" class="col-lg-2 control-label">Eliga imagenes</label>&nbsp;&nbsp;&nbsp;&nbsp;
                    <span class="btn btn-default btn-file">
-                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen0"  multiple="" directory="">
+                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen0">
                   </span>&nbsp;&nbsp;&nbsp;
                   <span class="btn btn-default btn-file">
-                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen1" multiple="" directory="">
+                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen1">
                   </span>&nbsp;&nbsp;&nbsp;
                   <span class="btn btn-default btn-file">
-                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen2" multiple="" directory="">
+                    <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen2">
                   </span>
                 </div><br>
                 <div class="form-group">
