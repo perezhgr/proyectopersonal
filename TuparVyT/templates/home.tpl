@@ -11,12 +11,12 @@
                 <h3 class="masthead-brand"></h3>
                 <ul class=" nav masthead-nav">
                   <li class="active"><a href="#top">Home</a></li>
-                  <li><a href="#empresa">Acerca</a></li>
+                  <li ><a href="#empresa">Acerca</a></li>
                   <li><a href="#paquetes">Paquetes</a></li>
-                  <li><a href="#contacto">Contacto</a></li>
+                  <li><a href="#contacto">Contacto</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                   <li><a href=""></a></li>
-                  <li><p class="lead" data-toggle="tooltip" data-placement="left" title="Iniciar sesion">
-                    <a class="zoom btn btn-primary btn-md" data-toggle="modal" data-target="#myModal"><i class="fa fa-user fa-1x"></i>&nbsp;</a>
+                  <li><p class="lead">
+                    <a class="zoom btn btn-default btn-sm" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
                   </p>
                   </li>
                   {if isset($Mail)}
@@ -84,23 +84,26 @@
               <div class="form-group">
               <div class="col-lg-12">
                 <label>Registrate y comenta nuestros destinos.</label>
-                  <input type="text" class="form-control" id="inputPassword" placeholder="Nombre" name="nombre" required>
+                  <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
               </div>
               </div>
               <div class="form-group">
               <div class="col-lg-12">
-                  <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail" required>
+                  <input type="text" class="form-control" id="mail" placeholder="Mail" name="mail" >
               </div>
               </div>
               <div class="form-group">
               <div class="col-lg-12">
-                  <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass" required>
+                  <input type="password" class="form-control" id="pass" placeholder="Password" name="pass" >
               </div>
               </div>
             <div class="form-group">            
             <div class="col-lg-1">
-              <button type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-success btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
-            </div>
+              <button type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-default btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
+            </div><br><br><br>
+              <small>¿Ya tienes una cuenta? 
+              </small>
+              <a style="cursor:pointer"class="zoom" data-toggle="modal" data-target="#myModal"><strong>&nbsp;Inicia sesion</strong></a>
             </div>
           </fieldset>
         </form>

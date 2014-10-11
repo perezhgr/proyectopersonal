@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-09 16:20:31
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-11 20:07:24
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:936389164542b0a0e965c58-34212797%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1412864428,
+      1 => 1413050839,
       2 => 'file',
     ),
   ),
@@ -41,12 +41,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 <h3 class="masthead-brand"></h3>
                 <ul class=" nav masthead-nav">
                   <li class="active"><a href="#top">Home</a></li>
-                  <li><a href="#empresa">Acerca</a></li>
+                  <li ><a href="#empresa">Acerca</a></li>
                   <li><a href="#paquetes">Paquetes</a></li>
-                  <li><a href="#contacto">Contacto</a></li>
+                  <li><a href="#contacto">Contacto</a></li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
                   <li><a href=""></a></li>
-                  <li><p class="lead" data-toggle="tooltip" data-placement="left" title="Iniciar sesion">
-                    <a class="zoom btn btn-primary btn-md" data-toggle="modal" data-target="#myModal"><i class="fa fa-user fa-1x"></i>&nbsp;</a>
+                  <li><p class="lead">
+                    <a class="zoom btn btn-default btn-sm" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
                   </p>
                   </li>
                   <?php if (isset($_smarty_tpl->tpl_vars['Mail']->value)){?>
@@ -115,23 +115,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               <div class="form-group">
               <div class="col-lg-12">
                 <label>Registrate y comenta nuestros destinos.</label>
-                  <input type="text" class="form-control" id="inputPassword" placeholder="Nombre" name="nombre" required>
+                  <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
               </div>
               </div>
               <div class="form-group">
               <div class="col-lg-12">
-                  <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail" required>
+                  <input type="text" class="form-control" id="mail" placeholder="Mail" name="mail" >
               </div>
               </div>
               <div class="form-group">
               <div class="col-lg-12">
-                  <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass" required>
+                  <input type="password" class="form-control" id="pass" placeholder="Password" name="pass" >
               </div>
               </div>
             <div class="form-group">            
             <div class="col-lg-1">
-              <button type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-success btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
-            </div>
+              <button type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-default btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
+            </div><br><br><br>
+              <small>¿Ya tienes una cuenta? 
+              </small>
+              <a style="cursor:pointer"class="zoom" data-toggle="modal" data-target="#myModal"><strong>&nbsp;Inicia sesion</strong></a>
             </div>
           </fieldset>
         </form>

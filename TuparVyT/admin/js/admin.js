@@ -1,5 +1,9 @@
+
 /*----Borrar una ciudad----*/
 function BorrarCiudad(ciudad){
+	var x;
+    if (confirm("Esta seguro que desea borrar la ciudad ?") == true) {
+   
 	$.ajax({
 		type: "GET",
 		url: "borrar_ciudad.php?id_ciudad="+ciudad,
@@ -12,12 +16,12 @@ function BorrarCiudad(ciudad){
 				type: "success"});
 			
 		}});
+	}
 }
 
 /*----Crear una ciudad----*/
 
-$( '#formciudad' )
-  .submit( function( e ) {
+$('#formciudad').submit( function() {
     $.ajax( {
       url: "AM_ciudad.php",
       type: 'POST',
@@ -166,3 +170,4 @@ function PromoverUsuario(usuario){
 			
 		}});
 }
+
