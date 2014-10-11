@@ -1,4 +1,4 @@
-$(document).ready(function() {nombre
+$(document).ready(function() {
 	
 	$('#registrarse').click(function(){
 
@@ -18,7 +18,7 @@ $(document).ready(function() {nombre
 			return false;  
 		}  
 
-		if($("#mail").val().length < 1) {  
+		if($("#email").val().length < 1) {  
 			$.ambiance({message: "El correo electrónico es obligatorio",
 				title: "Error !",
 				timeout: 2,
@@ -26,7 +26,7 @@ $(document).ready(function() {nombre
 			return false;  
 		}  
 
-		var email =$("#mail").val();
+		var email =$("#email").val();
 		var filter = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
 
 		if (!filter.test(email)) {
@@ -38,7 +38,7 @@ $(document).ready(function() {nombre
 		}
 		
 
-		if($("#pass").val().length == 0)  {  
+		if($("#password").val().length == 0)  {  
 			$.ambiance({message: "La contraseña es obligatoria",
 				title: "Error !",
 				timeout: 2,
@@ -46,7 +46,7 @@ $(document).ready(function() {nombre
 			return false;  
 		} 
 
-		if($("#pass").val().length < 5)  {  
+		if($("#password").val().length < 5)  {  
 			$.ambiance({message: "Contraseña insegura.<br>Debe contener mas de 5 caracteres.",
 				title: "Error !",
 				timeout: 2,
@@ -56,5 +56,24 @@ $(document).ready(function() {nombre
 
 
 	});
+
+	$("#formregistrarse").submit(function() 
+	{
+		$.ajax({
+			type: "POST",
+			data:$("#formregistrarse").serialize(), 
+			success: function(data)
+			{
+				$(":text,:password").val('');
+				$.ambiance({message: "Te has registrado correctamente!.<br>Inicia sesion y comienza a comentar la ciudad que hayas visitado.",
+					title: "Hecho!",
+					timeout: 6,
+					type: "success"});	
+			}
+
+		});
+		return false;
+	});
+
 });
 

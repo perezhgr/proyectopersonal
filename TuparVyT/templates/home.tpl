@@ -44,25 +44,35 @@
                       <h4 class="modal-title" id="myModalLabel">Inicia sesion</h4>
                     </div>
                     <div class="modal-body">
-                      <form id="formlog" class="form-horizontal" method="POST">        
+                      <form class="form-horizontal" method="POST">        
                         <fieldset>
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail">
+                              <input type="text" class="form-control" id="mail" placeholder="Mail" name="mail">
+                              {if isset($ErrorUsuario)}
+                              <strong class="error">{$ErrorUsuario}</strong>
+                              {else}
+                              <strong  style="display:none" class="error">{$ErrorUsuario}</strong>
+                              {/if}
                             </div>
                           </div>
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
-                              <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass">
+                              <input type="password" class="form-control" id="pass" placeholder="Password" name="pass">
+                              {if isset($ErrorPass)}
+                              <strong class="error">{$ErrorPass}</strong>
+                              {else}
+                              <strong  style="display:none" class="error">{$ErrorPass}</strong>
+                              {/if}
                             </div>
                           </div>
 
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-2">
-                            <button  type="submit" data-toggle="tooltip" data-placement="left" title="Iniciar sesion" class="btn btn-primary btn-md btn-block"><i id="signin"class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
+                            <button  id="iniciar" type="submit" data-toggle="tooltip" data-placement="left" title="Iniciar sesion" class="btn btn-primary btn-md btn-block"><i id="signin"class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
 
                             </div>
                           </div>
@@ -79,7 +89,7 @@
           <div class="row">
           <div class="col-lg-4"></div>
           <div class="col-lg-4 bx zoom">
-          <form  class="form-horizontal" ACTION="" METHOD="POST">        
+          <form  id="formregistrarse" class="form-horizontal" ACTION="" METHOD="POST">        
             <fieldset >
               <div class="form-group">
               <div class="col-lg-12">
@@ -89,12 +99,12 @@
               </div>
               <div class="form-group">
               <div class="col-lg-12">
-                  <input type="text" class="form-control" id="mail" placeholder="Mail" name="mail" >
+                  <input type="text" class="form-control" id="email" placeholder="Mail" name="mail" >
               </div>
               </div>
               <div class="form-group">
               <div class="col-lg-12">
-                  <input type="password" class="form-control" id="pass" placeholder="Password" name="pass" >
+                  <input type="password" class="form-control" id="password" placeholder="Password" name="pass" >
               </div>
               </div>
             <div class="form-group">            

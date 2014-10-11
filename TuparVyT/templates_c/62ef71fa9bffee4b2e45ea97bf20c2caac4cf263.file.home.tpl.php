@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-11 21:12:34
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-11 22:40:51
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:936389164542b0a0e965c58-34212797%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1413054751,
+      1 => 1413060033,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'Mail' => 0,
+    'ErrorUsuario' => 0,
+    'ErrorPass' => 0,
     'Empresa' => 0,
     'empresa' => 0,
     'Ciudades' => 0,
@@ -75,25 +77,39 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                       <h4 class="modal-title" id="myModalLabel">Inicia sesion</h4>
                     </div>
                     <div class="modal-body">
-                      <form id="formlog" class="form-horizontal" method="POST">        
+                      <form class="form-horizontal" method="POST">        
                         <fieldset>
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail">
+                              <input type="text" class="form-control" id="mail" placeholder="Mail" name="mail">
+                              <?php if (isset($_smarty_tpl->tpl_vars['ErrorUsuario']->value)){?>
+                              <strong class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorUsuario']->value;?>
+</strong>
+                              <?php }else{ ?>
+                              <strong  style="display:none" class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorUsuario']->value;?>
+</strong>
+                              <?php }?>
                             </div>
                           </div>
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
-                              <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass">
+                              <input type="password" class="form-control" id="pass" placeholder="Password" name="pass">
+                              <?php if (isset($_smarty_tpl->tpl_vars['ErrorPass']->value)){?>
+                              <strong class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorPass']->value;?>
+</strong>
+                              <?php }else{ ?>
+                              <strong  style="display:none" class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorPass']->value;?>
+</strong>
+                              <?php }?>
                             </div>
                           </div>
 
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-2">
-                            <button  type="submit" data-toggle="tooltip" data-placement="left" title="Iniciar sesion" class="btn btn-primary btn-md btn-block"><i id="signin"class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
+                            <button  id="iniciar" type="submit" data-toggle="tooltip" data-placement="left" title="Iniciar sesion" class="btn btn-primary btn-md btn-block"><i id="signin"class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
 
                             </div>
                           </div>
@@ -110,7 +126,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <div class="row">
           <div class="col-lg-4"></div>
           <div class="col-lg-4 bx zoom">
-          <form  class="form-horizontal" ACTION="" METHOD="POST">        
+          <form  id="formregistrarse" class="form-horizontal" ACTION="" METHOD="POST">        
             <fieldset >
               <div class="form-group">
               <div class="col-lg-12">
@@ -120,12 +136,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               </div>
               <div class="form-group">
               <div class="col-lg-12">
-                  <input type="text" class="form-control" id="mail" placeholder="Mail" name="mail" >
+                  <input type="text" class="form-control" id="email" placeholder="Mail" name="mail" >
               </div>
               </div>
               <div class="form-group">
               <div class="col-lg-12">
-                  <input type="password" class="form-control" id="pass" placeholder="Password" name="pass" >
+                  <input type="password" class="form-control" id="password" placeholder="Password" name="pass" >
               </div>
               </div>
             <div class="form-group">            
