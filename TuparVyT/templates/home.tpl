@@ -14,23 +14,31 @@
                   <li ><a href="#empresa">Acerca</a></li>
                   <li><a href="#paquetes">Paquetes</a></li>
                   <li><a href="#contacto">Contacto</a></li>
-                  
                   <li><a href=""></a></li>
-                  <li><p class="lead">
-                    <a class="zoom btn btn-default btn-sm" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
-                  </p>
-                  </li>
-                  {if isset($Mail)} 
-                  <li><p class="lead">
-                    <a class="btn btn-primary btn-sm">
-                      <strong>{$Mail}</strong>
-                    </a>&nbsp
-                    <button id="logout" class=" zoom btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
-                      <i class="fa fa-power-off"></i>
-                    </button>
-                  </p>
-                  </li>
-                  {/if}
+                  <li><a href=""></a></li>
+                  <li><a href=""></a></li>
+                  <li><a href=""></a></li>
+                  <li><a href=""></a></li>
+                  <li><a href=""></a></li>
+                  <li>
+                    {if isset($Nombre)} 
+                    <p style="display:none" class="lead">
+                      <a class="zoom btn btn-default btn-sm" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
+                    </p>
+                    <p class="lead">
+                      <a class="btn btn-primary btn-sm">
+                        <strong>Hola {$Nombre} !</strong>
+                      </a>&nbsp
+                      <button id="logout" class=" zoom btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
+                        <i class="fa fa-power-off"></i>
+                      </button>
+                    </p>
+                    {else}
+                    <p class="lead">
+                      <a class="zoom btn btn-default btn-sm" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
+                    </p>
+                    {/if}
+                  </li>                  
                 </ul>
               </div>
             </div>

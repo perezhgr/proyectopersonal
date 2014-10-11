@@ -1,4 +1,5 @@
 	<?php
+	session_start();
 	class ControllerHome
 	{
 		private $model;
@@ -37,8 +38,8 @@
 					$this->view->MensajeErrorPass("Error : Password Invalida.");
 				}
 				else{
-					$_SESSION["mail"]=$formulario["mail"];
-					$this->view->ImprimirUsuarioLogueado($_SESSION["mail"]);
+					$_SESSION["nombre"]=$user[0]["nombre"];
+					$this->view->ImprimirUsuarioLogueado($_SESSION["nombre"]);
 					//header('Location: home.php');
 				}		
 			}

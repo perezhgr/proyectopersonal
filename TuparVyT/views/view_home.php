@@ -26,8 +26,8 @@ class ViewHome
 		$this->smarty->assign('ErrorPass',$errorpass);
 	}
 
-	public function ImprimirUsuarioLogueado($mail){
-		$this->smarty->assign("Mail",$mail);			
+	public function ImprimirUsuarioLogueado($nombre){
+		$this->smarty->assign("Nombre",$nombre);			
 
 	}
 

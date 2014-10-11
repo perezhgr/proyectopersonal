@@ -1,9 +1,7 @@
 $("#logout").click(function() {
 
 	$.ajax({
-	  type: "POST",
-	  url: "logout.php",
-	  data:$("#formlogin").serialize(),
+	  url: "logout.php"
 	  success: function(data)
 			   {
 				   window.location = "home.php";
