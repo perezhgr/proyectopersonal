@@ -164,7 +164,7 @@ function PromoverUsuario(usuario){
 			$.ambiance({message: "El usuario tiene permisos de administrador !",
 				title: "Hecho!",
 				timeout: 3,
-				type: "error"});
+				type: "success"});
 			
 		}});
 }

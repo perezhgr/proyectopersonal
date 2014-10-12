@@ -48,7 +48,7 @@
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Condicion del turista</label>
                                 <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputEmail" placeholder="Nombre" name="condicion" 
+                                <input type="text" class="form-control" id="condicion" placeholder="Nombre" name="condicion" 
                                 value="{$condicion.condicion}">
                               </div>
                               </div>
@@ -63,7 +63,7 @@
                             </div>                                         
                             <div class="form-group">
                               <div class="col-lg-10 col-lg-offset-2">
-                                <button type="submit" class="btn btn-primary btn-">Editar</button>
+                                <button id="btneditarcondicion" type="submit" class="btn btn-primary btn-">Editar</button>
                               </div>
                             </div>
                           </fieldset>

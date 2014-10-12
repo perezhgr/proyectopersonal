@@ -46,12 +46,12 @@
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Condicion</label>
                               <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputEmail" placeholder="Condicion para categorizar a un turista" name="condicion" required>
+                                <input type="text" class="form-control" id="condicion" placeholder="Condicion para categorizar a un turista" name="condicion" >
                               </div>
                             </div>
                             <div class="form-group">
                               <div class="col-lg-10 col-lg-offset-2">
-                                <input type="submit" class="btn btn-primary" value="Crear">
+                                <input id="btncrearcondicion" type="submit" class="btn btn-primary" value="Crear">
                               </div>
                             </div>
                           </fieldset>

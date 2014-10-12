@@ -52,16 +52,10 @@
                <nav class="navbar navbar-default" role="navigation"> 
                   <!-- Brand and toggle get grouped for better mobile display -->
                   <div class="navbar-header">
-                    <a class="navbar-brand" href="">Comentarios</a>
+                    <a class="navbar-brand" >Comentarios</a>
                   </div>
                 </nav>
-                <style type="text/css">
-                  .scroll-area {
-                    height: 250px;
-                    position: relative;
-                    overflow: auto;
-                  }
-                </style>
+                
                 <div class="scroll-area" data-spy="scroll" data-offset="0">
                   <address id="comentario">
                   </address>

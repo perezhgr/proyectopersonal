@@ -6242,9 +6242,8 @@ button.close {
 background-color: black;
 }
 
-
 .scroll-area {
-  height: 250px;
+  height: 200px;
   position: relative;
   overflow: auto;
 }

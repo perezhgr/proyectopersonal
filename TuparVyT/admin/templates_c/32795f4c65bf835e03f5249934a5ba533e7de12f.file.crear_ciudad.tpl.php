@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-11 20:53:15
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-12 20:03:52
          compiled from "./templates/crear_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1519808595415a3c3a66d22-29589237%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '32795f4c65bf835e03f5249934a5ba533e7de12f' => 
     array (
       0 => './templates/crear_ciudad.tpl',
-      1 => 1413053580,
+      1 => 1413136950,
       2 => 'file',
     ),
   ),
@@ -73,19 +73,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Ciudad</label>
                     <div class="col-lg-10">
-                      <input id="1" type="text" class="form-control" placeholder="Nombre" name="ciudad" required>
+                      <input id="ciudad" type="text" class="form-control" placeholder="Nombre" name="ciudad" >
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Duracion</label>
                     <div class="col-lg-10">
-                      <input id="2" type="text" class="form-control"  placeholder="Duracion" name="duracion" required>
+                      <input id="duracion" type="text" class="form-control"  placeholder="Duracion" name="duracion" >
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Precio</label>
                     <div class="col-lg-10">
-                      <input id="3" stype="text" class="form-control"  placeholder="Precio" name="precio" required>
+                      <input id="precio" type="text" class="form-control"  placeholder="Precio" name="precio" >
                     </div>
                   </div>
                   <div class="form-group">
@@ -102,7 +102,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 </div><br>
                 <div class="form-group">
                   <div class="col-lg-10 col-lg-offset-2">
-                    <input type="submit" class="btn btn-primary" value="Crear">
+                    <input id="botoncrearciudad" type="submit" class="btn btn-primary" value="Crear">
                   </div>
                 </div>
               </fieldset>

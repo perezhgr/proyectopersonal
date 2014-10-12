@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-08 16:16:28
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-12 20:05:13
          compiled from "./templates/editar_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:38070822354158fd4c7fd06-98594908%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fd3fea16eec79b8685b12930d995bf162735c89a' => 
     array (
       0 => './templates/editar_ciudad.tpl',
-      1 => 1412777280,
+      1 => 1413137109,
       2 => 'file',
     ),
   ),
@@ -81,14 +81,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 foreach ($_from as $_smarty_tpl->tpl_vars['ciudad']->key => $_smarty_tpl->tpl_vars['ciudad']->value){
 $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
 ?>
-                                 <input type="text" class="form-control" id="inputPassword" placeholder="Ciudad" name="ciudad" value="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
+                                 <input type="text" class="form-control" id="ciudad" placeholder="Ciudad" name="ciudad" value="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
 ">
                             </div>
                             </div>
                             <div class="form-group">
                               <label for="inputPassword" class="col-lg-2 control-label">Duracion</label>
                               <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputPassword" placeholder="Duracion" name="duracion"
+                                <input type="text" class="form-control" id="duracion" placeholder="Duracion" name="duracion"
                                 value="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['duracion'];?>
 ">
                               </div>
@@ -96,7 +96,7 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                            <div class="form-group">
                               <label for="inputPassword" class="col-lg-2 control-label">Precio</label>
                               <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputPassword" placeholder="Precio" name="precio"
+                                <input type="text" class="form-control" id="precio" placeholder="Precio" name="precio"
                                 value="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['precio'];?>
 ">
                               </div>
@@ -114,7 +114,7 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                             </div>                                         
                             <div class="form-group">
                               <div class="col-lg-10 col-lg-offset-2">
-                                <button type="submit" class="btn btn-primary btn-">Editar</button>
+                                <button id="botoneditarciudad" type="submit" class="btn btn-primary btn-">Editar</button>
                               </div>
                             </div>
                           </fieldset>

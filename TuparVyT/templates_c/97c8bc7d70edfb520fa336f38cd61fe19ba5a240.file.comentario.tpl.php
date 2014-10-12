@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-12 16:00:47
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-12 16:15:13
          compiled from "./templates/comentario.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1517202957542b255766ba76-28728710%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97c8bc7d70edfb520fa336f38cd61fe19ba5a240' => 
     array (
       0 => './templates/comentario.tpl',
-      1 => 1413122440,
+      1 => 1413123259,
       2 => 'file',
     ),
   ),
@@ -93,16 +93,10 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
                <nav class="navbar navbar-default" role="navigation"> 
                   <!-- Brand and toggle get grouped for better mobile display -->
                   <div class="navbar-header">
-                    <a class="navbar-brand" href="">Comentarios</a>
+                    <a class="navbar-brand" >Comentarios</a>
                   </div>
                 </nav>
-                <style type="text/css">
-                  .scroll-area {
-                    height: 250px;
-                    position: relative;
-                    overflow: auto;
-                  }
-                </style>
+                
                 <div class="scroll-area" data-spy="scroll" data-offset="0">
                   <address id="comentario">
                   </address>

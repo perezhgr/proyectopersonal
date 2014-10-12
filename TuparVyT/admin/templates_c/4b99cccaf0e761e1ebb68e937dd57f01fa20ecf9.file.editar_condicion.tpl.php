@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-08 16:16:19
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-12 20:13:18
          compiled from "./templates/editar_condicion.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9778900955419d8a33d7454-13844061%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4b99cccaf0e761e1ebb68e937dd57f01fa20ecf9' => 
     array (
       0 => './templates/editar_condicion.tpl',
-      1 => 1412777773,
+      1 => 1413137574,
       2 => 'file',
     ),
   ),
@@ -81,7 +81,7 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Condicion del turista</label>
                                 <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputEmail" placeholder="Nombre" name="condicion" 
+                                <input type="text" class="form-control" id="condicion" placeholder="Nombre" name="condicion" 
                                 value="<?php echo $_smarty_tpl->tpl_vars['condicion']->value['condicion'];?>
 ">
                               </div>
@@ -98,7 +98,7 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
                             </div>                                         
                             <div class="form-group">
                               <div class="col-lg-10 col-lg-offset-2">
-                                <button type="submit" class="btn btn-primary btn-">Editar</button>
+                                <button id="btneditarcondicion" type="submit" class="btn btn-primary btn-">Editar</button>
                               </div>
                             </div>
                           </fieldset>

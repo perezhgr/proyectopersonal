@@ -11,7 +11,9 @@
 	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
 	<script type="text/javascript" src="js/login.js"></script>
 	<script type="text/javascript" src="js/logout.js"></script>
-	<script type="text/javascript" src="js/admin.js"></script>		
+	<script type="text/javascript" src="js/ABM.js"></script>		
+	<script type="text/javascript" src="js/ciudad.js"></script>		
+	<script type="text/javascript" src="js/condicion_turista.js"></script>		
 	<script type="text/javascript" src="js/jquery.ambiance.js"></script>
 	
 	</body>

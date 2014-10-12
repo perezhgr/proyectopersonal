@@ -46,19 +46,19 @@
                   <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Ciudad</label>
                     <div class="col-lg-10">
-                      <input id="1" type="text" class="form-control" placeholder="Nombre" name="ciudad" required>
+                      <input id="ciudad" type="text" class="form-control" placeholder="Nombre" name="ciudad" >
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Duracion</label>
                     <div class="col-lg-10">
-                      <input id="2" type="text" class="form-control"  placeholder="Duracion" name="duracion" required>
+                      <input id="duracion" type="text" class="form-control"  placeholder="Duracion" name="duracion" >
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Precio</label>
                     <div class="col-lg-10">
-                      <input id="3" stype="text" class="form-control"  placeholder="Precio" name="precio" required>
+                      <input id="precio" type="text" class="form-control"  placeholder="Precio" name="precio" >
                     </div>
                   </div>
                   <div class="form-group">
@@ -75,7 +75,7 @@
                 </div><br>
                 <div class="form-group">
                   <div class="col-lg-10 col-lg-offset-2">
-                    <input type="submit" class="btn btn-primary" value="Crear">
+                    <input id="botoncrearciudad" type="submit" class="btn btn-primary" value="Crear">
                   </div>
                 </div>
               </fieldset>
