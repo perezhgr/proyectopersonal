@@ -10,7 +10,9 @@
   <link href="css/jquery.ambiance.css" rel="stylesheet"> 
   <link href="css/alertify.bootstrap.css" rel="stylesheet">  
   <link href="css/alertify.core.css" rel="stylesheet">  
-  <link href="css/jquery.alerts.css" rel="stylesheet">       
+  <link href="css/jquery.alerts.css" rel="stylesheet">   
+  
+  
   
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

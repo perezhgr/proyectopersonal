@@ -15,7 +15,8 @@
   <link href="css/cover.css" rel="stylesheet">
   <link href="css/carousel.css" rel="stylesheet">
   <link href="css/font-awesome.css" rel="stylesheet">  
-  <link href="css/jquery.ambiance.css" rel="stylesheet">       
+  <link href="css/jquery.ambiance.css" rel="stylesheet"> 
+  <link href="css/bootstrap-theme.css" rel="stylesheet">         
   
   
 

@@ -7,7 +7,7 @@ include './models/model_comentario_ciudad.php';
 $model = new ModelComentarioCiudad();
 $view = new ViewComentarioCiudad();
 $controller = new ControllerComentarioCiudad($model,$view);
-//$controller->InsertarComentario();	
+$controller->InsertarComentario();	
 $controller->ImprimirComentario();	
 
 ?>

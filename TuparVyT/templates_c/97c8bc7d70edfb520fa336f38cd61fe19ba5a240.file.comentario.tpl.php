@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-09 19:02:03
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-12 16:00:47
          compiled from "./templates/comentario.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1517202957542b255766ba76-28728710%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97c8bc7d70edfb520fa336f38cd61fe19ba5a240' => 
     array (
       0 => './templates/comentario.tpl',
-      1 => 1412874097,
+      1 => 1413122440,
       2 => 'file',
     ),
   ),
@@ -29,7 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_542b25577170a3_99465041')) {function content_542b25577170a3_99465041($_smarty_tpl) {?>                  <!-- FORM COMENTARIO-->
-                  <form class="form-horizontal" ACTION="" method="POST">        
+                  <form class="form-horizontal" method="POST">        
                     <div class="jumbotron">
                     <h4>Deja tu comentario</h4><br>
                     <div class="form-group">
@@ -90,6 +90,23 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
               <!-- FIN FORM COMENTARIO-->
 
                <!-- LISTADO DE COMENTARIOS-->
+               <nav class="navbar navbar-default" role="navigation"> 
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="">Comentarios</a>
+                  </div>
+                </nav>
+                <style type="text/css">
+                  .scroll-area {
+                    height: 250px;
+                    position: relative;
+                    overflow: auto;
+                  }
+                </style>
+                <div class="scroll-area" data-spy="scroll" data-offset="0">
+                  <address id="comentario">
+                  </address>
+
                   <address>
                     <?php  $_smarty_tpl->tpl_vars['comentario'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['comentario']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['Comentario']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -104,5 +121,14 @@ $_smarty_tpl->tpl_vars['comentario']->_loop = true;
                     </div><br>
                     <?php } ?>                      
                   </address>
+                  <hr>
+
+                </div>
                 <!-- LISTADO DE COMENTARIOS-->
+
+
+
+
+
+
 <?php }} ?>

@@ -6241,3 +6241,10 @@ button.close {
 .cl{
 background-color: black;
 }
+
+
+.scroll-area {
+  height: 250px;
+  position: relative;
+  overflow: auto;
+}

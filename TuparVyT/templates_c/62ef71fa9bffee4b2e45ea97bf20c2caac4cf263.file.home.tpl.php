@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-11 23:59:07
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-12 15:52:47
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:936389164542b0a0e965c58-34212797%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1413064732,
+      1 => 1413121926,
       2 => 'file',
     ),
   ),
@@ -291,7 +291,7 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
             </div>
           </fieldset>
         </form>
-        
+               
         </div><br>
         <div class="row">
 

@@ -50,7 +50,7 @@ class ModelComentarioCiudad
 		VALUES (:texto,:id_usuario,:id_ciudad,id_condicion)";
 
 		$resultado = $this->conn->prepare($sql);
-		$resultado->execute(array(':texto'=>$comentario["texto"],':id_usuario'=>$comentario["id_usuario"],':id_ciudad'=>$comentario["id_ciudad"],':id_condicion'=>$comentario["id_condicion"]));
+		$resultado->execute(array(':texto'=>$comentario["texto"],':id_usuario'=>$comentario["id_usuario"],':id_ciudad'=>$comentario["id_ciudad"],':id_condicion'=>218));
 
 		if (!$resultado)
 		{
