@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-12 15:52:47
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-12 20:54:13
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:936389164542b0a0e965c58-34212797%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1413121926,
+      1 => 1413140007,
       2 => 'file',
     ),
   ),
@@ -273,19 +273,19 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                 <label for="inputPassword" class="col-lg-2 control-label"
                 name="asunto">Asunto</label>
                 <div class="col-lg-8">
-                  <input type="text" class="form-control" id="inputPassword" placeholder="Asunto" name="asunto">
+                  <input type="text" class="form-control" id="asunto" placeholder="Asunto" name="asunto">
                 </div>
               </div>
               <div class="form-group">
                <label for="inputText" class="col-lg-2 control-label">Mensaje</label>
                <div class="col-lg-8  control-label">
-                <textarea class="form-control" rows="8" type="text" name="texto" placeholder="Escriba su mensaje"></textarea>
+                <textarea class="form-control" rows="8" type="text" name="texto" placeholder="Escriba su mensaje" id="mensaje"></textarea>
               </div>
             </div>
             <div class="form-group">
               <div class="col-lg-2"></div>
               <div class="col-lg-8">
-              <button type="submit" class="btn btn-primary btn-md btn-block"><i class="fa fa-paper-plane fa-1x"></i></button>
+              <button id="btnenviarmail" type="submit" class="btn btn-primary btn-md btn-block"><i class="fa fa-paper-plane fa-1x"></i></button>
                 
               </div>
             </div>

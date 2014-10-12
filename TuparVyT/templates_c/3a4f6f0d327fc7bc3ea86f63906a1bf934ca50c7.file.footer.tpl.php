@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-11 21:48:12
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-12 20:45:40
          compiled from "./templates/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:936244761542b0a0eaaabd2-97661527%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a4f6f0d327fc7bc3ea86f63906a1bf934ca50c7' => 
     array (
       0 => './templates/footer.tpl',
-      1 => 1413056846,
+      1 => 1413139534,
       2 => 'file',
     ),
   ),
@@ -38,7 +38,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script type="text/javascript" src="js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="js/ie10-viewport-bug-workaround.js">
+    </script>
     <script type="text/javascript" src="js/SmoothPageScrolling.js"></script>
     <script type="text/javascript" src="js/detalle_ciudad.js"></script>
     <script type="text/javascript" src="js/comentario_ciudad.js"></script>
@@ -48,11 +49,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/registro.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/logout.js"></script>
+    <script type="text/javascript" src="js/mail.js"></script>
     <script type="text/javascript" src="js/jquery.ambiance.js"></script>   
-
-    
-    <!-- 
-    <script type="text/javascript" src="js/logout.js"></script>-->
     
   </body>
   </html><?php }} ?>

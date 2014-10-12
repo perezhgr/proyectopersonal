@@ -17,7 +17,8 @@
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script type="text/javascript" src="js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="js/ie10-viewport-bug-workaround.js">
+    </script>
     <script type="text/javascript" src="js/SmoothPageScrolling.js"></script>
     <script type="text/javascript" src="js/detalle_ciudad.js"></script>
     <script type="text/javascript" src="js/comentario_ciudad.js"></script>
@@ -27,11 +28,9 @@
     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
     <script type="text/javascript" src="js/registro.js"></script>
     <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/logout.js"></script>
+    <script type="text/javascript" src="js/mail.js"></script>
     <script type="text/javascript" src="js/jquery.ambiance.js"></script>   
-
-    
-    <!-- 
-    <script type="text/javascript" src="js/logout.js"></script>-->
     
   </body>
   </html>

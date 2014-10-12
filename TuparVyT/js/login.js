@@ -1,4 +1,4 @@
-$(document).ready(function() {nombre
+$(document).ready(function() {
 	
 	$('#iniciar').click(function(){
 

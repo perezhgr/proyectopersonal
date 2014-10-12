@@ -216,19 +216,19 @@
                 <label for="inputPassword" class="col-lg-2 control-label"
                 name="asunto">Asunto</label>
                 <div class="col-lg-8">
-                  <input type="text" class="form-control" id="inputPassword" placeholder="Asunto" name="asunto">
+                  <input type="text" class="form-control" id="asunto" placeholder="Asunto" name="asunto">
                 </div>
               </div>
               <div class="form-group">
                <label for="inputText" class="col-lg-2 control-label">Mensaje</label>
                <div class="col-lg-8  control-label">
-                <textarea class="form-control" rows="8" type="text" name="texto" placeholder="Escriba su mensaje"></textarea>
+                <textarea class="form-control" rows="8" type="text" name="texto" placeholder="Escriba su mensaje" id="mensaje"></textarea>
               </div>
             </div>
             <div class="form-group">
               <div class="col-lg-2"></div>
               <div class="col-lg-8">
-              <button type="submit" class="btn btn-primary btn-md btn-block"><i class="fa fa-paper-plane fa-1x"></i></button>
+              <button id="btnenviarmail" type="submit" class="btn btn-primary btn-md btn-block"><i class="fa fa-paper-plane fa-1x"></i></button>
                 
               </div>
             </div>

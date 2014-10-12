@@ -39,9 +39,8 @@
 				}
 				else{
 					$_SESSION["nombre"]=$user[0]["nombre"];
-					$this->view->ImprimirUsuarioLogueado($_SESSION["nombre"]);
-					//header('Location: home.php');
-				}		
+						$this->view->ImprimirUsuarioLogueado($_SESSION["nombre"]);
+					}		
 			}
 
 			$empresa=$this->model->ObtenerDescripcionEmpresa();
