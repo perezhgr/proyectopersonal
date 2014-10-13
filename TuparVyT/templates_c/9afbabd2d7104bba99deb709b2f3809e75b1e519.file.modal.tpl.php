@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-13 22:45:11
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-13 23:04:16
          compiled from "./templates/modal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1443305185542b0a1a112ec0-45545667%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9afbabd2d7104bba99deb709b2f3809e75b1e519' => 
     array (
       0 => './templates/modal.tpl',
-      1 => 1413233044,
+      1 => 1413234248,
       2 => 'file',
     ),
   ),
@@ -25,6 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ciudad' => 0,
     'Comentario' => 0,
     'comentario' => 0,
+    'Nombre' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -125,8 +126,10 @@ $_smarty_tpl->tpl_vars['comentario']->_loop = true;
 </span>
                                 <i class="fa fa-comments fa-2x"></i>&nbsp;
                               </button><br>
-                              <small><em>* Esta ciudad no tiene comentarios.<br>
-                              * Si desea dejar su comentario debera registrarse primero.</em>
+                              <small><em>* Esta ciudad no tiene comentarios.</em><br>
+                              <?php if (!isset($_smarty_tpl->tpl_vars['Nombre']->value)){?>
+                              <em>* Si desea dejar su comentario debera registrarse primero.</em>
+                              <?php }?>
                               </small>
                               <?php }else{ ?>  
                               <button type="button" class="btn btn-primary" onClick="getComentarioCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
@@ -135,8 +138,13 @@ $_smarty_tpl->tpl_vars['comentario']->_loop = true;
 </span>
                                 <i class="fa fa-comments fa-2x"></i>&nbsp;
                               </button><br>
-                              <small><em>
-                              * Si desea dejar su comentario debera registrarse primero.</em></small>
+                              <small>
+                              <?php if (!isset($_smarty_tpl->tpl_vars['Nombre']->value)){?>
+                              <em>                              
+                              * Si desea dejar su comentario debera registrarse primero.</em>
+                              <?php }?>
+                              </small>
+                              
                               <?php }?>
                               <?php } ?>
                             </li><br><br>

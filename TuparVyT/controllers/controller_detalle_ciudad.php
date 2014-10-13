@@ -1,4 +1,5 @@
 <?php
+session_start();
 class ControllerDetalleCiudad
 {
 	private $model;
@@ -17,9 +18,13 @@ class ControllerDetalleCiudad
 			$this->view->MostrarDetalleCiudad($this->model->ObtenerDetalleCiudad($_GET['id_ciudad']));
 			$this->view->MostrarImgCiudad($this->model->ObtenerImgByIdCiudad($_GET['id_ciudad']));
 		    $this->view->MostrarContadorComentario($this->model->ObtenerCountComentByIdCiudad($_GET['id_ciudad']));
-
-		    $this->view->ImprimirModal();
 		}
+		
+		if (isset($_SESSION['nombre'])) {
+			$this->view->ImprimirModalSinLeyendaDeRegistrarse($_SESSION["nombre"]);	
+		}
+		else
+			$this->view->ImprimirModal();
 	}
 }	
 ?>

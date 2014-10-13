@@ -68,16 +68,23 @@
                                 <span class="badge pull-right">{$comentario.comentarios}</span>
                                 <i class="fa fa-comments fa-2x"></i>&nbsp;
                               </button><br>
-                              <small><em>* Esta ciudad no tiene comentarios.<br>
-                              * Si desea dejar su comentario debera registrarse primero.</em>
+                              <small><em>* Esta ciudad no tiene comentarios.</em><br>
+                              {if !isset($Nombre)}
+                              <em>* Si desea dejar su comentario debera registrarse primero.</em>
+                              {/if}
                               </small>
                               {else}  
                               <button type="button" class="btn btn-primary" onClick="getComentarioCiudad({$ciudad.id_ciudad})">
                                 <span class="badge pull-right">{$comentario.comentarios}</span>
                                 <i class="fa fa-comments fa-2x"></i>&nbsp;
                               </button><br>
-                              <small><em>
-                              * Si desea dejar su comentario debera registrarse primero.</em></small>
+                              <small>
+                              {if !isset($Nombre)}
+                              <em>                              
+                              * Si desea dejar su comentario debera registrarse primero.</em>
+                              {/if}
+                              </small>
+                              
                               {/if}
                               {/foreach}
                             </li><br><br>
