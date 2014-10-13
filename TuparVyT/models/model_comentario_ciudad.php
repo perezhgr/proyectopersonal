@@ -43,24 +43,5 @@ class ModelComentarioCiudad
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
 	}
-
-	public function InsertaComentario($comentario){
-
-		$sql = "INSERT INTO `tuparvt`.`comentario` (`texto`,`id_usuario`, `id_ciudad`, `id_condicion`) 
-		VALUES (:texto,:id_usuario,:id_ciudad,id_condicion)";
-
-		$resultado = $this->conn->prepare($sql);
-		$resultado->execute(array(':texto'=>$comentario["texto"],':id_usuario'=>$comentario["id_usuario"],':id_ciudad'=>$comentario["id_ciudad"],':id_condicion'=>218));
-
-		if (!$resultado)
-		{
-			die(print($this->conn->errorInfo()[2]));
-		}
-		return $resultado->fetchAll(PDO::FETCH_ASSOC);
-
-	}
-
-
-
 }
 ?>

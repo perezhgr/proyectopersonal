@@ -1,3 +1,4 @@
+                  {if isset($Nombre)}
                   <!-- FORM COMENTARIO-->
                   <form class="form-horizontal" method="POST">        
                     <div class="jumbotron">
@@ -40,12 +41,13 @@
                       <div class="form-group">
                         <div class="col-lg-3"></div>
                         <div class="col-lg-2">
-                          <button type="submit" class="btn btn-success btn-md">Publicar</button>                            
+                          <a href="GrabarComentario.php"><button type="submit" class="btn btn-success btn-md">Publicar</button></a>
                         </div>
                       </div>
                     
                     </div>
                   </form>
+                  {/if}
               <!-- FIN FORM COMENTARIO-->
 
                <!-- LISTADO DE COMENTARIOS-->

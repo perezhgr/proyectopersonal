@@ -1,4 +1,5 @@
 <?php
+session_start();
 class ControllerComentarioCiudad
 {
 	private $model;
@@ -20,19 +21,12 @@ class ControllerComentarioCiudad
 			$this->view->MostrarIdCiudadFormularioComentario($this->model->ObtenerIdCiudad($_GET['id_ciudad']));			
 		}
 
-		$this->view->ImprimirComentario();	
-	}
-
-	public function InsertarComentario(){
-
-		if (isset($_POST['texto'])) {
-			$comentario["texto"] = $_POST["texto"];	
-			$comentario["id_usuario"] = $_POST["id_usuario"];
-			$comentario["id_ciudad"] = $_POST["id_ciudad"];
-			
-			$this->model->InsertaComentario($comentario);
+		if (isset($_SESSION['nombre'])) {
+			$this->view->ImprimirComentarioSesion($_SESSION["nombre"]);	
+		}
+		else{
+			$this->view->ImprimirComentario();	
 		}
 	}
-
 }
 ?>

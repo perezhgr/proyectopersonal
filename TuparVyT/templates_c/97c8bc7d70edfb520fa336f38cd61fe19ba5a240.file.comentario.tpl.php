@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-12 16:15:13
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-13 22:36:10
          compiled from "./templates/comentario.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1517202957542b255766ba76-28728710%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97c8bc7d70edfb520fa336f38cd61fe19ba5a240' => 
     array (
       0 => './templates/comentario.tpl',
-      1 => 1413123259,
+      1 => 1413232473,
       2 => 'file',
     ),
   ),
@@ -19,6 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_542b25577170a3_99465041',
   'variables' => 
   array (
+    'Nombre' => 0,
     'IdCiudad' => 0,
     'idciudad' => 0,
     'Condicion' => 0,
@@ -28,7 +29,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_542b25577170a3_99465041')) {function content_542b25577170a3_99465041($_smarty_tpl) {?>                  <!-- FORM COMENTARIO-->
+<?php if ($_valid && !is_callable('content_542b25577170a3_99465041')) {function content_542b25577170a3_99465041($_smarty_tpl) {?>                  <?php if (isset($_smarty_tpl->tpl_vars['Nombre']->value)){?>
+                  <!-- FORM COMENTARIO-->
                   <form class="form-horizontal" method="POST">        
                     <div class="jumbotron">
                     <h4>Deja tu comentario</h4><br>
@@ -81,12 +83,13 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
                       <div class="form-group">
                         <div class="col-lg-3"></div>
                         <div class="col-lg-2">
-                          <button type="submit" class="btn btn-success btn-md">Publicar</button>                            
+                          <a href="GrabarComentario.php"><button type="submit" class="btn btn-success btn-md">Publicar</button></a>
                         </div>
                       </div>
                     
                     </div>
                   </form>
+                  <?php }?>
               <!-- FIN FORM COMENTARIO-->
 
                <!-- LISTADO DE COMENTARIOS-->

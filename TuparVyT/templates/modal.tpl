@@ -63,7 +63,11 @@
                           <ul class="nav nav-pills nav-stacked">
                             <li class="active">
                               {foreach from =$Comentario item=comentario}
-                              {if $comentario.comentarios== 0}
+                              {if $comentario.comentarios == 0}
+                               <button type="button" class="btn btn-primary" onClick="getComentarioCiudad({$ciudad.id_ciudad})">
+                                <span class="badge pull-right">{$comentario.comentarios}</span>
+                                <i class="fa fa-comments fa-2x"></i>&nbsp;
+                              </button><br>
                               <small><em>* Esta ciudad no tiene comentarios.<br>
                               * Si desea dejar su comentario debera registrarse primero.</em>
                               </small>
