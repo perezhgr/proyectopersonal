@@ -43,7 +43,7 @@
 
                   <!-- DATOS CIUDAD-->
                         
-                  <div class="row">                                    
+                  <div class="  row">                                    
                     <div class="col-lg-4  text-center">                      
                       <h3>Lugar<h3><h4>{$ciudad.nombre_ciudad}</h4>
                       </div>
@@ -63,29 +63,34 @@
                           <ul class="nav nav-pills nav-stacked">
                             <li class="active">
                               {foreach from =$Comentario item=comentario}
-                              {if $comentario.comentarios == 0}
-                               <button type="button" class="btn btn-primary" onClick="getComentarioCiudad({$ciudad.id_ciudad})">
-                                <span class="badge pull-right">{$comentario.comentarios}</span>
-                                <i class="fa fa-comments fa-2x"></i>&nbsp;
-                              </button><br>
-                              <small><em>* Esta ciudad no tiene comentarios.</em><br>
-                              {if !isset($Nombre)}
-                              <em>* Si desea dejar su comentario debera registrarse primero.</em>
-                              {/if}
-                              </small>
-                              {else}  
-                              <button type="button" class="btn btn-primary" onClick="getComentarioCiudad({$ciudad.id_ciudad})">
-                                <span class="badge pull-right">{$comentario.comentarios}</span>
-                                <i class="fa fa-comments fa-2x"></i>&nbsp;
-                              </button><br>
-                              <small>
-                              {if !isset($Nombre)}
-                              <em>                              
-                              * Si desea dejar su comentario debera registrarse primero.</em>
-                              {/if}
-                              </small>
-                              
-                              {/if}
+                                {if $comentario.comentarios == 0}
+                                    <button type="button" class="btn btn-primary" onClick="getComentarioCiudad({$ciudad.id_ciudad})">
+                                      <span class="badge pull-right">
+                                          {$comentario.comentarios}
+                                      </span>
+                                      <i class="fa fa-comments fa-2x"></i>&nbsp;
+                                    </button><br>
+                                    <small>
+                                      <em>* Esta ciudad no tiene comentarios.</em><br>
+                                      {if !isset($Nombre)}
+                                        <em>* Si desea dejar su comentario debera   registrarse primero.
+                                        </em>
+                                      {/if}
+                                    </small>
+                                {else}  
+                                    <button type="button" class="btn btn-primary" onClick="getComentarioCiudad({$ciudad.id_ciudad})">
+                                      <span class="badge pull-right">
+                                          {$comentario.comentarios}
+                                      </span>
+                                      <i class="fa fa-comments fa-2x"></i>&nbsp;
+                                    </button><br>
+                                    <small>
+                                    {if !isset($Nombre)}
+                                      <em>* Si desea dejar su comentario debera registrarse primero.
+                                      </em>
+                                    {/if}
+                                    </small>
+                                {/if}
                               {/foreach}
                             </li><br><br>
                           </ul>
