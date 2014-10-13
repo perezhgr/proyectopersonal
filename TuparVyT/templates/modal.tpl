@@ -25,8 +25,7 @@
                             </div>
                           </div>                          
                           {/foreach}   
-                        </div>
-                        
+                        </div>                        
 
                         <!-- Controls -->
                         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">

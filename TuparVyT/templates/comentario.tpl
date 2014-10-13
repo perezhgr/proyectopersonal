@@ -1,6 +1,6 @@
                   {if isset($Nombre)}
                   <!-- FORM COMENTARIO-->
-                  <form class="form-horizontal" method="POST">        
+                  <form id="formcrearcomentario"class="form-horizontal" method="POST">        
                     <div class="jumbotron">
                     <h4>Deja tu comentario</h4><br>
                     <div class="form-group">
@@ -41,7 +41,7 @@
                       <div class="form-group">
                         <div class="col-lg-3"></div>
                         <div class="col-lg-2">
-                          <a href="GrabarComentario.php"><button type="submit" class="btn btn-success btn-md">Publicar</button></a>
+                          <button type="submit" class="btn btn-success btn-md">Publicar</button>
                         </div>
                       </div>
                     

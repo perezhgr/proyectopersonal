@@ -9,6 +9,13 @@ class ViewGrabarComentario
 		$this->smarty = New Smarty;
 	}
 
+
+	public function MostrarUltimoComentarioInsertado($comentario)
+	{
+		$this->smarty->assign('Comentario',$comentario);
+		$this->smarty->display('ultimo_comentario.tpl');
+
+	}
 }
 
 ?>

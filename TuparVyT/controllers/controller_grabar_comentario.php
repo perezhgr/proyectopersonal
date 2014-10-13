@@ -2,11 +2,11 @@
 class ControllerGrabarComentario
 {
 	private $model;
-	//private $view;
+	private $view;
 
-	public function __construct($model/*,$view*/) {
+	public function __construct($model,$view) {
 		$this->model = $model;
-	//	$this->view = $view;
+		$this->view = $view;
 	}
 
 
@@ -21,5 +21,14 @@ class ControllerGrabarComentario
 			$this->model->InsertaComentario($comentario);
 		}
 	}
+
+	public function BuscarComentario(){
+
+		if (isset($_GET['id_ciudad'])) {
+			$this->view->MostrarUltimoComentarioInsertado($this->model->BuscarComentario($_GET['id_ciudad']));
+		}
+	}
+
+	
 }
 ?>
