@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-12 20:54:13
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-14 14:58:56
          compiled from "./templates/home.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:936389164542b0a0e965c58-34212797%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1413140007,
+      1 => 1413291534,
       2 => 'file',
     ),
   ),
@@ -34,14 +34,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <body>
       <div id="top" class="site-wrapper">
 
-        <div class="site-wrapper-inner ">
+        <div class="site-wrapper-inner">
 
           <div class="cover-container ">
 
             <div class="masthead clearfix ">
-              <div class="inner ">
+              <div class="inner">
                 <h3 class="masthead-brand"></h3>
-                <ul class=" nav masthead-nav">
+                <ul class="nav masthead-nav d ">
                   <li class="active"><a href="#top">Home</a></li>
                   <li ><a href="#empresa">Acerca</a></li>
                   <li><a href="#paquetes">Paquetes</a></li>
@@ -74,7 +74,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   </li>                  
                 </ul>
               </div>
-            </div>
+            </div><br>
 
             <div class="inner cover ">
               <h1 class="cover-heading w ">Tupar Viajes y Turismo</h1>
@@ -159,7 +159,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <div class="form-group">            
             <div class="col-lg-1">
               <button  id="registrarse" type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-default btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
-            </div><br><br><br>
+            </div><br><br>
               <small>¿Ya tienes una cuenta? 
               </small>
               <a style="cursor:pointer"class="zoom" data-toggle="modal" data-target="#myModal"><strong>&nbsp;Inicia sesion</strong></a>

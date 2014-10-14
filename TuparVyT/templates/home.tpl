@@ -2,14 +2,14 @@
     <body>
       <div id="top" class="site-wrapper">
 
-        <div class="site-wrapper-inner ">
+        <div class="site-wrapper-inner">
 
           <div class="cover-container ">
 
             <div class="masthead clearfix ">
-              <div class="inner ">
+              <div class="inner">
                 <h3 class="masthead-brand"></h3>
-                <ul class=" nav masthead-nav">
+                <ul class="nav masthead-nav d ">
                   <li class="active"><a href="#top">Home</a></li>
                   <li ><a href="#empresa">Acerca</a></li>
                   <li><a href="#paquetes">Paquetes</a></li>
@@ -41,7 +41,7 @@
                   </li>                  
                 </ul>
               </div>
-            </div>
+            </div><br>
 
             <div class="inner cover ">
               <h1 class="cover-heading w ">Tupar Viajes y Turismo</h1>
@@ -122,7 +122,7 @@
             <div class="form-group">            
             <div class="col-lg-1">
               <button  id="registrarse" type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-default btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
-            </div><br><br><br>
+            </div><br><br>
               <small>¿Ya tienes una cuenta? 
               </small>
               <a style="cursor:pointer"class="zoom" data-toggle="modal" data-target="#myModal"><strong>&nbsp;Inicia sesion</strong></a>
