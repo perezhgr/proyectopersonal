@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-12 18:19:15
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-14 16:59:59
          compiled from "./templates/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:141441983954158fd4ceef23-17344057%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97c13ae6868bbc459509c9f1b968154acd23eecc' => 
     array (
       0 => './templates/header.tpl',
-      1 => 1413120953,
+      1 => 1413298726,
       2 => 'file',
     ),
   ),
@@ -31,7 +31,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <link href="css/jquery.ambiance.css" rel="stylesheet"> 
   <link href="css/alertify.bootstrap.css" rel="stylesheet">  
   <link href="css/alertify.core.css" rel="stylesheet">  
-  <link href="css/jquery.alerts.css" rel="stylesheet">   
+  <link href="css/jquery.alerts.css" rel="stylesheet"> 
+  <link href="css/sweet-alert.css" rel="stylesheet"> 
+  
   
   
   

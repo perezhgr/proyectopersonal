@@ -2,40 +2,57 @@
 function BorrarCiudad(ciudad){
 //	var x;
 //    if (confirm("Esta seguro que desea borrar la ciudad ?") == true) {
-   
+
 	$.ajax({
 		type: "GET",
 		url: "borrar_ciudad.php?id_ciudad="+ciudad,
 		success: function(data)
 		{	
-			$('#TabCiudad').html(data);
-			$.ambiance({message: "La ciudad se ha eliminado exitosamente !",
-				title: "Hecho!",
-				timeout: 2,
-				type: "success"});
 			
-		}});
+			swal({
+				title: "Estas seguro?",
+				text: "Tu registro no se podra recuperar!",
+				type: "warning",
+				showCancelButton: true,
+				confirmButtonColor: "#DD6B55",
+				confirmButtonText: "Si, borrar esto!",
+				cancelButtonText: "No, cancelar!",
+				closeOnConfirm: false,
+				closeOnCancel: false
+			},
+			function(isConfirm){
+				if (isConfirm) {
+					$('#TabCiudad').html(data);
+					swal("Borrado!", "La ciudad ha sido borrada.", "success");
+				} else {
+					swal("Cancelado", "La ciudad esta a salvo :)", "error");
+				}
+			});
+			
+		}
+
+	});
 }
 
 /*----Crear una ciudad----*/
 
 $('#formciudad').submit( function(e) {
-    $.ajax( {
-      url: "AM_ciudad.php",
-      type: "POST",
-      data: new FormData( this ),
-      processData: false,
-      contentType: false
-            
-    } );
-    $(":text").val('');
-    $.ambiance({message: "La ciudad se ha creado exitosamente !",
-				title: "Hecho!",
-				timeout: 2,
-				type: "success"});						
-   
-   e.preventDefault(); 
-  } );
+	$.ajax( {
+		url: "AM_ciudad.php",
+		type: "POST",
+		data: new FormData( this ),
+		processData: false,
+		contentType: false
+
+	} );
+	$(":text").val('');
+	$.ambiance({message: "La ciudad se ha creado exitosamente !",
+		title: "Hecho!",
+		timeout: 2,
+		type: "success"});						
+
+	e.preventDefault(); 
+} );
 
 
 /*----Editar una ciudad----*/

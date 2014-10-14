@@ -15,6 +15,7 @@
 	<script type="text/javascript" src="js/ciudad.js"></script>		
 	<script type="text/javascript" src="js/condicion_turista.js"></script>		
 	<script type="text/javascript" src="js/jquery.ambiance.js"></script>
+	<script type="text/javascript" src="js/sweet-alert.js"></script>	
 	
 	</body>
 </html>
