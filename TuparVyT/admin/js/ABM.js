@@ -1,6 +1,5 @@
 /*----Borrar una ciudad----*/
 function BorrarCiudad(ciudad){
-
 	swal({
 		title: "Estas seguro?",
 		text: "Tu registro no se podra recuperar!",
@@ -69,66 +68,73 @@ $("#formeditarciudad").submit(function()
 
 /*----Borrar un comentario (testimonio)----*/
 function BorrarComentario(comentario){
-	$.ajax({
-		type: "GET",
-		url: "borrar_comentario.php?id_comentario="+comentario,
-		success: function(data)
-		{	
-			swal({
-				title: "Estas seguro?",
-				text: "Tu registro no se podra recuperar!",
-				type: "warning",
-				showCancelButton: true,
-				confirmButtonColor: "#DD6B55",
-				confirmButtonText: "Si, borrar esto!",
-				cancelButtonText: "No, cancelar!",
-				closeOnConfirm: false,
-				closeOnCancel: false
-			},
-			function(isConfirm){
-				if (isConfirm) {
-					$('#TabComentario').html(data);
+	swal({
+		title: "Estas seguro?",
+		text: "Tu registro no se podra recuperar!",
+		type: "warning",
+		showCancelButton: true,
+		confirmButtonColor: "#DD6B55",
+		confirmButtonText: "Si, borrar esto!",
+		cancelButtonText: "No, cancelar!",
+		closeOnConfirm: false,
+		closeOnCancel: false
+	},
+
+	function(isConfirm){
+		if (isConfirm) {
+			
+			$.ajax({
+				type: "GET",
+				url: "borrar_comentario.php?id_comentario="+comentario,
+				success: function(data)
+				{
+					$('#TabComentario').html(data);					
 					swal("Borrado!", "El comentario se ha eliminado exitosamente !.", "success");
-				} else {
-					swal("Cancelado", "El comentario esta a salvo :)", "error");
 				}
 			});
-			
-		}});
+		}
+		else {
+			swal("Cancelado", "El comentario esta a salvo :)", "error");
+		}	
+
+	});
 }
 
 
 
 /*----Borrar una condicion----*/
 function BorrarCondicion(condicion){
-	$.ajax({
-		type: "GET",
-		url: "borrar_condicion.php?id_condicion="+condicion,
-		success: function(data)
-		{	
-			swal({
-				title: "Estas seguro?",
-				text: "Tu registro no se podra recuperar!",
-				type: "warning",
-				showCancelButton: true,
-				confirmButtonColor: "#DD6B55",
-				confirmButtonText: "Si, borrar esto!",
-				cancelButtonText: "No, cancelar!",
-				closeOnConfirm: false,
-				closeOnCancel: false
-			},
-			function(isConfirm){
-				if (isConfirm) {
-					$('#TabCondicion').html(data);
+	swal({
+		title: "Estas seguro?",
+		text: "Tu registro no se podra recuperar!",
+		type: "warning",
+		showCancelButton: true,
+		confirmButtonColor: "#DD6B55",
+		confirmButtonText: "Si, borrar esto!",
+		cancelButtonText: "No, cancelar!",
+		closeOnConfirm: false,
+		closeOnCancel: false
+	},
+
+	function(isConfirm){
+		if (isConfirm) {
+			
+			$.ajax({
+				type: "GET",
+				url: "borrar_condicion.php?id_condicion="+condicion,
+				success: function(data)
+				{
+					$('#TabCondicion').html(data);				
 					swal("Borrado!", "La condicion se ha eliminado exitosamente !.", "success");
-				} else {
-					swal("Cancelado", "La condicion esta a salvo :)", "error");
 				}
 			});
-			
-		}});
-}
+		}
+		else {
+			swal("Cancelado", "La condicion esta a salvo :)", "error");
+		}	
 
+	});
+}
 
 
 /*----Crear una condicion----*/
@@ -171,60 +177,70 @@ $("#formeditarcondicion").submit(function()
 
 /*----Borrar un usuario ----*/
 function BorrarUsuario(usuario){
-	$.ajax({
-		type: "GET",
-		url: "borrar_usuario.php?id_usuario="+usuario,
-		success: function(data)
-		{	
-			swal({
-				title: "Estas seguro?",
-				text: "Tu registro no se podra recuperar!",
-				type: "warning",
-				showCancelButton: true,
-				confirmButtonColor: "#DD6B55",
-				confirmButtonText: "Si, borrar esto!",
-				cancelButtonText: "No, cancelar!",
-				closeOnConfirm: false,
-				closeOnCancel: false
-			},
-			function(isConfirm){
-				if (isConfirm) {
-					$('#TabUsuario').html(data);
-					swal("Borrado!", "El usuario se ha eliminado exitosamente !", "success");
-				} else {
-					swal("Cancelado", "El usuario esta a salvo :)", "error");
+	swal({
+		title: "Estas seguro?",
+		text: "Tu registro no se podra recuperar!",
+		type: "warning",
+		showCancelButton: true,
+		confirmButtonColor: "#DD6B55",
+		confirmButtonText: "Si, borrar esto!",
+		cancelButtonText: "No, cancelar!",
+		closeOnConfirm: false,
+		closeOnCancel: false
+	},
+
+	function(isConfirm){
+		if (isConfirm) {
+			
+			$.ajax({
+				type: "GET",
+				url: "borrar_usuario.php?id_usuario="+usuario,
+				success: function(data)
+				{
+					$('#TabUsuario').html(data);				
+					swal("Borrado!", "El usuario se ha eliminado exitosamente !.", "success");
 				}
 			});
-		}});
+		}
+		else {
+			swal("Cancelado", "El usuario esta a salvo :)", "error");
+		}	
+
+	});
 }
+
 
 /*----Editar un usuario (Promover) ----*/
 function PromoverUsuario(usuario){
-	$.ajax({
-		type: "GET",
-		url: "editar_usuario.php?id_usuario="+usuario,
-		success: function(data)
-		{	
-			swal({
-				title: "Estas seguro?",
-				text: "Los permisos del usuarios seran modificados!",
-				type: "warning",
-				showCancelButton: true,
-				confirmButtonColor: "#DD6B55",
-				confirmButtonText: "Si, hacer esto!",
-				cancelButtonText: "No, salir!",
-				closeOnConfirm: false,
-				closeOnCancel: false
-			},
-			function(isConfirm){
-				if (isConfirm) {
-					$('#TabUsuario').html(data);
+	swal({
+		title: "Estas seguro?",
+		text: "Tu registro no se podra recuperar!",
+		type: "warning",
+		showCancelButton: true,
+		confirmButtonColor: "#DD6B55",
+		confirmButtonText: "Si!",
+		cancelButtonText: "No, cancelar!",
+		closeOnConfirm: false,
+		closeOnCancel: false
+	},
+
+	function(isConfirm){
+		if (isConfirm) {
+			
+			$.ajax({
+				type: "GET",
+				url: "editar_usuario.php?id_usuario="+usuario,
+				success: function(data)
+				{
+					$('#TabUsuario').html(data);				
 					swal("Hecho!", "El usuario tiene permisos de administrador !.", "success");
-				} else {
-					swal("Cancelado", "Los permisos del usuario no se han modificado :)", "error");
 				}
 			});
-			
-		}});
+		}
+		else {
+			swal("Cancelado", "Los permisos del usuario no se han modificado :)", "error");
+		}	
+
+	});
 }
 
