@@ -20,6 +20,13 @@ class ViewDetalleCiudad
 	public function MostrarContadorComentario($comentario){
 		$this->smarty->assign("Comentario",$comentario);				
 	}
+	
+
+	public function ImprimirModalSinLeyendaDeRegistrarse($nombre){
+		$this->smarty->assign("Nombre",$nombre);				
+		$this->smarty->display('modal.tpl');
+
+	}
 
 	public function ImprimirModal(){
 		$this->smarty->display('modal.tpl');

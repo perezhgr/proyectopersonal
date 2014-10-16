@@ -15,7 +15,8 @@ class ControllerBorrarCiudad
 		{
 			if(isset($_GET['id_ciudad'])) {
 				$this->model->EliminarCiudad($_GET['id_ciudad']);
-				$this->view->resultado();
+				$this->view->MostrarCiudadesActualizadas($this->model->GetCiudades());
+				$this->view->MostrarPanelActualizado();				
 			}
 		}
 		else

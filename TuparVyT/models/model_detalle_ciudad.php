@@ -26,7 +26,7 @@ class ModelDetalleCiudad
 	
 	public function ObtenerImgByIdCiudad($id_ciudad){
 		
-		$sql = "SELECT c.id_ciudad,nombre_ciudad,i.path
+		$sql = "SELECT c.id_ciudad,nombre_ciudad,i.path,i.id_imagen
 		FROM   ciudad c
 		JOIN   imagen i ON (i.id_ciudad = c.id_ciudad)
 		WHERE  c.id_ciudad =$id_ciudad ";

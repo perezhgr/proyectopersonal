@@ -9,15 +9,13 @@
 	<script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
 	<script type="text/javascript" src="js/logout.js"></script>
+	<script type="text/javascript" src="js/ABM.js"></script>		
+	<script type="text/javascript" src="js/ciudad.js"></script>		
+	<script type="text/javascript" src="js/condicion_turista.js"></script>		
+	<script type="text/javascript" src="js/jquery.ambiance.js"></script>
+	<script type="text/javascript" src="js/sweet-alert.js"></script>	
 	
-	  <script>
-        $('#confirm-delete').on('show.bs.modal', function(e) {
-            $(this).find('.danger').attr('href', $(e.relatedTarget).data('href'));
-            
-            $('.debug-url').html('Delete URL: <strong>' + $(this).find('.danger').attr('href') + '</strong>');
-        })
-    </script>
-</body>
+	</body>
 </html>

@@ -1,25 +1,27 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-09-29 15:41:30
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-15 16:54:12
          compiled from "./templates/home.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:11170143915419df466eb559-80047184%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:936389164542b0a0e965c58-34212797%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '62ef71fa9bffee4b2e45ea97bf20c2caac4cf263' => 
     array (
       0 => './templates/home.tpl',
-      1 => 1411998087,
+      1 => 1413384849,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '11170143915419df466eb559-80047184',
+  'nocache_hash' => '936389164542b0a0e965c58-34212797',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5419df46881c82_06520704',
+  'unifunc' => 'content_542b0a0ea9d2e1_27618312',
   'variables' => 
   array (
-    'Mail' => 0,
+    'Nombre' => 0,
+    'ErrorUsuario' => 0,
+    'ErrorPass' => 0,
     'Empresa' => 0,
     'empresa' => 0,
     'Ciudades' => 0,
@@ -27,40 +29,50 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5419df46881c82_06520704')) {function content_5419df46881c82_06520704($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_542b0a0ea9d2e1_27618312')) {function content_542b0a0ea9d2e1_27618312($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
     <body>
       <div id="top" class="site-wrapper">
 
-        <div class="site-wrapper-inner ">
+        <div class="site-wrapper-inner">
 
           <div class="cover-container ">
 
-            <div class=" masthead clearfix ">
-              <div class="inner ">
+            <div class="masthead clearfix ">
+              <div class="inner">
                 <h3 class="masthead-brand"></h3>
-                <ul class="nav masthead-nav">
+                <ul class="nav masthead-nav d ">
                   <li class="active"><a href="#top">Home</a></li>
-                  <li><a href="#empresa">Acerca</a></li>
+                  <li ><a href="#empresa">Acerca</a></li>
                   <li><a href="#paquetes">Paquetes</a></li>
                   <li><a href="#contacto">Contacto</a></li>
                   <li><a href=""></a></li>
-                  <li><p class="lead" data-toggle="tooltip" data-placement="left" title="Iniciar sesion">
-                    <a class="zoom btn btn-primary btn-md" data-toggle="modal" data-target="#myModal"><i class="fa fa-user fa-1x"></i>&nbsp;</a>
-                  </p>
-                  </li>
-                  <?php if (isset($_smarty_tpl->tpl_vars['Mail']->value)){?>
-                  <h4><strong>Conectado como:</strong><p class="text-success"><?php echo $_smarty_tpl->tpl_vars['Mail']->value;?>
-</p></h4> 
-                           
-                  <button id="logout" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
-              <span class="glyphicon glyphicon-log-out">&nbsp&nbsp</span>
-            </button>
-                  <?php }?>
-
+                  <li><a href=""></a></li>
+                  <li><a href=""></a></li>
+                  <li><a href=""></a></li>
+                  <li>
+                    <?php if (isset($_smarty_tpl->tpl_vars['Nombre']->value)){?> 
+                    <p style="display:none" class="lead">
+                      <a class="zoom btn btn-default btn-sm" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
+                    </p>
+                    <p class="lead">
+                      <a class="btn btn-primary btn-sm">
+                        <strong>Hola <?php echo $_smarty_tpl->tpl_vars['Nombre']->value;?>
+ !</strong>
+                      </a>&nbsp
+                      <button id="logout" class=" zoom btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
+                        <i class="fa fa-power-off"></i>
+                      </button>
+                    </p>
+                    <?php }else{ ?>
+                    <p class="lead">
+                      <a class="zoom btn btn-default btn-sm" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
+                    </p>
+                    <?php }?>
+                  </li>                  
                 </ul>
               </div>
-            </div>
+            </div><br>
 
             <div class="inner cover ">
               <h1 class="cover-heading w ">Tupar Viajes y Turismo</h1>
@@ -75,25 +87,39 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                       <h4 class="modal-title" id="myModalLabel">Inicia sesion</h4>
                     </div>
                     <div class="modal-body">
-                      <form id="formlog" class="form-horizontal" method="POST">        
+                      <form class="form-horizontal" method="POST">        
                         <fieldset>
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail">
+                              <input type="text" class="form-control" id="mail" placeholder="Mail" name="mail">
+                              <?php if (isset($_smarty_tpl->tpl_vars['ErrorUsuario']->value)){?>
+                              <strong class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorUsuario']->value;?>
+</strong>
+                              <?php }else{ ?>
+                              <strong  style="display:none" class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorUsuario']->value;?>
+</strong>
+                              <?php }?>
                             </div>
                           </div>
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
-                              <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass">
+                              <input type="password" class="form-control" id="pass" placeholder="Password" name="pass">
+                              <?php if (isset($_smarty_tpl->tpl_vars['ErrorPass']->value)){?>
+                              <strong class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorPass']->value;?>
+</strong>
+                              <?php }else{ ?>
+                              <strong  style="display:none" class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorPass']->value;?>
+</strong>
+                              <?php }?>
                             </div>
                           </div>
 
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-2">
-                            <button  type="submit" data-toggle="tooltip" data-placement="left" title="Iniciar sesion" class="btn btn-primary btn-md btn-block"><i id="signin"class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
+                            <button  id="iniciar" type="submit" data-toggle="tooltip" data-placement="left" title="Iniciar sesion" class="btn btn-primary btn-md btn-block"><i id="signin"class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
 
                             </div>
                           </div>
@@ -110,28 +136,31 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <div class="row">
           <div class="col-lg-4"></div>
           <div class="col-lg-4 bx zoom">
-          <form  class="form-horizontal" ACTION="" METHOD="POST">        
+          <form  id="formregistrarse" class="form-horizontal" ACTION="" METHOD="POST">        
             <fieldset >
               <div class="form-group">
               <div class="col-lg-12">
                 <label>Registrate y comenta nuestros destinos.</label>
-                  <input type="text" class="form-control" id="inputPassword" placeholder="Nombre" name="nombre" required>
+                  <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
               </div>
               </div>
               <div class="form-group">
               <div class="col-lg-12">
-                  <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail" required>
+                  <input type="text" class="form-control" id="email" placeholder="Mail" name="mail" >
               </div>
               </div>
               <div class="form-group">
               <div class="col-lg-12">
-                  <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass" required>
+                  <input type="password" class="form-control" id="password" placeholder="Password" name="pass" >
               </div>
               </div>
             <div class="form-group">            
             <div class="col-lg-1">
-              <button type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-success btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
-            </div>
+              <button  id="registrarse" type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-default btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
+            </div><br><br>
+              <small>¿Ya tienes una cuenta? 
+              </small>
+              <a style="cursor:pointer"class="zoom" data-toggle="modal" data-target="#myModal"><strong>&nbsp;Inicia sesion</strong></a>
             </div>
           </fieldset>
         </form>
@@ -242,24 +271,25 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                 <label for="inputPassword" class="col-lg-2 control-label"
                 name="asunto">Asunto</label>
                 <div class="col-lg-8">
-                  <input type="text" class="form-control" id="inputPassword" placeholder="Asunto" name="asunto">
+                  <input type="text" class="form-control" id="asunto" placeholder="Asunto" name="asunto">
                 </div>
               </div>
               <div class="form-group">
                <label for="inputText" class="col-lg-2 control-label">Mensaje</label>
                <div class="col-lg-8  control-label">
-                <textarea class="form-control" rows="8" type="text" name="texto" placeholder="Escriba su mensaje"></textarea>
+                <textarea class="form-control" rows="8" type="text" name="texto" placeholder="Escriba su mensaje" id="mensaje"></textarea>
               </div>
             </div>
             <div class="form-group">
               <div class="col-lg-2"></div>
               <div class="col-lg-8">
-              <button type="submit" class="btn btn-primary btn-md btn-block"><i class="fa fa-paper-plane fa-1x"></i></button>
+              <button id="btnenviarmail" type="submit" class="btn btn-primary btn-md btn-block"><i class="fa fa-paper-plane fa-1x"></i></button>
                 
               </div>
             </div>
           </fieldset>
         </form>
+               
         </div><br>
         <div class="row">
 

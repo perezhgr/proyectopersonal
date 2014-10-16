@@ -6237,3 +6237,14 @@ button.close {
     border-color: white;
     
 }
+
+.cl{
+background-color: black;
+}
+
+.scroll-area {
+  height: 200px;
+  position: relative;
+  overflow: auto;
+}
+    

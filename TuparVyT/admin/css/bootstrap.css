@@ -6306,3 +6306,13 @@ label {
     cursor: inherit;
     display: block;
 }
+
+
+input:required {
+  border: 1px solid ;
+  outline: none;
+}
+
+.error{
+  color: red;
+}

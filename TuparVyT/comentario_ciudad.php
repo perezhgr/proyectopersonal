@@ -8,5 +8,6 @@ $model = new ModelComentarioCiudad();
 $view = new ViewComentarioCiudad();
 $controller = new ControllerComentarioCiudad($model,$view);
 $controller->ImprimirComentario();	
+
 ?>
 

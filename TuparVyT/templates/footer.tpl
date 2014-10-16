@@ -8,23 +8,17 @@
             <div class="spacer spacer-big"></div>
             <p class="copyright">© 2014 Todos los derechos reservados • Tupar VyT • Viajes &amp; Turismo</p>
           </div>
-
-          <div id="my_map"></div>        
-
         </footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-<script>$("#my_map").width("600px").height("350px").gmap3();</script>
-<script type="text/javascript"
-src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
-    <script type="text/javascript" src="js/gmap3.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script type="text/javascript" src="js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script type="text/javascript" src="js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="js/ie10-viewport-bug-workaround.js">
+    </script>
     <script type="text/javascript" src="js/SmoothPageScrolling.js"></script>
     <script type="text/javascript" src="js/detalle_ciudad.js"></script>
     <script type="text/javascript" src="js/comentario_ciudad.js"></script>
@@ -32,9 +26,12 @@ src="http://maps.google.com/maps/api/js?sensor=false&amp;language=en"></script>
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-    <!-- 
-    <script type="text/javascript" src="js/logout.js"></script>-->
+    <script type="text/javascript" src="js/registro.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/logout.js"></script>
+    <script type="text/javascript" src="js/mail.js"></script>
+    <script type="text/javascript" src="js/sweet-alert.js"></script>  
+    <script type="text/javascript" src="js/jquery.ambiance.js"></script>  
     
   </body>
   </html>

@@ -26,17 +26,6 @@ class ModelHome
 		return $resultado->fetchAll(PDO::FETCH_ASSOC);
 	}
 
-	public function BuscarUsuario($usuario){
-		
-		$sql = "SELECT mail,pass
-		FROM   usuario 
-		WHERE  pass=".$usuario['pass'];
-
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();
-	}
-
-
 	public function ObtenerDescripcionEmpresa(){
 		
 		$sql = "SELECT *
@@ -60,5 +49,24 @@ class ModelHome
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
 	}
+
+
+	public function GetUsuario($mail){
+		
+		$sql = "SELECT *
+		FROM usuario
+		WHERE mail='$mail'";
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}
+
+	public function GetPass($pass){
+		
+		$sql = "SELECT *
+		FROM usuario
+		WHERE pass='$pass'";
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}	
 }
 ?>

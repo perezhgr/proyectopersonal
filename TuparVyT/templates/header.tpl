@@ -9,13 +9,18 @@
 
   <title>Tupar • VyT</title>
 
-  <!-- Bootstrap core CSS -->
+  <!-- Bootstrap core CSS -->  
   <link href="css/bootstrap.css" rel="stylesheet">
-
   <!-- Custom styles for this template -->
   <link href="css/cover.css" rel="stylesheet">
   <link href="css/carousel.css" rel="stylesheet">
   <link href="css/font-awesome.css" rel="stylesheet">  
+  <link href="css/jquery.ambiance.css" rel="stylesheet"> 
+  <link href="css/bootstrap-theme.css" rel="stylesheet">
+  <link href="css/sweet-alert.css" rel="stylesheet">
+  
+  
+  
 
   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
   <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->

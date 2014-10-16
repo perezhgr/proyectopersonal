@@ -7,9 +7,9 @@
                       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
-                          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        {foreach $Imagen as $imagen name=img}
+                          <li data-target="#carousel-example-generic" data-slide-to="0" class="{if $smarty.foreach.img.iteration == 1}active{/if}"></li>
+                          {/foreach}   
                         </ol>
 
                         <!-- Wrapper for slides -->
@@ -25,8 +25,7 @@
                             </div>
                           </div>                          
                           {/foreach}   
-                        </div>
-                        
+                        </div>                        
 
                         <!-- Controls -->
                         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -43,7 +42,7 @@
 
                   <!-- DATOS CIUDAD-->
                         
-                  <div class="row">                                    
+                  <div class="  row">                                    
                     <div class="col-lg-4  text-center">                      
                       <h3>Lugar<h3><h4>{$ciudad.nombre_ciudad}</h4>
                       </div>
@@ -63,18 +62,34 @@
                           <ul class="nav nav-pills nav-stacked">
                             <li class="active">
                               {foreach from =$Comentario item=comentario}
-                              {if $comentario.comentarios== 0}
-                              <small><em>* Esta ciudad no tiene comentarios.<br>
-                              * Si desea dejar su comentario debera registrarse primero.</em>
-                              </small>
-                              {else}  
-                              <button type="button" class="btn btn-primary" onClick="getComentarioCiudad({$ciudad.id_ciudad})">
-                                <span class="badge pull-right">{$comentario.comentarios}</span>
-                                <i class="fa fa-comments fa-2x"></i>&nbsp;
-                              </button><br>
-                              <small><em>
-                              * Si desea dejar su comentario debera registrarse primero.</em></small>
-                              {/if}
+                                {if $comentario.comentarios == 0}
+                                    <button type="button" class="btn btn-primary" onClick="getComentarioCiudad({$ciudad.id_ciudad})">
+                                      <span class="badge pull-right">
+                                          {$comentario.comentarios}
+                                      </span>
+                                      <i class="fa fa-comments fa-2x"></i>&nbsp;
+                                    </button><br>
+                                    <small>
+                                      <em>* Esta ciudad no tiene comentarios.</em><br>
+                                      {if !isset($Nombre)}
+                                        <em>* Si desea dejar su comentario debera   registrarse primero.
+                                        </em>
+                                      {/if}
+                                    </small>
+                                {else}  
+                                    <button type="button" class="btn btn-primary" onClick="getComentarioCiudad({$ciudad.id_ciudad})">
+                                      <span class="badge pull-right">
+                                          {$comentario.comentarios}
+                                      </span>
+                                      <i class="fa fa-comments fa-2x"></i>&nbsp;
+                                    </button><br>
+                                    <small>
+                                    {if !isset($Nombre)}
+                                      <em>* Si desea dejar su comentario debera registrarse primero.
+                                      </em>
+                                    {/if}
+                                    </small>
+                                {/if}
                               {/foreach}
                             </li><br><br>
                           </ul>

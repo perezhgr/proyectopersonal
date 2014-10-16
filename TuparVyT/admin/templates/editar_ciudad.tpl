@@ -40,7 +40,7 @@
                   </ul>
                   <div id="myTabContent" class="tab-content">
                     <div class="tab-pane fade active in" id="home">
-                        <form class="form-horizontal" method="POST"> 
+                        <form id="formeditarciudad" class="form-horizontal" method="POST"> 
                           
                           <fieldset>
                             <legend>Ciudad</legend>
@@ -48,20 +48,20 @@
                             <label for="inputEmail" class="col-lg-2 control-label">Ciudad</label>
                             <div class="col-lg-10">
                                  {foreach from=$Ciudades item=ciudad}
-                                 <input type="text" class="form-control" id="inputPassword" placeholder="" name="ciudad" value="{$ciudad.nombre_ciudad}">
+                                 <input type="text" class="form-control" id="ciudad" placeholder="Ciudad" name="ciudad" value="{$ciudad.nombre_ciudad}">
                             </div>
                             </div>
                             <div class="form-group">
                               <label for="inputPassword" class="col-lg-2 control-label">Duracion</label>
                               <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputPassword" placeholder="Duracion" name="duracion"
+                                <input type="text" class="form-control" id="duracion" placeholder="Duracion" name="duracion"
                                 value="{$ciudad.duracion}">
                               </div>
                             </div>
                            <div class="form-group">
                               <label for="inputPassword" class="col-lg-2 control-label">Precio</label>
                               <div class="col-lg-10">
-                                <input type="text" class="form-control" id="inputPassword" placeholder="Precio" name="precio"
+                                <input type="text" class="form-control" id="precio" placeholder="Precio" name="precio"
                                 value="{$ciudad.precio}">
                               </div>
 
@@ -69,7 +69,7 @@
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label"></label>
                               <div class="col-lg-10">
-                                <input type="hidden" class="form-control" id="inputEmail" placeholder="Nombre" name="id_ciudad" 
+                                <input type="hidden" class="form-control" placeholder="Nombre" name="id_ciudad" 
                                 value="{$ciudad.id_ciudad}">
                               </div>
                               {/foreach}
@@ -77,7 +77,7 @@
                             </div>                                         
                             <div class="form-group">
                               <div class="col-lg-10 col-lg-offset-2">
-                                <button type="submit" class="btn btn-primary btn-">Editar</button>
+                                <button id="botoneditarciudad" type="submit" class="btn btn-primary btn-">Editar</button>
                               </div>
                             </div>
                           </fieldset>
