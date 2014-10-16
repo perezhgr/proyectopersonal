@@ -4,46 +4,30 @@
                     <div class="jumbotron">
                       <h4>Deja tu comentario</h4><br>
                       <div class="form-group">
-                        <div class="col-lg-3"></div>
+                        <div class="col-lg-6"><label>Escriba su comentario</label>
+                          <textarea class="form-control" rows="3" type="text" name="texto" placeholder="Comentario..." required></textarea></div>
                         <div class="col-lg-6">
-                          <label>Escriba su comentario</label>
-                          <textarea class="form-control" rows="5" type="text" name="texto" placeholder="Comentario..." required></textarea>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-lg-3"></div>
-                        <div class="col-lg-6">
-                          <input type="hidden" class="form-control" name="id_usuario" value="{$IdUsuario}" required>                        
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-lg-3"></div>
-                        <div class="col-lg-6">
-                          {foreach from=$IdCiudad item=idciudad}
-                          <input type="hidden" class="form-control" name="id_ciudad" value="{$idciudad.id_ciudad}" required>
-                          {/foreach}
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <div class="col-lg-3"></div>
-                        <div class="col-lg-6">
-                          <label>Elija su condicion de turista</label><br>
+                           <label>Elija su condicion de turista</label><br>
                           <select  class="form-control" name="id_condicion">
                            {foreach from=$Condicion item=condicion}
                            <option value="{$condicion.id_condicion}">{$condicion.condicion}</option>
                            {/foreach}
-                         </select> 
-                       </div>
-                     </div>
-
-                     <div class="form-group">
-                      <div class="col-lg-3"></div>
-                      <div class="col-lg-2">
-                        <button type="submit" class="btn btn-success btn-md">Publicar</button>
+                         </select><br> 
+                        </div>
+                        <div class="col-lg-6">
+                        <button type="submit" class="btn btn-success  btn-sm btn-block">
+                        <i class="fa fa-paper-plane"></i></button>
+                        </div>
                       </div>
-                    </div>
-                    
+                      <div class="form-group">
+                        <div class="col-lg-6">
+                          <input type="hidden" class="form-control" name="id_usuario" value="{$IdUsuario}" required></div>
+                        <div class="col-lg-6">
+                          {foreach from=$IdCiudad item=idciudad}
+                          <input type="hidden" class="form-control" name="id_ciudad" value="{$idciudad.id_ciudad}" required>
+                          {/foreach}                       
+                        </div>
+                      </div>                 
                   </div>
                 </form>
                 {/if}

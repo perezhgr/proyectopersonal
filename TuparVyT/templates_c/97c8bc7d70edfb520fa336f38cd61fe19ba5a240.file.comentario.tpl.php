@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-16 22:29:00
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-16 23:20:45
          compiled from "./templates/comentario.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1517202957542b255766ba76-28728710%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97c8bc7d70edfb520fa336f38cd61fe19ba5a240' => 
     array (
       0 => './templates/comentario.tpl',
-      1 => 1413491332,
+      1 => 1413494360,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'Nombre' => 0,
+    'Condicion' => 0,
+    'condicion' => 0,
     'IdUsuario' => 0,
     'IdCiudad' => 0,
     'idciudad' => 0,
-    'Condicion' => 0,
-    'condicion' => 0,
     'Comentario' => 0,
     'comentario' => 0,
   ),
@@ -36,37 +36,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <div class="jumbotron">
                       <h4>Deja tu comentario</h4><br>
                       <div class="form-group">
-                        <div class="col-lg-3"></div>
+                        <div class="col-lg-6"><label>Escriba su comentario</label>
+                          <textarea class="form-control" rows="3" type="text" name="texto" placeholder="Comentario..." required></textarea></div>
                         <div class="col-lg-6">
-                          <label>Escriba su comentario</label>
-                          <textarea class="form-control" rows="5" type="text" name="texto" placeholder="Comentario..." required></textarea>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-lg-3"></div>
-                        <div class="col-lg-6">
-                          <input type="hidden" class="form-control" name="id_usuario" value="<?php echo $_smarty_tpl->tpl_vars['IdUsuario']->value;?>
-" required>                        
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-lg-3"></div>
-                        <div class="col-lg-6">
-                          <?php  $_smarty_tpl->tpl_vars['idciudad'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['idciudad']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['IdCiudad']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['idciudad']->key => $_smarty_tpl->tpl_vars['idciudad']->value){
-$_smarty_tpl->tpl_vars['idciudad']->_loop = true;
-?>
-                          <input type="hidden" class="form-control" name="id_ciudad" value="<?php echo $_smarty_tpl->tpl_vars['idciudad']->value['id_ciudad'];?>
-" required>
-                          <?php } ?>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                        <div class="col-lg-3"></div>
-                        <div class="col-lg-6">
-                          <label>Elija su condicion de turista</label><br>
+                           <label>Elija su condicion de turista</label><br>
                           <select  class="form-control" name="id_condicion">
                            <?php  $_smarty_tpl->tpl_vars['condicion'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['condicion']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['Condicion']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -77,17 +50,28 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
 "><?php echo $_smarty_tpl->tpl_vars['condicion']->value['condicion'];?>
 </option>
                            <?php } ?>
-                         </select> 
-                       </div>
-                     </div>
-
-                     <div class="form-group">
-                      <div class="col-lg-3"></div>
-                      <div class="col-lg-2">
-                        <button type="submit" class="btn btn-success btn-md">Publicar</button>
+                         </select><br> 
+                        </div>
+                        <div class="col-lg-6">
+                        <button type="submit" class="btn btn-success  btn-sm btn-block">
+                        <i class="fa fa-paper-plane"></i></button>
+                        </div>
                       </div>
-                    </div>
-                    
+                      <div class="form-group">
+                        <div class="col-lg-6">
+                          <input type="hidden" class="form-control" name="id_usuario" value="<?php echo $_smarty_tpl->tpl_vars['IdUsuario']->value;?>
+" required></div>
+                        <div class="col-lg-6">
+                          <?php  $_smarty_tpl->tpl_vars['idciudad'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['idciudad']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['IdCiudad']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['idciudad']->key => $_smarty_tpl->tpl_vars['idciudad']->value){
+$_smarty_tpl->tpl_vars['idciudad']->_loop = true;
+?>
+                          <input type="hidden" class="form-control" name="id_ciudad" value="<?php echo $_smarty_tpl->tpl_vars['idciudad']->value['id_ciudad'];?>
+" required>
+                          <?php } ?>                       
+                        </div>
+                      </div>                 
                   </div>
                 </form>
                 <?php }?>
