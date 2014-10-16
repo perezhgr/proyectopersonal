@@ -9,14 +9,10 @@ class ViewBorrarUsuario
 		$this->smarty = New Smarty;
 	}
 	
-	public function MostrarUsuariosActualizados($usuario)
-	{		
-		$this->smarty->assign('Usuario',$usuario);
-		
-	}
-	public function MostrarPanelActualizado()
-	{		
-		$this->smarty->display('panel_usuario.tpl');
+	public function resultado()
+	{
+		echo "borrado";
+
 	}
 }
 

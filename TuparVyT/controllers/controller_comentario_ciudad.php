@@ -1,5 +1,4 @@
 <?php
-session_start();
 class ControllerComentarioCiudad
 {
 	private $model;
@@ -10,23 +9,16 @@ class ControllerComentarioCiudad
 		$this->view = $view;
 	}
 
-	// Muestra un formulario para comentar y  
-	//la lista de comentarios que tiene la ciudad. 
+
 	public function ImprimirComentario(){
 
+		//$this->view->MostrarCondicionesDeViaje($this->model->ObtenerCondiciones());
 		if (isset($_GET['id_ciudad'])) {
 
 			$this->view->MostrarComentario($this->model->ObtenerComentarioByIdCiudad($_GET['id_ciudad']));
-			$this->view->MostrarCondicionFormularioComentario($this->model->ObtenerCondicion());			
-			$this->view->MostrarIdCiudadFormularioComentario($this->model->ObtenerIdCiudad($_GET['id_ciudad']));			
+		    $this->view->ImprimirComentario();
 		}
 
-		if (isset($_SESSION['nombre'])) {
-			$this->view->ImprimirComentarioSesion($_SESSION["nombre"]);	
-		}
-		else{
-			$this->view->ImprimirComentario();	
-		}
 	}
-}
+}	
 ?>

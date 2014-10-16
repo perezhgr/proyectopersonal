@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-14 16:59:59
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-19 00:47:11
          compiled from "./templates/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:141441983954158fd4ceef23-17344057%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97c13ae6868bbc459509c9f1b968154acd23eecc' => 
     array (
       0 => './templates/header.tpl',
-      1 => 1413298726,
+      1 => 1411080427,
       2 => 'file',
     ),
   ),
@@ -21,26 +21,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_54158fd4d23f63_80584614')) {function content_54158fd4d23f63_80584614($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Admin • Tupar VyT</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/bootstrap.css" media="screen">
-  <link rel="stylesheet" href="css/bootswatch.min.css">
-  <link href="css/font-awesome.css" rel="stylesheet">  
-  <link href="css/jquery.ambiance.css" rel="stylesheet"> 
-  <link href="css/alertify.bootstrap.css" rel="stylesheet">  
-  <link href="css/alertify.core.css" rel="stylesheet">  
-  <link href="css/jquery.alerts.css" rel="stylesheet"> 
-  <link href="css/sweet-alert.css" rel="stylesheet"> 
-  
-  
-  
-  
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <head>
+    <meta charset="utf-8">
+    <title>Admin • Tupar VyT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="css/bootswatch.min.css">
+    <link href="css/font-awesome.css" rel="stylesheet">  
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
       <script src="../bower_components/respond/dest/respond.min.js"></script>
-      <![endif]-->
+    <![endif]-->
 
-    </head><?php }} ?>
+  </head><?php }} ?>

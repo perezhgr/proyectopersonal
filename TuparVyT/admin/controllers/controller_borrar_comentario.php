@@ -16,8 +16,7 @@ class ControllerBorrarComentario
 		{	
 			if(isset($_GET['id_comentario'])) {
 				$this->model->EliminarComentario($_GET['id_comentario']);
-				$this->view->MostrarComentariosActualizados($this->model->GetComentarios());
-				$this->view->MostrarPanelActualizado();		
+				$this->view->resultado();
 			}
 		}
 		else

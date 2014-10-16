@@ -39,26 +39,25 @@
           </ul>
           <div id="myTabContent" class="tab-content">
             <div class="tab-pane fade active in" id="home">
-              <form  id="formciudad" class="form-horizontal" method="POST" enctype="multipart/form-data" > 
-
+              <form class="form-horizontal" method="POST" ENCTYPE="multipart/form-data"> 
                 <fieldset>
                   <legend>Ciudad</legend>
                   <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Ciudad</label>
                     <div class="col-lg-10">
-                      <input id="ciudad" type="text" class="form-control" placeholder="Nombre" name="ciudad" >
+                      <input type="text" class="form-control" id="inputEmail" placeholder="Nombre" name="ciudad">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Duracion</label>
                     <div class="col-lg-10">
-                      <input id="duracion" type="text" class="form-control"  placeholder="Duracion" name="duracion" >
+                      <input type="text" class="form-control" id="inputPassword" placeholder="Duracion" name="duracion">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Precio</label>
                     <div class="col-lg-10">
-                      <input id="precio" type="text" class="form-control"  placeholder="Precio" name="precio" >
+                      <input type="text" class="form-control" id="inputPassword" placeholder="Precio" name="precio">
                     </div>
                   </div>
                   <div class="form-group">
@@ -75,7 +74,7 @@
                 </div><br>
                 <div class="form-group">
                   <div class="col-lg-10 col-lg-offset-2">
-                    <input id="botoncrearciudad" type="submit" class="btn btn-primary" value="Crear">
+                    <button type="submit" class="btn btn-primary btn-">Crear</button>
                   </div>
                 </div>
               </fieldset>

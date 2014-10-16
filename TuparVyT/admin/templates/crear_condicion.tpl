@@ -38,20 +38,19 @@
                     </a></li>
                   </ul>
                   <div id="myTabContent" class="tab-content">
-
-                     <div class="tab-pane fade active in" id="home">
-                        <form  id="formcondicion" class="form-horizontal" method="post" action="">
+                    <div class="tab-pane fade active in" id="home">
+                        <form class="form-horizontal" method="POST">
                           <fieldset>
                             <legend>Condicion del turista</legend>
                             <div class="form-group">
                             <label for="inputEmail" class="col-lg-2 control-label">Condicion</label>
                               <div class="col-lg-10">
-                                <input type="text" class="form-control" id="condicion" placeholder="Condicion para categorizar a un turista" name="condicion" >
+                                <input type="text" class="form-control" id="inputEmail" placeholder="Condicion para categorizar a un turista" name="condicion">
                               </div>
                             </div>
                             <div class="form-group">
                               <div class="col-lg-10 col-lg-offset-2">
-                                <input id="btncrearcondicion" type="submit" class="btn btn-primary" value="Crear">
+                                <button type="submit" class="btn btn-primary btn-">Crear</button>
                               </div>
                             </div>
                           </fieldset>

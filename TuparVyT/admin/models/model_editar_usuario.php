@@ -18,16 +18,5 @@ class ModelEditarUsuario
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();		
 	}
-
-	public function ObtenerUsuario(){
-		
-		$sql = "SELECT *
-		FROM usuario";
-
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();
-	}
-
-
 }
 ?>

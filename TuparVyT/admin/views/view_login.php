@@ -15,19 +15,10 @@ class ViewLogin
 
 	}
 
-	public function MensajeErrorUsuario($errorusuario){
-
-		$this->smarty->assign('ErrorUsuario',$errorusuario);	
+	public function MensajeError($error){
+		echo $error;
 	}
 
-	public function MensajeErrorAdmin($erroradmin){
-
-		$this->smarty->assign('ErrorAdmin',$erroradmin);	
-	}
-
-	public function MensajeErrorPass($errorpass){
-		$this->smarty->assign('ErrorPass',$errorpass);
-	}
 }
 
 ?>

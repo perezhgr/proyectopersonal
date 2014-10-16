@@ -16,8 +16,7 @@ class ControllerBorrarUsuario
 		{			
 			if(isset($_GET['id_usuario'])) {
 				$this->model->EliminarUsuario($_GET['id_usuario']);
-				$this->view->MostrarUsuariosActualizados($this->model->ObtenerUsuario());
-				$this->view->MostrarPanelActualizado();		
+				$this->view->resultado();
 			}
 		}			
 		else

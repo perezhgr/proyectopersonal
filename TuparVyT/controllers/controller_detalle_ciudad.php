@@ -1,5 +1,4 @@
 <?php
-session_start();
 class ControllerDetalleCiudad
 {
 	private $model;
@@ -12,19 +11,18 @@ class ControllerDetalleCiudad
 
 
 	public function ImprimirModal(){
-	
+		//echo "<h1>HOLA MUNDO - CIUDAD</h1>";
+
+		
+		//if(array_key_exists('id_ciudad',$_GET)){
 		if (isset($_GET['id_ciudad'])) {
 
 			$this->view->MostrarDetalleCiudad($this->model->ObtenerDetalleCiudad($_GET['id_ciudad']));
 			$this->view->MostrarImgCiudad($this->model->ObtenerImgByIdCiudad($_GET['id_ciudad']));
 		    $this->view->MostrarContadorComentario($this->model->ObtenerCountComentByIdCiudad($_GET['id_ciudad']));
+
+		    $this->view->ImprimirModal();
 		}
-		
-		if (isset($_SESSION['nombre'])) {
-			$this->view->ImprimirModalSinLeyendaDeRegistrarse($_SESSION["nombre"]);	
-		}
-		else
-			$this->view->ImprimirModal();
 	}
 }	
 ?>

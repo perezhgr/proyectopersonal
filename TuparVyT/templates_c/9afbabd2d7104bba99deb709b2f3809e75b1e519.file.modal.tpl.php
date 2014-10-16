@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-13 23:25:12
+<?php /* Smarty version Smarty-3.1.14, created on 2014-09-25 19:44:37
          compiled from "./templates/modal.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1443305185542b0a1a112ec0-45545667%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:185600833554220ee6b8dab1-54559864%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9afbabd2d7104bba99deb709b2f3809e75b1e519' => 
     array (
       0 => './templates/modal.tpl',
-      1 => 1413235092,
+      1 => 1411667073,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1443305185542b0a1a112ec0-45545667',
+  'nocache_hash' => '185600833554220ee6b8dab1-54559864',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_542b0a1a1c58b3_42119452',
+  'unifunc' => 'content_54220ee6c30b03_31248837',
   'variables' => 
   array (
     'Ciudad' => 0,
@@ -25,11 +25,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ciudad' => 0,
     'Comentario' => 0,
     'comentario' => 0,
-    'Nombre' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_542b0a1a1c58b3_42119452')) {function content_542b0a1a1c58b3_42119452($_smarty_tpl) {?>                  <!-- CAROUSEL-->
+<?php if ($_valid && !is_callable('content_54220ee6c30b03_31248837')) {function content_54220ee6c30b03_31248837($_smarty_tpl) {?>                  <!-- CAROUSEL-->
                   <?php  $_smarty_tpl->tpl_vars['ciudad'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ciudad']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['Ciudad']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['ciudad']->key => $_smarty_tpl->tpl_vars['ciudad']->value){
@@ -42,15 +41,9 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
                         <ol class="carousel-indicators">
-                        <?php  $_smarty_tpl->tpl_vars['imagen'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['imagen']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['Imagen']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
- $_smarty_tpl->tpl_vars['smarty']->value['foreach']['img']['iteration']=0;
-foreach ($_from as $_smarty_tpl->tpl_vars['imagen']->key => $_smarty_tpl->tpl_vars['imagen']->value){
-$_smarty_tpl->tpl_vars['imagen']->_loop = true;
- $_smarty_tpl->tpl_vars['smarty']->value['foreach']['img']['iteration']++;
-?>
-                          <li data-target="#carousel-example-generic" data-slide-to="0" class="<?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['img']['iteration']==1){?>active<?php }?>"></li>
-                          <?php } ?>   
+                          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                         </ol>
 
                         <!-- Wrapper for slides -->
@@ -74,7 +67,8 @@ $_smarty_tpl->tpl_vars['imagen']->_loop = true;
                             </div>
                           </div>                          
                           <?php } ?>   
-                        </div>                        
+                        </div>
+                        
 
                         <!-- Controls -->
                         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -91,7 +85,7 @@ $_smarty_tpl->tpl_vars['imagen']->_loop = true;
 
                   <!-- DATOS CIUDAD-->
                         
-                  <div class="  row">                                    
+                  <div class="row">                                    
                     <div class="col-lg-4  text-center">                      
                       <h3>Lugar<h3><h4><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
 </h4>
@@ -118,38 +112,20 @@ $_smarty_tpl->tpl_vars['imagen']->_loop = true;
 foreach ($_from as $_smarty_tpl->tpl_vars['comentario']->key => $_smarty_tpl->tpl_vars['comentario']->value){
 $_smarty_tpl->tpl_vars['comentario']->_loop = true;
 ?>
-                                <?php if ($_smarty_tpl->tpl_vars['comentario']->value['comentarios']==0){?>
-                                    <button type="button" class="btn btn-primary" onClick="getComentarioCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
+                              <?php if ($_smarty_tpl->tpl_vars['comentario']->value['comentarios']==0){?>
+                              <small><em>* Esta ciudad no tiene comentarios.<br>
+                              * Si desea dejar su comentario debera registrarse primero.</em>
+                              </small>
+                              <?php }else{ ?>  
+                              <button type="button" class="btn btn-primary" onClick="getComentarioCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
 )">
-                                      <span class="badge pull-right">
-                                          <?php echo $_smarty_tpl->tpl_vars['comentario']->value['comentarios'];?>
-
-                                      </span>
-                                      <i class="fa fa-comments fa-2x"></i>&nbsp;
-                                    </button><br>
-                                    <small>
-                                      <em>* Esta ciudad no tiene comentarios.</em><br>
-                                      <?php if (!isset($_smarty_tpl->tpl_vars['Nombre']->value)){?>
-                                        <em>* Si desea dejar su comentario debera   registrarse primero.
-                                        </em>
-                                      <?php }?>
-                                    </small>
-                                <?php }else{ ?>  
-                                    <button type="button" class="btn btn-primary" onClick="getComentarioCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
-)">
-                                      <span class="badge pull-right">
-                                          <?php echo $_smarty_tpl->tpl_vars['comentario']->value['comentarios'];?>
-
-                                      </span>
-                                      <i class="fa fa-comments fa-2x"></i>&nbsp;
-                                    </button><br>
-                                    <small>
-                                    <?php if (!isset($_smarty_tpl->tpl_vars['Nombre']->value)){?>
-                                      <em>* Si desea dejar su comentario debera registrarse primero.
-                                      </em>
-                                    <?php }?>
-                                    </small>
-                                <?php }?>
+                                <span class="badge pull-right"><?php echo $_smarty_tpl->tpl_vars['comentario']->value['comentarios'];?>
+</span>
+                                <i class="fa fa-comments fa-2x"></i>&nbsp;
+                              </button><br>
+                              <small><em>
+                              * Si desea dejar su comentario debera registrarse primero.</em></small>
+                              <?php }?>
                               <?php } ?>
                             </li><br><br>
                           </ul>

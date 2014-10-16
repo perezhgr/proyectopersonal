@@ -8,7 +8,7 @@ include './models/model_home.php';
 $model = new ModelHome();
 $view = new ViewHome();
 $controller = new ControllerHome($model,$view);
-$controller->ImprimirHome();	
+$controller->Usuario();	
 //$controller->enviarMail();
 
 ?>

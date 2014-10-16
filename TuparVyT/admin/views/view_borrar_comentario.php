@@ -9,14 +9,10 @@ class ViewBorrarComentario
 		$this->smarty = New Smarty;
 	}
 	
-	public function MostrarComentariosActualizados($comentario)
-	{		
-		$this->smarty->assign('Testimonio',$comentario);
-		
-	}
-	public function MostrarPanelActualizado()
-	{		
-		$this->smarty->display('panel_comentario.tpl');
+	public function resultado()
+	{
+		echo "borrado";
+
 	}
 }
 

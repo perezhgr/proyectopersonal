@@ -16,8 +16,7 @@ class ControllerBorrarCondicion
 		{		
 			if(isset($_GET['id_condicion'])) {
 				$this->model->EliminarCondicion($_GET['id_condicion']);
-				$this->view->MostrarCondicionesActualizadas($this->model->ObtenerCondicion());
-				$this->view->MostrarPanelActualizado();		
+				$this->view->resultado();
 			}
 		}			
 		else

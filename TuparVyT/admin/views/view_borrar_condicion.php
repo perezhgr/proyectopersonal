@@ -9,15 +9,10 @@ class ViewBorrarCondicion
 		$this->smarty = New Smarty;
 	}
 	
-	public function MostrarCondicionesActualizadas($condicion)
+	public function resultado()
 	{
-		$this->smarty->assign('Condicion',$condicion);
+		echo "borrado";
 
-	}
-
-	public function MostrarPanelActualizado()
-	{		
-		$this->smarty->display('panel_condicion.tpl');
 	}
 }
 

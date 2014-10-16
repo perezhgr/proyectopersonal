@@ -7,6 +7,15 @@ include './models/model_login.php';
 $model = new ModelLogin();
 $view = new ViewLogin();
 $controller = new ControllerLogin($model,$view);
-$controller->imprimirPagina();
 
+if(isset($_POST["mail"]))
+{
+    $formulario["mail"] = $_POST["mail"];
+	$formulario["pass"] = $_POST["pass"];
+	$controller->loginUsuario($formulario);
+}
+else
+{
+	$controller->imprimirPagina();
+}
 ?>

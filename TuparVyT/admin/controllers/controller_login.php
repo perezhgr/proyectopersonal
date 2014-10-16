@@ -1,5 +1,4 @@
 <?php
-session_start();
 class ControllerLogin
 {
 	private $view;
@@ -9,36 +8,66 @@ class ControllerLogin
 		$this->model = $model;
 		$this->view = $view;
 	}
-
+	
 	public function imprimirPagina(){
+		{
+			session_start();
+			if(!isset($_SESSION["mail"]))
+			{
+				$this->view->imprimirPagina();
+			}
+			else
+			{
+				header('Location: admin.php');
+			}
+		}
 
-	  if(isset($_POST["mail"]))
-	  {
-			$formulario["mail"] = $_POST["mail"];
-			$formulario["pass"] = md5($_POST["pass"]);
+	}
+	
+	public function loginUsuario($formulario)
+	{
+		$error = $this->verificarFormulario($formulario);
+		if(!$error)
+		{
+			$user = $this->model->GetUsuario($formulario["mail"]);
+			
+			if(empty($user))
+			{
+				$this->view->MensajeError("Error: Usuario Inexistente");
+			} 	
+			if($user[0]["pass"] != md5($formulario["pass"]))
+			{
+				$this->view->MensajeError("Error: Password Inválida");
+			}
+			
+			session_start();
+			$_SESSION["mail"]=$formulario["mail"];
+			echo "login.php";
+			
+		}
+		else
+		{
+			$this->view->MensajeError($error);
+		}
 		
+	}
 
-		$user=$this->model->GetUsuario($formulario['mail']);
-		$esadmi=$this->model->GetEsAdmin($formulario['mail']);
-		$pass=$this->model->GetPass($formulario['pass']);
+	private function verificarFormulario($formulario)
+	{
+		if(!$this->verificaremail($formulario["mail"]))
+			return "Error: Email Inválido";
+		if(strlen($formulario["pass"])==0)
+			return "Error: La password es vacía";
+	}
 
+	private function verificaremail($email){ 
 
-		if (empty($user)){
-			$this->view->MensajeErrorUsuario("Error: Usuario inexistente.");			
-		}
-		elseif (empty($esadmi)) {
-			$this->view->MensajeErrorAdmin("Error : Usuario sin permisos de administrador.");
-		}
-		elseif (empty($pass)) {
-			$this->view->MensajeErrorPass("Error : Password Invalida.");
+		if(!preg_match("/^[_\.0-9a-zA-Z-]+@([0-9a-zA-Z][0-9a-zA-Z-]+\.)+[a-zA-Z]{2,6}$/i", $email)) {
+ 			return false;
 		}
 		else{
-			$_SESSION["mail"]=$formulario["mail"];
-			header('Location: admin.php');
-		}		
-      }
-
-		$this->view->imprimirPagina();
-	}
+			return true;
+		}
+	}	
 }
 ?>

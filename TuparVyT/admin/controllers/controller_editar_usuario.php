@@ -16,8 +16,7 @@ class ControllerEditarUsuario
 			if (isset($_GET['id_usuario'])) {
 
 				$this->model->EditarUsuario($_GET['id_usuario']);
-				$this->view->MostrarUsuariosActualizados($this->model->ObtenerUsuario());
-				$this->view->MostrarPanelActualizado();		
+				$this->view->MostrarAlerta();
 			}
 		}
 		else

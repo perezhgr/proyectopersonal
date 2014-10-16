@@ -2,44 +2,34 @@
     <body>
       <div id="top" class="site-wrapper">
 
-        <div class="site-wrapper-inner">
+        <div class="site-wrapper-inner ">
 
           <div class="cover-container ">
 
-            <div class="masthead clearfix ">
-              <div class="inner">
+            <div class=" masthead clearfix ">
+              <div class="inner ">
                 <h3 class="masthead-brand"></h3>
-                <ul class="nav masthead-nav d ">
+                <ul class="nav masthead-nav">
                   <li class="active"><a href="#top">Home</a></li>
-                  <li ><a href="#empresa">Acerca</a></li>
+                  <li><a href="#empresa">Acerca</a></li>
                   <li><a href="#paquetes">Paquetes</a></li>
                   <li><a href="#contacto">Contacto</a></li>
                   <li><a href=""></a></li>
-                  <li><a href=""></a></li>
-                  <li><a href=""></a></li>
-                  <li><a href=""></a></li>
-                  <li>
-                    {if isset($Nombre)} 
-                    <p style="display:none" class="lead">
-                      <a class="zoom btn btn-default btn-sm" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
-                    </p>
-                    <p class="lead">
-                      <a class="btn btn-primary btn-sm">
-                        <strong>Hola {$Nombre} !</strong>
-                      </a>&nbsp
-                      <button id="logout" class=" zoom btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
-                        <i class="fa fa-power-off"></i>
-                      </button>
-                    </p>
-                    {else}
-                    <p class="lead">
-                      <a class="zoom btn btn-default btn-sm" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
-                    </p>
-                    {/if}
-                  </li>                  
+                  <li><p class="lead" data-toggle="tooltip" data-placement="left" title="Iniciar sesion">
+                    <a class="zoom btn btn-primary btn-md" data-toggle="modal" data-target="#myModal"><i class="fa fa-user fa-1x"></i>&nbsp;</a>
+                  </p>
+                  </li>
+                  {if isset($Mail)}
+                  <h4><strong>Conectado como:</strong><p class="text-success">{$Mail}</p></h4> 
+                           
+                  <button id="logout" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
+              <span class="glyphicon glyphicon-log-out">&nbsp&nbsp</span>
+            </button>
+                  {/if}
+
                 </ul>
               </div>
-            </div><br>
+            </div>
 
             <div class="inner cover ">
               <h1 class="cover-heading w ">Tupar Viajes y Turismo</h1>
@@ -54,35 +44,25 @@
                       <h4 class="modal-title" id="myModalLabel">Inicia sesion</h4>
                     </div>
                     <div class="modal-body">
-                      <form class="form-horizontal" method="POST">        
+                      <form id="formlog" class="form-horizontal" method="POST">        
                         <fieldset>
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
-                              <input type="text" class="form-control" id="mail" placeholder="Mail" name="mail">
-                              {if isset($ErrorUsuario)}
-                              <strong class="error">{$ErrorUsuario}</strong>
-                              {else}
-                              <strong  style="display:none" class="error">{$ErrorUsuario}</strong>
-                              {/if}
+                              <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail">
                             </div>
                           </div>
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
-                              <input type="password" class="form-control" id="pass" placeholder="Password" name="pass">
-                              {if isset($ErrorPass)}
-                              <strong class="error">{$ErrorPass}</strong>
-                              {else}
-                              <strong  style="display:none" class="error">{$ErrorPass}</strong>
-                              {/if}
+                              <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass">
                             </div>
                           </div>
 
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-2">
-                            <button  id="iniciar" type="submit" data-toggle="tooltip" data-placement="left" title="Iniciar sesion" class="btn btn-primary btn-md btn-block"><i id="signin"class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
+                            <button  type="submit" data-toggle="tooltip" data-placement="left" title="Iniciar sesion" class="btn btn-primary btn-md btn-block"><i id="signin"class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
 
                             </div>
                           </div>
@@ -99,31 +79,28 @@
           <div class="row">
           <div class="col-lg-4"></div>
           <div class="col-lg-4 bx zoom">
-          <form  id="formregistrarse" class="form-horizontal" ACTION="" METHOD="POST">        
+          <form  class="form-horizontal" ACTION="" METHOD="POST">        
             <fieldset >
               <div class="form-group">
               <div class="col-lg-12">
                 <label>Registrate y comenta nuestros destinos.</label>
-                  <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
+                  <input type="text" class="form-control" id="inputPassword" placeholder="Nombre" name="nombre" required>
               </div>
               </div>
               <div class="form-group">
               <div class="col-lg-12">
-                  <input type="text" class="form-control" id="email" placeholder="Mail" name="mail" >
+                  <input type="text" class="form-control" id="inputPassword" placeholder="Mail" name="mail" required>
               </div>
               </div>
               <div class="form-group">
               <div class="col-lg-12">
-                  <input type="password" class="form-control" id="password" placeholder="Password" name="pass" >
+                  <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass" required>
               </div>
               </div>
             <div class="form-group">            
             <div class="col-lg-1">
-              <button  id="registrarse" type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-default btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
-            </div><br><br>
-              <small>¿Ya tienes una cuenta? 
-              </small>
-              <a style="cursor:pointer"class="zoom" data-toggle="modal" data-target="#myModal"><strong>&nbsp;Inicia sesion</strong></a>
+              <button type="submit" data-toggle="tooltip" data-placement="left" title="Registrate" class="zoom btn btn-success btn-md"><i class="fa fa-sign-in fa-2x"></i>&nbsp;</button>
+            </div>
             </div>
           </fieldset>
         </form>
@@ -214,25 +191,24 @@
                 <label for="inputPassword" class="col-lg-2 control-label"
                 name="asunto">Asunto</label>
                 <div class="col-lg-8">
-                  <input type="text" class="form-control" id="asunto" placeholder="Asunto" name="asunto">
+                  <input type="text" class="form-control" id="inputPassword" placeholder="Asunto" name="asunto">
                 </div>
               </div>
               <div class="form-group">
                <label for="inputText" class="col-lg-2 control-label">Mensaje</label>
                <div class="col-lg-8  control-label">
-                <textarea class="form-control" rows="8" type="text" name="texto" placeholder="Escriba su mensaje" id="mensaje"></textarea>
+                <textarea class="form-control" rows="8" type="text" name="texto" placeholder="Escriba su mensaje"></textarea>
               </div>
             </div>
             <div class="form-group">
               <div class="col-lg-2"></div>
               <div class="col-lg-8">
-              <button id="btnenviarmail" type="submit" class="btn btn-primary btn-md btn-block"><i class="fa fa-paper-plane fa-1x"></i></button>
+              <button type="submit" class="btn btn-primary btn-md btn-block"><i class="fa fa-paper-plane fa-1x"></i></button>
                 
               </div>
             </div>
           </fieldset>
         </form>
-               
         </div><br>
         <div class="row">
 

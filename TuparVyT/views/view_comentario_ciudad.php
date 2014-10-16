@@ -9,26 +9,14 @@ class ViewComentarioCiudad
 		$this->smarty = New Smarty;
 	}
 
-	public function MostrarCondicionFormularioComentario($condicion){
+	/*public function MostrarCondicionesDeViaje($condicion){
 		$this->smarty->assign("Condicion",$condicion);				
-	}
-
-
-	public function MostrarIdCiudadFormularioComentario($IdCiudad){
-		$this->smarty->assign("IdCiudad",$IdCiudad);				
-	}
-	
+	}*/
 	
 	public function MostrarComentario($comentario){
 		$this->smarty->assign("Comentario",$comentario);				
 	}
 
-	
-	public function ImprimirComentarioSesion($nombre){
-		$this->smarty->assign("Nombre",$nombre);					
-		$this->smarty->display('comentario.tpl');
-
-	}
 	public function ImprimirComentario(){
 		$this->smarty->display('comentario.tpl');
 
