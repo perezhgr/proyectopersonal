@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-12 18:20:15
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-15 16:55:18
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1340954347541591112ed7c1-77948224%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1413130810,
+      1 => 1413383300,
       2 => 'file',
     ),
   ),
@@ -100,10 +100,10 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                 <td><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['precio'];?>
 </td>
                 <td>
-                  <a data-toggle="tooltip" data-placement="top" title="Edite una ciudad haciendo click aqui" href="AM_ciudad.php?id_ciudad=<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
+                  <a href="AM_ciudad.php?id_ciudad=<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
 "><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                   </a>
-                  <a data-toggle="tooltip" data-placement="top" title="Elimine una ciudad haciendo click aqui" style="cursor:pointer">
+                  <a style="cursor:pointer">
                     <span onclick="BorrarCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
 );" class="glyphicon glyphicon-trash ">
                     </span>

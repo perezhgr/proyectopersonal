@@ -57,23 +57,19 @@ $(document).ready(function() {
 
 	});
 
-	$("#formregistrarse").submit(function() 
-	{
-		$.ajax({
-			type: "POST",
-			data:$("#formregistrarse").serialize(), 
-			success: function(data)
-			{
-				$(":text,:password").val('');
-				$.ambiance({message: "Te has registrado correctamente!.<br>Inicia sesion y comienza a comentar la ciudad que hayas visitado.",
-					title: "Hecho!",
-					timeout: 6,
-					type: "success"});	
-			}
-
-		});
-		return false;
+$("#formregistrarse").submit(function()
+{
+	$.ajax({
+		type: "POST",
+		data:$("#formregistrarse").serialize(),
+		success: function(data)
+		{
+			$(":text,:password").val('');
+			swal("Hecho!", "Te has registrado correctamente!.Inicia sesion y comienza a comentar la ciudad que hayas visitado.", "success")	
+		}
 	});
-
+	return false;
 });
+});
+
 

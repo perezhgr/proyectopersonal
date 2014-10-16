@@ -57,9 +57,9 @@
                 <td>{$ciudad.duracion}</td>
                 <td>{$ciudad.precio}</td>
                 <td>
-                  <a data-toggle="tooltip" data-placement="top" title="Edite una ciudad haciendo click aqui" href="AM_ciudad.php?id_ciudad={$ciudad.id_ciudad}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
+                  <a href="AM_ciudad.php?id_ciudad={$ciudad.id_ciudad}"><span class="glyphicon glyphicon-pencil">&nbsp&nbsp</span>
                   </a>
-                  <a data-toggle="tooltip" data-placement="top" title="Elimine una ciudad haciendo click aqui" style="cursor:pointer">
+                  <a style="cursor:pointer">
                     <span onclick="BorrarCiudad({$ciudad.id_ciudad});" class="glyphicon glyphicon-trash ">
                     </span>
                   </a><br>
