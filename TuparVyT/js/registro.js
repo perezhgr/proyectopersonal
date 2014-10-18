@@ -57,7 +57,7 @@ $(document).ready(function() {
 
 	});
 
-$("#formregistrarse").submit(function()
+/*$("#formregistrarse").submit(function()
 {
 	$.ajax({
 		type: "POST",
@@ -65,11 +65,11 @@ $("#formregistrarse").submit(function()
 		success: function(data)
 		{
 			$(":text,:password").val('');
-			swal("Hecho!", "Te has registrado correctamente!.Inicia sesion y comienza a comentar la ciudad que hayas visitado.", "success")	
+			
 		}
 	});
 	return false;
-});
+});*/
 });
 
 

@@ -27,7 +27,7 @@
                           <input type="hidden" class="form-control" name="id_ciudad" value="{$idciudad.id_ciudad}" required>
                           {/foreach}                       
                         </div>
-                      </div>                 
+                      </div>  
                   </div>
                 </form>
                 {/if}
@@ -43,7 +43,7 @@
                       success: function(data)
                       {
                         $('#comentario').html(data);
-                        swal("Hecho!", "Tu comentario se agrego.", "success") 
+                        
                       }
 
                     });

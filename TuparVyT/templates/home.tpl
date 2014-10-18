@@ -17,7 +17,6 @@
                   <li><a href=""></a></li>
                   <li><a href=""></a></li>
                   <li><a href=""></a></li>
-                  <li><a href=""></a></li>
                   <li>
                     {if isset($Nombre)} 
                     <p style="display:none" class="lead">

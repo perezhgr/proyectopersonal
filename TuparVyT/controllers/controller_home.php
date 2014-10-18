@@ -15,10 +15,15 @@
 
 			if(isset($_POST["nombre"]))
 			{
+				$_SESSION["nombre"] = $_POST['nombre'] ;
 				$usuario['nombre'] = $_POST['nombre'] ;
 				$usuario['mail'] = $_POST['mail'] ;
 				$usuario['pass'] = md5($_POST['pass']);
-				$usuario=$this->model->GrabarUsuario($usuario);
+
+				$this->model->GrabarUsuario($usuario);
+				$user=$this->model->GetUsuario($usuario['mail']);
+				$_SESSION["id_usuario"]=$user[0]["id_usuario"];
+				$this->view->ImprimirUsuarioLogueado($_SESSION["nombre"]);
 			}
 
 			elseif(isset($_POST["mail"]))

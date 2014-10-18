@@ -30,6 +30,11 @@ class ViewHome
 		$this->smarty->assign("Nombre",$nombre);			
 
 	}
+	
+	/*public function ImprimirUsuarioRegistrado($name){
+		$this->smarty->assign("Name",$name);			
+
+	}*/
 
 	public function ImprimirHome(){
 		$this->smarty->display('home.tpl');
