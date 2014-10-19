@@ -26,15 +26,15 @@ class ViewHome
 		$this->smarty->assign('ErrorPass',$errorpass);
 	}
 
-	public function ImprimirUsuarioLogueado($nombre){
-		$this->smarty->assign("Nombre",$nombre);			
+	public function ImprimirUsuarioLogueado($nombreusuariologueado){
+		$this->smarty->assign("Nombre",$nombreusuariologueado);			
 
 	}
 	
-	/*public function ImprimirUsuarioRegistrado($name){
-		$this->smarty->assign("Name",$name);			
+	public function ImprimirUsuarioRegistrado($nombreusuarioregistrado){
+		$this->smarty->assign("Nombre",$nombreusuarioregistrado);			
 
-	}*/
+	}
 
 	public function ImprimirHome(){
 		$this->smarty->display('home.tpl');

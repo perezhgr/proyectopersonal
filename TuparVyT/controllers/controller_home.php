@@ -23,7 +23,7 @@
 				$this->model->GrabarUsuario($usuario);
 				$user=$this->model->GetUsuario($usuario['mail']);
 				$_SESSION["id_usuario"]=$user[0]["id_usuario"];
-				$this->view->ImprimirUsuarioLogueado($_SESSION["nombre"]);
+				$this->view->ImprimirUsuarioRegistrado($_SESSION["nombre"]);
 			}
 
 			elseif(isset($_POST["mail"]))
