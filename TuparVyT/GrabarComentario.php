@@ -9,6 +9,7 @@ $view = new ViewGrabarComentario();
 $controller = new ControllerGrabarComentario($model,$view);
 $controller->GrabarComentario();	
 $controller->BuscarComentario();	
+$controller->ObtenerCountComent();	
 
 ?>
 

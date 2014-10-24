@@ -39,5 +39,19 @@ class ModelGrabarComentario
 		return $query->fetchAll();
 	}
 	
+
+		public function ObtenerCountComentarioActualizado($id_ciudad)
+	{
+		
+		$sql = "SELECT COUNT(id_comentario) AS countcoments
+		FROM   comentario 
+		WHERE  id_ciudad= $id_ciudad";		
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}
+
+
+	
+	
 }
 ?>

@@ -1,6 +1,6 @@
 <?php
 require('./libs/Smarty.class.php');
-class ViewHome
+class ViewIndex
 {
 	public $smarty;   
 
@@ -13,8 +13,11 @@ class ViewHome
 		$this->smarty->assign("Empresa",$empresa);				
 	}
 
-	public function MostrarCiudades($ciudades){
+	public function MostrarCiudadesConImagenes($ciudades){
 		$this->smarty->assign("Ciudades",$ciudades);				
+	}
+	public function MostrarCiudades($city){
+		$this->smarty->assign("City",$city);				
 	}
 
 	public function MensajeErrorUsuario($errorusuario){
@@ -36,8 +39,8 @@ class ViewHome
 
 	}
 
-	public function ImprimirHome(){
-		$this->smarty->display('home.tpl');
+	public function ImprimirIndex(){
+		$this->smarty->display('index.tpl');
 
 	}
 

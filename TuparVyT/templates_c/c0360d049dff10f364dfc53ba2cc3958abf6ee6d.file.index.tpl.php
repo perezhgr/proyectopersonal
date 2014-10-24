@@ -1,44 +1,95 @@
-{include file="header.tpl"}
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-24 19:26:06
+         compiled from "./templates/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:170233470754483c6f72cf81-30486735%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'c0360d049dff10f364dfc53ba2cc3958abf6ee6d' => 
+    array (
+      0 => './templates/index.tpl',
+      1 => 1414171563,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '170233470754483c6f72cf81-30486735',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_54483c6f8d09e5_26095978',
+  'variables' => 
+  array (
+    'Nombre' => 0,
+    'ErrorUsuario' => 0,
+    'ErrorPass' => 0,
+    'Empresa' => 0,
+    'empresa' => 0,
+    'Ciudades' => 0,
+    'ciudad' => 0,
+    'City' => 0,
+    'city' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_54483c6f8d09e5_26095978')) {function content_54483c6f8d09e5_26095978($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
     <body>
+
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+              <span class="sr-only">Toggle navigation</span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse">
+          <a class="navbar-brand">Tupar VyT</a>
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="#top">Inicio</a>
+              </li>
+              <li>
+                <a href="#empresa">Acerca</a>
+              </li>
+              <li>
+                <a href="#paquetes">Paquetes</a>
+              </li>
+              <li>
+                <a href="#contacto">Contacto</a>
+              </li>             
+            </ul>
+            <ul class="nav navbar-nav" style="float: right">
+              <li>
+                <?php if (isset($_smarty_tpl->tpl_vars['Nombre']->value)){?> 
+                <p style="display:none" class="lead">
+                  <a class="zoom btn btn-default btn-sm" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
+                </p>
+                <p class="lead navbar-btn pull-right">
+                  <a class="btn btn-primary btn-sm">
+                    <strong >Hola <?php echo $_smarty_tpl->tpl_vars['Nombre']->value;?>
+ !</strong>
+                  </a>&nbsp
+                  <button id="logout" class="zoom btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
+                    <i class="fa fa-power-off"></i>
+                  </button>
+                </p>
+                <?php }else{ ?>
+                <p class="lead">
+                  <a class="zoom btn btn-default btn-sm navbar-btn pull-right" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
+                </p>
+
+                <?php }?>
+              
+            </li>
+          </ul>
+          </div>
+        </div>
+      </div>
       <div id="top" class="site-wrapper">
 
         <div class="site-wrapper-inner">
 
           <div class="cover-container ">
-
-            <div class="masthead clearfix ">
-              <div class="inner">
-                <h3 class="masthead-brand"></h3>
-                <ul class="nav masthead-nav d ">
-                  <li class="active"><a href="#top">Home</a></li>
-                  <li ><a href="#empresa">Acerca</a></li>
-                  <li><a href="#paquetes">Paquetes</a></li>
-                  <li><a href="#contacto">Contacto</a></li>
-                  <li><a href=""></a></li>
-                  <li><a href=""></a></li>
-                  <li><a href=""></a></li>
-                  <li>
-                    {if isset($Nombre)} 
-                    <p style="display:none" class="lead">
-                      <a class="zoom btn btn-default btn-sm" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
-                    </p>
-                    <p class="lead">
-                      <a class="btn btn-primary btn-sm">
-                        <strong>Hola {$Nombre} !</strong>
-                      </a>&nbsp
-                      <button id="logout" class=" zoom btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
-                        <i class="fa fa-power-off"></i>
-                      </button>
-                    </p>
-                    {else}
-                    <p class="lead">
-                      <a class="zoom btn btn-default btn-sm" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
-                    </p>
-                    {/if}
-                  </li>                  
-                </ul>
-              </div>
-            </div><br>
 
             <div class="inner cover ">
               <h1 class="cover-heading w ">Tupar Viajes y Turismo</h1>
@@ -59,22 +110,26 @@
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
                               <input type="text" class="form-control" id="mail" placeholder="Mail" name="mail">
-                              {if isset($ErrorUsuario)}
-                              <strong class="error">{$ErrorUsuario}</strong>
-                              {else}
-                              <strong  style="display:none" class="error">{$ErrorUsuario}</strong>
-                              {/if}
+                              <?php if (isset($_smarty_tpl->tpl_vars['ErrorUsuario']->value)){?>
+                              <strong class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorUsuario']->value;?>
+</strong>
+                              <?php }else{ ?>
+                              <strong  style="display:none" class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorUsuario']->value;?>
+</strong>
+                              <?php }?>
                             </div>
                           </div>
                           <div class="form-group">
                             <div class="col-lg-3"></div>
                             <div class="col-lg-6">
                               <input type="password" class="form-control" id="pass" placeholder="Password" name="pass">
-                              {if isset($ErrorPass)}
-                              <strong class="error">{$ErrorPass}</strong>
-                              {else}
-                              <strong  style="display:none" class="error">{$ErrorPass}</strong>
-                              {/if}
+                              <?php if (isset($_smarty_tpl->tpl_vars['ErrorPass']->value)){?>
+                              <strong class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorPass']->value;?>
+</strong>
+                              <?php }else{ ?>
+                              <strong  style="display:none" class="error"><?php echo $_smarty_tpl->tpl_vars['ErrorPass']->value;?>
+</strong>
+                              <?php }?>
                             </div>
                           </div>
 
@@ -148,25 +203,36 @@
         </div>
 
       </div><br><br><br><br><br>
-
       <div class="container marketing">
-        <div class="row">
+        <div class="row" >
           <h2 id="empresa">Nuestro servicio</h2><br><br>
-          {foreach $Empresa as $empresa name=emp}
-          {if $smarty.foreach.emp.iteration !== 4}
+          <?php  $_smarty_tpl->tpl_vars['empresa'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['empresa']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['Empresa']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['emp']['iteration']=0;
+foreach ($_from as $_smarty_tpl->tpl_vars['empresa']->key => $_smarty_tpl->tpl_vars['empresa']->value){
+$_smarty_tpl->tpl_vars['empresa']->_loop = true;
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['emp']['iteration']++;
+?>
+          <?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['emp']['iteration']!==4){?>
           <div class="col-lg-6">
-          <img class="zoom img-circle zoom" src="{$empresa.path}" alt="" style="width: 140px; height: 140px;">
-            <h3 >{$empresa.titulo}</h3><br>
-            <p class="text-justify">{$empresa.cuerpo}</p>
+          <img class="zoom img-circle zoom" src="<?php echo $_smarty_tpl->tpl_vars['empresa']->value['path'];?>
+" alt="" style="width: 140px; height: 140px;">
+            <h3 ><?php echo $_smarty_tpl->tpl_vars['empresa']->value['titulo'];?>
+</h3><br>
+            <p class="text-justify"><?php echo $_smarty_tpl->tpl_vars['empresa']->value['cuerpo'];?>
+</p>
           </div>
-          {else}
+          <?php }else{ ?>
           <div class="col-lg-12 ">
-          <img class="img-circle zoom" src="{$empresa.path}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-            <h3>{$empresa.titulo}</h3><br>
-            <p class="text-justify">{$empresa.cuerpo}</p>
+          <img class="img-circle zoom" src="<?php echo $_smarty_tpl->tpl_vars['empresa']->value['path'];?>
+" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+            <h3><?php echo $_smarty_tpl->tpl_vars['empresa']->value['titulo'];?>
+</h3><br>
+            <p class="text-justify"><?php echo $_smarty_tpl->tpl_vars['empresa']->value['cuerpo'];?>
+</p>
           </div>
-          {/if}
-          {/foreach}
+          <?php }?>
+          <?php } ?>
         </div><br><br><br><br><br><br><br><br>
 
 
@@ -192,22 +258,43 @@
         <!-- Three columns of text below the carousel -->
         <div class="row ">
           <h2 id="paquetes">Paquetes</h2><br><br>
-          {foreach from=$Ciudades item=ciudad}
-          <div class="col-lg-4 col-sm-6 col-xs-12 ">
-            <img src="{$ciudad.path}" class="img-rounded img-responsive zoom"  data-toggle="tooltip" data-placement="left" title="{$ciudad.nombre_ciudad}">
-           <h3>{$ciudad.nombre_ciudad}</h3>
+          <?php  $_smarty_tpl->tpl_vars['ciudad'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ciudad']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['Ciudades']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['ciudad']->key => $_smarty_tpl->tpl_vars['ciudad']->value){
+$_smarty_tpl->tpl_vars['ciudad']->_loop = true;
+?>
 
-        <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" onClick="getDetalleCiudad({$ciudad.id_ciudad})">Ver mas &raquo;</button>
-        </div>
-        {/foreach}
+          <div class="col-lg-4 col-sm-6 col-xs-12 ">
+            <img src="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['path'];?>
+"  alt="" class="img-rounded img-responsive zoom"  data-toggle="tooltip" data-placement="left" title="<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
+">
+            <h3><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['nombre_ciudad'];?>
+</h3>
+
+            <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" onClick="getDetalleCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
+)">Ver mas &raquo;</button>
+          </div>   
+        <?php } ?>
+        <?php  $_smarty_tpl->tpl_vars['city'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['city']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['City']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['city']->key => $_smarty_tpl->tpl_vars['city']->value){
+$_smarty_tpl->tpl_vars['city']->_loop = true;
+?>
+        <div class="col-lg-4 col-sm-6 col-xs-12 ">
+          <img src="img/222.gif"  alt="" class="img-rounded img-responsive zoom"  data-toggle="tooltip" data-placement="left" title="<?php echo $_smarty_tpl->tpl_vars['city']->value['nombre_ciudad'];?>
+">
+          <h3><?php echo $_smarty_tpl->tpl_vars['city']->value['nombre_ciudad'];?>
+</h3>
+        </div>  
+      <?php } ?>
         <!-- /.col-lg-4 -->
-       </div><br><br><br><br><br><br><br><br><!-- /.row -->
+       </div><br><br><br><br><br><!-- /.row -->
 
        <div class="row">
        <h2 id="contacto">Envienos su consulta</h2><br><br>
         <div class="col-lg-8">
         <h4 class="text-center">Estaríamos encantados de proporcionarle con más información ,<br> sólo tiene que llamar , correo electrónico o visítenos</h4><br><br>
-        <form class="zoom form-horizontal" ACTION="" METHOD="POST">        
+        <form class="form-horizontal" ACTION="" METHOD="POST">        
             <fieldset>
               <div class="form-group">
                 <label for="inputPassword" class="col-lg-2 control-label"
@@ -229,8 +316,10 @@
                 
               </div>
             </div>
-          </fieldset>
+          </fieldset>          
         </form>
+
+
                
         </div><br>
         <div class="row">
@@ -253,4 +342,5 @@
         </div>
       </div>    
      </div><br><br><br><br><br><br>
-{include file="footer.tpl"}
+<?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+<?php }} ?>

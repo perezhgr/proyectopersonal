@@ -24,7 +24,7 @@ class ControllerLogin
 
 
 		if (empty($user)){
-			$this->view->MensajeErrorUsuario("Error: Usuario inexistente.");			
+			$this->view->MensajeErrorUsuario("Error: Usuario inexistente.");
 		}
 		elseif (empty($esadmi)) {
 			$this->view->MensajeErrorAdmin("Error : Usuario sin permisos de administrador.");
@@ -34,7 +34,9 @@ class ControllerLogin
 		}
 		else{
 			$_SESSION["mail"]=$formulario["mail"];
+			if(array_key_exists('mail', $_SESSION)){
 			header('Location: admin.php');
+			}
 		}		
       }
 

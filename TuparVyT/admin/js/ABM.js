@@ -46,6 +46,12 @@ $('#formciudad').submit( function(e) {
 	$(":text").val('');
 	swal("Hecho!", "La ciudad se creo exitosamente!", "success")
 	e.preventDefault(); 
+
+	setTimeout(function() {
+		window.location = "admin.php";
+	}, 1500);
+
+	
 } );
 
 
@@ -59,6 +65,9 @@ $("#formeditarciudad").submit(function()
 		success: function(data)
 		{
 			swal("Hecho!", "La ciudad se ha editado exitosamente!", "success")
+			setTimeout(function() {
+				window.location = "admin.php";
+			}, 1500);
 		}
 
 	});
@@ -150,8 +159,9 @@ $("#formcondicion").submit(function()
 		{
 			$(":text").val('');	
 			swal("Hecho!", "La condicion se ha creado exitosamente !", "success")
-			
-			
+			setTimeout(function() {
+				window.location = "admin.php";
+			}, 1500);	
 		}
 
 	});
@@ -167,6 +177,9 @@ $("#formeditarcondicion").submit(function()
 		success: function(data)
 		{
 			swal("Hecho!", "La condicion se ha editado exitosamente !", "success")
+				setTimeout(function() {
+					window.location = "admin.php";
+				}, 1500);
 		}
 
 	});

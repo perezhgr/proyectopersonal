@@ -1,6 +1,6 @@
 	<?php
 	session_start();
-	class ControllerHome
+	class ControllerIndex
 	{
 		private $model;
 		private $view;
@@ -11,7 +11,7 @@
 		}
 
 
-		public function ImprimirHome(){
+		public function ImprimirIndex(){
 
 			if(isset($_POST["nombre"]))
 			{
@@ -51,9 +51,12 @@
 
 			$empresa=$this->model->ObtenerDescripcionEmpresa();
 			$this->view->MostrarDescripcionEmpresa($empresa);
-			$this->view->MostrarCiudades($this->model->ObtenerCiudades());
 
-			$this->view->ImprimirHome();
+			$this->view->MostrarCiudadesConImagenes($this->model->ObtenerCiudadesConImg());
+			$this->view->MostrarCiudades($this->model->ObtenerCiudades());
+			
+
+			$this->view->ImprimirIndex();
 
 		}
 	}

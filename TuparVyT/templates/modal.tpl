@@ -65,7 +65,9 @@
                                 {if $comentario.comentarios == 0}
                                     <button type="button" class="btn btn-primary" onClick="getComentarioCiudad({$ciudad.id_ciudad})">
                                       <span class="badge pull-right">
+                                          <div id="contadorcomentario">           
                                           {$comentario.comentarios}
+                                          </div>
                                       </span>
                                       <i class="fa fa-comments fa-2x"></i>&nbsp;
                                     </button><br>
@@ -107,9 +109,11 @@
 
                       <!-- CAROUSEL CICLICO-->                                    
                       <script type="text/javascript">
+                      
                         $('.carousel').carousel({
                           interval: 2800
                         })
+                        
                         $('.carousel').carousel({
                           pause: "hover"
                         })

@@ -29,6 +29,13 @@ class ControllerGrabarComentario
 		}
 	}
 
+	public function ObtenerCountComent(){
+
+		if (isset($_GET['id_ciudad'])) {
+			$this->view->MostrarCountComentarioActualizado($this->model->ObtenerCountComentarioActualizado($_GET['id_ciudad']));
+		}
+	}
+
 	
 }
 ?>

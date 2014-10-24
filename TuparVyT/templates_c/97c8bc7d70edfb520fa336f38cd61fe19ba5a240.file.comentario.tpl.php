@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-17 15:21:33
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-23 23:37:58
          compiled from "./templates/comentario.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1517202957542b255766ba76-28728710%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97c8bc7d70edfb520fa336f38cd61fe19ba5a240' => 
     array (
       0 => './templates/comentario.tpl',
-      1 => 1413551015,
+      1 => 1414100265,
       2 => 'file',
     ),
   ),
@@ -32,7 +32,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_542b25577170a3_99465041')) {function content_542b25577170a3_99465041($_smarty_tpl) {?>                  <?php if (isset($_smarty_tpl->tpl_vars['Nombre']->value)){?>
                   <!-- FORM COMENTARIO-->
-                  <form id="formcrearcomentario"class="form-horizontal" method="POST">        
+                  <form id="formcrearcomentario" class="form-horizontal" method="POST">        
                     <div class="jumbotron">
                       <h4>Deja tu comentario</h4><br>
                       <div class="form-group">
@@ -86,8 +86,8 @@ $_smarty_tpl->tpl_vars['idciudad']->_loop = true;
                       data:$("#formcrearcomentario").serialize(), 
                       success: function(data)
                       {
-                        $('#comentario').html(data);
                         
+                        $('#comentario').html(data);                      
                       }
 
                     });

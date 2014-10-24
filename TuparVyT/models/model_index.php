@@ -1,5 +1,5 @@
 <?php
-class ModelHome
+class ModelIndex
 {
 	private $conn;
 
@@ -39,12 +39,23 @@ class ModelHome
 	}
 
 
-	public function ObtenerCiudades(){
+	public function ObtenerCiudadesConImg(){
 		
 		$sql = "SELECT c.id_ciudad,nombre_ciudad,i.path
 		FROM   ciudad c
 		JOIN   imagen i ON (i.id_ciudad = c.id_ciudad)
 		GROUP BY c.id_ciudad ";
+
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}
+
+	public function ObtenerCiudades(){
+		
+		$sql = "SELECT c.id_ciudad,nombre_ciudad
+		FROM   ciudad c
+        WHERE  c.id_ciudad NOT IN (SELECT i.id_ciudad
+                                   FROM  imagen i)";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();

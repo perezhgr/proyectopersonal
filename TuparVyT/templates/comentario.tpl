@@ -1,6 +1,6 @@
                   {if isset($Nombre)}
                   <!-- FORM COMENTARIO-->
-                  <form id="formcrearcomentario"class="form-horizontal" method="POST">        
+                  <form id="formcrearcomentario" class="form-horizontal" method="POST">        
                     <div class="jumbotron">
                       <h4>Deja tu comentario</h4><br>
                       <div class="form-group">
@@ -42,8 +42,8 @@
                       data:$("#formcrearcomentario").serialize(), 
                       success: function(data)
                       {
-                        $('#comentario').html(data);
                         
+                        $('#comentario').html(data);                      
                       }
 
                     });

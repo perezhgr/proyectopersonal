@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-13 23:25:12
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-23 23:10:03
          compiled from "./templates/modal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1443305185542b0a1a112ec0-45545667%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9afbabd2d7104bba99deb709b2f3809e75b1e519' => 
     array (
       0 => './templates/modal.tpl',
-      1 => 1413235092,
+      1 => 1414098585,
       2 => 'file',
     ),
   ),
@@ -122,8 +122,10 @@ $_smarty_tpl->tpl_vars['comentario']->_loop = true;
                                     <button type="button" class="btn btn-primary" onClick="getComentarioCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
 )">
                                       <span class="badge pull-right">
+                                          <div id="contadorcomentario">           
                                           <?php echo $_smarty_tpl->tpl_vars['comentario']->value['comentarios'];?>
 
+                                          </div>
                                       </span>
                                       <i class="fa fa-comments fa-2x"></i>&nbsp;
                                     </button><br>
@@ -167,9 +169,11 @@ $_smarty_tpl->tpl_vars['comentario']->_loop = true;
 
                       <!-- CAROUSEL CICLICO-->                                    
                       <script type="text/javascript">
+                      
                         $('.carousel').carousel({
                           interval: 2800
                         })
+                        
                         $('.carousel').carousel({
                           pause: "hover"
                         })

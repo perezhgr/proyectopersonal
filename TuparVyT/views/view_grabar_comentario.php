@@ -16,6 +16,15 @@ class ViewGrabarComentario
 		$this->smarty->display('ultimo_comentario.tpl');
 
 	}
+
+	public function MostrarCountComentarioActualizado($count)
+	{
+		$this->smarty->assign('CountComent',$count);
+		$this->smarty->display('contador_comentario.tpl');
+
+	}
+
+	
 }
 
 ?>
