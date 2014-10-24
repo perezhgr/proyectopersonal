@@ -47,7 +47,7 @@
                       <h3>Lugar<h3><h4>{$ciudad.nombre_ciudad}</h4>
                       </div>
                       <div class="col-lg-4  text-center">
-                        <h3>Precio</h3><h4>{$ciudad.precio}</h4>
+                        <h3>Precio</h3><h4>$&nbsp;{$ciudad.precio}</h4>
                       </div>
                       <div class="col-lg-4  text-center">
                         <h3>Duracion</h3><h4>{$ciudad.duracion}</h4>

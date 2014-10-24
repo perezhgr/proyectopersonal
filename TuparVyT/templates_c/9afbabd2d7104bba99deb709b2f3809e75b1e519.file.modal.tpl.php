@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-23 23:10:03
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-24 20:58:04
          compiled from "./templates/modal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1443305185542b0a1a112ec0-45545667%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9afbabd2d7104bba99deb709b2f3809e75b1e519' => 
     array (
       0 => './templates/modal.tpl',
-      1 => 1414098585,
+      1 => 1414175742,
       2 => 'file',
     ),
   ),
@@ -97,7 +97,7 @@ $_smarty_tpl->tpl_vars['imagen']->_loop = true;
 </h4>
                       </div>
                       <div class="col-lg-4  text-center">
-                        <h3>Precio</h3><h4><?php echo $_smarty_tpl->tpl_vars['ciudad']->value['precio'];?>
+                        <h3>Precio</h3><h4>$&nbsp;<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['precio'];?>
 </h4>
                       </div>
                       <div class="col-lg-4  text-center">

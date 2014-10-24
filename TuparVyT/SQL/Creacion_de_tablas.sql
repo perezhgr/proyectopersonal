@@ -19,7 +19,7 @@ CREATE TABLE ciudad (
 	id_ciudad          INT(10) NOT NULL AUTO_INCREMENT,
 	nombre_ciudad 	   VARCHAR (50) NOT NULL,
 	duracion		   VARCHAR (20) NOT NULL,
-	precio			   VARCHAR (50) NOT NULL,
+	precio			   INT(10) NOT NULL,
 
 	CONSTRAINT PK_CIUDAD PRIMARY KEY (id_ciudad)
 )ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;
