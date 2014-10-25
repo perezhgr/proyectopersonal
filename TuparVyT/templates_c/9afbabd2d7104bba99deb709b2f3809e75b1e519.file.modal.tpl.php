@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-24 20:58:04
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-25 22:42:43
          compiled from "./templates/modal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1443305185542b0a1a112ec0-45545667%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9afbabd2d7104bba99deb709b2f3809e75b1e519' => 
     array (
       0 => './templates/modal.tpl',
-      1 => 1414175742,
+      1 => 1414269757,
       2 => 'file',
     ),
   ),
@@ -23,8 +23,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'Imagen' => 0,
     'imagen' => 0,
     'ciudad' => 0,
-    'Comentario' => 0,
-    'comentario' => 0,
     'Nombre' => 0,
   ),
   'has_nocache_code' => false,
@@ -113,46 +111,16 @@ $_smarty_tpl->tpl_vars['imagen']->_loop = true;
                         <div class="col-lg-6">
                           <ul class="nav nav-pills nav-stacked">
                             <li class="active">
-                              <?php  $_smarty_tpl->tpl_vars['comentario'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['comentario']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['Comentario']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['comentario']->key => $_smarty_tpl->tpl_vars['comentario']->value){
-$_smarty_tpl->tpl_vars['comentario']->_loop = true;
-?>
-                                <?php if ($_smarty_tpl->tpl_vars['comentario']->value['comentarios']==0){?>
-                                    <button type="button" class="btn btn-primary" onClick="getComentarioCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
+                              <button type="button" class="btn btn-primary" onClick="getComentarioCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
 )">
-                                      <span class="badge pull-right">
-                                          <div id="contadorcomentario">           
-                                          <?php echo $_smarty_tpl->tpl_vars['comentario']->value['comentarios'];?>
-
-                                          </div>
-                                      </span>
-                                      <i class="fa fa-comments fa-2x"></i>&nbsp;
-                                    </button><br>
-                                    <small>
-                                      <em>* Esta ciudad no tiene comentarios.</em><br>
-                                      <?php if (!isset($_smarty_tpl->tpl_vars['Nombre']->value)){?>
-                                        <em>* Si desea dejar su comentario debera   registrarse primero.
-                                        </em>
-                                      <?php }?>
-                                    </small>
-                                <?php }else{ ?>  
-                                    <button type="button" class="btn btn-primary" onClick="getComentarioCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
-)">
-                                      <span class="badge pull-right">
-                                          <?php echo $_smarty_tpl->tpl_vars['comentario']->value['comentarios'];?>
-
-                                      </span>
-                                      <i class="fa fa-comments fa-2x"></i>&nbsp;
-                                    </button><br>
-                                    <small>
-                                    <?php if (!isset($_smarty_tpl->tpl_vars['Nombre']->value)){?>
-                                      <em>* Si desea dejar su comentario debera registrarse primero.
-                                      </em>
-                                    <?php }?>
-                                    </small>
+                              <i class="fa fa-comments fa-3x"></i>&nbsp;
+                              </button><br>
+                              <small>
+                                <?php if (!isset($_smarty_tpl->tpl_vars['Nombre']->value)){?>
+                                <em>* Si desea dejar su comentario debera   registrarse primero.
+                                </em>
                                 <?php }?>
-                              <?php } ?>
+                              </small>
                             </li><br><br>
                           </ul>
                           </div>

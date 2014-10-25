@@ -19,8 +19,9 @@ class ViewComentarioCiudad
 	}
 	
 	
-	public function MostrarComentario($comentario){
+	public function MostrarComentario($comentario,$contador){
 		$this->smarty->assign("Comentario",$comentario);				
+		$this->smarty->assign("Contador",$contador);	
 	}
 	
 	public function ImprimirComentarioSesion($nombre,$id){

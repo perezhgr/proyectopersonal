@@ -11,6 +11,7 @@ class ModelComentarioCiudad
 
 	}		
 
+
 	public function ObtenerComentarioByIdCiudad($id_ciudad){
 		
 		$sql = "SELECT u.nombre,c.texto,c.id_ciudad,co.condicion,c.id_comentario 
@@ -20,6 +21,18 @@ class ModelComentarioCiudad
 		JOIN   condicion co ON (co.id_condicion = c.id_condicion)
 		WHERE  c.id_ciudad= $id_ciudad
 		ORDER BY c.id_comentario DESC ";
+
+		$query = $this->conn->query($sql);
+		return $query->fetchAll();
+	}
+
+
+
+	public function ObtenerCountComentarioByIdCiudad($id_ciudad){
+		
+		$sql = "SELECT COUNT(id_comentario) AS countcoment
+		FROM   comentario 
+		WHERE  id_ciudad= $id_ciudad";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();

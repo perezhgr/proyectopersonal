@@ -16,7 +16,7 @@ class ControllerComentarioCiudad
 
 		if (isset($_GET['id_ciudad'])) {
 
-			$this->view->MostrarComentario($this->model->ObtenerComentarioByIdCiudad($_GET['id_ciudad']));
+			$this->view->MostrarComentario($this->model->ObtenerComentarioByIdCiudad($_GET['id_ciudad']),$this->model->ObtenerCountComentarioByIdCiudad($_GET['id_ciudad']));
 			$this->view->MostrarCondicionFormularioComentario($this->model->ObtenerCondicion());			
 			$this->view->MostrarIdCiudadFormularioComentario($this->model->ObtenerIdCiudad($_GET['id_ciudad']));			
 		}
