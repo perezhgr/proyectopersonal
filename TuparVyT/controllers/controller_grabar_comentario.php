@@ -1,4 +1,5 @@
 <?php
+session_start();
 class ControllerGrabarComentario
 {
 	private $model;
@@ -9,10 +10,9 @@ class ControllerGrabarComentario
 		$this->view = $view;
 	}
 
+		public function ImprimirComentario(){
 
-	public function GrabarComentario(){
-
-		if (isset($_POST['texto'])) {
+			if (isset($_POST['texto'])) {
 			$comentario["texto"] = $_POST["texto"];	
 			$comentario["id_usuario"] = $_POST["id_usuario"];
 			$comentario["id_ciudad"] = $_POST["id_ciudad"];
@@ -20,22 +20,18 @@ class ControllerGrabarComentario
 			
 			$this->model->InsertaComentario($comentario);
 		}
-	}
 
-	public function BuscarComentario(){
+			$this->view->MostrarComentario($this->model->ObtenerComentarioByIdCiudad($comentario["id_ciudad"]),$this->model->ObtenerCountComentarioByIdCiudad($comentario["id_ciudad"]));
+			$this->view->MostrarCondicionFormularioComentario($this->model->ObtenerCondicion());			
+			$this->view->MostrarIdCiudadFormularioComentario($this->model->ObtenerIdCiudad($comentario["id_ciudad"]));			
+		
 
-		if (isset($_GET['id_ciudad'])) {
-			$this->view->MostrarUltimoComentarioInsertado($this->model->BuscarComentario($_GET['id_ciudad']));
+		if (isset($_SESSION['nombre'])) {
+			$this->view->ImprimirComentarioSesion($_SESSION["nombre"],$_SESSION["id_usuario"]);	
+		}
+		else{
+			$this->view->ImprimirComentario();	
 		}
 	}
-
-	public function ObtenerCountComent(){
-
-		if (isset($_GET['id_ciudad'])) {
-			$this->view->MostrarCountComentarioActualizado($this->model->ObtenerCountComentarioActualizado($_GET['id_ciudad']));
-		}
-	}
-
-	
 }
 ?>

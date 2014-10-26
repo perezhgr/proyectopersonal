@@ -34,15 +34,5 @@ class ModelDetalleCiudad
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
 	}
-
-	public function ObtenerCountComentByIdCiudad($id_ciudad){
-		
-		$sql = "SELECT COUNT(id_comentario) as comentarios
-		FROM   comentario 
-		WHERE  id_ciudad =$id_ciudad";
-
-		$query = $this->conn->query($sql);
-		return $query->fetchAll();
-	}
 }
 ?>

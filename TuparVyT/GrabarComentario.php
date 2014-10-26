@@ -7,9 +7,7 @@ include './models/model_grabar_comentario.php';
 $model = new ModelGrabarComentario();
 $view = new ViewGrabarComentario();
 $controller = new ControllerGrabarComentario($model,$view);
-$controller->GrabarComentario();	
-$controller->BuscarComentario();	
-$controller->ObtenerCountComent();	
 
+$controller->ImprimirComentario();	
 ?>
 

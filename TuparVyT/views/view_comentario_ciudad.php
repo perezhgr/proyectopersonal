@@ -13,7 +13,6 @@ class ViewComentarioCiudad
 		$this->smarty->assign("Condicion",$condicion);				
 	}
 
-
 	public function MostrarIdCiudadFormularioComentario($IdCiudad){
 		$this->smarty->assign("IdCiudad",$IdCiudad);				
 	}

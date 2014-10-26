@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-26 20:44:56
-         compiled from "./templates/comentario.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1618187900544d4397481154-92442903%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-26 20:45:02
+         compiled from "./templates/ultimo_comentario.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2112254690544d439aea69a0-29546448%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '97c8bc7d70edfb520fa336f38cd61fe19ba5a240' => 
+    '051ee43f2e2337eae96b1b53027611cbf71e53ba' => 
     array (
-      0 => './templates/comentario.tpl',
-      1 => 1414352621,
+      0 => './templates/ultimo_comentario.tpl',
+      1 => 1414352667,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1618187900544d4397481154-92442903',
+  'nocache_hash' => '2112254690544d439aea69a0-29546448',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_544d439754b951_03423737',
+  'unifunc' => 'content_544d439af3cc74_56283816',
   'variables' => 
   array (
     'Nombre' => 0,
@@ -31,9 +31,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_544d439754b951_03423737')) {function content_544d439754b951_03423737($_smarty_tpl) {?>                  <?php if (isset($_smarty_tpl->tpl_vars['Nombre']->value)){?>
+<?php if ($_valid && !is_callable('content_544d439af3cc74_56283816')) {function content_544d439af3cc74_56283816($_smarty_tpl) {?>                  <?php if (isset($_smarty_tpl->tpl_vars['Nombre']->value)){?>
                   <!-- FORM COMENTARIO-->
-                  <div id="templateformcomentactualizado">
+
                   <form id="formcrearcomentario" class="form-horizontal" method="POST">        
                     <div class="jumbotron">
                       <h4>Deja tu comentario</h4><br>
@@ -102,6 +102,7 @@ $_smarty_tpl->tpl_vars['idciudad']->_loop = true;
                       <nav class="navbar navbar-default" role="navigation"> 
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
+                          <div>
                             <?php  $_smarty_tpl->tpl_vars['comentario'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['comentario']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['Contador']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['comentario']->key => $_smarty_tpl->tpl_vars['comentario']->value){
@@ -110,6 +111,7 @@ $_smarty_tpl->tpl_vars['comentario']->_loop = true;
                             <h4>Comentarios&nbsp;&nbsp;
                               <span class="label label-primary"><?php echo $_smarty_tpl->tpl_vars['comentario']->value['countcoment'];?>
 </span>
+                            </div>
                           </h4>
                           <?php } ?>
                         </div>
@@ -132,8 +134,8 @@ $_smarty_tpl->tpl_vars['comentario']->_loop = true;
                         </address>
 
                         <hr>
-                      </div>
-                      </div>
+
+
                       <!-- LISTADO DE COMENTARIOS-->
 
 

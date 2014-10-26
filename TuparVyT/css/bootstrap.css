@@ -6243,7 +6243,7 @@ background-color: black;
 }
 
 .scroll-area {
-  height: 200px;
+  height: 150px;
   position: relative;
   overflow: auto;
 }

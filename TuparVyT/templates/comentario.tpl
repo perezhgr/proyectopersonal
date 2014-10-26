@@ -1,5 +1,6 @@
                   {if isset($Nombre)}
                   <!-- FORM COMENTARIO-->
+                  <div id="templateformcomentactualizado">
                   <form id="formcrearcomentario" class="form-horizontal" method="POST">        
                     <div class="jumbotron">
                       <h4>Deja tu comentario</h4><br>
@@ -16,7 +17,7 @@
                          </div>
                          {foreach from=$IdCiudad item=idciudad}
                          <div class="col-lg-6">
-                          <button type="submit" onclick="ActualizarContadorComentario({$idciudad.id_ciudad});" class="btn btn-primary btn-sm btn-block">
+                          <button type="submit" class="btn btn-primary btn-sm btn-block">
                             <i class="fa fa-paper-plane"></i></button>
                           </div>
                         </div>
@@ -24,7 +25,7 @@
                           <div class="col-lg-6">
                             <input type="hidden" class="form-control" name="id_usuario" value="{$IdUsuario}" required></div>
                             <div class="col-lg-6">
-                              
+
                               <input type="hidden" class="form-control" name="id_ciudad" value="{$idciudad.id_ciudad}" required>
                               {/foreach}                       
                             </div>
@@ -44,46 +45,27 @@
                             success: function(data)
                             {
 
-                              $('#comentario').html(data);                      
+                              $('#templateformcomentactualizado').html(data);                      
                             }
 
                           });
                           return false;
                         });
-                        
-                        //Actualiza el contador de comentarios.
-                        function ActualizarContadorComentario(ciudad){
-                          $.ajax({
-                            type: "GET",
-                            url: "ActualizarContadorComentario.php?id_ciudad="+ciudad,
-                            success: function(data)
-                            {
-                              $('#contadoractualizado').html(data);
-                            }
-                          });
-                          return false;
-                        }
-
                       </script>
 
                       <!-- LISTADO DE COMENTARIOS-->
                       <nav class="navbar navbar-default" role="navigation"> 
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
-                          <div id="contadoractualizado">
-                          {foreach from=$Contador item=comentario}
-                        <h4>Comentarios&nbsp;&nbsp;
-                            <span class="label label-primary">{$comentario.countcoment}</span>
-                          </div>
-                        </h4>
-                        {/foreach}
+                            {foreach from=$Contador item=comentario}
+                            <h4>Comentarios&nbsp;&nbsp;
+                              <span class="label label-primary">{$comentario.countcoment}</span>
+                          </h4>
+                          {/foreach}
                         </div>
                       </nav>
 
                       <div class="scroll-area" data-spy="scroll" data-offset="0">
-
-                        <address id="comentario">
-                        </address>
                         <address>
                           {foreach from=$Comentario item=comentario}
                           <div class="jumbotron text-left"><strong>{$comentario.nombre} ({$comentario.condicion})</strong> dijo:<br>
@@ -93,6 +75,7 @@
                         </address>
 
                         <hr>
+                      </div>
                       </div>
                       <!-- LISTADO DE COMENTARIOS-->
 

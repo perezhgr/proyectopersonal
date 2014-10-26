@@ -17,7 +17,6 @@ class ControllerDetalleCiudad
 
 			$this->view->MostrarDetalleCiudad($this->model->ObtenerDetalleCiudad($_GET['id_ciudad']));
 			$this->view->MostrarImgCiudad($this->model->ObtenerImgByIdCiudad($_GET['id_ciudad']));
-		    $this->view->MostrarContadorComentario($this->model->ObtenerCountComentByIdCiudad($_GET['id_ciudad']));
 		}
 		
 		if (isset($_SESSION['nombre'])) {
