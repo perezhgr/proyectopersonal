@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-26 19:55:09
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-27 00:46:15
          compiled from "./templates/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:364074710544d438dead5c7-63538012%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c0360d049dff10f364dfc53ba2cc3958abf6ee6d' => 
     array (
       0 => './templates/index.tpl',
-      1 => 1414171563,
+      1 => 1414367171,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_544d438e199965_54600588',
   'variables' => 
   array (
     'Nombre' => 0,
@@ -28,8 +30,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'city' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_544d438e199965_54600588',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_544d438e199965_54600588')) {function content_544d438e199965_54600588($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 
@@ -273,7 +273,7 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
 
             <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" onClick="getDetalleCiudad(<?php echo $_smarty_tpl->tpl_vars['ciudad']->value['id_ciudad'];?>
 )">Ver mas &raquo;</button>
-          </div>   
+          </div>      
         <?php } ?>
         <?php  $_smarty_tpl->tpl_vars['city'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['city']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['City']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -331,7 +331,7 @@ $_smarty_tpl->tpl_vars['city']->_loop = true;
             <p class="text-justify">Oficina Tupar VyT<br><br>
 
 
-            <i class="zoom fa fa-road fa-2x"></i>&nbsp&nbsp25 de mayo 268<br><br>
+            <i class="zoom fa fa-road fa-2x"></i>&nbsp&nbsp9 de Julio 380<br><br>
             <i class="zoom fa fa-building fa-2x"></i>&nbsp&nbspTandil 7000<br><br>
             <i class="zoom fa fa-map-marker fa-2x"></i>&nbsp&nbsp&nbsp&nbspArgentina<br><br>
             <i class="zoom fa fa-phone fa-2x"></i>&nbsp&nbsp+54 249 422 0494<br><br>

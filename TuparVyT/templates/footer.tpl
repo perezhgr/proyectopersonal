@@ -1,14 +1,15 @@
-     <footer>
+<div id="map-canvas"></div><br><br><br>
+<footer>
 
-      <div class="footerinner wrapper align-center text-light">
-        <div class="column one-third">
-          <a href="#top" class="sr-button sr-buttonicon small-iconbutton" title="Back to Top">
-            <i class="zoom fa fa-angle-double-up fa-3x"></i>
+  <div class="footerinner wrapper align-center text-light">
+    <div class="column one-third">
+      <a href="#top" class="sr-button sr-buttonicon small-iconbutton" title="Back to Top">
+        <i class="zoom fa fa-angle-double-up fa-3x"></i>
 
-            <div class="spacer spacer-big"></div>
-            <p class="copyright">© 2014 Todos los derechos reservados • Tupar VyT • Viajes &amp; Turismo</p>
-          </div>
-        </footer>
+        <div class="spacer spacer-big"></div>
+        <p class="copyright">© 2014 Todos los derechos reservados • Tupar VyT • Viajes &amp; Turismo</p>
+    </div>
+</footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -32,6 +33,7 @@
     <script type="text/javascript" src="js/mail.js"></script>
     <script type="text/javascript" src="js/sweet-alert.js"></script>  
     <script type="text/javascript" src="js/jquery.ambiance.js"></script>  
-    
-  </body>
-  </html>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script type="text/javascript" src="js/maps.js"></script>      
+</body>
+</html>

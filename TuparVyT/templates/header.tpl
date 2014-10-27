@@ -18,9 +18,8 @@
   <link href="css/jquery.ambiance.css" rel="stylesheet"> 
   <link href="css/bootstrap-theme.css" rel="stylesheet">
   <link href="css/sweet-alert.css" rel="stylesheet">
-  
-  
-  
+  <link href="css/maps.css" rel="stylesheet">
+   
 
   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
   <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->

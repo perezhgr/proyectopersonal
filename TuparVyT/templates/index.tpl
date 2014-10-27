@@ -214,7 +214,7 @@
             <h3>{$ciudad.nombre_ciudad}</h3>
 
             <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg" onClick="getDetalleCiudad({$ciudad.id_ciudad})">Ver mas &raquo;</button>
-          </div>   
+          </div>      
         {/foreach}
         {foreach from=$City item=city}
         <div class="col-lg-4 col-sm-6 col-xs-12 ">
@@ -266,7 +266,7 @@
             <p class="text-justify">Oficina Tupar VyT<br><br>
 
 
-            <i class="zoom fa fa-road fa-2x"></i>&nbsp&nbsp25 de mayo 268<br><br>
+            <i class="zoom fa fa-road fa-2x"></i>&nbsp&nbsp9 de Julio 380<br><br>
             <i class="zoom fa fa-building fa-2x"></i>&nbsp&nbspTandil 7000<br><br>
             <i class="zoom fa fa-map-marker fa-2x"></i>&nbsp&nbsp&nbsp&nbspArgentina<br><br>
             <i class="zoom fa fa-phone fa-2x"></i>&nbsp&nbsp+54 249 422 0494<br><br>
