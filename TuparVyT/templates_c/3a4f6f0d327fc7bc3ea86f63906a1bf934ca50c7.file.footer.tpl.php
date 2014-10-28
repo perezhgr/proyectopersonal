@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-26 21:52:48
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-28 15:04:53
          compiled from "./templates/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:524262176544d438e1ef657-64879903%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a4f6f0d327fc7bc3ea86f63906a1bf934ca50c7' => 
     array (
       0 => './templates/footer.tpl',
-      1 => 1414356764,
+      1 => 1414505092,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,44 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_544d438e200fe5_05303060',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_544d438e200fe5_05303060')) {function content_544d438e200fe5_05303060($_smarty_tpl) {?><div id="map-canvas"></div><br><br><br>
+<?php if ($_valid && !is_callable('content_544d438e200fe5_05303060')) {function content_544d438e200fe5_05303060($_smarty_tpl) {?> <style>
+      #map_canvas {
+        width: 100%;
+        height: 500px;
+        border-radius: 10px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var myLatlng = new google.maps.LatLng(-37.327413, -59.134512);
+        var mapCanvas = document.getElementById('map_canvas');
+        var mapOptions = {
+          center: myLatlng,
+          zoom: 17,
+          scrollwheel: false,
+          navigationControl: false,
+          mapTypeControl: false,
+          scaleControl: false,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        var marker = new google.maps.Marker({
+           position: myLatlng,
+           map: map,
+           title: 'Tupar VyT!'
+       });
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+    <div id="map_canvas"></div>
+  </body>
+
+
+<br><br><br>
+
 <footer>
 
   <div class="footerinner wrapper align-center text-light">
@@ -53,8 +90,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <script type="text/javascript" src="js/logout.js"></script>
     <script type="text/javascript" src="js/mail.js"></script>
     <script type="text/javascript" src="js/sweet-alert.js"></script>  
-    <script type="text/javascript" src="js/jquery.ambiance.js"></script>  
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script type="text/javascript" src="js/maps.js"></script>      
+    <script type="text/javascript" src="js/jquery.ambiance.js"></script>     
 </body>
 </html><?php }} ?>

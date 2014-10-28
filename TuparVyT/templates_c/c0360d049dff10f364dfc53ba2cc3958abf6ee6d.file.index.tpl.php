@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-27 00:46:15
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-28 14:11:12
          compiled from "./templates/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:364074710544d438dead5c7-63538012%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c0360d049dff10f364dfc53ba2cc3958abf6ee6d' => 
     array (
       0 => './templates/index.tpl',
-      1 => 1414367171,
+      1 => 1414501386,
       2 => 'file',
     ),
   ),
@@ -92,8 +92,29 @@ $_valid = $_smarty_tpl->decodeProperties(array (
           <div class="cover-container ">
 
             <div class="inner cover ">
-              <h1 class="cover-heading w ">Tupar Viajes y Turismo</h1>
-              <p class="lead s zoom">Tu sueño hecho realidad...</p>
+              <h1 class="cover-heading w ">Tupar Viajes y Turismo</h1>              
+              <!-- Modal de video  -->
+              <i style="cursor:pointer;" class="fa fa-play-circle fa-5x zoom" data-toggle="modal" data-target=".bs-example-modal-lg1"></i>
+
+              <div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Tu sueño hecha realidad...</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="span8">
+                        <div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
+                          <iframe src="//www.youtube.com/embed/4puZ4IfaKSM?autoplay=1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fin Modal de video  -->
 
               <!-- FORM PARA LOGIN -->
               <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -254,8 +275,9 @@ $_smarty_tpl->tpl_vars['empresa']->_loop = true;
           </div>
         </div>
         <!-- Fin Modal con Ajax-->
-
         <!-- Three columns of text below the carousel -->
+
+        <div>
         <div class="row ">
           <h2 id="paquetes">Paquetes</h2><br><br>
           <?php  $_smarty_tpl->tpl_vars['ciudad'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['ciudad']->_loop = false;
@@ -290,7 +312,7 @@ $_smarty_tpl->tpl_vars['city']->_loop = true;
         <!-- /.col-lg-4 -->
        </div><br><br><br><br><br><!-- /.row -->
 
-       <div class="row">
+      <div class="row">
        <h2 id="contacto">Envienos su consulta</h2><br><br>
         <div class="col-lg-8">
         <h4 class="text-center">Estaríamos encantados de proporcionarle con más información ,<br> sólo tiene que llamar , correo electrónico o visítenos</h4><br><br>
@@ -319,8 +341,6 @@ $_smarty_tpl->tpl_vars['city']->_loop = true;
           </fieldset>          
         </form>
 
-
-               
         </div><br>
         <div class="row">
 
@@ -343,4 +363,5 @@ $_smarty_tpl->tpl_vars['city']->_loop = true;
       </div>    
      </div><br><br><br><br><br><br>
 <?php echo $_smarty_tpl->getSubTemplate ("footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
+
 <?php }} ?>

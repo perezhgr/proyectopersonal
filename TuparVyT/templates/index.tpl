@@ -57,8 +57,29 @@
           <div class="cover-container ">
 
             <div class="inner cover ">
-              <h1 class="cover-heading w ">Tupar Viajes y Turismo</h1>
-              <p class="lead s zoom">Tu sueño hecho realidad...</p>
+              <h1 class="cover-heading w ">Tupar Viajes y Turismo</h1>              
+              <!-- Modal de video  -->
+              <i style="cursor:pointer;" class="fa fa-play-circle fa-5x zoom" data-toggle="modal" data-target=".bs-example-modal-lg1"></i>
+
+              <div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <h4 class="modal-title" id="myModalLabel">Tu sueño hecha realidad...</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="span8">
+                        <div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
+                          <iframe src="//www.youtube.com/embed/4puZ4IfaKSM?autoplay=1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Fin Modal de video  -->
 
               <!-- FORM PARA LOGIN -->
               <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -203,8 +224,9 @@
           </div>
         </div>
         <!-- Fin Modal con Ajax-->
-
         <!-- Three columns of text below the carousel -->
+
+        <div>
         <div class="row ">
           <h2 id="paquetes">Paquetes</h2><br><br>
           {foreach from = $Ciudades item=ciudad}
@@ -225,7 +247,7 @@
         <!-- /.col-lg-4 -->
        </div><br><br><br><br><br><!-- /.row -->
 
-       <div class="row">
+      <div class="row">
        <h2 id="contacto">Envienos su consulta</h2><br><br>
         <div class="col-lg-8">
         <h4 class="text-center">Estaríamos encantados de proporcionarle con más información ,<br> sólo tiene que llamar , correo electrónico o visítenos</h4><br><br>
@@ -254,8 +276,6 @@
           </fieldset>          
         </form>
 
-
-               
         </div><br>
         <div class="row">
 
