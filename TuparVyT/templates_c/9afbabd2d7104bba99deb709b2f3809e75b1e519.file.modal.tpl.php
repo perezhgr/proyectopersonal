@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-28 13:12:25
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-28 15:30:57
          compiled from "./templates/modal.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1478133041544d43951fdd86-28686305%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9afbabd2d7104bba99deb709b2f3809e75b1e519' => 
     array (
       0 => './templates/modal.tpl',
-      1 => 1414457298,
+      1 => 1414506617,
       2 => 'file',
     ),
   ),
@@ -38,19 +38,6 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
                     <div class="col-lg-1"></div>
                     <div class="col-lg-10">
                       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                        <?php  $_smarty_tpl->tpl_vars['imagen'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['imagen']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['Imagen']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
- $_smarty_tpl->tpl_vars['smarty']->value['foreach']['img']['iteration']=0;
-foreach ($_from as $_smarty_tpl->tpl_vars['imagen']->key => $_smarty_tpl->tpl_vars['imagen']->value){
-$_smarty_tpl->tpl_vars['imagen']->_loop = true;
- $_smarty_tpl->tpl_vars['smarty']->value['foreach']['img']['iteration']++;
-?>
-                          <li data-target="#carousel-example-generic" data-slide-to="0" class="<?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['img']['iteration']==1){?>active<?php }?>"></li>
-                          <?php } ?>   
-                        </ol>
-
                         <!-- Wrapper for slides -->
                         
                         <div class="carousel-inner">

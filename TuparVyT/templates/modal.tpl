@@ -5,13 +5,6 @@
                     <div class="col-lg-1"></div>
                     <div class="col-lg-10">
                       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                        {foreach $Imagen as $imagen name=img}
-                          <li data-target="#carousel-example-generic" data-slide-to="0" class="{if $smarty.foreach.img.iteration == 1}active{/if}"></li>
-                          {/foreach}   
-                        </ol>
-
                         <!-- Wrapper for slides -->
                         
                         <div class="carousel-inner">
