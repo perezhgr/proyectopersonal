@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-28 14:11:12
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-30 00:49:44
          compiled from "./templates/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:364074710544d438dead5c7-63538012%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c0360d049dff10f364dfc53ba2cc3958abf6ee6d' => 
     array (
       0 => './templates/index.tpl',
-      1 => 1414501386,
+      1 => 1414626582,
       2 => 'file',
     ),
   ),
@@ -65,12 +65,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   <a class="zoom btn btn-default btn-sm" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
                 </p>
                 <p class="lead navbar-btn pull-right">
-                  <a class="btn btn-primary btn-sm">
-                    <strong >Hola <?php echo $_smarty_tpl->tpl_vars['Nombre']->value;?>
+                  <a class="zoom btn btn-primary btn-sm">
+                    <strong>Hola <?php echo $_smarty_tpl->tpl_vars['Nombre']->value;?>
  !</strong>
                   </a>&nbsp
                   <button id="logout" class="zoom btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
-                    <i class="fa fa-power-off"></i>
+                    <strong>Salir&nbsp</strong><i class="fa fa-power-off"></i>
                   </button>
                 </p>
                 <?php }else{ ?>

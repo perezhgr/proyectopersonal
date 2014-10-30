@@ -31,11 +31,11 @@
                   <a class="zoom btn btn-default btn-sm" data-toggle="modal" data-target="#myModal"><strong>Inicia sesion</strong></a>
                 </p>
                 <p class="lead navbar-btn pull-right">
-                  <a class="btn btn-primary btn-sm">
-                    <strong >Hola {$Nombre} !</strong>
+                  <a class="zoom btn btn-primary btn-sm">
+                    <strong>Hola {$Nombre} !</strong>
                   </a>&nbsp
                   <button id="logout" class="zoom btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="Salir">
-                    <i class="fa fa-power-off"></i>
+                    <strong>Salir&nbsp</strong><i class="fa fa-power-off"></i>
                   </button>
                 </p>
                 {else}

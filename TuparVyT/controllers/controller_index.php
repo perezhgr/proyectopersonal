@@ -10,7 +10,6 @@
 			$this->view = $view;
 		}
 
-
 		public function ImprimirIndex(){
 
 			if(isset($_POST["nombre"]))
@@ -45,8 +44,12 @@
 				else{
 					$_SESSION["nombre"]=$user[0]["nombre"];
 					$_SESSION["id_usuario"]=$user[0]["id_usuario"];
-						$this->view->ImprimirUsuarioLogueado($_SESSION["nombre"]);
 					}		
+			}
+
+			if (isset($_SESSION['id_usuario'])) {
+				
+				$this->view->ImprimirUsuarioLogueado($_SESSION["nombre"]);
 			}
 
 			$empresa=$this->model->ObtenerDescripcionEmpresa();
