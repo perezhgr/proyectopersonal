@@ -6225,6 +6225,15 @@ button.close {
     opacity: 1;
   }
 
+  .zoomkeypress{
+    transform : scale(1.1);
+    -moz-transform : scale(1.1); /* Firefox */
+    -webkit-transform : scale(1.1); /* Chrome - Safari */
+    -o-transform : scale(1.1); /* Opera */
+    -ms-transform : scale(1.1); /* IE9 */
+    opacity: 1;
+  }
+
   .k{
     font-color:black; 
   }

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-30 00:10:03
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-30 15:39:49
          compiled from "./templates/crear_ciudad.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1519808595415a3c3a66d22-29589237%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '32795f4c65bf835e03f5249934a5ba533e7de12f' => 
     array (
       0 => './templates/crear_ciudad.tpl',
-      1 => 1414177665,
+      1 => 1414677567,
       2 => 'file',
     ),
   ),
@@ -86,19 +86,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               </div>
               <div class="form-group">
                 <label for="inputPassword" class="col-lg-2 control-label">Eliga imagenes</label>&nbsp;&nbsp;&nbsp;&nbsp;
+               
+                <span id="btn1" class="btn btn-default btn-file">
+                  <i class="fa fa-picture-o fa-2x"></i><input id="img1" type="file" name="imagen0">
+                </span>&nbsp;&nbsp;&nbsp;
+
                 <span class="btn btn-default btn-file">
-                  <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen0">
+                  <i class="fa fa-picture-o fa-2x"></i><input id="img2" type="file" name="imagen1">
                 </span>&nbsp;&nbsp;&nbsp;
                 <span class="btn btn-default btn-file">
-                  <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen1">
-                </span>&nbsp;&nbsp;&nbsp;
-                <span class="btn btn-default btn-file">
-                  <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen2">
+                  <i class="fa fa-picture-o fa-2x"></i><input id="img3" type="file" name="imagen2">
                 </span>
               </div><br>
               <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
-                  <input id="botoncrearciudad" type="submit" class="btn btn-primary" value="Crear">
+                  <input id="botoncrearciudad" type="submit" class="btn btn-primary" value="Crear">&nbsp;&nbsp;
+                  <input id="botoncrearciudad" type="reset" class="btn btn-default" value="Limpiar">
                 </div>
               </div>
             </fieldset>

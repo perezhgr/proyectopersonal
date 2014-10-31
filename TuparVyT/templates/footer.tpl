@@ -69,6 +69,7 @@
     <script type="text/javascript" src="js/logout.js"></script>
     <script type="text/javascript" src="js/mail.js"></script>
     <script type="text/javascript" src="js/sweet-alert.js"></script>  
-    <script type="text/javascript" src="js/jquery.ambiance.js"></script>     
+    <script type="text/javascript" src="js/jquery.ambiance.js"></script>
+    <script type="text/javascript" src="js/zoom.js"></script>        
 </body>
 </html>

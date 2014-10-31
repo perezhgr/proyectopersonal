@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-12 20:13:18
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-30 14:46:54
          compiled from "./templates/editar_condicion.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:9778900955419d8a33d7454-13844061%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4b99cccaf0e761e1ebb68e937dd57f01fa20ecf9' => 
     array (
       0 => './templates/editar_condicion.tpl',
-      1 => 1413137574,
+      1 => 1414676791,
       2 => 'file',
     ),
   ),
@@ -99,6 +99,7 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
                             <div class="form-group">
                               <div class="col-lg-10 col-lg-offset-2">
                                 <button id="btneditarcondicion" type="submit" class="btn btn-primary btn-">Editar</button>
+                                &nbsp;&nbsp;
                               </div>
                             </div>
                           </fieldset>

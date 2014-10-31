@@ -41,6 +41,16 @@ $(document).ready(function() {
 			return false;  
 		}
 	});
+
+	$('#img1').click(function(){
+
+		if (($("#img1").val().length > 0)){
+			$('#btn1').addClass('btn btn-primary btn-file');
+		}
+		/*else if ($("#img1").val().length == 0){
+			alert('no tiene imagen');
+		}*/
+	});
 });
 
 

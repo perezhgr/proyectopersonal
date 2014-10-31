@@ -59,19 +59,22 @@
               </div>
               <div class="form-group">
                 <label for="inputPassword" class="col-lg-2 control-label">Eliga imagenes</label>&nbsp;&nbsp;&nbsp;&nbsp;
+               
+                <span id="btn1" class="btn btn-default btn-file">
+                  <i class="fa fa-picture-o fa-2x"></i><input id="img1" type="file" name="imagen0">
+                </span>&nbsp;&nbsp;&nbsp;
+
                 <span class="btn btn-default btn-file">
-                  <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen0">
+                  <i class="fa fa-picture-o fa-2x"></i><input id="img2" type="file" name="imagen1">
                 </span>&nbsp;&nbsp;&nbsp;
                 <span class="btn btn-default btn-file">
-                  <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen1">
-                </span>&nbsp;&nbsp;&nbsp;
-                <span class="btn btn-default btn-file">
-                  <i class="fa fa-picture-o fa-2x"></i><input type="file" name="imagen2">
+                  <i class="fa fa-picture-o fa-2x"></i><input id="img3" type="file" name="imagen2">
                 </span>
               </div><br>
               <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
-                  <input id="botoncrearciudad" type="submit" class="btn btn-primary" value="Crear">
+                  <input id="botoncrearciudad" type="submit" class="btn btn-primary" value="Crear">&nbsp;&nbsp;
+                  <input id="botoncrearciudad" type="reset" class="btn btn-default" value="Limpiar">
                 </div>
               </div>
             </fieldset>

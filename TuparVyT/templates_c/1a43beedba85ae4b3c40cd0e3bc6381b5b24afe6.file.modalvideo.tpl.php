@@ -1,0 +1,42 @@
+<?php /* Smarty version Smarty-3.1.14, created on 2014-10-31 19:22:47
+         compiled from "./templates/modalvideo.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2259473515453d3778b2d04-73838039%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '1a43beedba85ae4b3c40cd0e3bc6381b5b24afe6' => 
+    array (
+      0 => './templates/modalvideo.tpl',
+      1 => 1414779727,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '2259473515453d3778b2d04-73838039',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_5453d3778b5213_60214779',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5453d3778b5213_60214779')) {function content_5453d3778b5213_60214779($_smarty_tpl) {?>          <!-- Modal de video -->
+          <i style="cursor:pointer;" class="fa fa-play-circle fa-5x zoom" data-toggle="modal" data-target=".bs-example-modal-lg1"></i>
+          <div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Tu sueño hecha realidad...</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="span8">
+                    <div class="flex-video widescreen" style="margin: 0 auto;text-align:center;">
+                      <iframe src="//www.youtube.com/embed/4puZ4IfaKSM?autoplay=1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fin Modal de video -->
+<?php }} ?>

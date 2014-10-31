@@ -51,7 +51,8 @@
                             </div>
                             <div class="form-group">
                               <div class="col-lg-10 col-lg-offset-2">
-                                <input id="btncrearcondicion" type="submit" class="btn btn-primary" value="Crear">
+                                <input id="btncrearcondicion" type="submit" class="btn btn-primary" value="Crear">&nbsp;&nbsp;
+                                <input id="botoncrearciudad" type="reset" class="btn btn-default" value="Limpiar">
                               </div>
                             </div>
                           </fieldset>
