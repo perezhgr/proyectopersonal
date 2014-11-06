@@ -8,7 +8,7 @@
         </button>
       </div>
       <div class="collapse navbar-collapse">
-        <a class="navbar-brand">Tupar VyT</a>
+        <a class="navbar-brand" href="#top">Tupar VyT</a>
         <ul class="nav navbar-nav">
           <li class="active">
             <a href="#top">Inicio</a>

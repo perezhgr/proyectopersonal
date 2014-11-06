@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-31 19:31:43
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-02 21:33:11
          compiled from "./templates/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:364074710544d438dead5c7-63538012%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c0360d049dff10f364dfc53ba2cc3958abf6ee6d' => 
     array (
       0 => './templates/index.tpl',
-      1 => 1414780201,
+      1 => 1414960385,
       2 => 'file',
     ),
   ),
@@ -40,7 +40,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </button>
       </div>
       <div class="collapse navbar-collapse">
-        <a class="navbar-brand">Tupar VyT</a>
+        <a class="navbar-brand" href="#top">Tupar VyT</a>
         <ul class="nav navbar-nav">
           <li class="active">
             <a href="#top">Inicio</a>

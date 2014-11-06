@@ -40,18 +40,37 @@ $(document).ready(function() {
 				type: "error"});
 			return false;  
 		}
-	});
 
-	$('#img1').click(function(){
 
-		if (($("#img1").val().length > 0)){
-			$('#btn1').addClass('btn btn-primary btn-file');
-		}
-		/*else if ($("#img1").val().length == 0){
-			alert('no tiene imagen');
-		}*/
 	});
 });
+
+function PreviewImage() {
+	var oFReader = new FileReader();
+	oFReader.readAsDataURL(document.getElementById("img1").files[0]);
+
+	oFReader.onload = function (oFREvent) {
+		document.getElementById("uploadPreview").src = oFREvent.target.result;
+	};
+};
+
+function PreviewImage2() {
+	var oFReader = new FileReader();
+	oFReader.readAsDataURL(document.getElementById("img2").files[0]);
+
+	oFReader.onload = function (oFREvent) {
+		document.getElementById("uploadPreview2").src = oFREvent.target.result;
+	};
+};
+function PreviewImage3() {
+	var oFReader = new FileReader();
+	oFReader.readAsDataURL(document.getElementById("img3").files[0]);
+
+	oFReader.onload = function (oFREvent) {
+		document.getElementById("uploadPreview3").src = oFREvent.target.result;
+	};
+};
+
 
 
 

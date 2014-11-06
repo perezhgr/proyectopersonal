@@ -57,27 +57,57 @@
                   <input id="precio" type="text" class="form-control" placeholder="Precio" name="precio" >
                 </div>
               </div>
-              <div class="form-group">
-                <label for="inputPassword" class="col-lg-2 control-label">Eliga imagenes</label>&nbsp;&nbsp;&nbsp;&nbsp;
-               
-                <span id="btn1" class="btn btn-default btn-file">
-                  <i class="fa fa-picture-o fa-2x"></i><input id="img1" type="file" name="imagen0">
-                </span>&nbsp;&nbsp;&nbsp;
 
-                <span class="btn btn-default btn-file">
-                  <i class="fa fa-picture-o fa-2x"></i><input id="img2" type="file" name="imagen1">
-                </span>&nbsp;&nbsp;&nbsp;
-                <span class="btn btn-default btn-file">
-                  <i class="fa fa-picture-o fa-2x"></i><input id="img3" type="file" name="imagen2">
-                </span>
-              </div><br>
               <div class="form-group">
+                <label for="inputPassword" class="col-lg-2 control-label">Eliga imagenes</label>
+
+              <!--DIV QUE CONTIENE A LOS BOTONES PARA CARGAR IMAGENES-->
+                
+                <div class="col-lg-4 centered">
+                  <span class="btn btn-default btn-file">
+                    <i class="fa fa-picture-o fa-2x"></i>
+                    <input id="img1" type="file" name="imagen0" onchange="PreviewImage();" /> </span>
+
+                    <span class="btn btn-default btn-file">
+                      <i class="fa fa-picture-o fa-2x"></i>
+                      <input id="img2" type="file" name="imagen1" onchange="PreviewImage2();" />
+                    </span>
+
+                    <span class="btn btn-default btn-file">
+                      <i class="fa fa-picture-o fa-2x"></i>
+                      <input id="img3" type="file" name="imagen2" onchange="PreviewImage3();" /></span><br>
+                    </div>    
+              </div>    
+              <!--DIV QUE CONTIENE A LOS BOTONES PARA CARGAR IMAGENES->
+
+              <!--DIV QUE CONTIENE A LAS IMAGENES-->
+              <div class="form-group">
+
+                <div class="col-lg-4">
+                  <img class="img-thumbnail" id="uploadPreview" style="width: 300px; height: 200px;" /><br><br>
+
+                </div>
+                <div class="col-lg-4 ">
+                  <img class="img-thumbnail" id="uploadPreview2" style="width: 300px; height: 200px;" /><br><br>
+                
+                </div>
+                <div class="col-lg-4 ">
+                  <img class="img-thumbnail" id="uploadPreview3" style="width: 300px; height: 200px;" /><br><br>
+
+                </div>  
+                <script type="text/javascript">
+
+                </script>
+              </div>
+              <!--FIN DIV QUE CONTIENE A LAS IMAGENES-->
+              <br>
+            </fieldset>
+
+            <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
                   <input id="botoncrearciudad" type="submit" class="btn btn-primary" value="Crear">&nbsp;&nbsp;
-                  <input id="botoncrearciudad" type="reset" class="btn btn-default" value="Limpiar">
                 </div>
               </div>
-            </fieldset>
           </form>
         </div>
       </div>
