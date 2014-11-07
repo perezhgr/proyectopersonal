@@ -20,13 +20,11 @@ class ViewLogin
 		$this->smarty->assign('ErrorUsuario',$errorusuario);	
 	}
 
-	public function MensajeErrorAdmin($erroradmin){
+	public function ImprimirPaginaAdmin($mail)
+	{	
+		$this->smarty->assign("Mail",$mail);
+		$this->smarty->display('admin.tpl');
 
-		$this->smarty->assign('ErrorAdmin',$erroradmin);	
-	}
-
-	public function MensajeErrorPass($errorpass){
-		$this->smarty->assign('ErrorPass',$errorpass);
 	}
 }
 

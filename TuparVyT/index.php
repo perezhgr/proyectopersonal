@@ -9,6 +9,6 @@ $model = new ModelIndex();
 $view = new ViewIndex();
 $controller = new ControllerIndex($model,$view);
 $controller->ImprimirIndex();	
-//$controller->enviarMail();
+//$controller->EnviarMail();
 
 ?>

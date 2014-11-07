@@ -92,13 +92,13 @@
         {foreach $Empresa as $empresa name=emp}
         {if $smarty.foreach.emp.iteration !== 4}
         <div class="col-lg-6">
-          <img class="zoom img-circle zoom" src="{$empresa.path}" alt="" style="width: 140px; height: 140px;">
+          <img class="zoom img-circle zoom" src="{$empresa.path}"  style="width: 140px; height: 140px;">
           <h3 >{$empresa.titulo}</h3><br>
           <p class="text-justify">{$empresa.cuerpo}</p>
         </div>
         {else}
         <div class="col-lg-12 ">
-          <img class="img-circle zoom" src="{$empresa.path}" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <img class="img-circle zoom" src="{$empresa.path}" alt="" style="width: 140px; height: 140px;">
           <h3>{$empresa.titulo}</h3><br>
           <p class="text-justify">{$empresa.cuerpo}</p>
         </div>
@@ -140,7 +140,7 @@
                   <label for="inputPassword" class="col-lg-2 control-label"
                   name="asunto">Asunto</label>
                   <div class="col-lg-8">
-                    <input type="text" class="form-control" id="asunto" placeholder="Asunto" name="asunto">
+                    <input type="text" class="form-control" id="asunto" placeholder="Asunto" name="     ">
                   </div>
                 </div>
                 <div class="form-group">

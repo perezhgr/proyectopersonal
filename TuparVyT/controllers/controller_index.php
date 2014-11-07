@@ -12,6 +12,8 @@
 
 		public function ImprimirIndex(){
 
+			$respuesta_ajax = NULL;
+
 			if(isset($_POST["nombre"]))
 			{
 				$_SESSION["nombre"] = $_POST['nombre'] ;
@@ -34,33 +36,64 @@
 				$user=$this->model->GetUsuario($formulario['mail']);
 				$pass=$this->model->GetPass($formulario['pass']);
 
-				if (empty($user)){
-					$this->view->MensajeErrorUsuario("Error: Usuario inexistente.");			
+				if (empty($user)){	
+					$respuesta_ajax = FALSE;	
 				}
 
 				elseif (empty($pass)) {
-					$this->view->MensajeErrorPass("Error : Password Invalida.");
+					$respuesta_ajax = FALSE;
 				}
 				else{
+
 					$_SESSION["nombre"]=$user[0]["nombre"];
 					$_SESSION["id_usuario"]=$user[0]["id_usuario"];
-					}		
+					$respuesta_ajax = TRUE;
+				}		
+
+			echo json_encode(array('respuesta_ajax'=>$respuesta_ajax));
+			exit();
 			}
 
 			if (isset($_SESSION['id_usuario'])) {
-				
+
 				$this->view->ImprimirUsuarioLogueado($_SESSION["nombre"]);
+				$empresa=$this->model->ObtenerDescripcionEmpresa();
+				$this->view->MostrarDescripcionEmpresa($empresa);
+
+				$this->view->MostrarCiudadesConImagenes($this->model->ObtenerCiudadesConImg());
+				$this->view->MostrarCiudades($this->model->ObtenerCiudades());
+				$this->view->ImprimirIndex();
+			}
+			else{
+
+				$empresa=$this->model->ObtenerDescripcionEmpresa();
+				$this->view->MostrarDescripcionEmpresa($empresa);
+
+				$this->view->MostrarCiudadesConImagenes($this->model->ObtenerCiudadesConImg());
+				$this->view->MostrarCiudades($this->model->ObtenerCiudades());
+
+
+				$this->view->ImprimirIndex();
 			}
 
-			$empresa=$this->model->ObtenerDescripcionEmpresa();
-			$this->view->MostrarDescripcionEmpresa($empresa);
-
-			$this->view->MostrarCiudadesConImagenes($this->model->ObtenerCiudadesConImg());
-			$this->view->MostrarCiudades($this->model->ObtenerCiudades());
-			
-
-			$this->view->ImprimirIndex();
-
 		}
+
+
+	/*		public function EnviarMail(){
+
+			if(isset($_POST['asunto'])) {
+				
+	// Debes editar las próximas dos líneas de código de acuerdo con tus preferencias
+				$email_to = "perez.hgr@gmail.com";
+				$email_subject = $_POST['asunto'];
+				$email_message .=$_POST['mensaje'];
+			}
+
+	// Ahora se envía el e-mail usando la función mail() de PHP
+			@mail($email_to, $email_subject, $email_message);
+
+			echo "¡El formulario se ha enviado con éxito!";
+		}
+	*/	
 	}
 	?>

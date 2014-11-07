@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-02 21:33:11
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-07 15:20:51
          compiled from "./templates/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:364074710544d438dead5c7-63538012%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c0360d049dff10f364dfc53ba2cc3958abf6ee6d' => 
     array (
       0 => './templates/index.tpl',
-      1 => 1414960385,
+      1 => 1415370041,
       2 => 'file',
     ),
   ),
@@ -136,7 +136,7 @@ $_smarty_tpl->tpl_vars['empresa']->_loop = true;
         <?php if ($_smarty_tpl->getVariable('smarty')->value['foreach']['emp']['iteration']!==4){?>
         <div class="col-lg-6">
           <img class="zoom img-circle zoom" src="<?php echo $_smarty_tpl->tpl_vars['empresa']->value['path'];?>
-" alt="" style="width: 140px; height: 140px;">
+"  style="width: 140px; height: 140px;">
           <h3 ><?php echo $_smarty_tpl->tpl_vars['empresa']->value['titulo'];?>
 </h3><br>
           <p class="text-justify"><?php echo $_smarty_tpl->tpl_vars['empresa']->value['cuerpo'];?>
@@ -145,7 +145,7 @@ $_smarty_tpl->tpl_vars['empresa']->_loop = true;
         <?php }else{ ?>
         <div class="col-lg-12 ">
           <img class="img-circle zoom" src="<?php echo $_smarty_tpl->tpl_vars['empresa']->value['path'];?>
-" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+" alt="" style="width: 140px; height: 140px;">
           <h3><?php echo $_smarty_tpl->tpl_vars['empresa']->value['titulo'];?>
 </h3><br>
           <p class="text-justify"><?php echo $_smarty_tpl->tpl_vars['empresa']->value['cuerpo'];?>
@@ -204,7 +204,7 @@ $_smarty_tpl->tpl_vars['city']->_loop = true;
                   <label for="inputPassword" class="col-lg-2 control-label"
                   name="asunto">Asunto</label>
                   <div class="col-lg-8">
-                    <input type="text" class="form-control" id="asunto" placeholder="Asunto" name="asunto">
+                    <input type="text" class="form-control" id="asunto" placeholder="Asunto" name="     ">
                   </div>
                 </div>
                 <div class="form-group">

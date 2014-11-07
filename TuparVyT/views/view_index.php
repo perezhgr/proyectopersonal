@@ -20,15 +20,6 @@ class ViewIndex
 		$this->smarty->assign("City",$city);				
 	}
 
-	public function MensajeErrorUsuario($errorusuario){
-
-		$this->smarty->assign('ErrorUsuario',$errorusuario);	
-	}
-
-	public function MensajeErrorPass($errorpass){
-		$this->smarty->assign('ErrorPass',$errorpass);
-	}
-
 	public function ImprimirUsuarioLogueado($nombreusuariologueado){
 		$this->smarty->assign("Nombre",$nombreusuariologueado);			
 
@@ -43,7 +34,6 @@ class ViewIndex
 		$this->smarty->display('index.tpl');
 
 	}
-
 }
 
 ?>
