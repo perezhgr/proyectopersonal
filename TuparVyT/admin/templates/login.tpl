@@ -26,28 +26,13 @@
                   <div class="form-group">
                     <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                     <div class="col-lg-10">
-                      <input type="text" class="form-control" id="email" placeholder="yyy@zzz.com" name="mail" ><br>
-                      {if isset($ErrorUsuario)}
-                        <strong class="error">{$ErrorUsuario}</strong>
-                      {else}
-                        <strong  style="display:none" class="error">{$ErrorUsuario}</strong>
-                      {/if}
-                      {if isset($ErrorAdmin)}
-                        <strong class="error">{$ErrorAdmin}</strong>
-                      {else}
-                        <strong  style="display:none" class="error">{$ErrorAdmin}</strong>
-                      {/if}
+                      <input type="text" class="form-control" id="email" placeholder="yyy@zzz.com" name="mail" >
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputPassword" class="col-lg-2 control-label">Password</label>
                     <div class="col-lg-10">
-                      <input type="password" class="form-control" id="pass" placeholder="Password" name="pass" ><br>
-                      {if isset($ErrorPass)}
-                        <strong class="error">{$ErrorPass}</strong>
-                      {else}
-                        <strong  style="display:none" class="error">{$ErrorPass}</strong>
-                      {/if}
+                      <input type="password" class="form-control" id="pass" placeholder="Password" name="pass">
                     </div>
                   </div>
                   <div class="form-group">
