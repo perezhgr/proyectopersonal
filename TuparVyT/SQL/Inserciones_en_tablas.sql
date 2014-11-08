@@ -24,52 +24,14 @@ INSERT INTO `tuparvt`.`empresa` (`titulo`,`cuerpo`,`path`) VALUES
 --Inserciones en la tabla ciudad
 
 INSERT INTO `tuparvt`.`ciudad` (`nombre_ciudad`, `duracion`, `precio`) VALUES 
-('Amsterdam', '3 dias.', '$5000'),
-('Berlin', '6 dias', '$5000'),
-('Ciudad del Cabo','5 dias', '$6000'),
-('Dubai', '4 dias.', '$10000'), 
-('Londres', '4 dias', '$4490'),
-('Nueva York','14 dias', '$4000'), 
-('Paris', '4 dias.', '$10000'), 
-('Sidney', '20 dias', '$15000');
-
---------------------------------------------------------------------------------
-
---Inserciones en la tabla imagen
-
-INSERT INTO `imagen` (`path`,`id_ciudad`) VALUES
-
-('img/amsterdam.jpg','1'),
-('img/amsterdam2.jpg','1'),
-('img/amsterdam3.jpg','1'),
-
-('img/berlin.jpg','2'),
-('img/berlin2.jpg','2'),
-('img/berlin3.jpg','2'),
-
-('img/cape.jpg','3'),
-('img/cape2.jpg','3'),
-('img/cape3.jpg','3'),
-
-('img/dubai.jpg','4'),
-('img/dubai2.jpg','4'),
-('img/dubai3.jpg','4'),
-
-('img/london.jpg','5'),
-('img/london2.jpg','5'),
-('img/london3.jpg','5'),
-
-('img/ny.jpg','6'),
-('img/ny2.jpg','6'),
-('img/ny3.jpg','6'),
-
-('img/paris.jpg','7'),
-('img/paris2.jpg','7'),
-('img/paris3.jpg','7'),
-
-('img/sidney.jpg','8'),
-('img/sidney2.jpg','8'),
-('img/sidney3.jpg','8');
+('Amsterdam', '3 dias.', '5000'),
+('Berlin', '6 dias', '5000'),
+('Ciudad del Cabo','5 dias', '6000'),
+('Dubai', '4 dias.', '10000'), 
+('Londres', '4 dias', '4490'),
+('Nueva York','14 dias', '4000'), 
+('Paris', '4 dias.', '10000'), 
+('Sidney', '20 dias', '15000');
 
 --------------------------------------------------------------------------------
 
@@ -111,14 +73,14 @@ INSERT INTO `imagen` (`path`,`id_ciudad`) VALUES
 
 --------------------------------------------------------------------------------
 --Insercion en la tabla usuario (pass = sitioweb2014)
-INSERT INTO `tuparvt`.`usuario` (`mail`,`pass`,`es_admin`) VALUES 
-('perez.hgr@gmail.com','397728967ab813da1a4319e18f71aaf9','1');
+INSERT INTO `tuparvt`.`usuario` (`nombre`,`mail`,`pass`,`es_admin`) VALUES 
+('Hugo','perez.hgr@gmail.com','397728967ab813da1a4319e18f71aaf9','1');
 
 --------------------------------------------------------------------------------
 --Insercion en la comentario
 INSERT INTO `tuparvt`.`comentario` (`texto`, `id_usuario`,`id_ciudad`,`id_condicion`) VALUES
-('Estuvo genial', '1','2','1'), 
-('Muy buen servicio', '2','3','1'),
-('Excelente atención','3','2','1');
+('Estuvo genial', '2','2','1'), 
+('Muy buen servicio', '2','3','7'),
+('Excelente atención','2','4','4');
 
 

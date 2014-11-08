@@ -9,7 +9,7 @@ CREATE TABLE empresa (
 	id_empresa         INT(10) NOT NULL AUTO_INCREMENT,
 	titulo       	   TEXT (65000) NOT NULL,
 	cuerpo      	   TEXT (65000) NOT NULL,
-	id_imagen      	   VARCHAR(50) NULL,
+	path	      	   VARCHAR(50) NULL,
 
 	CONSTRAINT PK_EMPRESA PRIMARY KEY (id_empresa)
 )ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;
@@ -55,3 +55,8 @@ CREATE TABLE comentario (
 	CONSTRAINT FK_COMENTARIO_CIUDAD    FOREIGN KEY (id_ciudad) REFERENCES ciudad (id_ciudad) ON DELETE CASCADE,
 	CONSTRAINT FK_COMENTARIO_CONDICION FOREIGN KEY (id_condicion) REFERENCES condicion (id_condicion) ON DELETE CASCADE
 )ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;
+
+
+---Borrado de mas de una tabla 
+
+DROP TABLE IF EXISTS comentario ,condicion, empresa,imagen, usuario , ciudad;

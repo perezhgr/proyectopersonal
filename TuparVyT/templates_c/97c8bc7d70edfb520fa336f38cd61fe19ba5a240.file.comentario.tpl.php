@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-26 20:44:56
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-08 14:59:37
          compiled from "./templates/comentario.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1618187900544d4397481154-92442903%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:136457958545e21c9e27ab7-43931036%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,12 +11,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1618187900544d4397481154-92442903',
+  'nocache_hash' => '136457958545e21c9e27ab7-43931036',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_544d439754b951_03423737',
   'variables' => 
   array (
     'Nombre' => 0,
@@ -30,8 +28,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'Comentario' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_545e21c9eba589_35028128',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_544d439754b951_03423737')) {function content_544d439754b951_03423737($_smarty_tpl) {?>                  <?php if (isset($_smarty_tpl->tpl_vars['Nombre']->value)){?>
+<?php if ($_valid && !is_callable('content_545e21c9eba589_35028128')) {function content_545e21c9eba589_35028128($_smarty_tpl) {?>                  <?php if (isset($_smarty_tpl->tpl_vars['Nombre']->value)){?>
                   <!-- FORM COMENTARIO-->
                   <div id="templateformcomentactualizado">
                   <form id="formcrearcomentario" class="form-horizontal" method="POST">        

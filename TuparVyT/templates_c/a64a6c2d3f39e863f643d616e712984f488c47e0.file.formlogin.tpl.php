@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-07 20:58:40
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-08 14:56:06
          compiled from "./templates/formlogin.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:6776214735453d509318a87-03954777%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:628033024545e20f68516b2-55669745%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '6776214735453d509318a87-03954777',
+  'nocache_hash' => '628033024545e20f68516b2-55669745',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.14',
-  'unifunc' => 'content_5453d50933f252_07513180',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.14',
+  'unifunc' => 'content_545e20f686d522_06442372',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5453d50933f252_07513180')) {function content_5453d50933f252_07513180($_smarty_tpl) {?>          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<?php if ($_valid && !is_callable('content_545e20f686d522_06442372')) {function content_545e20f686d522_06442372($_smarty_tpl) {?>          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
