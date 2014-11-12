@@ -5002,6 +5002,7 @@ a.list-group-item-danger.active:focus {
 }
 .panel-body {
   padding: 15px;
+  color: black;
 }
 .panel-heading {
   padding: 10px 15px;
@@ -6284,4 +6285,8 @@ height: 100%;
 }
 @media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
 .flex-video { padding-top: 0; }
+}
+
+.panel-title:hover {
+     cursor: pointer;
 }

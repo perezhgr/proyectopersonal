@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-30 14:44:40
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-10 21:52:29
          compiled from "./templates/crear_condicion.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:36013785415a47a071f70-60876046%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5a563fad399da08d1898576cb3a7d7bfe1577d83' => 
     array (
       0 => './templates/crear_condicion.tpl',
-      1 => 1414676655,
+      1 => 1415649240,
       2 => 'file',
     ),
   ),
@@ -80,6 +80,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                               <div class="col-lg-10 col-lg-offset-2">
                                 <input id="btncrearcondicion" type="submit" class="btn btn-primary" value="Crear">&nbsp;&nbsp;
                                 <input id="botoncrearciudad" type="reset" class="btn btn-default" value="Limpiar">
+
                               </div>
                             </div>
                           </fieldset>

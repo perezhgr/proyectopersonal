@@ -9,7 +9,7 @@ CREATE TABLE empresa (
 	id_empresa         INT(10) NOT NULL AUTO_INCREMENT,
 	titulo       	   TEXT (65000) NOT NULL,
 	cuerpo      	   TEXT (65000) NOT NULL,
-	path	      	   VARCHAR(50) NULL,
+	path	      	   VARCHAR(50) NOT NULL,
 
 	CONSTRAINT PK_EMPRESA PRIMARY KEY (id_empresa)
 )ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;

@@ -29,7 +29,7 @@ class ModelIndex
 	public function ObtenerDescripcionEmpresa(){
 		
 		$sql = "SELECT *
-		FROM   empresa ";
+		FROM   empresa";
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();

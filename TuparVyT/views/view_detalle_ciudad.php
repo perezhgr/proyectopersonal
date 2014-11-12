@@ -20,7 +20,6 @@ class ViewDetalleCiudad
 	public function ImprimirModalSinLeyendaDeRegistrarse($nombre){
 		$this->smarty->assign("Nombre",$nombre);				
 		$this->smarty->display('modalciudad.tpl');
-
 	}
 
 	public function ImprimirModal(){

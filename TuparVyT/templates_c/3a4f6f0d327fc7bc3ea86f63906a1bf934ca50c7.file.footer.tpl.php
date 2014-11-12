@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-08 14:56:06
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-12 19:29:20
          compiled from "./templates/footer.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1837174027545e20f68eebc0-99215081%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a4f6f0d327fc7bc3ea86f63906a1bf934ca50c7' => 
     array (
       0 => './templates/footer.tpl',
-      1 => 1414760018,
+      1 => 1415816952,
       2 => 'file',
     ),
   ),
@@ -15,9 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.14',
   'unifunc' => 'content_545e20f693a248_40180026',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_545e20f693a248_40180026')) {function content_545e20f693a248_40180026($_smarty_tpl) {?> <style>
       #map_canvas {
