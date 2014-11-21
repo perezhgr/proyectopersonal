@@ -50,8 +50,8 @@
 					$respuesta_ajax = TRUE;
 				}		
 
-			echo json_encode(array('respuesta_ajax'=>$respuesta_ajax));
-			exit();
+				echo json_encode(array('respuesta_ajax'=>$respuesta_ajax));
+				exit();
 			}
 
 			if (isset($_SESSION['id_usuario'])) {
@@ -78,22 +78,5 @@
 
 		}
 
-
-	/*		public function EnviarMail(){
-
-			if(isset($_POST['asunto'])) {
-				
-	// Debes editar las próximas dos líneas de código de acuerdo con tus preferencias
-				$email_to = "perez.hgr@gmail.com";
-				$email_subject = $_POST['asunto'];
-				$email_message .=$_POST['mensaje'];
-			}
-
-	// Ahora se envía el e-mail usando la función mail() de PHP
-			@mail($email_to, $email_subject, $email_message);
-
-			echo "¡El formulario se ha enviado con éxito!";
-		}
-	*/	
-	}
-	?>
+}
+?>

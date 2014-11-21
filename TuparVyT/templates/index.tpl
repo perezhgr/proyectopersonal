@@ -145,19 +145,26 @@
       <div class="col-lg-8">
         <h4 class="text-center">Estaríamos encantados de proporcionarle con más información ,<br> sólo tiene que llamar , correo electrónico o visítenos</h4><br><br>
         <div id="divform2">
-          <form class=" form-horizontal" ACTION="" METHOD="POST">
+          <form id= "FormMail" class=" form-horizontal" 
+                ACTION="./controllers/controller_enviar_mail.php" METHOD="POST">
             <fieldset>
+              <div class="form-group">
+                <label class="col-lg-2 control-label">E-mail</label>
+                <div class="col-lg-2">
+                  <p class="form-control-static">tuparvyt@gmail.com</p>
+                </div>
+              </div>
               <div class="form-group">
                 <label for="inputPassword" class="col-lg-2 control-label"
                 name="asunto">Asunto</label>
                 <div class="col-lg-8">
-                  <input type="text" class="form-control" id="asunto" placeholder="Asunto" name="     ">
+                  <input type="text" class="form-control" id="asunto" placeholder="Asunto" name="asunto">
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputText" class="col-lg-2 control-label">Mensaje</label>
                 <div class="col-lg-8 control-label">
-                  <textarea class="form-control" rows="8" type="text" name="texto" placeholder="Escriba su mensaje" id="mensaje"></textarea>
+                  <textarea class="form-control" rows="8" type="text" name="mensaje" placeholder="Escriba su mensaje" id="mensaje"></textarea>
                 </div>
               </div>
               <div class="form-group">

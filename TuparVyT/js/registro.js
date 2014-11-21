@@ -36,7 +36,6 @@ $(document).ready(function() {
 				type: "error"});
 			return false;
 		}
-		
 
 		if($("#password").val().length == 0)  {  
 			$.ambiance({message: "La contraseña es obligatoria",
