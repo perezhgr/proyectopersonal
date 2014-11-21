@@ -11,15 +11,15 @@
 		$mail->isSMTP();                                      // Set mailer to use SMTP
 		$mail->Host = 'smtp.gmail.com';  					  // Specify main and backup SMTP servers
 		$mail->SMTPAuth = true;                               // Enable SMTP authentication
-		$mail->Username = 'tuparvyt@gmail.com';    // SMTP username
-		$mail->Password = 'programacionweb';                 // SMTP password
+		$mail->Username = 'tuparvyt@gmail.com';    			  // SMTP username
+		$mail->Password = 'programacionweb';                  // SMTP password
 		$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 		$mail->Port = 587;                                    // TCP port to connect to
 
 		$mail->From = ' postmaster@localhost';
 		$mail->FromName = 'Tupar VyT';
 		$mail->addAddress('tuparvyt@gmail.com', 'Hugo');     // Add a recipient
-		$mail->addAddress('Hugo');               			// Name is optional
+		$mail->addAddress('Hugo');               			 // Name is optional
 		$mail->addReplyTo('tuparvyt@gmail.com', 'Mensaje de prueba');
 		$mail->addCC('tuparvyt@gmail.com');
 		$mail->addBCC('tuparvyt@gmail.com');
@@ -31,7 +31,6 @@
 
 		$mail->Subject = $_POST['asunto'];
 		$mail->Body    = $_POST['mensaje'];
-
 
 		if(!$mail->send()) {
 			$respuesta_ajax_mail = FALSE;
