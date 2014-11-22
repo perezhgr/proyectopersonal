@@ -14,17 +14,6 @@ $(document).ready(function(){
 			$( "#divform" ).addClass( "zoom" );
 		}
 	});
-
-/*
-	$('#asunto').keypress(function(){
-		if($.trim($('#asunto').val()) == '')
-			//if($.trim($('#mensaje').val()) == '')
-		{
-			$( "#divform2" ).removeClass( "zoomkeypress" );      
-			$( "#divform2" ).addClass( "zoom" );
-		}
-	});
-*/
 });
 
 

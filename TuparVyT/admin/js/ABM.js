@@ -160,7 +160,7 @@ $("#formcondicion").submit(function()
 			$(":text").val('');	
 			swal("Hecho!", "La condicion se ha creado exitosamente !", "success")
 			setTimeout(function() {
-				window.location ="admin.php";
+				window.location = "admin.php";
 			}, 1500);	
 		}
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-11-10 20:27:05
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-22 15:03:29
          compiled from "./templates/admin.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1340954347541591112ed7c1-77948224%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'eb669023950c29719bac9ad0fab891ac18fb23f9' => 
     array (
       0 => './templates/admin.tpl',
-      1 => 1415647469,
+      1 => 1416665003,
       2 => 'file',
     ),
   ),
@@ -126,9 +126,10 @@ $_smarty_tpl->tpl_vars['ciudad']->_loop = true;
             <thead>
               <tr>
                 <th>#</th>
-                <th>Persona</th>
-                <th>Condicion</th>
+                <th>Nombre de usuario</th>
+                <th>Condicion de su viaje</th>
                 <th>Texto</th>
+                <th>Ciudad que comentaste</th>
                 <th>Accion</th>
               </tr>
             </thead>
@@ -146,6 +147,8 @@ $_smarty_tpl->tpl_vars['testimonio']->_loop = true;
                 <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['condicion'];?>
 </td>
                 <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['texto'];?>
+</td>
+                <td><?php echo $_smarty_tpl->tpl_vars['testimonio']->value['nombre_ciudad'];?>
 </td>
                 <td>
                   <a data-toggle="tooltip" data-placement="top" title="Elimine un comentario haciendo click aqui" style="cursor:pointer"><span onclick="BorrarComentario(<?php echo $_smarty_tpl->tpl_vars['testimonio']->value['id_comentario'];?>
@@ -204,7 +207,7 @@ $_smarty_tpl->tpl_vars['condicion']->_loop = true;
             <thead>
               <tr>
                 <th>#</th>
-                <th>Nombre</th>
+                <th>Nombre de usuario</th>
                 <th>E-mail</th>
                 <th class="text-center">¿Tiene previlegios de administrador?</th>
                 <th>Accion</th>

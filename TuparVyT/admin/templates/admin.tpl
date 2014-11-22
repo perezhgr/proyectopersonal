@@ -81,9 +81,10 @@
             <thead>
               <tr>
                 <th>#</th>
-                <th>Persona</th>
-                <th>Condicion</th>
+                <th>Nombre de usuario</th>
+                <th>Condicion de su viaje</th>
                 <th>Texto</th>
+                <th>Ciudad que comentaste</th>
                 <th>Accion</th>
               </tr>
             </thead>
@@ -94,6 +95,7 @@
                 <td>{$testimonio.nombre}</td>
                 <td>{$testimonio.condicion}</td>
                 <td>{$testimonio.texto}</td>
+                <td>{$testimonio.nombre_ciudad}</td>
                 <td>
                   <a data-toggle="tooltip" data-placement="top" title="Elimine un comentario haciendo click aqui" style="cursor:pointer"><span onclick="BorrarComentario({$testimonio.id_comentario});" class="glyphicon glyphicon-trash"></span>
                   </a>
@@ -142,7 +144,7 @@
             <thead>
               <tr>
                 <th>#</th>
-                <th>Nombre</th>
+                <th>Nombre de usuario</th>
                 <th>E-mail</th>
                 <th class="text-center">¿Tiene previlegios de administrador?</th>
                 <th>Accion</th>

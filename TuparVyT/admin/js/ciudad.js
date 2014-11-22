@@ -72,8 +72,6 @@ function PreviewImage3() {
 };
 
 
-
-
 $(document).ready(function() {
 	
 	$('#botoneditarciudad').click(function(){
