@@ -10,9 +10,8 @@ class ControllerDetalleCiudad
 		$this->view = $view;
 	}
 
-
 	public function ImprimirModal(){
-	
+		
 		if (isset($_GET['id_ciudad'])) {
 
 			$this->view->MostrarDetalleCiudad($this->model->ObtenerDetalleCiudad($_GET['id_ciudad']));

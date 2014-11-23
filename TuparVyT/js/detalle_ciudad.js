@@ -6,5 +6,4 @@ function getDetalleCiudad(ciudad){
 			{
 				$('#contenidomodal').html(data);
 			}});
-
 }

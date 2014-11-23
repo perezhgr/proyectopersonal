@@ -33,9 +33,6 @@ class ModelIndex
 
 		$query = $this->conn->query($sql);
 		return $query->fetchAll();
-
-		//print_r($query->fetchAll());
-		//die();
 	}
 
 

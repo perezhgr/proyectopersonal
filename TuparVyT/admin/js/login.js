@@ -31,7 +31,7 @@ $(document).ready(function() {
 	});
 
 
-		//Errores de comparacion con BD (lado del servidor).
+		//ERRORES DE COMPARACION CON BD (LADO DEL SERVIDOR).
 
 		$("#formlogin").submit(function(){
 

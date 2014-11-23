@@ -8,7 +8,7 @@ $model = new ModelAMCondicion();
 $view = new ViewAMCondicion();
 $controller = new ControllerAMCondicion($model,$view);
 
-//Uso esta logica para poder imprimir un template u otro.
+//USO ESTA LOGICA PARA PODER IMPRIMIR UN TEMPLATE U OTRO.
 
 if(isset($_GET['id_condicion'])) {
 	$controller->ImprimirPagEditarCondicion();

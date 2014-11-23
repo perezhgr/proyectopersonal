@@ -1,4 +1,5 @@
-//Scrolling comun
+//SCROLLING COMUN PARA LA PAGINA QUE SE PRESENTA AL USUARIO (HOME).
+
 $(function() {
   $('a[href*=#]:not([href=#])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

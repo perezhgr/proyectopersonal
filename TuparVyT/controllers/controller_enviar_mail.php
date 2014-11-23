@@ -42,5 +42,5 @@
 		echo json_encode(array('respuesta_ajax'=>$respuesta_ajax_mail));
 		exit();
 
-}
-?>
+	}
+	?>

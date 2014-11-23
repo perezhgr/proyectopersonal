@@ -57,6 +57,8 @@ CREATE TABLE comentario (
 )ENGINE=InnoDB  DEFAULT CHARSET="utf8" AUTO_INCREMENT=1;
 
 
+
+
 ---Borrado de mas de una tabla 
 
 DROP TABLE IF EXISTS comentario ,condicion, empresa,imagen, usuario , ciudad;

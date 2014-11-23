@@ -14,7 +14,7 @@ class ControllerAMCondicion
 		session_start();
 
 		if (isset($_SESSION['mail'])){	
-		//Crear condicion	
+		// CREAR CONDICION
 			if (isset($_POST['condicion'])) {
 
 				$condicion["condicion"] = $_POST["condicion"];

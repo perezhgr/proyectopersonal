@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	
-	//Errores de validacion (lado del cliente)
+	//COMPROBACIONES DE FORMULARIO DEL LADO DEL CLIENTE.
 
 	$('#iniciar').click(function(){
 
@@ -23,38 +23,22 @@ $(document).ready(function() {
 		}
 
 
-
-
-		
-		/*
-
-		var reg = /^([\w-\.]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)([\w-]+\.)+[\w-]{2,4})?$/;
-
-		if (!reg.test(email)){
-			$.ambiance({message: "El correo electrónico introducido no es correcto.",
+		if($("#pass").val().length == 0)  {  
+			$.ambiance({message: "La contraseña es obligatoria",
 				title: "Error !",
 				timeout: 2,
-				type: "error"});			
-		}*/
+				type: "error"});
+			return false;  
+		} 
 
-if($("#pass").val().length == 0)  {  
-	$.ambiance({message: "La contraseña es obligatoria",
-		title: "Error !",
-		timeout: 2,
-		type: "error"});
-	return false;  
-} 
-
-});
-
-
-
+	});
 });
 
 
 
 $(document).ready(function() {
-	//Errores de comparacion con BD (lado del servidor).
+
+	//ERRORES DE COMPARACION CON BD (LADO DEL SERVIDOR).
 
 	$("#FormLogin").submit(function(){
 

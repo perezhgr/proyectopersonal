@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	
+	//VALIDACIONES DE INPUTS EN EL FORMULARIO DE CONTACTO
 	$('#btnenviarmail').click(function(){
 
 		if($("#asunto").val().length < 1) {  
@@ -23,7 +23,7 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
-	//Verificacion de que se envio un correo electronico.
+	//VERIFICA DE QUE SE ENVIO UN CORREO ELECTRONICO
 
 	$("#FormMail").submit(function(){
 

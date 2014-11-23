@@ -7,6 +7,7 @@ include './models/model_editar_usuario.php';
 $model = new ModelEditarUsuario();
 $view = new ViewEditarUsuario();
 $controller = new ControllerEditarUsuario($model,$view);
+
 $controller->EditarUsuario();
 
 ?>

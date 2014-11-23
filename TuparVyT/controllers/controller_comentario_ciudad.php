@@ -10,8 +10,9 @@ class ControllerComentarioCiudad
 		$this->view = $view;
 	}
 
-	// Muestra un formulario para comentar y  
-	//la lista de comentarios que tiene la ciudad. 
+	/* MUESTRA UN FORMULARIO PARA COMENTAR Y
+	LA LISTA DE COMENTARIOS QUE TIENE LA CIUDAD */
+	
 	public function ImprimirComentario(){
 
 		if (isset($_GET['id_ciudad'])) {

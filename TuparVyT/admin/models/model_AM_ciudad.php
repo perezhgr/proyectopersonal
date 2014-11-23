@@ -11,7 +11,7 @@ class ModelAMCiudad
 
 	}
 	
-//Empieza las funciones que crean una ciudad y 3 imagenes.
+	//FUNCION QUE INSERTA UNA CIUDAD CON 3 IMAGENES.
 
 	public function InsertaCiudad($ciudad){
 

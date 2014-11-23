@@ -6,6 +6,5 @@ function getComentarioCiudad(ciudad){
 			{
 				$('#comentario').html(data);
 			}});
-
 }
 

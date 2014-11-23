@@ -15,7 +15,7 @@ class ControllerAMCiudad
 
 		if (isset($_SESSION['mail'])){
 
-		//Crear ciudad con 3 imagenes		
+		// CREAR CIUDAD CON 3 IMAGENES.
 			if (isset($_POST['ciudad'])) {
 
 				$ciudad["ciudad"] = $_POST["ciudad"];

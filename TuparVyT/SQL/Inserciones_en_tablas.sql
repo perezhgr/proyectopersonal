@@ -1,5 +1,3 @@
------------------------------------------------------------------------------
---Inserciones en la tabla condicion
 
 INSERT INTO `tuparvt`.`condicion` (`condicion`) VALUES 
 ('Luna de miel'),
@@ -9,9 +7,11 @@ INSERT INTO `tuparvt`.`condicion` (`condicion`) VALUES
 ('Familia con niños pequeños'),
 ('Familia con niños mayores'),
 ('Grupo de amigos');
--------------------------------------------------------------------------------
 
---Inserciones en la tabla empresa
+
+
+
+
 INSERT INTO `tuparvt`.`empresa` (`titulo`,`cuerpo`,`path`) VALUES 
 ('¿Quienes somos?','Tupar Viajes y Turismo, inició sus actividades como agencia de viajes en Argentina el año 2001.Nuestra empresa internacionalmente, posee agencias propias en Chile, Perú y Colombia. Cuenta con un departamento de atención a empresas especializado en viajes de negocios. Tupar VyT se ha destacado en el mercado por su perfil innovador y su preocupación constante por entregar un servicio de primera clase, que logra equilibrar calidad, precio y formas de pago. Por esta razón, es la agencia de viajes con mayor crecimiento de los últimos años, ocupando un lugar de privilegio entre las principales empresas de la industria.','img/somos.jpg'),
 ('Nuestra Misión','Lograr optimizar los costos de viaje de su empresa ofreciendo el mejor servicio, condiciones y beneficios, los cuales serán traducidos en un ahorro para su empresa.','img/mision.jpg'),
@@ -20,8 +20,6 @@ INSERT INTO `tuparvt`.`empresa` (`titulo`,`cuerpo`,`path`) VALUES
 
 
 
--------------------------------------------------------------------------------
---Inserciones en la tabla ciudad
 
 INSERT INTO `tuparvt`.`ciudad` (`nombre_ciudad`, `duracion`, `precio`) VALUES 
 ('Amsterdam', '3 dias.', '5000'),
@@ -33,9 +31,12 @@ INSERT INTO `tuparvt`.`ciudad` (`nombre_ciudad`, `duracion`, `precio`) VALUES
 ('Paris', '4 dias.', '10000'), 
 ('Sidney', '20 dias', '15000');
 
---------------------------------------------------------------------------------
 
---Inserciones en la tabla imagen
+
+
+
+
+
 
 INSERT INTO `imagen` (`path`,`id_ciudad`) VALUES
 
@@ -71,13 +72,18 @@ INSERT INTO `imagen` (`path`,`id_ciudad`) VALUES
 ('img/sidney2.jpg','8'),
 ('img/sidney3.jpg','8');
 
---------------------------------------------------------------------------------
---Insercion en la tabla usuario (pass = sitioweb2014)
+
+
+
+
+
+
 INSERT INTO `tuparvt`.`usuario` (`nombre`,`mail`,`pass`,`es_admin`) VALUES 
 ('Hugo','perez.hgr@gmail.com','397728967ab813da1a4319e18f71aaf9','1');
 
---------------------------------------------------------------------------------
---Insercion en la comentario
+
+
+
 INSERT INTO `tuparvt`.`comentario` (`texto`, `id_usuario`,`id_ciudad`,`id_condicion`) VALUES
 ('Estuvo genial', '2','2','1'), 
 ('Muy buen servicio', '2','3','7'),

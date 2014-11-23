@@ -11,7 +11,7 @@ class ModelAdmin
 
 	}
 	
-	//Obtiene todas las ciudaes (para luego mostrarlas en la tabla)
+	//OBTIENE TODAS LAS CIUDADES (PARA LUEGO MOSTRARLAS EN LA TABLA)
 	public function ObtenerCiudad(){
 		
 		$sql = "SELECT id_ciudad,nombre_ciudad,duracion,precio

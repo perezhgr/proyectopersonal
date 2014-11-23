@@ -10,7 +10,9 @@ class ModelLogin
 		include('../conexion.php');
 
 	}
-	//Obtiene el usuario del administrador
+
+	//OBTIENE EL USUARIO DEL ADMINISTRADOR
+
 	public function GetUsuario($mail){
 		
 		$sql = "SELECT *

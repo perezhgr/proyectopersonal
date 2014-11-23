@@ -1,4 +1,4 @@
-/*----Borrar una ciudad----*/
+/*----BORRAR UNA CIUDAD----*/
 function BorrarCiudad(ciudad){
 	swal({
 		title: "Estas seguro?",
@@ -32,7 +32,7 @@ function BorrarCiudad(ciudad){
 	});
 }
 
-/*----Crear una ciudad----*/
+/*----CREAR UNA CIUDAD----*/
 
 $('#formciudad').submit( function(e) {
 	$.ajax( {
@@ -55,7 +55,7 @@ $('#formciudad').submit( function(e) {
 } );
 
 
-/*----Editar una ciudad----*/
+/*----EDITAR UNA CIUDAD----*/
 
 $("#formeditarciudad").submit(function() 
 {
@@ -75,7 +75,7 @@ $("#formeditarciudad").submit(function()
 });
 
 
-/*----Borrar un comentario (testimonio)----*/
+/*---- BORRAR UN COMENTARIO (TESTIMONIO)----*/
 function BorrarComentario(comentario){
 	swal({
 		title: "Estas seguro?",
@@ -111,7 +111,7 @@ function BorrarComentario(comentario){
 
 
 
-/*----Borrar una condicion----*/
+/*----BORRAR UNA CONDICION ----*/
 function BorrarCondicion(condicion){
 	swal({
 		title: "Estas seguro?",
@@ -146,7 +146,7 @@ function BorrarCondicion(condicion){
 }
 
 
-/*----Crear una condicion----*/
+/*----CREAR UNA CONDICION----*/
 $("#formcondicion").submit(function() 
 {
 	$.ajax({
@@ -168,7 +168,7 @@ $("#formcondicion").submit(function()
 	return false;
 });
 
-/*----Editar una condicion----*/
+/*----EDITAR UNA CONDICION----*/
 $("#formeditarcondicion").submit(function() 
 {
 	$.ajax({
@@ -188,7 +188,7 @@ $("#formeditarcondicion").submit(function()
 
 
 
-/*----Borrar un usuario ----*/
+/*---- BORRAR UN USUARIO ----*/
 function BorrarUsuario(usuario){
 	swal({
 		title: "Estas seguro?",
@@ -223,7 +223,7 @@ function BorrarUsuario(usuario){
 }
 
 
-/*----Editar un usuario (Promover) ----*/
+/*---- EDITAR UN USUARIO (PROMOVER) ----*/
 function PromoverUsuario(usuario){
 	swal({
 		title: "Estas seguro?",

@@ -17,5 +17,5 @@
 	<script type="text/javascript" src="js/jquery.ambiance.js"></script>
 	<script type="text/javascript" src="js/sweet-alert.js"></script>	
 	
-	</body>
+</body>
 </html>
