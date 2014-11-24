@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2014-10-14 16:59:59
+<?php /* Smarty version Smarty-3.1.14, created on 2014-11-23 20:28:08
          compiled from "./templates/header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:141441983954158fd4ceef23-17344057%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '97c13ae6868bbc459509c9f1b968154acd23eecc' => 
     array (
       0 => './templates/header.tpl',
-      1 => 1413298726,
+      1 => 1416764554,
       2 => 'file',
     ),
   ),
@@ -33,14 +33,5 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <link href="css/alertify.core.css" rel="stylesheet">  
   <link href="css/jquery.alerts.css" rel="stylesheet"> 
   <link href="css/sweet-alert.css" rel="stylesheet"> 
-  
-  
-  
-  
-  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
-      <script src="../bower_components/respond/dest/respond.min.js"></script>
-      <![endif]-->
 
-    </head><?php }} ?>
+</head><?php }} ?>
